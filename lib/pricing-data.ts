@@ -51,11 +51,9 @@ export const pricingData = {
         }
       },
       features: [
-        "5 DNA themes for components",
-        "Buttons + Cards + Inputs generator",
+        "5 DNA themes + Basic components",
         "Token export (JSON)",
-        "Basic accessibility checklist",
-        "Dataset sampler (read-only view up to 25k entries)"
+        "Basic accessibility checks"
       ]
     },
     {
@@ -97,17 +95,10 @@ export const pricingData = {
         }
       },
       features: [
-        "5 DNA themes for components",
-        "Buttons + Cards + Inputs generator",
-        "Token export (JSON)",
-        "Basic accessibility checklist",
-        "Dataset sampler (read-only view up to 25k entries)",
-        "Full Design System Kit (core components)",
-        "Page composer (sections + layout rules)",
-        "Responsive generator",
-        "Contrast + focus QA warnings",
-        "Export: Tailwind components / Bootstrap mapping / HTML",
-        "Dataset factory: tags + dedupe"
+        "All Starter features",
+        "Full Design System Kit",
+        "Page composer + Responsive generator",
+        "Multi-framework exports (React, Vue, Angular, Flutter)"
       ]
     },
     {
@@ -149,22 +140,10 @@ export const pricingData = {
         }
       },
       features: [
-        "5 DNA themes for components",
-        "Buttons + Cards + Inputs generator",
-        "Token export (JSON)",
-        "Basic accessibility checklist",
-        "Dataset sampler (read-only view up to 25k entries)",
-        "Full Design System Kit (core components)",
-        "Page composer (sections + layout rules)",
-        "Responsive generator",
-        "Contrast + focus QA warnings",
-        "Export: Tailwind components / Bootstrap mapping / HTML",
-        "Dataset factory: tags + dedupe",
-        "Adapters: MUI / Chakra exports",
-        "Theme DNA applied across ALL components",
-        "Motion pack: 50 animations + 50 hover styles (toggle)",
-        "Design QA: spacing rhythm + type scale validation",
-        "Asset pipeline (icons/shadows/gradients) via tokens"
+        "All Builder features",
+        "MUI / Chakra exports",
+        "Motion pack (100+ animations)",
+        "Design QA + Asset pipeline"
       ]
     },
     {
@@ -206,27 +185,10 @@ export const pricingData = {
         }
       },
       features: [
-        "5 DNA themes for components",
-        "Buttons + Cards + Inputs generator",
-        "Token export (JSON)",
-        "Basic accessibility checklist",
-        "Dataset sampler (read-only view up to 25k entries)",
-        "Full Design System Kit (core components)",
-        "Page composer (sections + layout rules)",
-        "Responsive generator",
-        "Contrast + focus QA warnings",
-        "Export: Tailwind components / Bootstrap mapping / HTML",
-        "Dataset factory: tags + dedupe",
-        "Adapters: MUI / Chakra exports",
-        "Theme DNA applied across ALL components",
-        "Motion pack: 50 animations + 50 hover styles (toggle)",
-        "Design QA: spacing rhythm + type scale validation",
-        "Asset pipeline (icons/shadows/gradients) via tokens",
-        "Shared libraries (tokens + presets)",
-        "Role-based access (viewer/editor/admin)",
-        "Versioned export bundles (diffable)",
-        "Brand kits + auto theme mapping",
-        "Dataset governance rules"
+        "All Studio features",
+        "Team collaboration (10 seats)",
+        "Shared libraries + Brand kits",
+        "Versioned exports + Governance"
       ]
     },
     {
@@ -268,33 +230,10 @@ export const pricingData = {
         }
       },
       features: [
-        "5 DNA themes for components",
-        "Buttons + Cards + Inputs generator",
-        "Token export (JSON)",
-        "Basic accessibility checklist",
-        "Dataset sampler (read-only view up to 25k entries)",
-        "Full Design System Kit (core components)",
-        "Page composer (sections + layout rules)",
-        "Responsive generator",
-        "Contrast + focus QA warnings",
-        "Export: Tailwind components / Bootstrap mapping / HTML",
-        "Dataset factory: tags + dedupe",
-        "Adapters: MUI / Chakra exports",
-        "Theme DNA applied across ALL components",
-        "Motion pack: 50 animations + 50 hover styles (toggle)",
-        "Design QA: spacing rhythm + type scale validation",
-        "Asset pipeline (icons/shadows/gradients) via tokens",
-        "Shared libraries (tokens + presets)",
-        "Role-based access (viewer/editor/admin)",
-        "Versioned export bundles (diffable)",
-        "Brand kits + auto theme mapping",
-        "Dataset governance rules",
-        "Custom adapters (internal frameworks)",
-        "SSO/SCIM options",
+        "All Team features",
+        "Custom adapters + SSO/SCIM",
         "On-prem / VPC deployment",
-        "Audit logs + retention",
-        "Custom dataset ingestion & cleaning pipeline",
-        "Human-in-the-loop review workflows"
+        "Enterprise SLA + Support"
       ]
     }
   ]
