@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { Button } from "@/components/ui/Button"
-import { Sparkles, Globe, Smartphone } from "lucide-react"
+import { Sparkles, Globe, Smartphone, Send } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 // Zod Schema
@@ -88,7 +88,7 @@ export function ChatInput({
             <div className="flex items-center gap-3">
               <button
                 type="button"
-                className="p-2 rounded-md bg-muted/50 hover:bg-muted transition-colors"
+                className="p-2 rounded-md bg-muted/50 hover:bg-muted transition-colors cursor-pointer"
                 aria-label="Add content"
               >
                 <div className="w-4 h-4 bg-primary/20 rounded-sm" />
@@ -96,7 +96,7 @@ export function ChatInput({
 
               <button
                 type="button"
-                className="p-2 rounded-md hover:bg-muted/30 transition-colors text-muted-foreground"
+                className="p-2 rounded-md hover:bg-muted/30 transition-colors text-muted-foreground cursor-pointer"
                 aria-label="AI Assistant"
               >
                 <Sparkles className="w-5 h-5 text-orange-500" />
@@ -121,7 +121,7 @@ export function ChatInput({
 
               <button
                 type="button"
-                className="p-2 rounded-md hover:bg-muted/30 transition-colors text-muted-foreground"
+                className="p-2 rounded-md hover:bg-muted/30 transition-colors text-muted-foreground cursor-pointer"
                 aria-label="Web"
               >
                 <Globe className="w-5 h-5" />
@@ -129,7 +129,7 @@ export function ChatInput({
 
               <button
                 type="button"
-                className="p-2 rounded-md hover:bg-muted/30 transition-colors text-muted-foreground"
+                className="p-2 rounded-md hover:bg-muted/30 transition-colors text-muted-foreground cursor-pointer"
                 aria-label="Mobile"
               >
                 <Smartphone className="w-5 h-5" />
@@ -137,13 +137,16 @@ export function ChatInput({
             </div>
           )}
 
-          {/* Submit Button */}
+          {/* Submit Button - Icon on small screens, text on larger */}
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium px-6 ml-auto disabled:opacity-50"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium px-3 sm:px-6 ml-auto disabled:opacity-50 h-9 w-9 sm:w-auto"
           >
-            {isSubmitting ? "Building..." : buttonText}
+            <span className="hidden sm:inline">
+              {isSubmitting ? "Building..." : buttonText}
+            </span>
+            <Send className="w-4 h-4 sm:hidden" />
           </Button>
         </div>
       </form>

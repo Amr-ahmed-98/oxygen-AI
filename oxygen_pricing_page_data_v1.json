@@ -1,0 +1,326 @@
+{
+  "metadata": {
+    "product": "Oxygen AI Frontend OS",
+    "version": "0.9.0",
+    "generatedAt": "2025-12-19T13:23:09Z",
+    "currency": "USD",
+    "billing": {
+      "annualDiscountPercent": 20,
+      "annualDiscountNote": "Annual billing is ~20% cheaper than monthly.",
+      "taxNote": "Taxes may apply depending on your location.",
+      "usageModel": {
+        "unitName": "Build Credits",
+        "unitDescription": "One Build Credit = one full UI build/export job (prompt → components → pages → export bundle).",
+        "overage": {
+          "enabled": true,
+          "pricePerCreditUSD": 0.25,
+          "note": "Overages are billed only if you opt-in; otherwise generation pauses at the plan limit."
+        }
+      }
+    },
+    "positioning": {
+      "oneLiner": "DNA tokens + dataset-driven components → generate, preview, edit, and export production UI.",
+      "differentiators": [
+        "Dataset-first diversity (not one fixed template set).",
+        "DNA Layers: Foundations → Interaction → Anatomy → Personality → Variation → Intelligence.",
+        "Multi-export: Tailwind, Bootstrap, Chakra, MUI, plus raw HTML/CSS and framework snippets."
+      ]
+    }
+  },
+  "plans": [
+    {
+      "id": "free",
+      "name": "Free",
+      "badge": null,
+      "recommended": false,
+      "price": {
+        "monthlyUSD": 0,
+        "annualUSDPerMonth": 0
+      },
+      "tagline": "Test the DNA workflow and export small UI snippets.",
+      "cta": {
+        "label": "Start free",
+        "action": "signup"
+      },
+      "included": {
+        "buildCreditsPerMonth": 20,
+        "dailyBuildCap": 3,
+        "maxProjects": 2,
+        "maxPagesPerProject": 3,
+        "themes": 2,
+        "exports": [
+          "HTML/CSS",
+          "Tailwind snippets"
+        ],
+        "dataset": {
+          "entriesAccessible": 2500,
+          "customImports": false
+        },
+        "collaboration": {
+          "seats": 1
+        },
+        "hosting": {
+          "enabled": false,
+          "customDomain": false
+        }
+      },
+      "limits": {
+        "maxPromptChars": 2500,
+        "maxAssetsUploadMB": 25,
+        "rateLimitPerMinute": 8
+      },
+      "features": [
+        "Live preview + code editor",
+        "Starter kit: Buttons, Cards, Inputs",
+        "Basic accessibility checks (contrast + focus outline)"
+      ]
+    },
+    {
+      "id": "starter",
+      "name": "Starter",
+      "badge": "Indie",
+      "recommended": false,
+      "price": {
+        "monthlyUSD": 15,
+        "annualUSDPerMonth": 12
+      },
+      "tagline": "Ship landing pages and MVP dashboards with export-ready UI.",
+      "cta": {
+        "label": "Upgrade to Starter",
+        "action": "checkout"
+      },
+      "included": {
+        "buildCreditsPerMonth": 250,
+        "dailyBuildCap": 25,
+        "maxProjects": 15,
+        "maxPagesPerProject": 25,
+        "themes": 5,
+        "exports": [
+          "HTML/CSS",
+          "Tailwind",
+          "Bootstrap"
+        ],
+        "dataset": {
+          "entriesAccessible": 50000,
+          "customImports": true
+        },
+        "collaboration": {
+          "seats": 1
+        },
+        "hosting": {
+          "enabled": true,
+          "customDomain": true,
+          "includedSites": 3
+        }
+      },
+      "limits": {
+        "maxPromptChars": 8000,
+        "maxAssetsUploadMB": 200,
+        "rateLimitPerMinute": 30
+      },
+      "features": [
+        "Full UI kit: Buttons, Cards, Inputs, Navbar, Sidebar, Modal, Table, Alerts, Badges",
+        "5 personalities (themes) applied across all components",
+        "One-click export bundle (.zip) with tokens + CSS"
+      ]
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "badge": "Most popular",
+      "recommended": true,
+      "price": {
+        "monthlyUSD": 39,
+        "annualUSDPerMonth": 29
+      },
+      "tagline": "Build full websites & SaaS UI with deep DNA and multi-framework export.",
+      "cta": {
+        "label": "Upgrade to Pro",
+        "action": "checkout"
+      },
+      "included": {
+        "buildCreditsPerMonth": 1200,
+        "dailyBuildCap": 120,
+        "maxProjects": 100,
+        "maxPagesPerProject": 120,
+        "themes": 10,
+        "exports": [
+          "HTML/CSS",
+          "Tailwind",
+          "Bootstrap",
+          "Chakra UI",
+          "Material UI",
+          "React/Vue/Angular/Svelte snippets"
+        ],
+        "dataset": {
+          "entriesAccessible": 250000,
+          "customImports": true,
+          "customDNA": true
+        },
+        "collaboration": {
+          "seats": 3,
+          "roles": [
+            "owner",
+            "editor",
+            "viewer"
+          ]
+        },
+        "hosting": {
+          "enabled": true,
+          "customDomain": true,
+          "includedSites": 15
+        }
+      },
+      "limits": {
+        "maxPromptChars": 20000,
+        "maxAssetsUploadMB": 1000,
+        "rateLimitPerMinute": 90
+      },
+      "features": [
+        "Multi-page site maps (marketing + app shell)",
+        "Component Intelligence: auto colors, responsive attributes, hover/animation logic",
+        "Accessibility audit checklist export (contrast, focus, labels, keyboard hints)",
+        "Version snapshots + rollback"
+      ]
+    },
+    {
+      "id": "studio",
+      "name": "Studio",
+      "badge": "Teams",
+      "recommended": false,
+      "price": {
+        "monthlyUSD": 99,
+        "annualUSDPerMonth": 79
+      },
+      "tagline": "Team workflows, brand kits, governance, and higher volume generation.",
+      "cta": {
+        "label": "Upgrade to Studio",
+        "action": "checkout"
+      },
+      "included": {
+        "buildCreditsPerMonth": 4000,
+        "dailyBuildCap": 400,
+        "maxProjects": 500,
+        "maxPagesPerProject": 500,
+        "themes": 25,
+        "exports": [
+          "All Pro exports + repo-ready structure"
+        ],
+        "dataset": {
+          "entriesAccessible": 800000,
+          "customImports": true,
+          "customDNA": true,
+          "privateDatasetSpaces": 5
+        },
+        "collaboration": {
+          "seats": 10,
+          "roles": [
+            "owner",
+            "admin",
+            "editor",
+            "viewer"
+          ]
+        },
+        "hosting": {
+          "enabled": true,
+          "customDomain": true,
+          "includedSites": 50
+        }
+      },
+      "limits": {
+        "maxPromptChars": 40000,
+        "maxAssetsUploadMB": 5000,
+        "rateLimitPerMinute": 200
+      },
+      "features": [
+        "Brand Kits (lock tokens per client/project)",
+        "Approval workflow: draft → review → publish",
+        "Audit log (token and export changes)",
+        "Org component catalog (private)"
+      ]
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "badge": "Custom",
+      "recommended": false,
+      "price": {
+        "monthlyUSD": null,
+        "annualUSDPerMonth": null
+      },
+      "tagline": "Security, compliance, private deployments, and custom pipelines.",
+      "cta": {
+        "label": "Book a demo",
+        "action": "contact_sales"
+      },
+      "included": {
+        "buildCreditsPerMonth": "Custom",
+        "dailyBuildCap": "Custom",
+        "maxProjects": "Unlimited",
+        "maxPagesPerProject": "Unlimited",
+        "themes": "Unlimited",
+        "exports": [
+          "All exports + custom adapters"
+        ],
+        "dataset": {
+          "entriesAccessible": "Unlimited",
+          "customImports": true,
+          "customDNA": true
+        },
+        "collaboration": {
+          "seats": "Custom"
+        },
+        "hosting": {
+          "enabled": true,
+          "customDomain": true
+        }
+      },
+      "limits": {
+        "maxPromptChars": "Custom",
+        "maxAssetsUploadMB": "Custom",
+        "rateLimitPerMinute": "Custom"
+      },
+      "features": [
+        "SAML/SSO + SCIM",
+        "VPC/on-prem deployment options",
+        "Data retention & governance controls",
+        "Enterprise SLA + dedicated support"
+      ]
+    }
+  ],
+  "addons": [
+    {
+      "id": "credits_pack_1000",
+      "name": "Build Credits Pack",
+      "priceUSD": 199,
+      "units": 1000,
+      "note": "One-time top-up for generation bursts."
+    },
+    {
+      "id": "local_private_mode",
+      "name": "Local/Private Model Mode",
+      "priceUSDPerMonth": 49,
+      "note": "Use a local model connector to keep prompts inside your environment (requires setup)."
+    },
+    {
+      "id": "extra_seat",
+      "name": "Extra Team Seat",
+      "priceUSDPerMonth": 12,
+      "note": "Add additional editors to Studio/Enterprise."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What counts as a Build Credit?",
+      "a": "One complete build job: generate components, assemble pages, and export a runnable bundle for a chosen stack."
+    },
+    {
+      "q": "Can I export without inline styles?",
+      "a": "Yes. Starter+ exports tokens + CSS files; Pro+ adds repo-ready export and design-system mappings."
+    },
+    {
+      "q": "Do you support accessibility?",
+      "a": "Yes. Each tier increases depth: basic checks on Free, audits on Pro+, and governance tools on Studio/Enterprise."
+    }
+  ]
+}

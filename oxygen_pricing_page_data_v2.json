@@ -1,0 +1,497 @@
+{
+  "metadata": {
+    "product": "Oxygen UI Factory",
+    "ideaTagline": "DNA-driven UI generator for websites, apps, and design systems",
+    "version": "2.0.0",
+    "generatedAt": "2025-12-19T13:50:14Z",
+    "currency": "USD",
+    "billingCycles": [
+      "monthly",
+      "annual"
+    ],
+    "notes": [
+      "Plans target a DNA+Dataset workflow: choose a theme, pick components, then export clean bundles (tokens + components).",
+      "Credits are consumed by generation jobs (component/section/page/app). Local models can reduce cloud credit usage.",
+      "Framework availability expands per plan to keep the early UX simple and progressively unlock more outputs."
+    ]
+  },
+  "pricingModel": {
+    "units": {
+      "credit": "1 generation job (component / section / page / app-shell)",
+      "computeMinute": "optional cloud build + preview minute",
+      "storageGB": "hosted asset storage"
+    },
+    "typicalUsageExamples": [
+      {
+        "scenario": "Landing page + 8 sections + theme kit",
+        "avgCredits": 12,
+        "outputs": [
+          "react + tailwind",
+          "html export"
+        ]
+      },
+      {
+        "scenario": "Dashboard app (auth shell, tables, charts) + dataset tuning",
+        "avgCredits": 70,
+        "outputs": [
+          "nextjs + tailwind",
+          "bootstrap mapping"
+        ]
+      },
+      {
+        "scenario": "Mobile MVP (5 screens) + shared design tokens",
+        "avgCredits": 40,
+        "outputs": [
+          "flutter",
+          "react-native"
+        ]
+      }
+    ]
+  },
+  "catalog": {
+    "themes": [
+      "neoFluent",
+      "glassMorph",
+      "cyberGlow",
+      "materialV4",
+      "minimalUltraClean"
+    ],
+    "designSystemKit": [
+      "buttons",
+      "cards",
+      "inputs",
+      "selects",
+      "tabs",
+      "alerts",
+      "badges",
+      "chips",
+      "navbars",
+      "sidebars",
+      "modals",
+      "drawers",
+      "tables",
+      "pagination",
+      "breadcrumbs",
+      "toasts",
+      "tooltips",
+      "dropdowns",
+      "accordions",
+      "stats",
+      "formsShell"
+    ],
+    "exportStyles": [
+      "css-variables + classes",
+      "tailwind config + components",
+      "bootstrap utility mapping"
+    ],
+    "accessibilityBaseline": [
+      "keyboard nav",
+      "focus rings",
+      "reduced motion",
+      "contrast checks",
+      "aria hints",
+      "semantic templates"
+    ]
+  },
+  "plans": [
+    {
+      "id": "starter",
+      "name": "Starter",
+      "badge": "Prototype",
+      "price": {
+        "monthly": 19,
+        "annual": 190
+      },
+      "included": {
+        "creditsPerMonth": 200,
+        "projects": 5,
+        "teamSeats": 1,
+        "exportsPerMonth": 60,
+        "customDomains": 0,
+        "storageGB": 2,
+        "computeMinutes": 0
+      },
+      "frameworkAccess": {
+        "web": {
+          "frameworks": [
+            "html",
+            "react",
+            "vue"
+          ],
+          "css": [
+            "tailwind",
+            "css"
+          ]
+        },
+        "mobile": {
+          "frameworks": [],
+          "nativeLanguages": []
+        },
+        "desktop": {
+          "frameworks": []
+        },
+        "backend": {
+          "languages": [
+            "node",
+            "python"
+          ]
+        }
+      },
+      "limits": {
+        "maxDatasetEntries": 50000,
+        "maxComponentsPerExport": 80,
+        "maxPagesPerProject": 8
+      },
+      "features": [
+        "5 DNA themes for components",
+        "Buttons + Cards + Inputs generator",
+        "Token export (JSON)",
+        "Basic accessibility checklist",
+        "Dataset sampler (read-only view up to 25k entries)"
+      ]
+    },
+    {
+      "id": "builder",
+      "name": "Builder",
+      "badge": "Web",
+      "price": {
+        "monthly": 39,
+        "annual": 390
+      },
+      "included": {
+        "creditsPerMonth": 650,
+        "projects": 20,
+        "teamSeats": 1,
+        "exportsPerMonth": 250,
+        "customDomains": 3,
+        "storageGB": 10,
+        "computeMinutes": 60
+      },
+      "frameworkAccess": {
+        "web": {
+          "frameworks": [
+            "nextjs",
+            "react",
+            "vue",
+            "svelte",
+            "angular"
+          ],
+          "css": [
+            "tailwind",
+            "bootstrap",
+            "css"
+          ]
+        },
+        "mobile": {
+          "frameworks": [
+            "flutter",
+            "react-native"
+          ],
+          "nativeLanguages": [
+            "dart",
+            "javascript"
+          ]
+        },
+        "desktop": {
+          "frameworks": [
+            "electron"
+          ]
+        },
+        "backend": {
+          "languages": [
+            "node",
+            "python",
+            "go"
+          ]
+        }
+      },
+      "limits": {
+        "maxDatasetEntries": 250000,
+        "maxComponentsPerExport": 300,
+        "maxPagesPerProject": 40
+      },
+      "features": [
+        "Full Design System Kit (core components)",
+        "Page composer (sections + layout rules)",
+        "Responsive generator",
+        "Contrast + focus QA warnings",
+        "Export: Tailwind components / Bootstrap mapping / HTML",
+        "Dataset factory: tags + dedupe"
+      ]
+    },
+    {
+      "id": "studio",
+      "name": "Studio",
+      "badge": "Multi-Framework",
+      "price": {
+        "monthly": 79,
+        "annual": 790
+      },
+      "included": {
+        "creditsPerMonth": 1500,
+        "projects": 60,
+        "teamSeats": 3,
+        "exportsPerMonth": 600,
+        "customDomains": 10,
+        "storageGB": 30,
+        "computeMinutes": 240
+      },
+      "frameworkAccess": {
+        "web": {
+          "frameworks": [
+            "nextjs",
+            "nuxt",
+            "react",
+            "vue",
+            "svelte",
+            "angular"
+          ],
+          "css": [
+            "tailwind",
+            "bootstrap",
+            "materialui",
+            "chakra",
+            "css"
+          ]
+        },
+        "mobile": {
+          "frameworks": [
+            "flutter",
+            "react-native",
+            "ionic"
+          ],
+          "nativeLanguages": [
+            "dart",
+            "typescript",
+            "javascript"
+          ]
+        },
+        "desktop": {
+          "frameworks": [
+            "electron",
+            "tauri"
+          ]
+        },
+        "backend": {
+          "languages": [
+            "node",
+            "python",
+            "go",
+            "rust"
+          ]
+        }
+      },
+      "limits": {
+        "maxDatasetEntries": 750000,
+        "maxComponentsPerExport": 1200,
+        "maxPagesPerProject": 200
+      },
+      "features": [
+        "Adapters: MUI / Chakra exports",
+        "Theme DNA applied across ALL components",
+        "Motion pack: 50 animations + 50 hover styles (toggle)",
+        "Design QA: spacing rhythm + type scale validation",
+        "Asset pipeline (icons/shadows/gradients) via tokens"
+      ]
+    },
+    {
+      "id": "team",
+      "name": "Team",
+      "badge": "Agency",
+      "price": {
+        "monthly": 149,
+        "annual": 1490
+      },
+      "included": {
+        "creditsPerMonth": 3500,
+        "projects": 200,
+        "teamSeats": 10,
+        "exportsPerMonth": 2000,
+        "customDomains": 30,
+        "storageGB": 120,
+        "computeMinutes": 900
+      },
+      "frameworkAccess": {
+        "web": {
+          "frameworks": [
+            "nextjs",
+            "nuxt",
+            "react",
+            "vue",
+            "svelte",
+            "angular"
+          ],
+          "css": [
+            "tailwind",
+            "bootstrap",
+            "materialui",
+            "chakra",
+            "css"
+          ]
+        },
+        "mobile": {
+          "frameworks": [
+            "flutter",
+            "react-native",
+            "swiftui",
+            "kotlin",
+            "ionic"
+          ],
+          "nativeLanguages": [
+            "dart",
+            "typescript",
+            "swift",
+            "kotlin"
+          ]
+        },
+        "desktop": {
+          "frameworks": [
+            "electron",
+            "tauri",
+            "qt"
+          ]
+        },
+        "backend": {
+          "languages": [
+            "node",
+            "python",
+            "go",
+            "rust",
+            "java",
+            "csharp"
+          ]
+        }
+      },
+      "limits": {
+        "maxDatasetEntries": 3000000,
+        "maxComponentsPerExport": 5000,
+        "maxPagesPerProject": 1000
+      },
+      "features": [
+        "Shared libraries (tokens + presets)",
+        "Role-based access (viewer/editor/admin)",
+        "Versioned export bundles (diffable)",
+        "Brand kits + auto theme mapping",
+        "Dataset governance rules"
+      ]
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "badge": "Custom",
+      "price": {
+        "monthly": null,
+        "annual": null
+      },
+      "included": {
+        "creditsPerMonth": "custom",
+        "projects": "custom",
+        "teamSeats": "custom",
+        "exportsPerMonth": "custom",
+        "customDomains": "custom",
+        "storageGB": "custom",
+        "computeMinutes": "custom"
+      },
+      "frameworkAccess": {
+        "web": {
+          "frameworks": [
+            "any"
+          ],
+          "css": [
+            "any"
+          ]
+        },
+        "mobile": {
+          "frameworks": [
+            "any"
+          ],
+          "nativeLanguages": [
+            "any"
+          ]
+        },
+        "desktop": {
+          "frameworks": [
+            "any"
+          ]
+        },
+        "backend": {
+          "languages": [
+            "any"
+          ]
+        }
+      },
+      "limits": {
+        "maxDatasetEntries": "custom",
+        "maxComponentsPerExport": "custom",
+        "maxPagesPerProject": "custom"
+      },
+      "features": [
+        "Custom adapters (internal frameworks)",
+        "SSO/SCIM options",
+        "On-prem / VPC deployment",
+        "Audit logs + retention",
+        "Custom dataset ingestion & cleaning pipeline",
+        "Human-in-the-loop review workflows"
+      ]
+    }
+  ],
+  "addOns": [
+    {
+      "id": "extra_credits",
+      "name": "Extra Credits Pack",
+      "packs": [
+        {
+          "credits": 500,
+          "price": 15
+        },
+        {
+          "credits": 2000,
+          "price": 49
+        },
+        {
+          "credits": 6000,
+          "price": 129
+        }
+      ],
+      "notes": "For heavy multi-page or multi-framework exports."
+    },
+    {
+      "id": "cloud_preview",
+      "name": "Cloud Preview Runtime",
+      "packs": [
+        {
+          "computeMinutes": 300,
+          "price": 12
+        },
+        {
+          "computeMinutes": 1200,
+          "price": 35
+        }
+      ],
+      "notes": "Optional server-side build + preview snapshots."
+    }
+  ],
+  "uiRenderingHints": {
+    "pricingPageSections": [
+      "hero",
+      "planCards",
+      "featureComparison",
+      "frameworkMatrix",
+      "mobileSupport",
+      "addons",
+      "faq"
+    ],
+    "comparisonTableKeys": [
+      "creditsPerMonth",
+      "projects",
+      "exportsPerMonth",
+      "teamSeats",
+      "web.frameworks",
+      "web.css",
+      "mobile.frameworks",
+      "mobile.nativeLanguages",
+      "desktop.frameworks",
+      "backend.languages"
+    ]
+  }
+}

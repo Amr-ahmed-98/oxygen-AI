@@ -10,6 +10,7 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet"
+import { AuthModal } from "@/components/features/auth/AuthModal"
 import {Icons} from "@/assets/icons"
 import { Images } from "@/assets/images"
 
@@ -21,6 +22,8 @@ const navLinks = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
+  const [authModalOpen, setAuthModalOpen] = useState(false)
+  const [authView, setAuthView] = useState<"login" | "signup">("login")
 
   return (
     <nav className="dark w-full border-b border-white/10 bg-background sticky top-0 z-50">
@@ -47,7 +50,7 @@ export function Navbar() {
             <Link 
               key={link.name} 
               href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors tracking-wider"
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors tracking-wider cursor-pointer"
             >
               {link.name}
             </Link>
@@ -59,12 +62,20 @@ export function Navbar() {
           <Button 
             variant="ghost" 
             className="text-primary hover:text-primary hover:bg-primary/10 font-medium"
+            onClick={() => {
+              setAuthView("login")
+              setAuthModalOpen(true)
+            }}
           >
             Login
           </Button>
           
           <Button 
             className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium px-6"
+            onClick={() => {
+              setAuthView("signup")
+              setAuthModalOpen(true)
+            }}
           >
             Get started
           </Button>
@@ -101,7 +112,7 @@ export function Navbar() {
                   <SheetClose asChild key={link.name}>
                     <Link 
                       href={link.href}
-                      className="text-base font-medium text-muted-foreground hover:text-primary transition-colors tracking-wider py-2"
+                      className="text-base font-medium text-muted-foreground hover:text-primary transition-colors tracking-wider py-2 cursor-pointer"
                       onClick={() => setOpen(false)}
                     >
                       {link.name}
@@ -115,14 +126,22 @@ export function Navbar() {
                 <Button 
                   variant="outline" 
                   className="w-full border-primary text-primary hover:bg-primary/10 font-medium"
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    setOpen(false)
+                    setAuthView("login")
+                    setAuthModalOpen(true)
+                  }}
                 >
                   Login
                 </Button>
                 
                 <Button 
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-medium"
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    setOpen(false)
+                    setAuthView("signup")
+                    setAuthModalOpen(true)
+                  }}
                 >
                   Get started
                 </Button>
@@ -133,6 +152,13 @@ export function Navbar() {
         </Sheet>
 
       </div>
+
+      {/* Auth Modal */}
+      <AuthModal 
+        open={authModalOpen} 
+        onOpenChange={setAuthModalOpen}
+        defaultView={authView}
+      />
     </nav>
   )
 }
