@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { Button } from "@/components/ui/Button"
-import { Sparkles, Globe, Smartphone, Send } from "lucide-react"
+import { Icons } from "@/assets/icons"
 import { cn } from "@/lib/utils"
 
 // Zod Schema
@@ -91,7 +91,7 @@ export function ChatInput({
                 className="p-2 rounded-md bg-muted/50 hover:bg-muted transition-colors cursor-pointer"
                 aria-label="Add content"
               >
-                <div className="w-4 h-4 bg-primary/20 rounded-sm" />
+               <Icons.Plus className="bg-primary rounded-3xl"/>
               </button>
 
               <button
@@ -99,7 +99,7 @@ export function ChatInput({
                 className="p-2 rounded-md hover:bg-muted/30 transition-colors text-muted-foreground cursor-pointer"
                 aria-label="AI Assistant"
               >
-                <Sparkles className="w-5 h-5 text-orange-500" />
+                <Icons.Sparkles className="w-5 h-5 text-orange-500" />
               </button>
 
               <div className="flex items-center gap-1 px-3 py-1.5 bg-muted/30 rounded-md text-sm text-muted-foreground">
@@ -124,7 +124,7 @@ export function ChatInput({
                 className="p-2 rounded-md hover:bg-muted/30 transition-colors text-muted-foreground cursor-pointer"
                 aria-label="Web"
               >
-                <Globe className="w-5 h-5" />
+                <Icons.Globe className="w-5 h-5" />
               </button>
 
               <button
@@ -132,7 +132,7 @@ export function ChatInput({
                 className="p-2 rounded-md hover:bg-muted/30 transition-colors text-muted-foreground cursor-pointer"
                 aria-label="Mobile"
               >
-                <Smartphone className="w-5 h-5" />
+                <Icons.Smartphone className="w-5 h-5" />
               </button>
             </div>
           )}
@@ -146,7 +146,7 @@ export function ChatInput({
             <span className="hidden sm:inline">
               {isSubmitting ? "Building..." : buttonText}
             </span>
-            <Send className="w-4 h-4 sm:hidden" />
+            <Icons.Send className="w-4 h-4 sm:hidden" />
           </Button>
         </div>
       </form>
