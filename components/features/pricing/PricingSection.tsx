@@ -72,52 +72,8 @@ const formatDesktopFramework = (fw: string) => {
   return map[fw] || fw
 }
 
-interface PricingData {
-  metadata: {
-    currency: string
-    billingCycles: string[]
-    notes?: string[]
-  }
-  plans: Array<{
-    id: string
-    name: string
-    badge: string | null
-    price: {
-      monthly: number | null
-      annual: number | null
-    }
-    included: {
-      creditsPerMonth: number | string
-      projects: number | string
-      teamSeats: number | string
-      exportsPerMonth?: number | string
-      [key: string]: any
-    }
-    limits?: {
-      [key: string]: any
-    }
-    frameworkAccess?: {
-      web: {
-        frameworks: string[]
-        css: string[]
-      }
-      mobile: {
-        frameworks: string[]
-        nativeLanguages: string[]
-      }
-      desktop: {
-        frameworks: string[]
-      }
-      backend: {
-        languages: string[]
-      }
-    }
-    features: string[]
-  }>
-}
-
 interface PricingSectionProps {
-  readonly data: PricingData
+  readonly data: typeof import("@/lib/pricing-data").pricingData
 }
 
 export function PricingSection({ data }: PricingSectionProps) {
@@ -133,7 +89,7 @@ export function PricingSection({ data }: PricingSectionProps) {
     }
   }
 
-  const getPrice = (plan: PricingData["plans"][0]) => {
+  const getPrice = (plan: typeof data.plans[number]) => {
     if (billingCycle === "annual" && plan.price.annual !== null) {
       // Annual price is total, so divide by 12 for per month display
       return Math.round(plan.price.annual / 12)
@@ -141,14 +97,14 @@ export function PricingSection({ data }: PricingSectionProps) {
     return plan.price.monthly
   }
 
-  const getPriceDisplay = (plan: PricingData["plans"][0]) => {
+  const getPriceDisplay = (plan: typeof data.plans[number]) => {
     const price = getPrice(plan)
     if (price === null) return "Custom"
     if (price === 0) return "$0"
     return `$${price}`
   }
 
-  const getAnnualDiscount = (plan: PricingData["plans"][0]) => {
+  const getAnnualDiscount = (plan: typeof data.plans[number]) => {
     if (plan.price.monthly === null || plan.price.annual === null) return 0
     const monthlyTotal = plan.price.monthly * 12
     const discount = ((monthlyTotal - plan.price.annual) / monthlyTotal) * 100
@@ -266,27 +222,27 @@ export function PricingSection({ data }: PricingSectionProps) {
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-muted-foreground">Credits</span>
                       <span className="text-foreground font-medium">
-                        {typeof plan.included.creditsPerMonth === "number" 
-                          ? plan.included.creditsPerMonth.toLocaleString() 
-                          : plan.included.creditsPerMonth}
-                        {typeof plan.included.creditsPerMonth === "number" && " / month"}
+                        {typeof (plan.included as any).creditsPerMonth === "number"
+                          ? (plan.included as any).creditsPerMonth.toLocaleString()
+                          : (plan.included as any).creditsPerMonth}
+                        {typeof (plan.included as any).creditsPerMonth === "number" && " / month"}
                       </span>
                     </div>
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-muted-foreground">Projects</span>
                       <span className="text-foreground font-medium">
-                        {plan.included.projects === "custom" || plan.included.projects === "Unlimited"
-                          ? "Unlimited" 
-                          : plan.included.projects}
+                        {(plan.included as any).projects === "custom" || (plan.included as any).projects === "Unlimited"
+                          ? "Unlimited"
+                          : (plan.included as any).projects}
                       </span>
                     </div>
-                    {plan.included.teamSeats && (
+                    {(plan.included as any).teamSeats && (
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-muted-foreground">Team Seats</span>
                         <span className="text-foreground font-medium">
-                          {plan.included.teamSeats === "custom" 
-                            ? "Custom" 
-                            : plan.included.teamSeats}
+                          {(plan.included as any).teamSeats === "custom"
+                            ? "Custom"
+                            : (plan.included as any).teamSeats}
                         </span>
                       </div>
                     )}
