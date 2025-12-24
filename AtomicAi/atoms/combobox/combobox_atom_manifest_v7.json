@@ -1,0 +1,231 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:54:04.518719+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "combobox-autocomplete",
+    "goal": "ThemeForest-grade Combobox/Autocomplete dataset for ERP search, filters, selects and async options"
+  },
+  "component": {
+    "id": "atom.combobox",
+    "name": "Combobox / Autocomplete",
+    "type": "atom",
+    "aliases": [
+      "Autocomplete",
+      "Typeahead",
+      "SearchSelect",
+      "AsyncSelect"
+    ],
+    "description": "Combobox input that filters options, supports async loading, grouping, icons, chips, and rich empty/error states.",
+    "tags": [
+      "ui",
+      "atom",
+      "combobox",
+      "autocomplete",
+      "select",
+      "search",
+      "filters",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "leadingIcon": {
+        "type": "icon|node",
+        "required": false
+      },
+      "optionIcon": {
+        "type": "icon|node",
+        "required": false
+      },
+      "chip": {
+        "type": "node",
+        "required": false
+      },
+      "helper": {
+        "type": "node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [
+        "onValueChange",
+        "onInputChange",
+        "onOpenChange"
+      ],
+      "mobile": [
+        "onValueChange",
+        "onInputChange"
+      ],
+      "desktop": [
+        "onValueChange",
+        "onInputChange"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "soft",
+          "outline",
+          "solid",
+          "minimal"
+        ],
+        "default": "outline"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "info",
+          "success",
+          "warning",
+          "danger",
+          "purple",
+          "teal"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "comfortable"
+      },
+      "mode": {
+        "type": "enum",
+        "enum": [
+          "single",
+          "multi"
+        ],
+        "default": "single"
+      },
+      "async": {
+        "type": "boolean",
+        "default": false
+      },
+      "creatable": {
+        "type": "boolean",
+        "default": false
+      },
+      "grouped": {
+        "type": "boolean",
+        "default": false
+      },
+      "withIcons": {
+        "type": "boolean",
+        "default": false
+      },
+      "withChips": {
+        "type": "boolean",
+        "default": false
+      },
+      "clearable": {
+        "type": "boolean",
+        "default": true
+      },
+      "state": {
+        "type": "enum",
+        "enum": [
+          "default",
+          "loading",
+          "error",
+          "disabled",
+          "readonly"
+        ],
+        "default": "default"
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": false
+      },
+      "readonly": {
+        "type": "boolean",
+        "default": false
+      },
+      "placeholder": {
+        "type": "string",
+        "default": "Search..."
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "closed",
+      "open",
+      "loading",
+      "error",
+      "disabled",
+      "readonly",
+      "multi",
+      "chips",
+      "async",
+      "creatable",
+      "grouped",
+      "compact"
+    ],
+    "a11y": {
+      "requirements": [
+        "Use ARIA combobox pattern with aria-expanded, aria-controls, and active descendant.",
+        "Support keyboard navigation (Arrow keys, Enter, Esc).",
+        "Announce loading/empty states to screen readers when possible."
+      ]
+    }
+  }
+}

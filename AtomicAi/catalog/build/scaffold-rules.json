@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "description": "Scaffold rules to prevent bloat and ensure successful builds",
+  "limits": {
+    "maxEntities": 40,
+    "maxRoutes": 220,
+    "maxScreens": 260,
+    "maxMarketingSectionsPerPage": 10,
+    "maxMarketingPages": 6,
+    "maxGeneratedFiles": 450
+  },
+  "generationRules": {
+    "entityCrudScreens": {
+      "alwaysGenerate": ["list", "detail"],
+      "generateFormsIfPermissions": true,
+      "formsMaxFieldsBeforeStepper": 10
+    },
+    "mobileRules": {
+      "forbidDataTable": true,
+      "forceCardList": true,
+      "filtersAsSheet": true
+    },
+    "performanceRules": {
+      "virtualizeIfRowsOver": 200,
+      "serverPaginationDefault": true,
+      "lazyMedia": true
+    },
+    "securityRules": {
+      "rbacGuardRequired": true,
+      "tenantScopeRequiredWhenMultiTenant": true,
+      "auditLogOnMutations": true
+    },
+    "namingRules": {
+      "entityPluralization": "simpleEnglishOrProvided",
+      "routeNaming": "kebabCase",
+      "screenIds": "screen.{entity}.{intent}"
+    }
+  },
+  "fallbacks": {
+    "ifEntityCountTooHigh": "generateCoreEntitiesOnly",
+    "ifRoutesTooHigh": "mergeRareScreensIntoSettings",
+    "ifSectionsTooMany": "dropLowestPrioritySections"
+  }
+}
+

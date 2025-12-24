@@ -1,0 +1,204 @@
+{
+  "version": "1.0.0",
+  "description": "Deterministic rules for generating routes and screens from entities",
+  "routeRules": {
+    "basePath": "/{{entityPlural}}",
+    "routes": [
+      {
+        "type": "list",
+        "path": "/{{entityPlural}}",
+        "screenId": "screen.{{moduleId}}.list",
+        "permission": "{{namespace}}.view"
+      },
+      {
+        "type": "create",
+        "path": "/{{entityPlural}}/new",
+        "screenId": "screen.{{moduleId}}.create",
+        "permission": "{{namespace}}.create"
+      },
+      {
+        "type": "detail",
+        "path": "/{{entityPlural}}/:id",
+        "screenId": "screen.{{moduleId}}.detail",
+        "permission": "{{namespace}}.view"
+      },
+      {
+        "type": "edit",
+        "path": "/{{entityPlural}}/:id/edit",
+        "screenId": "screen.{{moduleId}}.edit",
+        "permission": "{{namespace}}.edit"
+      }
+    ]
+  },
+  "screenGenerationRules": {
+    "list": {
+      "intent": "entityList",
+      "web": {
+        "layout": {
+          "if": "entity.views.list.layout == 'dataTablePro'",
+          "then": "data.table.pro",
+          "else": "data.list.cards"
+        },
+        "toolbar": {
+          "default": ["search", "filters", "columns", "export", "create"],
+          "fromEntity": "entity.views.list.toolbar"
+        },
+        "pagination": "server",
+        "virtualized": true
+      },
+      "mobile": {
+        "layout": "data.list.cards",
+        "filters": "bottomSheet",
+        "toolbar": ["search", "create"],
+        "virtualized": true,
+        "pullToRefresh": true
+      },
+      "desktop": {
+        "layout": "data.table.pro",
+        "toolbar": {
+          "default": ["search", "filters", "columns", "export", "create", "bulkActions"],
+          "fromEntity": "entity.views.list.toolbar"
+        },
+        "shortcuts": true,
+        "contextMenu": true,
+        "multiSelect": true,
+        "virtualized": true
+      },
+      "states": {
+        "required": ["loading", "empty", "error", "noPermission"]
+      },
+      "permissionsRequired": ["{{namespace}}.view"]
+    },
+    "detail": {
+      "intent": "entityDetail",
+      "web": {
+        "layout": "detailWithRightPanel",
+        "rightPanel": {
+          "fromEntity": "entity.views.detail.rightPanel",
+          "default": ["status", "tags", "metadata"]
+        }
+      },
+      "mobile": {
+        "layout": "tabsTop",
+        "primaryTab": {
+          "fromEntity": "entity.views.detail.tabs[0].id",
+          "default": "overview"
+        }
+      },
+      "desktop": {
+        "layout": "detailWithRightPanel",
+        "rightPanel": {
+          "fromEntity": "entity.views.detail.rightPanel",
+          "default": ["status", "tags", "metadata", "audit"]
+        },
+        "shortcuts": true
+      },
+      "tabs": {
+        "fromEntity": "entity.views.detail.tabs",
+        "default": [
+          {
+            "id": "overview",
+            "label": "نظرة عامة",
+            "component": "entityOverview"
+          }
+        ]
+      },
+      "states": {
+        "required": ["loading", "error", "noPermission"]
+      },
+      "permissionsRequired": ["{{namespace}}.view"]
+    },
+    "create": {
+      "intent": "entityForm",
+      "web": {
+        "layout": "form.builder.schemaDriven",
+        "props": {
+          "layout": "oneColumnMobile_twoColumnDesktop",
+          "validation": "schemaDriven"
+        }
+      },
+      "mobile": {
+        "layout": {
+          "if": "entity.fields.length > 10",
+          "then": "form.stepper",
+          "else": "form.builder.schemaDriven"
+        }
+      },
+      "desktop": {
+        "layout": "form.drawerEdit",
+        "props": {
+          "validation": "schemaDriven"
+        }
+      },
+      "formStates": {
+        "required": ["idle", "submitting", "success", "error"]
+      },
+      "permissionsRequired": ["{{namespace}}.create"]
+    },
+    "edit": {
+      "intent": "entityForm",
+      "web": {
+        "layout": "form.builder.schemaDriven",
+        "props": {
+          "layout": "oneColumnMobile_twoColumnDesktop",
+          "validation": "schemaDriven"
+        }
+      },
+      "mobile": {
+        "layout": {
+          "if": "entity.fields.length > 10",
+          "then": "form.stepper",
+          "else": "form.builder.schemaDriven"
+        }
+      },
+      "desktop": {
+        "layout": "form.drawerEdit",
+        "props": {
+          "validation": "schemaDriven"
+        }
+      },
+      "formStates": {
+        "required": ["idle", "submitting", "success", "error"]
+      },
+      "permissionsRequired": ["{{namespace}}.edit"]
+    }
+  },
+  "permissionDefaults": {
+    "list": "{{namespace}}.view",
+    "detail": "{{namespace}}.view",
+    "create": "{{namespace}}.create",
+    "edit": "{{namespace}}.edit",
+    "delete": "{{namespace}}.delete"
+  },
+  "stateDefaults": {
+    "list": {
+      "loading": true,
+      "empty": {
+        "title": "لا يوجد {{entityTitlePlural}}",
+        "description": "ابدأ بإنشاء أول {{entityTitle}}",
+        "action": {
+          "label": "إنشاء {{entityTitle}}",
+          "permission": "{{namespace}}.create"
+        }
+      },
+      "error": true,
+      "noPermission": {
+        "message": "ليس لديك صلاحية لعرض {{entityTitlePlural}}"
+      }
+    },
+    "detail": {
+      "loading": true,
+      "error": true,
+      "noPermission": {
+        "message": "ليس لديك صلاحية لعرض {{entityTitle}}"
+      }
+    },
+    "form": {
+      "idle": true,
+      "submitting": true,
+      "success": true,
+      "error": true
+    }
+  }
+}
+

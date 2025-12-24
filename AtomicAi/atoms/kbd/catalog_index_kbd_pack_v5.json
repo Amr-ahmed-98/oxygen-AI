@@ -1,0 +1,31 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:29:29.303340+00:00",
+  "items": [
+    {
+      "id": "atom.kbd",
+      "type": "atom",
+      "name": "KBD",
+      "tags": [
+        "ui",
+        "atom",
+        "kbd",
+        "shortcut",
+        "keyboard",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "KBD keyboard shortcut hotkey command control hint rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "kbd_atom_manifest_v5.json",
+        "kbd_variants_library_v5.json",
+        "catalog_index_kbd_pack_v5.json"
+      ]
+    }
+  ]
+}

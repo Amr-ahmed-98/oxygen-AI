@@ -1,0 +1,31 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:08:57.706124+00:00",
+  "items": [
+    {
+      "id": "atom.tabs",
+      "type": "atom",
+      "name": "Tabs",
+      "tags": [
+        "ui",
+        "atom",
+        "tabs",
+        "navigation",
+        "erp",
+        "dashboards",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Tabs tablist segmented pills underline scrollable overflow dropdown rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "tabs_atom_manifest_v4.json",
+        "tabs_variants_library_v4.json",
+        "catalog_index_tabs_pack_v4.json"
+      ]
+    }
+  ]
+}

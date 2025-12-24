@@ -1,0 +1,273 @@
+{
+  "version": "1.0.0",
+  "description": "Keyword map for deterministic classification",
+  "productTypeSignals": {
+    "HELPDESK_ITSM": {
+      "keywords": [
+        {"k": "ticket", "w": 10},
+        {"k": "helpdesk", "w": 12},
+        {"k": "incident", "w": 9},
+        {"k": "sla", "w": 12},
+        {"k": "knowledge base", "w": 8},
+        {"k": "kb", "w": 6},
+        {"k": "support queue", "w": 9},
+        {"k": "itil", "w": 7},
+        {"k": "service desk", "w": 10},
+        {"k": "escalation", "w": 8}
+      ],
+      "mustHaveDefaults": ["rbac", "audit", "notifications", "sla", "kb", "automations"]
+    },
+    "CRM": {
+      "keywords": [
+        {"k": "crm", "w": 12},
+        {"k": "pipeline", "w": 10},
+        {"k": "deal", "w": 8},
+        {"k": "lead", "w": 9},
+        {"k": "opportunity", "w": 8},
+        {"k": "account", "w": 7},
+        {"k": "contact", "w": 7},
+        {"k": "sales", "w": 8},
+        {"k": "kanban", "w": 7}
+      ],
+      "mustHaveDefaults": ["rbac", "audit", "activities", "kanbanPipeline", "reports"]
+    },
+    "HRMS_HCM": {
+      "keywords": [
+        {"k": "hr", "w": 10},
+        {"k": "hrms", "w": 12},
+        {"k": "hcm", "w": 12},
+        {"k": "attendance", "w": 10},
+        {"k": "payroll", "w": 9},
+        {"k": "leave", "w": 9},
+        {"k": "recruitment", "w": 8},
+        {"k": "timesheet", "w": 7},
+        {"k": "employee", "w": 8}
+      ],
+      "mustHaveDefaults": ["rbac", "audit", "approvals", "calendar"]
+    },
+    "WMS_TMS": {
+      "keywords": [
+        {"k": "wms", "w": 12},
+        {"k": "warehouse", "w": 10},
+        {"k": "inventory", "w": 9},
+        {"k": "pick", "w": 7},
+        {"k": "pack", "w": 7},
+        {"k": "barcode", "w": 8},
+        {"k": "tms", "w": 10},
+        {"k": "shipping", "w": 7},
+        {"k": "logistics", "w": 8}
+      ],
+      "mustHaveDefaults": ["rbac", "audit", "offlineFirst", "importExport"]
+    },
+    "POS": {
+      "keywords": [
+        {"k": "pos", "w": 12},
+        {"k": "checkout", "w": 10},
+        {"k": "receipt", "w": 8},
+        {"k": "cashier", "w": 7},
+        {"k": "shift", "w": 7},
+        {"k": "barcode scanner", "w": 7},
+        {"k": "offline", "w": 9}
+      ],
+      "mustHaveDefaults": ["offlineFirst", "receipts", "audit"]
+    },
+    "ECOMMERCE": {
+      "keywords": [
+        {"k": "ecommerce", "w": 12},
+        {"k": "catalog", "w": 8},
+        {"k": "cart", "w": 8},
+        {"k": "checkout", "w": 8},
+        {"k": "orders", "w": 8},
+        {"k": "shipping", "w": 7},
+        {"k": "payment", "w": 8},
+        {"k": "coupons", "w": 6}
+      ],
+      "mustHaveDefaults": ["headless", "payments", "shipping", "promotions"]
+    },
+    "MARKETPLACE": {
+      "keywords": [
+        {"k": "marketplace", "w": 12},
+        {"k": "vendor", "w": 9},
+        {"k": "multi-vendor", "w": 10},
+        {"k": "payout", "w": 8},
+        {"k": "commission", "w": 7},
+        {"k": "dispute", "w": 7},
+        {"k": "listing", "w": 7}
+      ],
+      "mustHaveDefaults": ["vendorPortal", "approvals", "payouts", "disputes"]
+    },
+    "BOOKING": {
+      "keywords": [
+        {"k": "booking", "w": 12},
+        {"k": "reservation", "w": 12},
+        {"k": "calendar", "w": 9},
+        {"k": "schedule", "w": 8},
+        {"k": "appointment", "w": 8},
+        {"k": "slots", "w": 7}
+      ],
+      "mustHaveDefaults": ["calendar", "notifications", "paymentsOptional"]
+    },
+    "BI_ANALYTICS": {
+      "keywords": [
+        {"k": "bi", "w": 12},
+        {"k": "analytics", "w": 10},
+        {"k": "dashboard", "w": 9},
+        {"k": "kpi", "w": 8},
+        {"k": "reports", "w": 8},
+        {"k": "warehouse", "w": 4}
+      ],
+      "mustHaveDefaults": ["dashboards", "export", "audit"]
+    },
+    "BILLING_SUBSCRIPTION": {
+      "keywords": [
+        {"k": "billing", "w": 12},
+        {"k": "subscription", "w": 11},
+        {"k": "invoice", "w": 9},
+        {"k": "metering", "w": 10},
+        {"k": "usage", "w": 8},
+        {"k": "dunning", "w": 7},
+        {"k": "payments", "w": 8}
+      ],
+      "mustHaveDefaults": ["plans", "subscriptions", "invoices", "usage", "payments", "audit"]
+    },
+    "IAM": {
+      "keywords": [
+        {"k": "iam", "w": 12},
+        {"k": "sso", "w": 10},
+        {"k": "oidc", "w": 8},
+        {"k": "saml", "w": 8},
+        {"k": "policies", "w": 8},
+        {"k": "mfa", "w": 7},
+        {"k": "sessions", "w": 7}
+      ],
+      "mustHaveDefaults": ["rbac", "audit", "sso", "policies"]
+    },
+    "CMS_DXP": {
+      "keywords": [
+        {"k": "cms", "w": 12},
+        {"k": "dxp", "w": 10},
+        {"k": "content", "w": 8},
+        {"k": "pages", "w": 6},
+        {"k": "headless cms", "w": 10},
+        {"k": "personalization", "w": 8}
+      ],
+      "mustHaveDefaults": ["headless", "roles", "workflow"]
+    },
+    "LMS": {
+      "keywords": [
+        {"k": "lms", "w": 12},
+        {"k": "courses", "w": 8},
+        {"k": "lessons", "w": 7},
+        {"k": "quiz", "w": 7},
+        {"k": "assignments", "w": 7},
+        {"k": "students", "w": 7}
+      ],
+      "mustHaveDefaults": ["roles", "progress", "content"]
+    }
+  },
+  "deliverySignals": {
+    "onPremise": {
+      "keywords": [
+        {"k": "on-prem", "w": 12},
+        {"k": "on premise", "w": 12},
+        {"k": "self-hosted", "w": 10},
+        {"k": "install", "w": 8}
+      ],
+      "constraints": {"noExternalCDN": true}
+    },
+    "multiTenantSaaS": {
+      "keywords": [
+        {"k": "saas", "w": 10},
+        {"k": "multi-tenant", "w": 10},
+        {"k": "tenants", "w": 8}
+      ],
+      "constraints": {}
+    },
+    "offlineFirst": {
+      "keywords": [
+        {"k": "offline", "w": 10},
+        {"k": "sync", "w": 7},
+        {"k": "no internet", "w": 8}
+      ],
+      "constraints": {"offlineFirst": true}
+    },
+    "headless": {
+      "keywords": [
+        {"k": "headless", "w": 10},
+        {"k": "api-first", "w": 9}
+      ],
+      "constraints": {"headless": true}
+    }
+  },
+  "personaSignals": {
+    "enterprise": [
+      {"k": "enterprise", "w": 8},
+      {"k": "admin", "w": 5},
+      {"k": "compliance", "w": 6}
+    ],
+    "powerUser": [
+      {"k": "dense", "w": 8},
+      {"k": "shortcuts", "w": 7},
+      {"k": "power user", "w": 8}
+    ],
+    "minimal": [
+      {"k": "minimal", "w": 9},
+      {"k": "clean", "w": 8},
+      {"k": "simple", "w": 7}
+    ],
+    "glass": [
+      {"k": "glass", "w": 9},
+      {"k": "modern", "w": 6},
+      {"k": "frost", "w": 8}
+    ],
+    "warm": [
+      {"k": "friendly", "w": 7},
+      {"k": "marketplace", "w": 6},
+      {"k": "shop", "w": 5}
+    ],
+    "brutal": [
+      {"k": "brutal", "w": 10},
+      {"k": "bold", "w": 7}
+    ],
+    "fintech": [
+      {"k": "fintech", "w": 10},
+      {"k": "billing", "w": 6},
+      {"k": "payments", "w": 5}
+    ],
+    "gov": [
+      {"k": "government", "w": 10},
+      {"k": "ministry", "w": 8},
+      {"k": "official", "w": 7}
+    ]
+  },
+  "verticalSignals": {
+    "healthtech": [
+      {"k": "clinic", "w": 9},
+      {"k": "hospital", "w": 9},
+      {"k": "patient", "w": 7}
+    ],
+    "fintech": [
+      {"k": "bank", "w": 9},
+      {"k": "payments", "w": 7},
+      {"k": "invoice", "w": 5}
+    ],
+    "edtech": [
+      {"k": "school", "w": 8},
+      {"k": "students", "w": 6},
+      {"k": "courses", "w": 6}
+    ],
+    "govtech": [
+      {"k": "government", "w": 10},
+      {"k": "municipality", "w": 9}
+    ],
+    "legaltech": [
+      {"k": "case management", "w": 10},
+      {"k": "law", "w": 7}
+    ],
+    "retailtech": [
+      {"k": "retail", "w": 8},
+      {"k": "pos", "w": 6}
+    ]
+  }
+}
+

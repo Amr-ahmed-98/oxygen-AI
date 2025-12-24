@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "description": "Backend policies (RBAC + Tenant scope + Audit)",
+  "rbac": {
+    "permissionHeader": "x-permissions",
+    "defaultDenied": true
+  },
+  "tenantScope": {
+    "enabled": true,
+    "field": "tenantId",
+    "mode": "rowLevel",
+    "applyTo": ["list", "detail", "create", "update", "delete"]
+  },
+  "audit": {
+    "enabled": true,
+    "events": ["create", "update", "delete", "login"],
+    "store": "AuditLog"
+  }
+}
+

@@ -1,0 +1,100 @@
+{
+  "id": "detail.view",
+  "type": "component",
+  "category": ["data-ui", "detail"],
+  "name": "Detail View",
+  "description": "Entity detail view with overview cards, tabs, activity timeline, and related entities",
+  "variants": [
+    "single",
+    "tabs",
+    "split",
+    "minimal"
+  ],
+  "props": {
+    "variant": {
+      "type": "string",
+      "required": false,
+      "default": "tabs",
+      "range": ["single", "tabs", "split", "minimal"],
+      "description": "Detail view layout variant"
+    },
+    "entity": {
+      "type": "string",
+      "required": true,
+      "description": "Entity type/ID"
+    },
+    "entityId": {
+      "type": "string",
+      "required": true,
+      "description": "Entity instance ID"
+    },
+    "showActivity": {
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "description": "Show activity timeline"
+    },
+    "showComments": {
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Show comments section"
+    },
+    "showRelated": {
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "description": "Show related entities"
+    }
+  },
+  "slots": {
+    "overview": {
+      "type": "array",
+      "required": false,
+      "itemType": "card",
+      "description": "Overview cards"
+    },
+    "tabs": {
+      "type": "array",
+      "required": false,
+      "itemType": "tab",
+      "description": "Detail tabs",
+      "itemSchema": {
+        "id": {"type": "string", "required": true},
+        "label": {"type": "string", "required": true},
+        "type": {
+          "type": "string",
+          "range": ["fields", "relation", "activity", "comments", "custom"]
+        },
+        "component": {"type": "string", "required": false}
+      }
+    },
+    "actions": {
+      "type": "array",
+      "required": false,
+      "itemType": "action",
+      "description": "Detail view actions"
+    },
+    "related": {
+      "type": "array",
+      "required": false,
+      "itemType": "relation",
+      "description": "Related entities"
+    }
+  },
+  "dependencies": [
+    "card",
+    "tabs",
+    "timeline",
+    "button",
+    "avatar"
+  ],
+  "whenToUse": [
+    "Entity detail pages",
+    "Record views",
+    "Item details with relationships",
+    "Activity tracking"
+  ],
+  "tags": ["detail", "view", "entity", "crud", "timeline"]
+}
+

@@ -1,0 +1,191 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:08:57.706124+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "switch",
+    "goal": "ThemeForest-grade Switch/Toggle dataset for settings and ERP feature flags"
+  },
+  "component": {
+    "id": "atom.switch",
+    "name": "Switch / Toggle",
+    "type": "atom",
+    "aliases": [
+      "Toggle",
+      "FeatureFlagSwitch",
+      "IOSSwitch",
+      "CompactSwitch"
+    ],
+    "description": "Binary control with label/description, sizes, icons, and loading/disabled states.",
+    "tags": [
+      "ui",
+      "atom",
+      "switch",
+      "toggle",
+      "settings",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "label": {
+        "type": "text|node",
+        "required": false
+      },
+      "description": {
+        "type": "text|node",
+        "required": false
+      },
+      "startIcon": {
+        "type": "icon|node",
+        "required": false
+      },
+      "endIcon": {
+        "type": "icon|node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [
+        "onCheckedChange",
+        "onClick"
+      ],
+      "mobile": [
+        "onValueChange",
+        "onPress"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "solid",
+          "soft",
+          "outline",
+          "glass",
+          "minimal"
+        ],
+        "default": "solid"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "success",
+          "warning",
+          "danger",
+          "info",
+          "purple",
+          "teal"
+        ],
+        "default": "primary"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "xs",
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "checked": {
+        "type": "boolean",
+        "default": false
+      },
+      "defaultChecked": {
+        "type": "boolean",
+        "default": false
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": false
+      },
+      "loading": {
+        "type": "boolean",
+        "default": false
+      },
+      "withIcons": {
+        "type": "boolean",
+        "default": false
+      },
+      "labelPosition": {
+        "type": "enum",
+        "enum": [
+          "end",
+          "start",
+          "top",
+          "bottom"
+        ],
+        "default": "end"
+      },
+      "ariaLabel": {
+        "type": "string",
+        "default": ""
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "off",
+      "on",
+      "hover",
+      "focus",
+      "disabled",
+      "loading",
+      "with-icons"
+    ],
+    "a11y": {
+      "requirements": [
+        "Use native checkbox input or role=switch with aria-checked.",
+        "Ensure label is clickable and announced by screen readers.",
+        "Focus-visible ring and sufficient contrast in all states."
+      ]
+    }
+  }
+}

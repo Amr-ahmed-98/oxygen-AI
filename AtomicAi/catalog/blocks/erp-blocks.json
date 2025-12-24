@@ -1,0 +1,64 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-01-XX",
+  "type": "block",
+  "category": "erp",
+  "items": [
+    {
+      "id": "appShell.sidebar",
+      "name": "App Shell Sidebar",
+      "description": "Application shell with sidebar navigation",
+      "component": "AppShell",
+      "tags": ["shell", "layout", "erp", "sidebar"]
+    },
+    {
+      "id": "table.listPage",
+      "name": "Table List Page",
+      "description": "Data table list page with actions",
+      "component": "TablePage",
+      "tags": ["table", "list", "data", "erp"]
+    },
+    {
+      "id": "form.editPage",
+      "name": "Form Edit Page",
+      "description": "Create/Edit form page",
+      "component": "FormPage",
+      "props": {
+        "mode": ["create", "edit"]
+      },
+      "tags": ["form", "create", "edit", "erp"]
+    },
+    {
+      "id": "filters.bar",
+      "name": "Filters Bar",
+      "description": "Filter bar with multiple fields",
+      "component": "FiltersBar",
+      "tags": ["filters", "search", "erp"]
+    },
+    {
+      "id": "bulk.actions",
+      "name": "Bulk Actions",
+      "description": "Bulk actions toolbar",
+      "component": "BulkActions",
+      "tags": ["bulk", "actions", "erp"]
+    },
+    {
+      "id": "empty.state",
+      "name": "Empty State",
+      "description": "Empty state component",
+      "component": "EmptyState",
+      "tags": ["empty", "no-data", "erp"]
+    },
+    {
+      "id": "loading.skeleton",
+      "name": "Loading Skeleton",
+      "description": "Loading skeleton component",
+      "component": "LoadingSkeleton",
+      "props": {
+        "variant": ["table", "card", "list"]
+      },
+      "tags": ["loading", "skeleton", "erp"]
+    }
+  ]
+}
+

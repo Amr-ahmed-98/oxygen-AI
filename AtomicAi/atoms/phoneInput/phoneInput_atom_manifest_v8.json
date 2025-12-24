@@ -1,0 +1,208 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T12:01:56.274864+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "phone-input",
+    "goal": "ThemeForest-grade PhoneInput atom with masks and country selector hook"
+  },
+  "component": {
+    "id": "atom.phoneInput",
+    "name": "Phone Input",
+    "type": "atom",
+    "aliases": [
+      "TelephoneInput",
+      "IntlPhoneInput"
+    ],
+    "description": "Phone number input with formatting/masking, country code (optional), and validation states.",
+    "tags": [
+      "ui",
+      "atom",
+      "input",
+      "phone",
+      "mask",
+      "forms",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "country": {
+        "type": "node",
+        "required": false
+      },
+      "leadingIcon": {
+        "type": "icon|node",
+        "required": false
+      },
+      "helper": {
+        "type": "node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [
+        "onValueChange",
+        "onCountryChange"
+      ],
+      "mobile": [
+        "onValueChange"
+      ],
+      "desktop": [
+        "onValueChange"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "outline",
+          "soft",
+          "solid",
+          "minimal"
+        ],
+        "default": "outline"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "success",
+          "warning",
+          "danger"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "comfortable"
+      },
+      "withCountry": {
+        "type": "boolean",
+        "default": true
+      },
+      "defaultCountry": {
+        "type": "string",
+        "default": "EG"
+      },
+      "format": {
+        "type": "enum",
+        "enum": [
+          "national",
+          "international",
+          "e164"
+        ],
+        "default": "international"
+      },
+      "state": {
+        "type": "enum",
+        "enum": [
+          "default",
+          "error",
+          "success",
+          "disabled",
+          "readonly",
+          "loading"
+        ],
+        "default": "default"
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": false
+      },
+      "readonly": {
+        "type": "boolean",
+        "default": false
+      },
+      "placeholder": {
+        "type": "string",
+        "default": "+20 1x xxx xxxx"
+      },
+      "ariaLabel": {
+        "type": "string",
+        "default": "Phone"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "focus",
+      "error",
+      "success",
+      "disabled",
+      "readonly",
+      "loading",
+      "country",
+      "compact",
+      "format-national",
+      "format-intl",
+      "format-e164"
+    ],
+    "a11y": {
+      "requirements": [
+        "Country selector must be keyboard accessible.",
+        "Input must have label/aria-label.",
+        "Announce validation errors."
+      ]
+    }
+  }
+}

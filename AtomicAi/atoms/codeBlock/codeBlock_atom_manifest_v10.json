@@ -1,0 +1,185 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T12:26:02.355835+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "code-block",
+    "goal": "ThemeForest-grade CodeBlock atom for docs, admin tools, and developer-facing dashboards"
+  },
+  "component": {
+    "id": "atom.codeBlock",
+    "name": "Code Block",
+    "type": "atom",
+    "aliases": [
+      "CodeSnippet",
+      "Preformatted",
+      "SyntaxBlock"
+    ],
+    "description": "Code block atom with mono typography, optional line numbers, copy action, and theme personas (dark/light).",
+    "tags": [
+      "ui",
+      "atom",
+      "code",
+      "snippet",
+      "docs",
+      "admin",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "header": {
+        "type": "node",
+        "required": false
+      },
+      "footer": {
+        "type": "node",
+        "required": false
+      },
+      "actions": {
+        "type": "node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [
+        "onCopy"
+      ],
+      "mobile": [
+        "onCopy"
+      ],
+      "desktop": [
+        "onCopy"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "card",
+          "plain",
+          "glass",
+          "terminal"
+        ],
+        "default": "card"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "brand",
+          "inverse"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "language": {
+        "type": "enum",
+        "enum": [
+          "auto",
+          "js",
+          "ts",
+          "json",
+          "html",
+          "css",
+          "bash",
+          "python",
+          "sql"
+        ],
+        "default": "auto"
+      },
+      "lineNumbers": {
+        "type": "boolean",
+        "default": false
+      },
+      "wrap": {
+        "type": "boolean",
+        "default": false
+      },
+      "copyable": {
+        "type": "boolean",
+        "default": true
+      },
+      "maxHeight": {
+        "type": "enum",
+        "enum": [
+          "none",
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "none"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "copyable",
+      "with-header",
+      "with-footer",
+      "line-numbers",
+      "wrap",
+      "rtl",
+      "terminal"
+    ],
+    "a11y": {
+      "requirements": [
+        "Copy button must be accessible and labeled.",
+        "Ensure contrast for code theme meets WCAG.",
+        "If scrollable, preserve keyboard navigation."
+      ]
+    }
+  }
+}

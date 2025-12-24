@@ -1,0 +1,206 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:39:20.992587+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "popover",
+    "goal": "ThemeForest-grade Popover dataset for tooltips, menus, filters, helpers"
+  },
+  "component": {
+    "id": "atom.popover",
+    "name": "Popover",
+    "type": "atom",
+    "aliases": [
+      "PopoverPanel",
+      "FloatingPanel",
+      "ContextPopover",
+      "DropdownPanel"
+    ],
+    "description": "Popover/floating panel supporting placements, arrows, triggers, close behaviors, focus trap and rich content.",
+    "tags": [
+      "ui",
+      "atom",
+      "popover",
+      "overlay",
+      "dropdown",
+      "filters",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "trigger": {
+        "type": "node",
+        "required": true
+      },
+      "content": {
+        "type": "node",
+        "required": true
+      },
+      "arrow": {
+        "type": "node",
+        "required": false
+      },
+      "header": {
+        "type": "node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [
+        "onOpenChange"
+      ],
+      "mobile": [
+        "onOpenChange"
+      ],
+      "desktop": [
+        "onOpenChange"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "card",
+          "soft",
+          "glass",
+          "minimal",
+          "menu"
+        ],
+        "default": "card"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "info",
+          "success",
+          "warning",
+          "danger"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "placement": {
+        "type": "enum",
+        "enum": [
+          "top",
+          "bottom",
+          "left",
+          "right",
+          "top-start",
+          "top-end",
+          "bottom-start",
+          "bottom-end",
+          "left-start",
+          "left-end",
+          "right-start",
+          "right-end"
+        ],
+        "default": "bottom-start"
+      },
+      "trigger": {
+        "type": "enum",
+        "enum": [
+          "click",
+          "hover",
+          "focus",
+          "contextmenu"
+        ],
+        "default": "click"
+      },
+      "withArrow": {
+        "type": "boolean",
+        "default": true
+      },
+      "closeOnOutsideClick": {
+        "type": "boolean",
+        "default": true
+      },
+      "closeOnEsc": {
+        "type": "boolean",
+        "default": true
+      },
+      "focusTrap": {
+        "type": "boolean",
+        "default": true
+      },
+      "offset": {
+        "type": "number",
+        "default": 8
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "closed",
+      "open",
+      "hover",
+      "focus",
+      "disabled",
+      "with-arrow",
+      "menu",
+      "filter-panel"
+    ],
+    "a11y": {
+      "requirements": [
+        "When open, manage focus (focus trap for dialogs); return focus to trigger on close.",
+        "Use aria-expanded and aria-controls on trigger when appropriate.",
+        "Esc closes, click outside closes (configurable)."
+      ]
+    }
+  }
+}

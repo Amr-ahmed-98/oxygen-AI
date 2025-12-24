@@ -1,0 +1,30 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T10:59:44.421659+00:00",
+  "items": [
+    {
+      "id": "atom.tooltip",
+      "type": "atom",
+      "name": "Tooltip",
+      "tags": [
+        "ui",
+        "atom",
+        "tooltip",
+        "popover",
+        "hint",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Tooltip popover hint hover focus click press placements delays interactive a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "tooltip_atom_manifest_v3.json",
+        "tooltip_variants_library_v3.json",
+        "catalog_index_tooltip_pack_v3.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3167 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2025-12-24T17:08:03.167Z",
+  "totalItems": 77,
+  "items": [
+    {
+      "id": "atom.alert",
+      "type": "atom",
+      "name": "Alert / Banner",
+      "tags": [
+        "ui",
+        "atom",
+        "alert",
+        "banner",
+        "feedback",
+        "status",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Alert / Banner ui atom alert banner feedback status a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "alert_atom_manifest_v8.json",
+        "alert_variants_library_v8.json",
+        "catalog_index_alert_pack_v8.json"
+      ],
+      "source": "alert\\catalog_index_alert_pack_v8.json",
+      "atomName": "alert"
+    },
+    {
+      "id": "atom.avatar",
+      "type": "atom",
+      "name": "Avatar",
+      "tags": [
+        "ui",
+        "atom",
+        "avatar",
+        "user",
+        "status",
+        "presence",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Avatar user entity team stack presence online busy away verified locked rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "avatar_atom_manifest_v4.json",
+        "avatar_variants_library_v4.json",
+        "catalog_index_avatar_pack_v4.json"
+      ],
+      "source": "avatar\\catalog_index_avatar_pack_v4.json",
+      "atomName": "avatar"
+    },
+    {
+      "id": "atom.avatar",
+      "type": "atom",
+      "name": "Avatar",
+      "tags": [
+        "ui",
+        "atom",
+        "avatar",
+        "user",
+        "presence",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Avatar user initials image status ring group rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "avatar_atom_manifest_v5.json",
+        "avatar_variants_library_v5.json",
+        "catalog_index_avatar_pack_v5.json"
+      ],
+      "source": "avatar\\catalog_index_avatar_pack_v5.json",
+      "atomName": "avatar"
+    },
+    {
+      "id": "atom.badge",
+      "type": "atom",
+      "name": "Badge / Tag / Chip",
+      "tags": [
+        "ui",
+        "atom",
+        "badge",
+        "tag",
+        "chip",
+        "status",
+        "filters",
+        "erp",
+        "saas",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Badge tag chip status pill filter chip removable selectable counter avatar category label rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "badge_atom_manifest_v3.json",
+        "badge_variants_library_v3.json",
+        "catalog_index_badge_pack_v3.json"
+      ],
+      "source": "badge\\catalog_index_badge_pack_v3.json",
+      "atomName": "badge"
+    },
+    {
+      "id": "atom.breadcrumb",
+      "type": "atom",
+      "name": "Breadcrumb",
+      "tags": [
+        "ui",
+        "atom",
+        "breadcrumb",
+        "navigation",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Breadcrumb navigation trail chevron collapse rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "breadcrumb_atom_manifest_v4.json",
+        "breadcrumb_variants_library_v4.json",
+        "catalog_index_breadcrumb_pack_v4.json"
+      ],
+      "source": "breadcrumb\\catalog_index_breadcrumb_pack_v4.json",
+      "atomName": "breadcrumb"
+    },
+    {
+      "id": "atom.button",
+      "type": "atom",
+      "name": "Button",
+      "tags": [
+        "accessibility",
+        "action",
+        "atom",
+        "button",
+        "cta",
+        "desktop",
+        "enterprise",
+        "erp",
+        "family:button",
+        "form",
+        "mobile",
+        "navigation",
+        "performance",
+        "rtl",
+        "saas",
+        "security",
+        "submit",
+        "subtype:base",
+        "themeable",
+        "tokens",
+        "ui",
+        "web"
+      ],
+      "embeddingText": "Button Universal action control supporting clicks/press, navigation, loading/disabled states, icons, toggles, menus, and analytics hooks. variants states a11y rtl web mobile desktop tokens personas",
+      "artifactRefs": [
+        "button_family_manifest_v2.json",
+        "button_family_variants_library_v2.json"
+      ],
+      "source": "button\\catalog_index_button_family_pack_v2.json",
+      "atomName": "button"
+    },
+    {
+      "id": "atom.iconButton",
+      "type": "atom",
+      "name": "IconButton",
+      "tags": [
+        "a11y",
+        "accessibility",
+        "action",
+        "atom",
+        "button",
+        "compact",
+        "cta",
+        "desktop",
+        "enterprise",
+        "erp",
+        "family:button",
+        "form",
+        "mobile",
+        "navigation",
+        "performance",
+        "rtl",
+        "saas",
+        "security",
+        "submit",
+        "subtype:icon",
+        "themeable",
+        "tokens",
+        "toolbar",
+        "ui",
+        "web"
+      ],
+      "embeddingText": "IconButton Icon-only button for toolbars and compact actions. Requires ariaLabel. variants states a11y rtl web mobile desktop tokens personas",
+      "artifactRefs": [
+        "button_family_manifest_v2.json",
+        "button_family_variants_library_v2.json"
+      ],
+      "source": "button\\catalog_index_button_family_pack_v2.json",
+      "atomName": "button"
+    },
+    {
+      "id": "atom.fab",
+      "type": "atom",
+      "name": "FloatingActionButton",
+      "tags": [
+        "accessibility",
+        "action",
+        "atom",
+        "button",
+        "cta",
+        "desktop",
+        "enterprise",
+        "erp",
+        "family:button",
+        "form",
+        "mobile",
+        "navigation",
+        "overlay",
+        "performance",
+        "primary-action",
+        "rtl",
+        "saas",
+        "security",
+        "submit",
+        "subtype:fab",
+        "themeable",
+        "tokens",
+        "ui",
+        "web"
+      ],
+      "embeddingText": "FloatingActionButton Floating action button for primary contextual actions on mobile/desktop shells. variants states a11y rtl web mobile desktop tokens personas",
+      "artifactRefs": [
+        "button_family_manifest_v2.json",
+        "button_family_variants_library_v2.json"
+      ],
+      "source": "button\\catalog_index_button_family_pack_v2.json",
+      "atomName": "button"
+    },
+    {
+      "id": "atom.toggleButton",
+      "type": "atom",
+      "name": "ToggleButton",
+      "tags": [
+        "accessibility",
+        "action",
+        "atom",
+        "button",
+        "cta",
+        "desktop",
+        "enterprise",
+        "erp",
+        "family:button",
+        "filters",
+        "form",
+        "mobile",
+        "navigation",
+        "performance",
+        "rtl",
+        "saas",
+        "security",
+        "segmented",
+        "stateful",
+        "submit",
+        "subtype:toggle",
+        "themeable",
+        "tokens",
+        "ui",
+        "web"
+      ],
+      "embeddingText": "ToggleButton Button with pressed state for toggles, view switches, and filters. variants states a11y rtl web mobile desktop tokens personas",
+      "artifactRefs": [
+        "button_family_manifest_v2.json",
+        "button_family_variants_library_v2.json"
+      ],
+      "source": "button\\catalog_index_button_family_pack_v2.json",
+      "atomName": "button"
+    },
+    {
+      "id": "atom.socialButton",
+      "type": "atom",
+      "name": "SocialButton",
+      "tags": [
+        "accessibility",
+        "action",
+        "atom",
+        "auth",
+        "button",
+        "cta",
+        "desktop",
+        "enterprise",
+        "erp",
+        "family:button",
+        "form",
+        "mobile",
+        "navigation",
+        "oauth",
+        "performance",
+        "rtl",
+        "saas",
+        "security",
+        "submit",
+        "subtype:social",
+        "themeable",
+        "tokens",
+        "ui",
+        "web"
+      ],
+      "embeddingText": "SocialButton Provider-branded sign-in button with consistent spacing and icons. variants states a11y rtl web mobile desktop tokens personas",
+      "artifactRefs": [
+        "button_family_manifest_v2.json",
+        "button_family_variants_library_v2.json"
+      ],
+      "source": "button\\catalog_index_button_family_pack_v2.json",
+      "atomName": "button"
+    },
+    {
+      "id": "atom.uploadButton",
+      "type": "atom",
+      "name": "UploadButton",
+      "tags": [
+        "accessibility",
+        "action",
+        "atom",
+        "attachments",
+        "button",
+        "cta",
+        "desktop",
+        "enterprise",
+        "erp",
+        "family:button",
+        "files",
+        "form",
+        "mobile",
+        "navigation",
+        "performance",
+        "rtl",
+        "saas",
+        "security",
+        "submit",
+        "subtype:upload",
+        "themeable",
+        "tokens",
+        "ui",
+        "web"
+      ],
+      "embeddingText": "UploadButton Button that triggers file picking (web) or file selection flow (mobile/desktop). variants states a11y rtl web mobile desktop tokens personas",
+      "artifactRefs": [
+        "button_family_manifest_v2.json",
+        "button_family_variants_library_v2.json"
+      ],
+      "source": "button\\catalog_index_button_family_pack_v2.json",
+      "atomName": "button"
+    },
+    {
+      "id": "atom.calendar",
+      "type": "atom",
+      "name": "Calendar",
+      "tags": [
+        "ui",
+        "atom",
+        "calendar",
+        "schedule",
+        "dashboard",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Calendar ui atom calendar schedule dashboard erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "calendar_atom_manifest_v9.json",
+        "calendar_variants_library_v9.json",
+        "catalog_index_calendar_pack_v9.json"
+      ],
+      "source": "calendar\\catalog_index_calendar_pack_v9.json",
+      "atomName": "calendar"
+    },
+    {
+      "id": "atom.checkbox",
+      "type": "atom",
+      "name": "Checkbox",
+      "tags": [
+        "ui",
+        "atom",
+        "checkbox",
+        "forms",
+        "tables",
+        "permissions",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Checkbox indeterminate mixed table selection permissions rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "checkbox_atom_manifest_v4.json",
+        "checkbox_variants_library_v4.json",
+        "catalog_index_checkbox_pack_v4.json"
+      ],
+      "source": "checkbox\\catalog_index_checkbox_pack_v4.json",
+      "atomName": "checkbox"
+    },
+    {
+      "id": "atom.circularProgress",
+      "type": "atom",
+      "name": "Circular Progress",
+      "tags": [
+        "ui",
+        "atom",
+        "circular-progress",
+        "kpi",
+        "loading",
+        "charts",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Circular progress ring donut kpi loader segmented rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "circularProgress_atom_manifest_v4.json",
+        "circularProgress_variants_library_v4.json",
+        "catalog_index_circularProgress_pack_v4.json"
+      ],
+      "source": "circular-progress\\catalog_index_circularProgress_pack_v4.json",
+      "atomName": "circular-progress"
+    },
+    {
+      "id": "atom.codeBlock",
+      "type": "atom",
+      "name": "Code Block",
+      "tags": [
+        "ui",
+        "atom",
+        "code",
+        "snippet",
+        "docs",
+        "admin",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Code Block ui atom code snippet docs admin a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "codeBlock_atom_manifest_v10.json",
+        "codeBlock_variants_library_v10.json",
+        "catalog_index_codeBlock_pack_v10.json"
+      ],
+      "source": "codeBlock\\catalog_index_codeBlock_pack_v10.json",
+      "atomName": "codeBlock"
+    },
+    {
+      "id": "atom.combobox",
+      "type": "atom",
+      "name": "Combobox / Autocomplete",
+      "tags": [
+        "ui",
+        "atom",
+        "combobox",
+        "autocomplete",
+        "select",
+        "search",
+        "filters",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Combobox / Autocomplete ui atom combobox autocomplete select search filters erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "combobox_atom_manifest_v7.json",
+        "combobox_variants_library_v7.json",
+        "catalog_index_combobox_pack_v7.json"
+      ],
+      "source": "combobox\\catalog_index_combobox_pack_v7.json",
+      "atomName": "combobox"
+    },
+    {
+      "id": "atom.currencyInput",
+      "type": "atom",
+      "name": "Currency Input",
+      "tags": [
+        "ui",
+        "atom",
+        "input",
+        "currency",
+        "money",
+        "billing",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Currency Input ui atom input currency money billing erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "currencyInput_atom_manifest_v8.json",
+        "currencyInput_variants_library_v8.json",
+        "catalog_index_currencyInput_pack_v8.json"
+      ],
+      "source": "currencyInput\\catalog_index_currencyInput_pack_v8.json",
+      "atomName": "currencyInput"
+    },
+    {
+      "id": "atom.datePicker",
+      "type": "atom",
+      "name": "Date Picker",
+      "tags": [
+        "ui",
+        "atom",
+        "date",
+        "datepicker",
+        "calendar",
+        "forms",
+        "filters",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Date Picker ui atom date datepicker calendar forms filters erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "datePicker_atom_manifest_v9.json",
+        "datePicker_variants_library_v9.json",
+        "catalog_index_datePicker_pack_v9.json"
+      ],
+      "source": "datePicker\\catalog_index_datePicker_pack_v9.json",
+      "atomName": "datePicker"
+    },
+    {
+      "id": "atom.dateRange",
+      "type": "atom",
+      "name": "DateRange",
+      "tags": [
+        "ui",
+        "atom",
+        "date-range",
+        "datepicker",
+        "filters",
+        "reports",
+        "booking",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Date range picker filters reports booking timesheets audit logs presets popover modal drawer rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "dateRange_atom_manifest_v3.json",
+        "dateRange_variants_library_v3.json",
+        "catalog_index_dateRange_pack_v3.json"
+      ],
+      "source": "dateRange\\catalog_index_dateRange_pack_v3.json",
+      "atomName": "dateRange"
+    },
+    {
+      "id": "atom.dateTimePicker",
+      "type": "atom",
+      "name": "DateTime Picker",
+      "tags": [
+        "ui",
+        "atom",
+        "datetime",
+        "datepicker",
+        "timepicker",
+        "scheduling",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "DateTime Picker ui atom datetime datepicker timepicker scheduling erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "dateTimePicker_atom_manifest_v9.json",
+        "dateTimePicker_variants_library_v9.json",
+        "catalog_index_dateTimePicker_pack_v9.json"
+      ],
+      "source": "dateTimePicker\\catalog_index_dateTimePicker_pack_v9.json",
+      "atomName": "dateTimePicker"
+    },
+    {
+      "id": "atom.divider",
+      "type": "atom",
+      "name": "Divider / Separator",
+      "tags": [
+        "ui",
+        "atom",
+        "divider",
+        "separator",
+        "layout",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Divider separator hr rule labeled dashed gradient sidebar rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "divider_atom_manifest_v4.json",
+        "divider_variants_library_v4.json",
+        "catalog_index_divider_pack_v4.json"
+      ],
+      "source": "divider\\catalog_index_divider_pack_v4.json",
+      "atomName": "divider"
+    },
+    {
+      "id": "atom.divider",
+      "type": "atom",
+      "name": "Divider",
+      "tags": [
+        "ui",
+        "atom",
+        "divider",
+        "separator",
+        "layout",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Divider separator hr inset label icon rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "divider_atom_manifest_v5.json",
+        "divider_variants_library_v5.json",
+        "catalog_index_divider_pack_v5.json"
+      ],
+      "source": "divider\\catalog_index_divider_pack_v5.json",
+      "atomName": "divider"
+    },
+    {
+      "id": "atom.drawer",
+      "type": "atom",
+      "name": "Drawer",
+      "tags": [
+        "ui",
+        "atom",
+        "drawer",
+        "overlay",
+        "slideover",
+        "offcanvas",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Drawer slideover offcanvas sheet dialog rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "drawer_atom_manifest_v6.json",
+        "drawer_variants_library_v6.json",
+        "catalog_index_drawer_pack_v6.json"
+      ],
+      "source": "drawer\\catalog_index_drawer_pack_v6.json",
+      "atomName": "drawer"
+    },
+    {
+      "id": "atom.fileUpload",
+      "type": "atom",
+      "name": "File Upload",
+      "tags": [
+        "ui",
+        "atom",
+        "upload",
+        "file",
+        "dropzone",
+        "attachments",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "File upload dropzone attachments preview progress validation rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "fileUpload_atom_manifest_v5.json",
+        "fileUpload_variants_library_v5.json",
+        "catalog_index_fileUpload_pack_v5.json"
+      ],
+      "source": "fileUpload\\catalog_index_fileUpload_pack_v5.json",
+      "atomName": "fileUpload"
+    },
+    {
+      "id": "atom.heading",
+      "type": "atom",
+      "name": "Heading",
+      "tags": [
+        "ui",
+        "atom",
+        "typography",
+        "heading",
+        "content",
+        "saas",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Heading ui atom typography heading content saas erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "heading_atom_manifest_v10.json",
+        "heading_variants_library_v10.json",
+        "catalog_index_heading_pack_v10.json"
+      ],
+      "source": "heading\\catalog_index_heading_pack_v10.json",
+      "atomName": "heading"
+    },
+    {
+      "id": "atom.helperText",
+      "type": "atom",
+      "name": "Helper Text",
+      "tags": [
+        "ui",
+        "atom",
+        "helper",
+        "validation",
+        "forms",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Helper Text ui atom helper validation forms erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "helperText_atom_manifest_v10.json",
+        "helperText_variants_library_v10.json",
+        "catalog_index_helperText_pack_v10.json"
+      ],
+      "source": "helperText\\catalog_index_helperText_pack_v10.json",
+      "atomName": "helperText"
+    },
+    {
+      "id": "atom.icon",
+      "type": "atom",
+      "name": "Icon",
+      "tags": [
+        "ui",
+        "atom",
+        "icon",
+        "glyph",
+        "svg",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Icon ui atom icon glyph svg a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "icon_atom_manifest_v7.json",
+        "icon_variants_library_v7.json",
+        "catalog_index_icon_pack_v7.json"
+      ],
+      "source": "icon\\catalog_index_icon_pack_v7.json",
+      "atomName": "icon"
+    },
+    {
+      "id": "atom.iconButton",
+      "type": "atom",
+      "name": "Icon Button",
+      "tags": [
+        "ui",
+        "atom",
+        "button",
+        "iconButton",
+        "actions",
+        "toolbar",
+        "table",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Icon Button ui atom button iconButton actions toolbar table erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "iconButton_atom_manifest_v7.json",
+        "iconButton_variants_library_v7.json",
+        "catalog_index_iconButton_pack_v7.json"
+      ],
+      "source": "iconButton\\catalog_index_iconButton_pack_v7.json",
+      "atomName": "iconButton"
+    },
+    {
+      "id": "atom.image",
+      "type": "atom",
+      "name": "Image",
+      "tags": [
+        "ui",
+        "atom",
+        "image",
+        "media",
+        "responsive",
+        "lazy",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Image ui atom image media responsive lazy a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "image_atom_manifest_v8.json",
+        "image_variants_library_v8.json",
+        "catalog_index_image_pack_v8.json"
+      ],
+      "source": "image\\catalog_index_image_pack_v8.json",
+      "atomName": "image"
+    },
+    {
+      "id": "atom.kbd",
+      "type": "atom",
+      "name": "KBD",
+      "tags": [
+        "ui",
+        "atom",
+        "kbd",
+        "shortcut",
+        "keyboard",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "KBD keyboard shortcut hotkey command control hint rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "kbd_atom_manifest_v5.json",
+        "kbd_variants_library_v5.json",
+        "catalog_index_kbd_pack_v5.json"
+      ],
+      "source": "kbd\\catalog_index_kbd_pack_v5.json",
+      "atomName": "kbd"
+    },
+    {
+      "id": "atom.label",
+      "type": "atom",
+      "name": "Label",
+      "tags": [
+        "ui",
+        "atom",
+        "label",
+        "forms",
+        "metadata",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Label ui atom label forms metadata erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "label_atom_manifest_v10.json",
+        "label_variants_library_v10.json",
+        "catalog_index_label_pack_v10.json"
+      ],
+      "source": "label\\catalog_index_label_pack_v10.json",
+      "atomName": "label"
+    },
+    {
+      "id": "atom.linearProgress",
+      "type": "atom",
+      "name": "Linear Progress",
+      "tags": [
+        "ui",
+        "atom",
+        "progress",
+        "linear",
+        "loading",
+        "kpi",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Linear progress bar KPI upload segmented indeterminate rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "linearProgress_atom_manifest_v6.json",
+        "linearProgress_variants_library_v6.json",
+        "catalog_index_linearProgress_pack_v6.json"
+      ],
+      "source": "linearProgress\\catalog_index_linearProgress_pack_v6.json",
+      "atomName": "linearProgress"
+    },
+    {
+      "id": "atom.link",
+      "type": "atom",
+      "name": "Link",
+      "tags": [
+        "ui",
+        "atom",
+        "link",
+        "navigation",
+        "content",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Link ui atom link navigation content a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "link_atom_manifest_v10.json",
+        "link_variants_library_v10.json",
+        "catalog_index_link_pack_v10.json"
+      ],
+      "source": "link\\catalog_index_link_pack_v10.json",
+      "atomName": "link"
+    },
+    {
+      "id": "atom.loading",
+      "type": "atom",
+      "name": "Spinner / Skeleton",
+      "tags": [
+        "ui",
+        "atom",
+        "spinner",
+        "skeleton",
+        "loading",
+        "states",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Loading spinner skeleton shimmer progress reduced motion a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "loading_atom_manifest_v4.json",
+        "loading_variants_library_v4.json",
+        "catalog_index_loading_pack_v4.json"
+      ],
+      "source": "loading\\catalog_index_loading_pack_v4.json",
+      "atomName": "loading"
+    },
+    {
+      "id": "atom.modal",
+      "type": "atom",
+      "name": "Modal / Dialog",
+      "tags": [
+        "ui",
+        "atom",
+        "modal",
+        "dialog",
+        "overlay",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Modal / Dialog ui atom modal dialog overlay erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "modal_atom_manifest_v7.json",
+        "modal_variants_library_v7.json",
+        "catalog_index_modal_pack_v7.json"
+      ],
+      "source": "modal\\catalog_index_modal_pack_v7.json",
+      "atomName": "modal"
+    },
+    {
+      "id": "atom.numberInput",
+      "type": "atom",
+      "name": "Number Input",
+      "tags": [
+        "ui",
+        "atom",
+        "input",
+        "number",
+        "forms",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Number Input ui atom input number forms erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "numberInput_atom_manifest_v8.json",
+        "numberInput_variants_library_v8.json",
+        "catalog_index_numberInput_pack_v8.json"
+      ],
+      "source": "numberInput\\catalog_index_numberInput_pack_v8.json",
+      "atomName": "numberInput"
+    },
+    {
+      "id": "atom.otpInput",
+      "type": "atom",
+      "name": "OTP / Pin Input",
+      "tags": [
+        "ui",
+        "atom",
+        "input",
+        "otp",
+        "pin",
+        "auth",
+        "security",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "OTP / Pin Input ui atom input otp pin auth security a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "otpInput_atom_manifest_v8.json",
+        "otpInput_variants_library_v8.json",
+        "catalog_index_otpInput_pack_v8.json"
+      ],
+      "source": "otpInput\\catalog_index_otpInput_pack_v8.json",
+      "atomName": "otpInput"
+    },
+    {
+      "id": "atom.pagination",
+      "type": "atom",
+      "name": "Pagination",
+      "tags": [
+        "ui",
+        "atom",
+        "pagination",
+        "tables",
+        "lists",
+        "search",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Pagination pager table search page size jump rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "pagination_atom_manifest_v4.json",
+        "pagination_variants_library_v4.json",
+        "catalog_index_pagination_pack_v4.json"
+      ],
+      "source": "pagination\\catalog_index_pagination_pack_v4.json",
+      "atomName": "pagination"
+    },
+    {
+      "id": "atom.passwordInput",
+      "type": "atom",
+      "name": "Password Input",
+      "tags": [
+        "ui",
+        "atom",
+        "input",
+        "password",
+        "auth",
+        "security",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Password Input ui atom input password auth security a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "passwordInput_atom_manifest_v8.json",
+        "passwordInput_variants_library_v8.json",
+        "catalog_index_passwordInput_pack_v8.json"
+      ],
+      "source": "passwordInput\\catalog_index_passwordInput_pack_v8.json",
+      "atomName": "passwordInput"
+    },
+    {
+      "id": "atom.phoneInput",
+      "type": "atom",
+      "name": "Phone Input",
+      "tags": [
+        "ui",
+        "atom",
+        "input",
+        "phone",
+        "mask",
+        "forms",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Phone Input ui atom input phone mask forms erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "phoneInput_atom_manifest_v8.json",
+        "phoneInput_variants_library_v8.json",
+        "catalog_index_phoneInput_pack_v8.json"
+      ],
+      "source": "phoneInput\\catalog_index_phoneInput_pack_v8.json",
+      "atomName": "phoneInput"
+    },
+    {
+      "id": "atom.popover",
+      "type": "atom",
+      "name": "Popover",
+      "tags": [
+        "ui",
+        "atom",
+        "popover",
+        "overlay",
+        "dropdown",
+        "filters",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Popover overlay floating panel menu filters placements rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "popover_atom_manifest_v6.json",
+        "popover_variants_library_v6.json",
+        "catalog_index_popover_pack_v6.json"
+      ],
+      "source": "popover\\catalog_index_popover_pack_v6.json",
+      "atomName": "popover"
+    },
+    {
+      "id": "atom.progress",
+      "type": "atom",
+      "name": "Progress Bar",
+      "tags": [
+        "ui",
+        "atom",
+        "progress",
+        "loading",
+        "kpi",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Progress bar linear kpi striped gradient indeterminate markers rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "progress_atom_manifest_v4.json",
+        "progress_variants_library_v4.json",
+        "catalog_index_progress_pack_v4.json"
+      ],
+      "source": "progress\\catalog_index_progress_pack_v4.json",
+      "atomName": "progress"
+    },
+    {
+      "id": "atom.radio",
+      "type": "atom",
+      "name": "Radio",
+      "tags": [
+        "ui",
+        "atom",
+        "radio",
+        "forms",
+        "settings",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Radio button single choice group settings billing rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "radio_atom_manifest_v4.json",
+        "radio_variants_library_v4.json",
+        "catalog_index_radio_pack_v4.json"
+      ],
+      "source": "radio\\catalog_index_radio_pack_v4.json",
+      "atomName": "radio"
+    },
+    {
+      "id": "atom.searchInput",
+      "type": "atom",
+      "name": "Search Input",
+      "tags": [
+        "ui",
+        "atom",
+        "input",
+        "search",
+        "toolbar",
+        "tables",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Search Input ui atom input search toolbar tables erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "searchInput_atom_manifest_v8.json",
+        "searchInput_variants_library_v8.json",
+        "catalog_index_searchInput_pack_v8.json"
+      ],
+      "source": "searchInput\\catalog_index_searchInput_pack_v8.json",
+      "atomName": "searchInput"
+    },
+    {
+      "id": "atom.select",
+      "type": "atom",
+      "name": "Select",
+      "tags": [
+        "ui",
+        "atom",
+        "select",
+        "dropdown",
+        "combobox",
+        "picker",
+        "forms",
+        "erp",
+        "saas",
+        "filters",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop",
+        "virtualization"
+      ],
+      "embeddingText": "Select dropdown combobox picker multi-select searchable async remote options grouped virtualization erp filters forms web mobile desktop rtl a11y tokens",
+      "artifactRefs": [
+        "select_atom_manifest_v2.json",
+        "select_variants_library_v2.json",
+        "catalog_index_select_pack_v2.json"
+      ],
+      "source": "select\\catalog_index_select_pack_v2.json",
+      "atomName": "select"
+    },
+    {
+      "id": "atom.checkbox",
+      "type": "atom",
+      "name": "Checkbox",
+      "tags": [
+        "ui",
+        "atom",
+        "checkbox",
+        "forms",
+        "erp",
+        "datatable",
+        "bulk-actions",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Checkbox tri-state indeterminate select all datatable bulk selection erp forms settings a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "checkbox_atom_manifest_v2.json",
+        "checkbox_variants_library_v2.json",
+        "catalog_index_checkbox_pack_v2.json"
+      ],
+      "source": "selection-controls-v2\\checkbox\\catalog_index_checkbox_pack_v2.json",
+      "atomName": "selection-controls-v2\\checkbox"
+    },
+    {
+      "id": "atom.radio",
+      "type": "atom",
+      "name": "Radio",
+      "tags": [
+        "ui",
+        "atom",
+        "radio",
+        "forms",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Radio option single choice forms filters erp settings a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "radio_atom_manifest_v2.json",
+        "radio_variants_library_v2.json",
+        "catalog_index_radio_pack_v2.json"
+      ],
+      "source": "selection-controls-v2\\radio\\catalog_index_radio_pack_v2.json",
+      "atomName": "selection-controls-v2\\radio"
+    },
+    {
+      "id": "atom.switch",
+      "type": "atom",
+      "name": "Switch",
+      "tags": [
+        "ui",
+        "atom",
+        "switch",
+        "toggle",
+        "settings",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Switch toggle settings feature flags on off forms erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "switch_atom_manifest_v2.json",
+        "switch_variants_library_v2.json",
+        "catalog_index_switch_pack_v2.json"
+      ],
+      "source": "selection-controls-v2\\switch\\catalog_index_switch_pack_v2.json",
+      "atomName": "selection-controls-v2\\switch"
+    },
+    {
+      "id": "atom.skeleton",
+      "type": "atom",
+      "name": "Skeleton",
+      "tags": [
+        "ui",
+        "atom",
+        "skeleton",
+        "loading",
+        "states",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Skeleton loading shimmer pulse table form card rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "skeleton_atom_manifest_v5.json",
+        "skeleton_variants_library_v5.json",
+        "catalog_index_skeleton_pack_v5.json"
+      ],
+      "source": "skeleton\\catalog_index_skeleton_pack_v5.json",
+      "atomName": "skeleton"
+    },
+    {
+      "id": "atom.slider",
+      "type": "atom",
+      "name": "Slider",
+      "tags": [
+        "ui",
+        "atom",
+        "slider",
+        "range",
+        "filters",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Slider range price filter marks tooltip rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "slider_atom_manifest_v4.json",
+        "slider_variants_library_v4.json",
+        "catalog_index_slider_pack_v4.json"
+      ],
+      "source": "slider\\catalog_index_slider_pack_v4.json",
+      "atomName": "slider"
+    },
+    {
+      "id": "atom.stepper",
+      "type": "atom",
+      "name": "Stepper",
+      "tags": [
+        "ui",
+        "atom",
+        "stepper",
+        "wizard",
+        "navigation",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Stepper wizard steps onboarding vertical horizontal rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "stepper_atom_manifest_v4.json",
+        "stepper_variants_library_v4.json",
+        "catalog_index_stepper_pack_v4.json"
+      ],
+      "source": "stepper\\catalog_index_stepper_pack_v4.json",
+      "atomName": "stepper"
+    },
+    {
+      "id": "atom.switch",
+      "type": "atom",
+      "name": "Switch / Toggle",
+      "tags": [
+        "ui",
+        "atom",
+        "switch",
+        "toggle",
+        "settings",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Switch toggle settings feature flag checkbox role switch rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "switch_atom_manifest_v4.json",
+        "switch_variants_library_v4.json",
+        "catalog_index_switch_pack_v4.json"
+      ],
+      "source": "switch\\catalog_index_switch_pack_v4.json",
+      "atomName": "switch"
+    },
+    {
+      "id": "atom.switch",
+      "type": "atom",
+      "name": "Switch",
+      "tags": [
+        "ui",
+        "atom",
+        "switch",
+        "toggle",
+        "settings",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Switch toggle settings approvals a11y role switch rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "switch_atom_manifest_v6.json",
+        "switch_variants_library_v6.json",
+        "catalog_index_switch_pack_v6.json"
+      ],
+      "source": "switch\\catalog_index_switch_pack_v6.json",
+      "atomName": "switch"
+    },
+    {
+      "id": "atom.tabs",
+      "type": "atom",
+      "name": "Tabs",
+      "tags": [
+        "ui",
+        "atom",
+        "tabs",
+        "navigation",
+        "erp",
+        "dashboards",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Tabs tablist segmented pills underline scrollable overflow dropdown rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "tabs_atom_manifest_v4.json",
+        "tabs_variants_library_v4.json",
+        "catalog_index_tabs_pack_v4.json"
+      ],
+      "source": "tabs\\catalog_index_tabs_pack_v4.json",
+      "atomName": "tabs"
+    },
+    {
+      "id": "atom.tabs",
+      "type": "atom",
+      "name": "Tabs",
+      "tags": [
+        "ui",
+        "atom",
+        "tabs",
+        "navigation",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Tabs tablist underline pills segmented scrollable vertical rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "tabs_atom_manifest_v6.json",
+        "tabs_variants_library_v6.json",
+        "catalog_index_tabs_pack_v6.json"
+      ],
+      "source": "tabs\\catalog_index_tabs_pack_v6.json",
+      "atomName": "tabs"
+    },
+    {
+      "id": "atom.text",
+      "type": "atom",
+      "name": "Text",
+      "tags": [
+        "ui",
+        "atom",
+        "typography",
+        "text",
+        "content",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Text ui atom typography text content erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "text_atom_manifest_v10.json",
+        "text_variants_library_v10.json",
+        "catalog_index_text_pack_v10.json"
+      ],
+      "source": "text\\catalog_index_text_pack_v10.json",
+      "atomName": "text"
+    },
+    {
+      "id": "atom.textarea",
+      "type": "atom",
+      "name": "Textarea",
+      "tags": [
+        "ui",
+        "atom",
+        "textarea",
+        "multiline",
+        "forms",
+        "erp",
+        "saas",
+        "notes",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Textarea multiline notes comments ticketing crm long description counter autosize toolbar erp forms a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "textarea_atom_manifest_v3.json",
+        "textarea_variants_library_v3.json",
+        "catalog_index_textarea_pack_v3.json"
+      ],
+      "source": "textarea\\catalog_index_textarea_pack_v3.json",
+      "atomName": "textarea"
+    },
+    {
+      "id": "atom.textField",
+      "type": "atom",
+      "name": "TextField",
+      "tags": [
+        "ui",
+        "atom",
+        "input",
+        "textfield",
+        "forms",
+        "erp",
+        "saas",
+        "validation",
+        "a11y",
+        "rtl",
+        "tokens",
+        "mobile",
+        "desktop",
+        "web",
+        "search",
+        "password",
+        "mask"
+      ],
+      "embeddingText": "TextField Input form validation label helper error prefix suffix icons clear password search masking otp enterprise erp saas web mobile desktop tokens rtl a11y",
+      "artifactRefs": [
+        "textField_atom_manifest_v2.json",
+        "textField_variants_library_v2.json",
+        "catalog_index_textField_pack_v2.json"
+      ],
+      "source": "textField\\catalog_index_textField_pack_v2.json",
+      "atomName": "textField"
+    },
+    {
+      "id": "atom.timePicker",
+      "type": "atom",
+      "name": "Time Picker",
+      "tags": [
+        "ui",
+        "atom",
+        "time",
+        "timepicker",
+        "clock",
+        "forms",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Time Picker ui atom time timepicker clock forms erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "timePicker_atom_manifest_v9.json",
+        "timePicker_variants_library_v9.json",
+        "catalog_index_timePicker_pack_v9.json"
+      ],
+      "source": "timePicker\\catalog_index_timePicker_pack_v9.json",
+      "atomName": "timePicker"
+    },
+    {
+      "id": "atom.toast",
+      "type": "atom",
+      "name": "Toast / Alert",
+      "tags": [
+        "ui",
+        "atom",
+        "toast",
+        "alert",
+        "notification",
+        "snackbar",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop",
+        "erp"
+      ],
+      "embeddingText": "Toast alert snackbar banner inline notification success error warning info actions progress stacking a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "toast_atom_manifest_v3.json",
+        "toast_variants_library_v3.json",
+        "catalog_index_toast_pack_v3.json"
+      ],
+      "source": "toast\\catalog_index_toast_pack_v3.json",
+      "atomName": "toast"
+    },
+    {
+      "id": "atom.tooltip",
+      "type": "atom",
+      "name": "Tooltip",
+      "tags": [
+        "ui",
+        "atom",
+        "tooltip",
+        "popover",
+        "hint",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Tooltip popover hint hover focus click press placements delays interactive a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "tooltip_atom_manifest_v3.json",
+        "tooltip_variants_library_v3.json",
+        "catalog_index_tooltip_pack_v3.json"
+      ],
+      "source": "tooltip\\catalog_index_tooltip_pack_v3.json",
+      "atomName": "tooltip"
+    },
+    {
+      "id": "hero.split.image",
+      "name": "Hero Split Image",
+      "description": "Hero section with split layout and image",
+      "component": "Hero",
+      "props": {
+        "variant": "split",
+        "imageUrl": true
+      },
+      "tags": [
+        "hero",
+        "banner",
+        "landing",
+        "marketing"
+      ],
+      "type": "block",
+      "source": "catalog/blocks/marketing-blocks.json"
+    },
+    {
+      "id": "hero.centered",
+      "name": "Hero Centered",
+      "description": "Centered hero section",
+      "component": "Hero",
+      "props": {
+        "variant": "centered"
+      },
+      "tags": [
+        "hero",
+        "banner",
+        "landing",
+        "marketing"
+      ],
+      "type": "block",
+      "source": "catalog/blocks/marketing-blocks.json"
+    },
+    {
+      "id": "pricing.cards",
+      "name": "Pricing Cards",
+      "description": "Pricing plans with cards layout",
+      "component": "Pricing",
+      "tags": [
+        "pricing",
+        "plans",
+        "marketing"
+      ],
+      "type": "block",
+      "source": "catalog/blocks/marketing-blocks.json"
+    },
+    {
+      "id": "features.grid",
+      "name": "Features Grid",
+      "description": "Features section with grid layout",
+      "component": "Features",
+      "props": {
+        "columns": [
+          2,
+          3,
+          4
+        ]
+      },
+      "tags": [
+        "features",
+        "benefits",
+        "marketing"
+      ],
+      "type": "block",
+      "source": "catalog/blocks/marketing-blocks.json"
+    },
+    {
+      "id": "testimonials.cards",
+      "name": "Testimonials Cards",
+      "description": "Customer testimonials with cards",
+      "component": "Testimonials",
+      "tags": [
+        "testimonials",
+        "reviews",
+        "marketing"
+      ],
+      "type": "block",
+      "source": "catalog/blocks/marketing-blocks.json"
+    },
+    {
+      "id": "faq.accordion",
+      "name": "FAQ Accordion",
+      "description": "FAQ section with accordion",
+      "component": "FAQ",
+      "tags": [
+        "faq",
+        "questions",
+        "marketing"
+      ],
+      "type": "block",
+      "source": "catalog/blocks/marketing-blocks.json"
+    },
+    {
+      "id": "cta.strip",
+      "name": "CTA Strip",
+      "description": "Call to action banner",
+      "component": "CTA",
+      "tags": [
+        "cta",
+        "call-to-action",
+        "marketing"
+      ],
+      "type": "block",
+      "source": "catalog/blocks/marketing-blocks.json"
+    },
+    {
+      "id": "footer.mega",
+      "name": "Footer Mega",
+      "description": "Mega footer with links",
+      "component": "Footer",
+      "tags": [
+        "footer",
+        "links",
+        "marketing"
+      ],
+      "type": "block",
+      "source": "catalog/blocks/marketing-blocks.json"
+    },
+    {
+      "id": "navbar.main",
+      "name": "Navbar Main",
+      "description": "Main navigation bar",
+      "component": "Navbar",
+      "tags": [
+        "navbar",
+        "navigation",
+        "marketing"
+      ],
+      "type": "block",
+      "source": "catalog/blocks/marketing-blocks.json"
+    },
+    {
+      "id": "appShell.sidebar",
+      "name": "App Shell Sidebar",
+      "description": "Application shell with sidebar navigation",
+      "component": "AppShell",
+      "tags": [
+        "shell",
+        "layout",
+        "erp",
+        "sidebar"
+      ],
+      "type": "block",
+      "source": "catalog/blocks/erp-blocks.json"
+    },
+    {
+      "id": "table.listPage",
+      "name": "Table List Page",
+      "description": "Data table list page with actions",
+      "component": "TablePage",
+      "tags": [
+        "table",
+        "list",
+        "data",
+        "erp"
+      ],
+      "type": "block",
+      "source": "catalog/blocks/erp-blocks.json"
+    },
+    {
+      "id": "form.editPage",
+      "name": "Form Edit Page",
+      "description": "Create/Edit form page",
+      "component": "FormPage",
+      "props": {
+        "mode": [
+          "create",
+          "edit"
+        ]
+      },
+      "tags": [
+        "form",
+        "create",
+        "edit",
+        "erp"
+      ],
+      "type": "block",
+      "source": "catalog/blocks/erp-blocks.json"
+    },
+    {
+      "id": "filters.bar",
+      "name": "Filters Bar",
+      "description": "Filter bar with multiple fields",
+      "component": "FiltersBar",
+      "tags": [
+        "filters",
+        "search",
+        "erp"
+      ],
+      "type": "block",
+      "source": "catalog/blocks/erp-blocks.json"
+    },
+    {
+      "id": "bulk.actions",
+      "name": "Bulk Actions",
+      "description": "Bulk actions toolbar",
+      "component": "BulkActions",
+      "tags": [
+        "bulk",
+        "actions",
+        "erp"
+      ],
+      "type": "block",
+      "source": "catalog/blocks/erp-blocks.json"
+    },
+    {
+      "id": "empty.state",
+      "name": "Empty State",
+      "description": "Empty state component",
+      "component": "EmptyState",
+      "tags": [
+        "empty",
+        "no-data",
+        "erp"
+      ],
+      "type": "block",
+      "source": "catalog/blocks/erp-blocks.json"
+    },
+    {
+      "id": "loading.skeleton",
+      "name": "Loading Skeleton",
+      "description": "Loading skeleton component",
+      "component": "LoadingSkeleton",
+      "props": {
+        "variant": [
+          "table",
+          "card",
+          "list"
+        ]
+      },
+      "tags": [
+        "loading",
+        "skeleton",
+        "erp"
+      ],
+      "type": "block",
+      "source": "catalog/blocks/erp-blocks.json"
+    }
+  ],
+  "byType": {
+    "atoms": [],
+    "molecules": [],
+    "organisms": [],
+    "blocks": [
+      "hero.split.image",
+      "hero.centered",
+      "pricing.cards",
+      "features.grid",
+      "testimonials.cards",
+      "faq.accordion",
+      "cta.strip",
+      "footer.mega",
+      "navbar.main",
+      "appShell.sidebar",
+      "table.listPage",
+      "form.editPage",
+      "filters.bar",
+      "bulk.actions",
+      "empty.state",
+      "loading.skeleton"
+    ]
+  },
+  "byTag": {
+    "ui": [
+      "atom.alert",
+      "atom.avatar",
+      "atom.avatar",
+      "atom.badge",
+      "atom.breadcrumb",
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton",
+      "atom.calendar",
+      "atom.checkbox",
+      "atom.circularProgress",
+      "atom.codeBlock",
+      "atom.combobox",
+      "atom.currencyInput",
+      "atom.datePicker",
+      "atom.dateRange",
+      "atom.dateTimePicker",
+      "atom.divider",
+      "atom.divider",
+      "atom.drawer",
+      "atom.fileUpload",
+      "atom.heading",
+      "atom.helperText",
+      "atom.icon",
+      "atom.iconButton",
+      "atom.image",
+      "atom.kbd",
+      "atom.label",
+      "atom.linearProgress",
+      "atom.link",
+      "atom.loading",
+      "atom.modal",
+      "atom.numberInput",
+      "atom.otpInput",
+      "atom.pagination",
+      "atom.passwordInput",
+      "atom.phoneInput",
+      "atom.popover",
+      "atom.progress",
+      "atom.radio",
+      "atom.searchInput",
+      "atom.select",
+      "atom.checkbox",
+      "atom.radio",
+      "atom.switch",
+      "atom.skeleton",
+      "atom.slider",
+      "atom.stepper",
+      "atom.switch",
+      "atom.switch",
+      "atom.tabs",
+      "atom.tabs",
+      "atom.text",
+      "atom.textarea",
+      "atom.textField",
+      "atom.timePicker",
+      "atom.toast",
+      "atom.tooltip"
+    ],
+    "atom": [
+      "atom.alert",
+      "atom.avatar",
+      "atom.avatar",
+      "atom.badge",
+      "atom.breadcrumb",
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton",
+      "atom.calendar",
+      "atom.checkbox",
+      "atom.circularProgress",
+      "atom.codeBlock",
+      "atom.combobox",
+      "atom.currencyInput",
+      "atom.datePicker",
+      "atom.dateRange",
+      "atom.dateTimePicker",
+      "atom.divider",
+      "atom.divider",
+      "atom.drawer",
+      "atom.fileUpload",
+      "atom.heading",
+      "atom.helperText",
+      "atom.icon",
+      "atom.iconButton",
+      "atom.image",
+      "atom.kbd",
+      "atom.label",
+      "atom.linearProgress",
+      "atom.link",
+      "atom.loading",
+      "atom.modal",
+      "atom.numberInput",
+      "atom.otpInput",
+      "atom.pagination",
+      "atom.passwordInput",
+      "atom.phoneInput",
+      "atom.popover",
+      "atom.progress",
+      "atom.radio",
+      "atom.searchInput",
+      "atom.select",
+      "atom.checkbox",
+      "atom.radio",
+      "atom.switch",
+      "atom.skeleton",
+      "atom.slider",
+      "atom.stepper",
+      "atom.switch",
+      "atom.switch",
+      "atom.tabs",
+      "atom.tabs",
+      "atom.text",
+      "atom.textarea",
+      "atom.textField",
+      "atom.timePicker",
+      "atom.toast",
+      "atom.tooltip"
+    ],
+    "alert": [
+      "atom.alert",
+      "atom.toast"
+    ],
+    "banner": [
+      "atom.alert"
+    ],
+    "feedback": [
+      "atom.alert"
+    ],
+    "status": [
+      "atom.alert",
+      "atom.avatar",
+      "atom.badge"
+    ],
+    "a11y": [
+      "atom.alert",
+      "atom.avatar",
+      "atom.avatar",
+      "atom.badge",
+      "atom.breadcrumb",
+      "atom.iconButton",
+      "atom.calendar",
+      "atom.checkbox",
+      "atom.circularProgress",
+      "atom.codeBlock",
+      "atom.combobox",
+      "atom.currencyInput",
+      "atom.datePicker",
+      "atom.dateRange",
+      "atom.dateTimePicker",
+      "atom.divider",
+      "atom.divider",
+      "atom.drawer",
+      "atom.fileUpload",
+      "atom.heading",
+      "atom.helperText",
+      "atom.icon",
+      "atom.iconButton",
+      "atom.image",
+      "atom.kbd",
+      "atom.label",
+      "atom.linearProgress",
+      "atom.link",
+      "atom.loading",
+      "atom.modal",
+      "atom.numberInput",
+      "atom.otpInput",
+      "atom.pagination",
+      "atom.passwordInput",
+      "atom.phoneInput",
+      "atom.popover",
+      "atom.progress",
+      "atom.radio",
+      "atom.searchInput",
+      "atom.select",
+      "atom.checkbox",
+      "atom.radio",
+      "atom.switch",
+      "atom.skeleton",
+      "atom.slider",
+      "atom.stepper",
+      "atom.switch",
+      "atom.switch",
+      "atom.tabs",
+      "atom.tabs",
+      "atom.text",
+      "atom.textarea",
+      "atom.textField",
+      "atom.timePicker",
+      "atom.toast",
+      "atom.tooltip"
+    ],
+    "rtl": [
+      "atom.alert",
+      "atom.avatar",
+      "atom.avatar",
+      "atom.badge",
+      "atom.breadcrumb",
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton",
+      "atom.calendar",
+      "atom.checkbox",
+      "atom.circularProgress",
+      "atom.codeBlock",
+      "atom.combobox",
+      "atom.currencyInput",
+      "atom.datePicker",
+      "atom.dateRange",
+      "atom.dateTimePicker",
+      "atom.divider",
+      "atom.divider",
+      "atom.drawer",
+      "atom.fileUpload",
+      "atom.heading",
+      "atom.helperText",
+      "atom.icon",
+      "atom.iconButton",
+      "atom.image",
+      "atom.kbd",
+      "atom.label",
+      "atom.linearProgress",
+      "atom.link",
+      "atom.loading",
+      "atom.modal",
+      "atom.numberInput",
+      "atom.otpInput",
+      "atom.pagination",
+      "atom.passwordInput",
+      "atom.phoneInput",
+      "atom.popover",
+      "atom.progress",
+      "atom.radio",
+      "atom.searchInput",
+      "atom.select",
+      "atom.checkbox",
+      "atom.radio",
+      "atom.switch",
+      "atom.skeleton",
+      "atom.slider",
+      "atom.stepper",
+      "atom.switch",
+      "atom.switch",
+      "atom.tabs",
+      "atom.tabs",
+      "atom.text",
+      "atom.textarea",
+      "atom.textField",
+      "atom.timePicker",
+      "atom.toast",
+      "atom.tooltip"
+    ],
+    "tokens": [
+      "atom.alert",
+      "atom.avatar",
+      "atom.avatar",
+      "atom.badge",
+      "atom.breadcrumb",
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton",
+      "atom.calendar",
+      "atom.checkbox",
+      "atom.circularProgress",
+      "atom.codeBlock",
+      "atom.combobox",
+      "atom.currencyInput",
+      "atom.datePicker",
+      "atom.dateRange",
+      "atom.dateTimePicker",
+      "atom.divider",
+      "atom.divider",
+      "atom.drawer",
+      "atom.fileUpload",
+      "atom.heading",
+      "atom.helperText",
+      "atom.icon",
+      "atom.iconButton",
+      "atom.image",
+      "atom.kbd",
+      "atom.label",
+      "atom.linearProgress",
+      "atom.link",
+      "atom.loading",
+      "atom.modal",
+      "atom.numberInput",
+      "atom.otpInput",
+      "atom.pagination",
+      "atom.passwordInput",
+      "atom.phoneInput",
+      "atom.popover",
+      "atom.progress",
+      "atom.radio",
+      "atom.searchInput",
+      "atom.select",
+      "atom.checkbox",
+      "atom.radio",
+      "atom.switch",
+      "atom.skeleton",
+      "atom.slider",
+      "atom.stepper",
+      "atom.switch",
+      "atom.switch",
+      "atom.tabs",
+      "atom.tabs",
+      "atom.text",
+      "atom.textarea",
+      "atom.textField",
+      "atom.timePicker",
+      "atom.toast",
+      "atom.tooltip"
+    ],
+    "web": [
+      "atom.alert",
+      "atom.avatar",
+      "atom.avatar",
+      "atom.badge",
+      "atom.breadcrumb",
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton",
+      "atom.calendar",
+      "atom.checkbox",
+      "atom.circularProgress",
+      "atom.codeBlock",
+      "atom.combobox",
+      "atom.currencyInput",
+      "atom.datePicker",
+      "atom.dateRange",
+      "atom.dateTimePicker",
+      "atom.divider",
+      "atom.divider",
+      "atom.drawer",
+      "atom.fileUpload",
+      "atom.heading",
+      "atom.helperText",
+      "atom.icon",
+      "atom.iconButton",
+      "atom.image",
+      "atom.kbd",
+      "atom.label",
+      "atom.linearProgress",
+      "atom.link",
+      "atom.loading",
+      "atom.modal",
+      "atom.numberInput",
+      "atom.otpInput",
+      "atom.pagination",
+      "atom.passwordInput",
+      "atom.phoneInput",
+      "atom.popover",
+      "atom.progress",
+      "atom.radio",
+      "atom.searchInput",
+      "atom.select",
+      "atom.checkbox",
+      "atom.radio",
+      "atom.switch",
+      "atom.skeleton",
+      "atom.slider",
+      "atom.stepper",
+      "atom.switch",
+      "atom.switch",
+      "atom.tabs",
+      "atom.tabs",
+      "atom.text",
+      "atom.textarea",
+      "atom.textField",
+      "atom.timePicker",
+      "atom.toast",
+      "atom.tooltip"
+    ],
+    "mobile": [
+      "atom.alert",
+      "atom.avatar",
+      "atom.avatar",
+      "atom.badge",
+      "atom.breadcrumb",
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton",
+      "atom.calendar",
+      "atom.checkbox",
+      "atom.circularProgress",
+      "atom.codeBlock",
+      "atom.combobox",
+      "atom.currencyInput",
+      "atom.datePicker",
+      "atom.dateRange",
+      "atom.dateTimePicker",
+      "atom.divider",
+      "atom.divider",
+      "atom.drawer",
+      "atom.fileUpload",
+      "atom.heading",
+      "atom.helperText",
+      "atom.icon",
+      "atom.iconButton",
+      "atom.image",
+      "atom.kbd",
+      "atom.label",
+      "atom.linearProgress",
+      "atom.link",
+      "atom.loading",
+      "atom.modal",
+      "atom.numberInput",
+      "atom.otpInput",
+      "atom.pagination",
+      "atom.passwordInput",
+      "atom.phoneInput",
+      "atom.popover",
+      "atom.progress",
+      "atom.radio",
+      "atom.searchInput",
+      "atom.select",
+      "atom.checkbox",
+      "atom.radio",
+      "atom.switch",
+      "atom.skeleton",
+      "atom.slider",
+      "atom.stepper",
+      "atom.switch",
+      "atom.switch",
+      "atom.tabs",
+      "atom.tabs",
+      "atom.text",
+      "atom.textarea",
+      "atom.textField",
+      "atom.timePicker",
+      "atom.toast",
+      "atom.tooltip"
+    ],
+    "desktop": [
+      "atom.alert",
+      "atom.avatar",
+      "atom.avatar",
+      "atom.badge",
+      "atom.breadcrumb",
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton",
+      "atom.calendar",
+      "atom.checkbox",
+      "atom.circularProgress",
+      "atom.codeBlock",
+      "atom.combobox",
+      "atom.currencyInput",
+      "atom.datePicker",
+      "atom.dateRange",
+      "atom.dateTimePicker",
+      "atom.divider",
+      "atom.divider",
+      "atom.drawer",
+      "atom.fileUpload",
+      "atom.heading",
+      "atom.helperText",
+      "atom.icon",
+      "atom.iconButton",
+      "atom.image",
+      "atom.kbd",
+      "atom.label",
+      "atom.linearProgress",
+      "atom.link",
+      "atom.loading",
+      "atom.modal",
+      "atom.numberInput",
+      "atom.otpInput",
+      "atom.pagination",
+      "atom.passwordInput",
+      "atom.phoneInput",
+      "atom.popover",
+      "atom.progress",
+      "atom.radio",
+      "atom.searchInput",
+      "atom.select",
+      "atom.checkbox",
+      "atom.radio",
+      "atom.switch",
+      "atom.skeleton",
+      "atom.slider",
+      "atom.stepper",
+      "atom.switch",
+      "atom.switch",
+      "atom.tabs",
+      "atom.tabs",
+      "atom.text",
+      "atom.textarea",
+      "atom.textField",
+      "atom.timePicker",
+      "atom.toast",
+      "atom.tooltip"
+    ],
+    "avatar": [
+      "atom.avatar",
+      "atom.avatar"
+    ],
+    "user": [
+      "atom.avatar",
+      "atom.avatar"
+    ],
+    "presence": [
+      "atom.avatar",
+      "atom.avatar"
+    ],
+    "erp": [
+      "atom.avatar",
+      "atom.avatar",
+      "atom.badge",
+      "atom.breadcrumb",
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton",
+      "atom.calendar",
+      "atom.checkbox",
+      "atom.circularProgress",
+      "atom.combobox",
+      "atom.currencyInput",
+      "atom.datePicker",
+      "atom.dateRange",
+      "atom.dateTimePicker",
+      "atom.divider",
+      "atom.divider",
+      "atom.drawer",
+      "atom.fileUpload",
+      "atom.heading",
+      "atom.helperText",
+      "atom.iconButton",
+      "atom.kbd",
+      "atom.label",
+      "atom.linearProgress",
+      "atom.loading",
+      "atom.modal",
+      "atom.numberInput",
+      "atom.pagination",
+      "atom.phoneInput",
+      "atom.popover",
+      "atom.progress",
+      "atom.radio",
+      "atom.searchInput",
+      "atom.select",
+      "atom.checkbox",
+      "atom.radio",
+      "atom.switch",
+      "atom.skeleton",
+      "atom.slider",
+      "atom.stepper",
+      "atom.switch",
+      "atom.switch",
+      "atom.tabs",
+      "atom.tabs",
+      "atom.text",
+      "atom.textarea",
+      "atom.textField",
+      "atom.timePicker",
+      "atom.toast"
+    ],
+    "badge": [
+      "atom.badge"
+    ],
+    "tag": [
+      "atom.badge"
+    ],
+    "chip": [
+      "atom.badge"
+    ],
+    "filters": [
+      "atom.badge",
+      "atom.toggleButton",
+      "atom.combobox",
+      "atom.datePicker",
+      "atom.dateRange",
+      "atom.popover",
+      "atom.select",
+      "atom.slider"
+    ],
+    "saas": [
+      "atom.badge",
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton",
+      "atom.heading",
+      "atom.select",
+      "atom.textarea",
+      "atom.textField"
+    ],
+    "breadcrumb": [
+      "atom.breadcrumb"
+    ],
+    "navigation": [
+      "atom.breadcrumb",
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton",
+      "atom.link",
+      "atom.stepper",
+      "atom.tabs",
+      "atom.tabs"
+    ],
+    "accessibility": [
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton"
+    ],
+    "action": [
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton"
+    ],
+    "button": [
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton",
+      "atom.iconButton"
+    ],
+    "cta": [
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton"
+    ],
+    "enterprise": [
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton"
+    ],
+    "family:button": [
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton"
+    ],
+    "form": [
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton"
+    ],
+    "performance": [
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton"
+    ],
+    "security": [
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton",
+      "atom.otpInput",
+      "atom.passwordInput"
+    ],
+    "submit": [
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton"
+    ],
+    "subtype:base": [
+      "atom.button"
+    ],
+    "themeable": [
+      "atom.button",
+      "atom.iconButton",
+      "atom.fab",
+      "atom.toggleButton",
+      "atom.socialButton",
+      "atom.uploadButton"
+    ],
+    "compact": [
+      "atom.iconButton"
+    ],
+    "subtype:icon": [
+      "atom.iconButton"
+    ],
+    "toolbar": [
+      "atom.iconButton",
+      "atom.iconButton",
+      "atom.searchInput"
+    ],
+    "overlay": [
+      "atom.fab",
+      "atom.drawer",
+      "atom.modal",
+      "atom.popover"
+    ],
+    "primary-action": [
+      "atom.fab"
+    ],
+    "subtype:fab": [
+      "atom.fab"
+    ],
+    "segmented": [
+      "atom.toggleButton"
+    ],
+    "stateful": [
+      "atom.toggleButton"
+    ],
+    "subtype:toggle": [
+      "atom.toggleButton"
+    ],
+    "auth": [
+      "atom.socialButton",
+      "atom.otpInput",
+      "atom.passwordInput"
+    ],
+    "oauth": [
+      "atom.socialButton"
+    ],
+    "subtype:social": [
+      "atom.socialButton"
+    ],
+    "attachments": [
+      "atom.uploadButton",
+      "atom.fileUpload"
+    ],
+    "files": [
+      "atom.uploadButton"
+    ],
+    "subtype:upload": [
+      "atom.uploadButton"
+    ],
+    "calendar": [
+      "atom.calendar",
+      "atom.datePicker"
+    ],
+    "schedule": [
+      "atom.calendar"
+    ],
+    "dashboard": [
+      "atom.calendar"
+    ],
+    "checkbox": [
+      "atom.checkbox",
+      "atom.checkbox"
+    ],
+    "forms": [
+      "atom.checkbox",
+      "atom.datePicker",
+      "atom.helperText",
+      "atom.label",
+      "atom.numberInput",
+      "atom.phoneInput",
+      "atom.radio",
+      "atom.select",
+      "atom.checkbox",
+      "atom.radio",
+      "atom.textarea",
+      "atom.textField",
+      "atom.timePicker"
+    ],
+    "tables": [
+      "atom.checkbox",
+      "atom.pagination",
+      "atom.searchInput"
+    ],
+    "permissions": [
+      "atom.checkbox"
+    ],
+    "circular-progress": [
+      "atom.circularProgress"
+    ],
+    "kpi": [
+      "atom.circularProgress",
+      "atom.linearProgress",
+      "atom.progress"
+    ],
+    "loading": [
+      "atom.circularProgress",
+      "atom.linearProgress",
+      "atom.loading",
+      "atom.progress",
+      "atom.skeleton"
+    ],
+    "charts": [
+      "atom.circularProgress"
+    ],
+    "code": [
+      "atom.codeBlock"
+    ],
+    "snippet": [
+      "atom.codeBlock"
+    ],
+    "docs": [
+      "atom.codeBlock"
+    ],
+    "admin": [
+      "atom.codeBlock"
+    ],
+    "combobox": [
+      "atom.combobox",
+      "atom.select"
+    ],
+    "autocomplete": [
+      "atom.combobox"
+    ],
+    "select": [
+      "atom.combobox",
+      "atom.select"
+    ],
+    "search": [
+      "atom.combobox",
+      "atom.pagination",
+      "atom.searchInput",
+      "atom.textField"
+    ],
+    "input": [
+      "atom.currencyInput",
+      "atom.numberInput",
+      "atom.otpInput",
+      "atom.passwordInput",
+      "atom.phoneInput",
+      "atom.searchInput",
+      "atom.textField"
+    ],
+    "currency": [
+      "atom.currencyInput"
+    ],
+    "money": [
+      "atom.currencyInput"
+    ],
+    "billing": [
+      "atom.currencyInput"
+    ],
+    "date": [
+      "atom.datePicker"
+    ],
+    "datepicker": [
+      "atom.datePicker",
+      "atom.dateRange",
+      "atom.dateTimePicker"
+    ],
+    "date-range": [
+      "atom.dateRange"
+    ],
+    "reports": [
+      "atom.dateRange"
+    ],
+    "booking": [
+      "atom.dateRange"
+    ],
+    "datetime": [
+      "atom.dateTimePicker"
+    ],
+    "timepicker": [
+      "atom.dateTimePicker",
+      "atom.timePicker"
+    ],
+    "scheduling": [
+      "atom.dateTimePicker"
+    ],
+    "divider": [
+      "atom.divider",
+      "atom.divider"
+    ],
+    "separator": [
+      "atom.divider",
+      "atom.divider"
+    ],
+    "layout": [
+      "atom.divider",
+      "atom.divider"
+    ],
+    "drawer": [
+      "atom.drawer"
+    ],
+    "slideover": [
+      "atom.drawer"
+    ],
+    "offcanvas": [
+      "atom.drawer"
+    ],
+    "upload": [
+      "atom.fileUpload"
+    ],
+    "file": [
+      "atom.fileUpload"
+    ],
+    "dropzone": [
+      "atom.fileUpload"
+    ],
+    "typography": [
+      "atom.heading",
+      "atom.text"
+    ],
+    "heading": [
+      "atom.heading"
+    ],
+    "content": [
+      "atom.heading",
+      "atom.link",
+      "atom.text"
+    ],
+    "helper": [
+      "atom.helperText"
+    ],
+    "validation": [
+      "atom.helperText",
+      "atom.textField"
+    ],
+    "icon": [
+      "atom.icon"
+    ],
+    "glyph": [
+      "atom.icon"
+    ],
+    "svg": [
+      "atom.icon"
+    ],
+    "iconButton": [
+      "atom.iconButton"
+    ],
+    "actions": [
+      "atom.iconButton"
+    ],
+    "table": [
+      "atom.iconButton"
+    ],
+    "image": [
+      "atom.image"
+    ],
+    "media": [
+      "atom.image"
+    ],
+    "responsive": [
+      "atom.image"
+    ],
+    "lazy": [
+      "atom.image"
+    ],
+    "kbd": [
+      "atom.kbd"
+    ],
+    "shortcut": [
+      "atom.kbd"
+    ],
+    "keyboard": [
+      "atom.kbd"
+    ],
+    "label": [
+      "atom.label"
+    ],
+    "metadata": [
+      "atom.label"
+    ],
+    "progress": [
+      "atom.linearProgress",
+      "atom.progress"
+    ],
+    "linear": [
+      "atom.linearProgress"
+    ],
+    "link": [
+      "atom.link"
+    ],
+    "spinner": [
+      "atom.loading"
+    ],
+    "skeleton": [
+      "atom.loading",
+      "atom.skeleton"
+    ],
+    "states": [
+      "atom.loading",
+      "atom.skeleton"
+    ],
+    "modal": [
+      "atom.modal"
+    ],
+    "dialog": [
+      "atom.modal"
+    ],
+    "number": [
+      "atom.numberInput"
+    ],
+    "otp": [
+      "atom.otpInput"
+    ],
+    "pin": [
+      "atom.otpInput"
+    ],
+    "pagination": [
+      "atom.pagination"
+    ],
+    "lists": [
+      "atom.pagination"
+    ],
+    "password": [
+      "atom.passwordInput",
+      "atom.textField"
+    ],
+    "phone": [
+      "atom.phoneInput"
+    ],
+    "mask": [
+      "atom.phoneInput",
+      "atom.textField"
+    ],
+    "popover": [
+      "atom.popover",
+      "atom.tooltip"
+    ],
+    "dropdown": [
+      "atom.popover",
+      "atom.select"
+    ],
+    "radio": [
+      "atom.radio",
+      "atom.radio"
+    ],
+    "settings": [
+      "atom.radio",
+      "atom.switch",
+      "atom.switch",
+      "atom.switch"
+    ],
+    "picker": [
+      "atom.select"
+    ],
+    "virtualization": [
+      "atom.select"
+    ],
+    "datatable": [
+      "atom.checkbox"
+    ],
+    "bulk-actions": [
+      "atom.checkbox"
+    ],
+    "switch": [
+      "atom.switch",
+      "atom.switch",
+      "atom.switch"
+    ],
+    "toggle": [
+      "atom.switch",
+      "atom.switch",
+      "atom.switch"
+    ],
+    "slider": [
+      "atom.slider"
+    ],
+    "range": [
+      "atom.slider"
+    ],
+    "stepper": [
+      "atom.stepper"
+    ],
+    "wizard": [
+      "atom.stepper"
+    ],
+    "tabs": [
+      "atom.tabs",
+      "atom.tabs"
+    ],
+    "dashboards": [
+      "atom.tabs"
+    ],
+    "text": [
+      "atom.text"
+    ],
+    "textarea": [
+      "atom.textarea"
+    ],
+    "multiline": [
+      "atom.textarea"
+    ],
+    "notes": [
+      "atom.textarea"
+    ],
+    "textfield": [
+      "atom.textField"
+    ],
+    "time": [
+      "atom.timePicker"
+    ],
+    "clock": [
+      "atom.timePicker"
+    ],
+    "toast": [
+      "atom.toast"
+    ],
+    "notification": [
+      "atom.toast"
+    ],
+    "snackbar": [
+      "atom.toast"
+    ],
+    "tooltip": [
+      "atom.tooltip"
+    ],
+    "hint": [
+      "atom.tooltip"
+    ]
+  }
+}

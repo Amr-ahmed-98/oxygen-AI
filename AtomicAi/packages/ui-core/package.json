@@ -1,0 +1,23 @@
+{
+  "name": "@atomic-ai/ui-core",
+  "version": "1.0.0",
+  "description": "Core UI system - tokens, recipes, manifests, types",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./tokens": "./dist/tokens/index.js",
+    "./recipes": "./dist/recipes/index.js",
+    "./manifests": "./dist/manifests/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  }
+}
+

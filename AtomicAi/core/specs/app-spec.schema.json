@@ -1,0 +1,399 @@
+{
+  "$schema": "http://json-schema.org/draft-2020-12/schema",
+  "title": "App Specification Schema",
+  "description": "Platform-agnostic specification for generating SaaS/ERP applications across Web, Mobile, and Desktop",
+  "type": "object",
+  "required": ["id", "name", "type", "platforms", "modules"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique application identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Application name"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["saas", "erp", "crm", "admin", "dashboard"],
+      "description": "Application type"
+    },
+    "platforms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["web", "mobile", "desktop"]
+      },
+      "minItems": 1,
+      "description": "Target platforms"
+    },
+    "version": {
+      "type": "string",
+      "description": "App version"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "description": { "type": "string" },
+        "author": { "type": "string" },
+        "license": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "theme": {
+      "type": "string",
+      "description": "Theme ID from theme registry"
+    },
+    "designTokens": {
+      "type": "object",
+      "description": "Design tokens overrides (optional)"
+    },
+    "navigation": {
+      "type": "object",
+      "description": "Navigation configuration per platform",
+      "properties": {
+        "web": { "$ref": "#/definitions/navigationWeb" },
+        "mobile": { "$ref": "#/definitions/navigationMobile" },
+        "desktop": { "$ref": "#/definitions/navigationDesktop" }
+      }
+    },
+    "appShell": {
+      "type": "object",
+      "description": "App shell configuration",
+      "properties": {
+        "sidebar": {
+          "type": "object",
+          "properties": {
+            "position": { "type": "string", "enum": ["left", "right"] },
+            "collapsible": { "type": "boolean" },
+            "groups": { "type": "array", "items": { "type": "object" } }
+          }
+        },
+        "header": {
+          "type": "object",
+          "properties": {
+            "breadcrumbs": { "type": "boolean" },
+            "actions": { "type": "array" },
+            "userMenu": { "type": "boolean" }
+          }
+        },
+        "topbar": {
+          "type": "object",
+          "properties": {
+            "workspaceSwitcher": { "type": "boolean" },
+            "tenantSwitcher": { "type": "boolean" },
+            "notifications": { "type": "boolean" }
+          }
+        },
+        "commandPalette": {
+          "type": "boolean",
+          "description": "Enable Cmd+K command palette"
+        }
+      }
+    },
+    "modules": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/moduleSpec" },
+      "description": "Application modules"
+    },
+    "entities": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/entitySpec" },
+      "description": "Shared entities across modules"
+    },
+    "auth": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "methods": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["email", "oauth", "2fa", "sso"] }
+        },
+        "registration": { "type": "boolean" },
+        "forgotPassword": { "type": "boolean" }
+      }
+    },
+    "rbac": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "roles": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/roleSpec" }
+        },
+        "permissions": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/permissionSpec" }
+        }
+      }
+    },
+    "multiTenant": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "workspaces": { "type": "boolean" },
+        "themePerTenant": { "type": "boolean" },
+        "brandingPerTenant": { "type": "boolean" }
+      }
+    },
+    "i18n": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "defaultLocale": { "type": "string" },
+        "supportedLocales": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "rtl": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "locales": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "offline": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "sync": { "type": "boolean" },
+        "cache": { "type": "boolean" }
+      },
+      "description": "Offline support (primarily for mobile)"
+    },
+    "screens": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/screenSpec" },
+      "description": "Platform-specific screens"
+    }
+  },
+  "definitions": {
+    "navigationWeb": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "enum": ["sidebar", "topbar", "both"] },
+        "routes": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/routeSpec" }
+        }
+      }
+    },
+    "navigationMobile": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "enum": ["tabs", "drawer", "stack"] },
+        "tabs": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/tabSpec" }
+        },
+        "screens": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/screenSpec" }
+        }
+      }
+    },
+    "navigationDesktop": {
+      "type": "object",
+      "properties": {
+        "sidebar": { "type": "boolean" },
+        "menuBar": { "type": "boolean" },
+        "shortcuts": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/shortcutSpec" }
+        }
+      }
+    },
+    "routeSpec": {
+      "type": "object",
+      "properties": {
+        "path": { "type": "string" },
+        "component": { "type": "string" },
+        "module": { "type": "string" },
+        "permission": { "type": "string" },
+        "children": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/routeSpec" }
+        }
+      }
+    },
+    "tabSpec": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "icon": { "type": "string" },
+        "screen": { "type": "string" }
+      }
+    },
+    "shortcutSpec": {
+      "type": "object",
+      "properties": {
+        "key": { "type": "string" },
+        "action": { "type": "string" },
+        "platform": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "moduleSpec": {
+      "type": "object",
+      "required": ["id", "name", "type"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["crm", "inventory", "sales", "purchases", "hr", "accounting", "reports", "admin", "custom"]
+        },
+        "icon": { "type": "string" },
+        "description": { "type": "string" },
+        "entities": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "routes": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/routeSpec" }
+        },
+        "permissions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "menuOrder": { "type": "number" }
+      }
+    },
+    "entitySpec": {
+      "type": "object",
+      "required": ["id", "name", "fields"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "pluralName": { "type": "string" },
+        "module": { "type": "string" },
+        "fields": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/fieldSpec" }
+        },
+        "relations": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/relationSpec" }
+        },
+        "permissions": { "$ref": "#/definitions/permissionSpec" },
+        "views": {
+          "type": "object",
+          "properties": {
+            "list": { "$ref": "#/definitions/viewSpec" },
+            "create": { "$ref": "#/definitions/viewSpec" },
+            "edit": { "$ref": "#/definitions/viewSpec" },
+            "details": { "$ref": "#/definitions/viewSpec" }
+          }
+        }
+      }
+    },
+    "fieldSpec": {
+      "type": "object",
+      "required": ["name", "type"],
+      "properties": {
+        "name": { "type": "string" },
+        "label": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["string", "number", "boolean", "date", "datetime", "enum", "relation", "money", "email", "url", "text", "json"]
+        },
+        "required": { "type": "boolean" },
+        "unique": { "type": "boolean" },
+        "default": {},
+        "validation": { "type": "object" },
+        "ui": {
+          "type": "object",
+          "properties": {
+            "component": { "type": "string" },
+            "placeholder": { "type": "string" },
+            "options": { "type": "array" },
+            "hidden": { "type": "boolean" },
+            "readonly": { "type": "boolean" }
+          }
+        }
+      }
+    },
+    "relationSpec": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "enum": ["oneToOne", "oneToMany", "manyToOne", "manyToMany"] },
+        "entity": { "type": "string" },
+        "field": { "type": "string" },
+        "displayField": { "type": "string" }
+      }
+    },
+    "viewSpec": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" },
+        "layout": { "type": "string" },
+        "columns": { "type": "array" },
+        "filters": { "type": "array" },
+        "actions": { "type": "array" },
+        "permissions": { "type": "array" }
+      }
+    },
+    "roleSpec": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "permissions": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "permissionSpec": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "resource": { "type": "string" },
+        "action": {
+          "type": "string",
+          "enum": ["view", "create", "edit", "delete", "export", "import"]
+        }
+      }
+    },
+    "screenSpec": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "platform": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["web", "mobile", "desktop"] }
+        },
+        "type": {
+          "type": "string",
+          "enum": ["list", "create", "edit", "details", "dashboard", "settings", "custom"]
+        },
+        "entity": { "type": "string" },
+        "layout": { "type": "object" },
+        "components": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/componentSpec" }
+        }
+      }
+    },
+    "componentSpec": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" },
+        "props": { "type": "object" },
+        "children": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/componentSpec" }
+        }
+      }
+    }
+  }
+}
+

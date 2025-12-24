@@ -1,0 +1,242 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T10:59:44.421659+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "badge",
+    "goal": "ThemeForest-grade Badge/Tag/Chip dataset for ERP & marketing"
+  },
+  "component": {
+    "id": "atom.badge",
+    "name": "Badge / Tag / Chip",
+    "type": "atom",
+    "aliases": [
+      "Tag",
+      "Chip",
+      "Pill",
+      "Label",
+      "StatusPill"
+    ],
+    "description": "Small label element for statuses, categories, filters, counts, and inline metadata; supports removable chips and icons.",
+    "tags": [
+      "ui",
+      "atom",
+      "badge",
+      "tag",
+      "chip",
+      "status",
+      "filters",
+      "erp",
+      "saas",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "content": {
+        "type": "text|node",
+        "required": true
+      },
+      "startIcon": {
+        "type": "icon|node",
+        "required": false
+      },
+      "endIcon": {
+        "type": "icon|node",
+        "required": false
+      },
+      "avatar": {
+        "type": "node",
+        "required": false
+      },
+      "removeIcon": {
+        "type": "icon|node",
+        "required": false
+      },
+      "tooltip": {
+        "type": "node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [
+        "onClick",
+        "onRemove",
+        "onFocus",
+        "onBlur"
+      ],
+      "mobile": [
+        "onPress",
+        "onRemove"
+      ]
+    },
+    "props": {
+      "text": {
+        "type": "string",
+        "default": "Label"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "xs",
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "sm"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "comfortable"
+      },
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "solid",
+          "soft",
+          "outline",
+          "ghost",
+          "gradient"
+        ],
+        "default": "soft"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "success",
+          "warning",
+          "danger",
+          "info",
+          "purple",
+          "pink",
+          "teal",
+          "amber"
+        ],
+        "default": "neutral"
+      },
+      "shape": {
+        "type": "enum",
+        "enum": [
+          "rounded",
+          "pill",
+          "square"
+        ],
+        "default": "pill"
+      },
+      "iconMode": {
+        "type": "enum",
+        "enum": [
+          "none",
+          "start",
+          "end",
+          "both"
+        ],
+        "default": "none"
+      },
+      "removable": {
+        "type": "boolean",
+        "default": false
+      },
+      "selected": {
+        "type": "boolean",
+        "default": false
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": false
+      },
+      "href": {
+        "type": "string",
+        "default": "",
+        "description": "If present, renders as link."
+      },
+      "counter": {
+        "type": "number",
+        "default": 0,
+        "description": "0 means no counter."
+      },
+      "maxCounter": {
+        "type": "number",
+        "default": 99,
+        "description": "Max before showing 99+."
+      },
+      "truncate": {
+        "type": "boolean",
+        "default": false
+      },
+      "ariaLabel": {
+        "type": "string",
+        "default": ""
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "hover",
+      "focus",
+      "disabled",
+      "selected",
+      "removable",
+      "link",
+      "with-icon",
+      "with-counter"
+    ],
+    "a11y": {
+      "requirements": [
+        "If clickable, use button semantics; if href, use link semantics.",
+        "Removable chips must provide aria-label for remove action.",
+        "Focus-visible ring for keyboard navigation.",
+        "Text must remain readable; do not rely on color only for status."
+      ]
+    }
+  }
+}

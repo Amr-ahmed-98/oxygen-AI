@@ -1,0 +1,42 @@
+{
+  "description": "ملخص Entities الأساسية للـHelpdesk (مختصر)",
+  "entities": [
+    {
+      "entity": "Ticket",
+      "file": "ticket.entity.json",
+      "status": "✅ موجود في specs/entities/ticket.entity.json",
+      "fields": [
+        "ticketNo", "subject", "description", "status", "priority",
+        "channel", "requesterId", "assigneeId", "queueId", "tags",
+        "slaPolicyId", "firstResponseDueAt", "resolveDueAt", "createdAt"
+      ]
+    },
+    {
+      "entity": "SlaPolicy",
+      "file": "slaPolicy.entity.json",
+      "status": "✅ موجود في specs/entities/slaPolicy.entity.json",
+      "fields": [
+        "name", "firstResponseMins", "resolutionMins",
+        "businessHoursOnly", "appliesToPriority"
+      ]
+    },
+    {
+      "entity": "Article",
+      "file": "article.entity.json",
+      "status": "✅ موجود في specs/entities/article.entity.json",
+      "fields": [
+        "title", "content", "categoryId", "visibility", "tags", "publishedAt"
+      ]
+    },
+    {
+      "entity": "AutomationRule",
+      "file": "automationRule.entity.json",
+      "status": "✅ موجود في specs/entities/automationRule.entity.json",
+      "fields": [
+        "name", "enabled", "trigger", "conditions", "actions"
+      ]
+    }
+  ],
+  "note": "جميع Entities موجودة في specs/entities/"
+}
+

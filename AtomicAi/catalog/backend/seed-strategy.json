@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "description": "Seed strategy for realistic demo data",
+  "principles": [
+    "Always seed roles/users first",
+    "Seed at least 50 rows per main entity for table realism",
+    "Ensure relational integrity (foreign keys)",
+    "Use varied statuses to test filters/states",
+    "Include edge cases (empty, long text, attachments optional)"
+  ],
+  "defaultSeedCounts": {
+    "User": 12,
+    "Tenant": 3,
+    "Role": 4,
+    "Ticket": 80,
+    "Comment": 240,
+    "SlaPolicy": 6,
+    "Article": 30,
+    "AutomationRule": 12,
+    "AuditLog": 120
+  },
+  "ticketDistributions": {
+    "status": {
+      "open": 0.35,
+      "pending": 0.25,
+      "resolved": 0.25,
+      "closed": 0.15
+    },
+    "priority": {
+      "low": 0.25,
+      "medium": 0.45,
+      "high": 0.22,
+      "urgent": 0.08
+    }
+  },
+  "fakerStyle": {
+    "language": "ar",
+    "region": "EG",
+    "timeZone": "Africa/Cairo"
+  }
+}
+

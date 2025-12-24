@@ -1,0 +1,118 @@
+{
+  "$schema": "../entity-spec.schema.json",
+  "entity": "Article",
+  "title": {
+    "singular": "مقال",
+    "plural": "المقالات"
+  },
+  "namespace": "kb",
+  "fields": [
+    {
+      "name": "id",
+      "type": "id",
+      "primary": true,
+      "ui": {
+        "list": false,
+        "form": false
+      }
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": true,
+      "ui": {
+        "list": true,
+        "form": true,
+        "label": "العنوان"
+      }
+    },
+    {
+      "name": "content",
+      "type": "richText",
+      "required": true,
+      "ui": {
+        "list": false,
+        "form": true,
+        "label": "المحتوى"
+      }
+    },
+    {
+      "name": "categoryId",
+      "type": "relation",
+      "to": "KbCategory",
+      "ui": {
+        "list": true,
+        "form": true,
+        "label": "الفئة"
+      }
+    },
+    {
+      "name": "visibility",
+      "type": "enum",
+      "values": ["public", "customers", "internal"],
+      "default": "customers",
+      "ui": {
+        "list": true,
+        "form": true,
+        "label": "الظهور",
+        "format": "badge"
+      }
+    },
+    {
+      "name": "tags",
+      "type": "list",
+      "itemType": "string",
+      "ui": {
+        "list": false,
+        "form": true,
+        "label": "العلامات"
+      }
+    },
+    {
+      "name": "publishedAt",
+      "type": "dateTime",
+      "ui": {
+        "list": true,
+        "form": false,
+        "label": "تاريخ النشر"
+      }
+    },
+    {
+      "name": "createdAt",
+      "type": "dateTime",
+      "readonly": true,
+      "ui": {
+        "list": true,
+        "form": false,
+        "label": "تاريخ الإنشاء"
+      }
+    }
+  ],
+  "views": {
+    "list": {
+      "layout": "dataTablePro",
+      "filters": ["categoryId", "visibility", "publishedAt"],
+      "search": ["title"],
+      "bulkActions": ["delete", "publish"],
+      "savedViews": false
+    },
+    "detail": {
+      "layout": "reader",
+      "tabs": []
+    },
+    "form": {
+      "mode": ["create", "edit"],
+      "layout": "oneColumnMobile_twoColumnDesktop",
+      "validation": "schemaDriven",
+      "attachments": false
+    }
+  },
+  "permissions": {
+    "kb.view": ["admin", "agent", "manager", "requester"],
+    "kb.edit": ["admin", "manager"]
+  },
+  "policies": [],
+  "computed": [],
+  "version": "1.0.0"
+}
+

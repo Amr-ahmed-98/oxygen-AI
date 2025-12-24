@@ -1,0 +1,32 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:23:10.317724+00:00",
+  "items": [
+    {
+      "id": "atom.pagination",
+      "type": "atom",
+      "name": "Pagination",
+      "tags": [
+        "ui",
+        "atom",
+        "pagination",
+        "tables",
+        "lists",
+        "search",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Pagination pager table search page size jump rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "pagination_atom_manifest_v4.json",
+        "pagination_variants_library_v4.json",
+        "catalog_index_pagination_pack_v4.json"
+      ]
+    }
+  ]
+}

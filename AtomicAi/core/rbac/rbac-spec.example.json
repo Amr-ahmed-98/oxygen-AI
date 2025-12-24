@@ -1,0 +1,128 @@
+{
+  "roles": [
+    {
+      "id": "admin",
+      "name": "Administrator",
+      "description": "Full system access",
+      "permissions": ["*"]
+    },
+    {
+      "id": "accountant",
+      "name": "Accountant",
+      "description": "Accounting and financial access",
+      "permissions": [
+        "invoice.*",
+        "payment.*",
+        "report.financial.*",
+        "customer.view",
+        "customer.edit"
+      ]
+    },
+    {
+      "id": "sales",
+      "name": "Sales Representative",
+      "description": "Sales and CRM access",
+      "permissions": [
+        "invoice.view",
+        "invoice.create",
+        "customer.*",
+        "lead.*",
+        "deal.*"
+      ]
+    },
+    {
+      "id": "manager",
+      "name": "Manager",
+      "description": "Management access",
+      "permissions": [
+        "*.view",
+        "*.create",
+        "*.edit",
+        "report.*",
+        "user.view"
+      ]
+    },
+    {
+      "id": "viewer",
+      "name": "Viewer",
+      "description": "Read-only access",
+      "permissions": [
+        "*.view",
+        "report.*"
+      ]
+    }
+  ],
+  "permissions": [
+    {
+      "id": "invoice.view",
+      "name": "View Invoices",
+      "resource": "invoice",
+      "action": "view"
+    },
+    {
+      "id": "invoice.create",
+      "name": "Create Invoices",
+      "resource": "invoice",
+      "action": "create"
+    },
+    {
+      "id": "invoice.edit",
+      "name": "Edit Invoices",
+      "resource": "invoice",
+      "action": "edit"
+    },
+    {
+      "id": "invoice.delete",
+      "name": "Delete Invoices",
+      "resource": "invoice",
+      "action": "delete"
+    },
+    {
+      "id": "invoice.export",
+      "name": "Export Invoices",
+      "resource": "invoice",
+      "action": "export"
+    },
+    {
+      "id": "customer.*",
+      "name": "All Customer Operations",
+      "resource": "customer",
+      "action": "*"
+    },
+    {
+      "id": "user.manage",
+      "name": "Manage Users",
+      "resource": "user",
+      "action": "manage"
+    },
+    {
+      "id": "report.*",
+      "name": "All Reports",
+      "resource": "report",
+      "action": "*"
+    }
+  ],
+  "resources": [
+    {
+      "id": "invoice",
+      "name": "Invoices",
+      "module": "sales"
+    },
+    {
+      "id": "customer",
+      "name": "Customers",
+      "module": "crm"
+    },
+    {
+      "id": "user",
+      "name": "Users",
+      "module": "admin"
+    },
+    {
+      "id": "report",
+      "name": "Reports",
+      "module": "reports"
+    }
+  ]
+}
+

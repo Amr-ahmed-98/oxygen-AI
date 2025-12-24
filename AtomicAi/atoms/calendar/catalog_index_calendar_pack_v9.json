@@ -1,0 +1,31 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T12:20:49.558296+00:00",
+  "items": [
+    {
+      "id": "atom.calendar",
+      "type": "atom",
+      "name": "Calendar",
+      "tags": [
+        "ui",
+        "atom",
+        "calendar",
+        "schedule",
+        "dashboard",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Calendar ui atom calendar schedule dashboard erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "calendar_atom_manifest_v9.json",
+        "calendar_variants_library_v9.json",
+        "catalog_index_calendar_pack_v9.json"
+      ]
+    }
+  ]
+}

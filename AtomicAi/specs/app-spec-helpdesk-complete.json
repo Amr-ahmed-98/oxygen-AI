@@ -1,0 +1,910 @@
+{
+  "app": {
+    "name": "SupportFlow",
+    "platforms": ["web", "mobile", "desktop"],
+    "themePack": "erp-professional",
+    "density": "compact",
+    "locale": {
+      "default": "ar-EG",
+      "rtl": true
+    }
+  },
+  "delivery": {
+    "mode": "multiTenantSaaS",
+    "deployment": "cloudNative",
+    "architecture": "modularMonolith",
+    "headless": false,
+    "pwa": true,
+    "desktop": "tauri"
+  },
+  "security": {
+    "rbac": true,
+    "multiTenant": true,
+    "auth": {
+      "method": "email_password",
+      "twoFactor": true,
+      "sso": true
+    }
+  },
+  "navigation": {
+    "web": {
+      "type": "sidebar",
+      "style": "grouped"
+    },
+    "mobile": {
+      "type": "tabs+stack"
+    },
+    "desktop": {
+      "type": "sidebar+menubar"
+    }
+  },
+  "roles": [
+    {
+      "id": "admin",
+      "name": "مدير النظام"
+    },
+    {
+      "id": "manager",
+      "name": "مشرف الدعم"
+    },
+    {
+      "id": "agent",
+      "name": "موظف دعم"
+    },
+    {
+      "id": "requester",
+      "name": "طالب خدمة"
+    }
+  ],
+  "modules": [
+    "core.auth",
+    "core.rbac",
+    "core.tenants",
+    "core.auditLogs",
+    "core.notifications",
+    "core.settings",
+    "helpdesk.tickets",
+    "helpdesk.sla",
+    "helpdesk.knowledgeBase",
+    "helpdesk.automations",
+    "helpdesk.reports"
+  ],
+  "routes": [
+    {
+      "id": "dashboard",
+      "path": "/",
+      "screenId": "screen.dashboard",
+      "permission": "dashboard.view"
+    },
+    {
+      "id": "ticketList",
+      "path": "/tickets",
+      "screenId": "screen.ticket.list",
+      "permission": "ticket.view"
+    },
+    {
+      "id": "ticketCreate",
+      "path": "/tickets/new",
+      "screenId": "screen.ticket.create",
+      "permission": "ticket.create"
+    },
+    {
+      "id": "ticketDetail",
+      "path": "/tickets/:id",
+      "screenId": "screen.ticket.detail",
+      "permission": "ticket.view"
+    },
+    {
+      "id": "ticketEdit",
+      "path": "/tickets/:id/edit",
+      "screenId": "screen.ticket.edit",
+      "permission": "ticket.edit"
+    },
+    {
+      "id": "slaList",
+      "path": "/sla",
+      "screenId": "screen.sla.list",
+      "permission": "sla.view"
+    },
+    {
+      "id": "slaCreate",
+      "path": "/sla/new",
+      "screenId": "screen.sla.create",
+      "permission": "sla.edit"
+    },
+    {
+      "id": "slaEdit",
+      "path": "/sla/:id/edit",
+      "screenId": "screen.sla.edit",
+      "permission": "sla.edit"
+    },
+    {
+      "id": "kbList",
+      "path": "/kb",
+      "screenId": "screen.kb.list",
+      "permission": "kb.view"
+    },
+    {
+      "id": "kbDetail",
+      "path": "/kb/:id",
+      "screenId": "screen.kb.detail",
+      "permission": "kb.view"
+    },
+    {
+      "id": "kbCreate",
+      "path": "/kb/new",
+      "screenId": "screen.kb.create",
+      "permission": "kb.edit"
+    },
+    {
+      "id": "kbEdit",
+      "path": "/kb/:id/edit",
+      "screenId": "screen.kb.edit",
+      "permission": "kb.edit"
+    },
+    {
+      "id": "autoList",
+      "path": "/automations",
+      "screenId": "screen.automation.list",
+      "permission": "automation.view"
+    },
+    {
+      "id": "autoCreate",
+      "path": "/automations/new",
+      "screenId": "screen.automation.create",
+      "permission": "automation.edit"
+    },
+    {
+      "id": "autoEdit",
+      "path": "/automations/:id/edit",
+      "screenId": "screen.automation.edit",
+      "permission": "automation.edit"
+    },
+    {
+      "id": "reports",
+      "path": "/reports",
+      "screenId": "screen.reports",
+      "permission": "reports.view"
+    },
+    {
+      "id": "audit",
+      "path": "/audit",
+      "screenId": "screen.audit",
+      "permission": "audit.view"
+    },
+    {
+      "id": "settings",
+      "path": "/settings",
+      "screenId": "screen.settings",
+      "permission": "settings.view"
+    }
+  ],
+  "screens": [
+    {
+      "screenId": "screen.dashboard",
+      "title": "لوحة التحكم",
+      "intent": "dashboard",
+      "view": {
+        "web": {
+          "layout": "dashboardGrid"
+        },
+        "mobile": {
+          "layout": "dashboardStack"
+        },
+        "desktop": {
+          "layout": "dashboardGrid",
+          "shortcuts": true
+        }
+      },
+      "widgets": ["kpiCards", "ticketsByStatus", "slaBreaches", "recentActivity"],
+      "states": {
+        "loading": true,
+        "error": true,
+        "noPermission": true
+      },
+      "permissionsRequired": ["dashboard.view"]
+    },
+    {
+      "screenId": "screen.ticket.list",
+      "title": "التذاكر",
+      "intent": "ticketQueue",
+      "entity": "Ticket",
+      "view": {
+        "web": {
+          "layout": "dataTablePro",
+          "queueSidebar": true,
+          "pagination": "server",
+          "density": "compact",
+          "virtualized": true
+        },
+        "mobile": {
+          "layout": "cardList",
+          "filters": "bottomSheet",
+          "virtualized": true,
+          "pullToRefresh": true
+        },
+        "desktop": {
+          "layout": "dataTablePro",
+          "queueSidebar": true,
+          "pagination": "server",
+          "contextMenu": true,
+          "shortcuts": true,
+          "multiSelect": true,
+          "virtualized": true
+        }
+      },
+      "toolbar": ["search", "filters", "savedViews", "columns", "export"],
+      "actions": [
+        {
+          "id": "create",
+          "label": "تذكرة جديدة",
+          "variant": "primary",
+          "permission": "ticket.create"
+        },
+        {
+          "id": "assign",
+          "label": "تعيين",
+          "variant": "secondary",
+          "permission": "ticket.assign",
+          "requiresSelection": true
+        },
+        {
+          "id": "bulkChangeStatus",
+          "label": "تغيير الحالة",
+          "variant": "secondary",
+          "permission": "ticket.edit",
+          "requiresSelection": true
+        }
+      ],
+      "states": {
+        "loading": true,
+        "empty": {
+          "title": "لا توجد تذاكر",
+          "description": "ابدأ بإنشاء أول تذكرة",
+          "action": {
+            "label": "تذكرة جديدة",
+            "permission": "ticket.create"
+          }
+        },
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لعرض التذاكر"
+        }
+      },
+      "permissionsRequired": ["ticket.view"]
+    },
+    {
+      "screenId": "screen.ticket.create",
+      "title": "تذكرة جديدة",
+      "intent": "entityForm",
+      "entity": "Ticket",
+      "view": {
+        "web": {
+          "layout": "formPage"
+        },
+        "mobile": {
+          "layout": "formPage",
+          "formLayout": "stepper"
+        },
+        "desktop": {
+          "layout": "formPage"
+        }
+      },
+      "form": {
+        "builder": "form.builder.schemaDriven",
+        "mode": "create"
+      },
+      "formStates": {
+        "idle": true,
+        "submitting": true,
+        "success": true,
+        "error": true
+      },
+      "states": {
+        "loading": true,
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لإنشاء تذكرة"
+        }
+      },
+      "permissionsRequired": ["ticket.create"]
+    },
+    {
+      "screenId": "screen.ticket.edit",
+      "title": "تعديل التذكرة",
+      "intent": "entityForm",
+      "entity": "Ticket",
+      "view": {
+        "web": {
+          "layout": "formDrawer"
+        },
+        "mobile": {
+          "layout": "formPage",
+          "formLayout": "stepper"
+        },
+        "desktop": {
+          "layout": "formDrawer"
+        }
+      },
+      "form": {
+        "builder": "form.builder.schemaDriven",
+        "mode": "edit"
+      },
+      "confirmDestructive": true,
+      "formStates": {
+        "idle": true,
+        "submitting": true,
+        "success": true,
+        "error": true
+      },
+      "states": {
+        "loading": true,
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لتعديل التذكرة"
+        }
+      },
+      "permissionsRequired": ["ticket.edit"]
+    },
+    {
+      "screenId": "screen.ticket.detail",
+      "title": "تفاصيل التذكرة",
+      "intent": "entityDetail",
+      "entity": "Ticket",
+      "view": {
+        "web": {
+          "layout": "detailWithRightPanel"
+        },
+        "mobile": {
+          "layout": "tabsTop",
+          "primaryTab": "conversation"
+        },
+        "desktop": {
+          "layout": "detailWithRightPanel",
+          "shortcuts": true
+        }
+      },
+      "tabs": [
+        {
+          "id": "overview",
+          "label": "نظرة عامة",
+          "component": "ticketOverview"
+        },
+        {
+          "id": "conversation",
+          "label": "المحادثة",
+          "component": "ticketConversation",
+          "default": true
+        },
+        {
+          "id": "activity",
+          "label": "النشاط",
+          "component": "activityTimeline"
+        },
+        {
+          "id": "sla",
+          "label": "SLA",
+          "component": "slaTimers"
+        }
+      ],
+      "rightPanel": ["assignee", "status", "priority", "tags", "slaTimers"],
+      "actions": [
+        {
+          "id": "edit",
+          "label": "تعديل",
+          "variant": "secondary",
+          "permission": "ticket.edit"
+        },
+        {
+          "id": "assign",
+          "label": "تعيين",
+          "variant": "secondary",
+          "permission": "ticket.assign"
+        },
+        {
+          "id": "comment",
+          "label": "إضافة تعليق",
+          "variant": "primary",
+          "permission": "ticket.comment"
+        },
+        {
+          "id": "close",
+          "label": "إغلاق",
+          "variant": "destructive",
+          "permission": "ticket.close",
+          "confirm": {
+            "title": "تأكيد الإغلاق",
+            "message": "هل أنت متأكد من إغلاق هذه التذكرة؟"
+          }
+        }
+      ],
+      "states": {
+        "loading": true,
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لعرض هذه التذكرة"
+        }
+      },
+      "permissionsRequired": ["ticket.view"]
+    },
+    {
+      "screenId": "screen.sla.list",
+      "title": "سياسات SLA",
+      "intent": "entityList",
+      "entity": "SlaPolicy",
+      "view": {
+        "web": {
+          "layout": "dataTablePro",
+          "pagination": "server",
+          "virtualized": true
+        },
+        "mobile": {
+          "layout": "cardList",
+          "filters": "bottomSheet",
+          "virtualized": true
+        },
+        "desktop": {
+          "layout": "dataTablePro",
+          "pagination": "server",
+          "shortcuts": true,
+          "virtualized": true
+        }
+      },
+      "toolbar": ["search", "filters", "columns"],
+      "actions": [
+        {
+          "id": "create",
+          "label": "سياسة جديدة",
+          "variant": "primary",
+          "permission": "sla.edit"
+        },
+        {
+          "id": "delete",
+          "label": "حذف",
+          "variant": "destructive",
+          "permission": "sla.edit",
+          "requiresSelection": true,
+          "confirm": {
+            "title": "تأكيد الحذف",
+            "message": "هل أنت متأكد من حذف السياسات المحددة؟"
+          }
+        }
+      ],
+      "states": {
+        "loading": true,
+        "empty": {
+          "title": "لا توجد سياسات SLA",
+          "description": "ابدأ بإنشاء أول سياسة SLA"
+        },
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لعرض سياسات SLA"
+        }
+      },
+      "permissionsRequired": ["sla.view"]
+    },
+    {
+      "screenId": "screen.sla.create",
+      "title": "سياسة SLA جديدة",
+      "intent": "entityForm",
+      "entity": "SlaPolicy",
+      "view": {
+        "web": {
+          "layout": "formPage"
+        },
+        "mobile": {
+          "layout": "formPage"
+        },
+        "desktop": {
+          "layout": "formPage"
+        }
+      },
+      "form": {
+        "builder": "form.builder.schemaDriven",
+        "mode": "create"
+      },
+      "formStates": {
+        "idle": true,
+        "submitting": true,
+        "success": true,
+        "error": true
+      },
+      "states": {
+        "loading": true,
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لإنشاء سياسة SLA"
+        }
+      },
+      "permissionsRequired": ["sla.edit"]
+    },
+    {
+      "screenId": "screen.sla.edit",
+      "title": "تعديل سياسة SLA",
+      "intent": "entityForm",
+      "entity": "SlaPolicy",
+      "view": {
+        "web": {
+          "layout": "formPage"
+        },
+        "mobile": {
+          "layout": "formPage"
+        },
+        "desktop": {
+          "layout": "formPage"
+        }
+      },
+      "form": {
+        "builder": "form.builder.schemaDriven",
+        "mode": "edit"
+      },
+      "confirmDestructive": true,
+      "formStates": {
+        "idle": true,
+        "submitting": true,
+        "success": true,
+        "error": true
+      },
+      "states": {
+        "loading": true,
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لتعديل سياسة SLA"
+        }
+      },
+      "permissionsRequired": ["sla.edit"]
+    },
+    {
+      "screenId": "screen.kb.list",
+      "title": "قاعدة المعرفة",
+      "intent": "entityList",
+      "entity": "Article",
+      "view": {
+        "web": {
+          "layout": "dataTablePro",
+          "pagination": "server",
+          "virtualized": true
+        },
+        "mobile": {
+          "layout": "cardList",
+          "filters": "bottomSheet",
+          "virtualized": true
+        },
+        "desktop": {
+          "layout": "dataTablePro",
+          "pagination": "server",
+          "shortcuts": true,
+          "virtualized": true
+        }
+      },
+      "toolbar": ["search", "filters", "columns"],
+      "actions": [
+        {
+          "id": "create",
+          "label": "مقال جديد",
+          "variant": "primary",
+          "permission": "kb.edit"
+        },
+        {
+          "id": "delete",
+          "label": "حذف",
+          "variant": "destructive",
+          "permission": "kb.edit",
+          "requiresSelection": true,
+          "confirm": {
+            "title": "تأكيد الحذف",
+            "message": "هل أنت متأكد من حذف المقالات المحددة؟"
+          }
+        }
+      ],
+      "states": {
+        "loading": true,
+        "empty": {
+          "title": "لا توجد مقالات",
+          "description": "ابدأ بإنشاء أول مقال"
+        },
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لعرض قاعدة المعرفة"
+        }
+      },
+      "permissionsRequired": ["kb.view"]
+    },
+    {
+      "screenId": "screen.kb.detail",
+      "title": "عرض المقال",
+      "intent": "articleReader",
+      "entity": "Article",
+      "view": {
+        "web": {
+          "layout": "readerWithSidebar"
+        },
+        "mobile": {
+          "layout": "reader"
+        },
+        "desktop": {
+          "layout": "readerWithSidebar",
+          "shortcuts": true
+        }
+      },
+      "states": {
+        "loading": true,
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لعرض هذا المقال"
+        }
+      },
+      "permissionsRequired": ["kb.view"]
+    },
+    {
+      "screenId": "screen.kb.create",
+      "title": "مقال جديد",
+      "intent": "entityForm",
+      "entity": "Article",
+      "view": {
+        "web": {
+          "layout": "formPage"
+        },
+        "mobile": {
+          "layout": "formPage"
+        },
+        "desktop": {
+          "layout": "formPage"
+        }
+      },
+      "form": {
+        "builder": "form.builder.schemaDriven",
+        "mode": "create"
+      },
+      "formStates": {
+        "idle": true,
+        "submitting": true,
+        "success": true,
+        "error": true
+      },
+      "states": {
+        "loading": true,
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لإنشاء مقال"
+        }
+      },
+      "permissionsRequired": ["kb.edit"]
+    },
+    {
+      "screenId": "screen.kb.edit",
+      "title": "تعديل المقال",
+      "intent": "entityForm",
+      "entity": "Article",
+      "view": {
+        "web": {
+          "layout": "formPage"
+        },
+        "mobile": {
+          "layout": "formPage"
+        },
+        "desktop": {
+          "layout": "formPage"
+        }
+      },
+      "form": {
+        "builder": "form.builder.schemaDriven",
+        "mode": "edit"
+      },
+      "confirmDestructive": true,
+      "formStates": {
+        "idle": true,
+        "submitting": true,
+        "success": true,
+        "error": true
+      },
+      "states": {
+        "loading": true,
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لتعديل المقال"
+        }
+      },
+      "permissionsRequired": ["kb.edit"]
+    },
+    {
+      "screenId": "screen.automation.list",
+      "title": "الأتمتة",
+      "intent": "entityList",
+      "entity": "AutomationRule",
+      "view": {
+        "web": {
+          "layout": "dataTablePro",
+          "pagination": "server",
+          "virtualized": true
+        },
+        "mobile": {
+          "layout": "cardList",
+          "filters": "bottomSheet",
+          "virtualized": true
+        },
+        "desktop": {
+          "layout": "dataTablePro",
+          "pagination": "server",
+          "shortcuts": true,
+          "virtualized": true
+        }
+      },
+      "toolbar": ["search", "filters", "columns"],
+      "actions": [
+        {
+          "id": "create",
+          "label": "قاعدة جديدة",
+          "variant": "primary",
+          "permission": "automation.edit"
+        },
+        {
+          "id": "delete",
+          "label": "حذف",
+          "variant": "destructive",
+          "permission": "automation.edit",
+          "requiresSelection": true,
+          "confirm": {
+            "title": "تأكيد الحذف",
+            "message": "هل أنت متأكد من حذف قواعد الأتمتة المحددة؟"
+          }
+        }
+      ],
+      "states": {
+        "loading": true,
+        "empty": {
+          "title": "لا توجد قواعد أتمتة",
+          "description": "ابدأ بإنشاء أول قاعدة أتمتة"
+        },
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لعرض قواعد الأتمتة"
+        }
+      },
+      "permissionsRequired": ["automation.view"]
+    },
+    {
+      "screenId": "screen.automation.create",
+      "title": "قاعدة أتمتة جديدة",
+      "intent": "ruleBuilder",
+      "entity": "AutomationRule",
+      "view": {
+        "web": {
+          "layout": "ruleBuilder"
+        },
+        "mobile": {
+          "layout": "ruleBuilder"
+        },
+        "desktop": {
+          "layout": "ruleBuilder"
+        }
+      },
+      "states": {
+        "loading": true,
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لإنشاء قاعدة أتمتة"
+        }
+      },
+      "permissionsRequired": ["automation.edit"]
+    },
+    {
+      "screenId": "screen.automation.edit",
+      "title": "تعديل قاعدة الأتمتة",
+      "intent": "ruleBuilder",
+      "entity": "AutomationRule",
+      "view": {
+        "web": {
+          "layout": "ruleBuilder"
+        },
+        "mobile": {
+          "layout": "ruleBuilder"
+        },
+        "desktop": {
+          "layout": "ruleBuilder"
+        }
+      },
+      "confirmDestructive": true,
+      "states": {
+        "loading": true,
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لتعديل قاعدة الأتمتة"
+        }
+      },
+      "permissionsRequired": ["automation.edit"]
+    },
+    {
+      "screenId": "screen.reports",
+      "title": "التقارير",
+      "intent": "reports",
+      "view": {
+        "web": {
+          "layout": "reportsDashboard"
+        },
+        "mobile": {
+          "layout": "reportsStack"
+        },
+        "desktop": {
+          "layout": "reportsDashboard",
+          "shortcuts": true
+        }
+      },
+      "states": {
+        "loading": true,
+        "empty": true,
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لعرض التقارير"
+        }
+      },
+      "permissionsRequired": ["reports.view"]
+    },
+    {
+      "screenId": "screen.audit",
+      "title": "سجل التدقيق",
+      "intent": "auditViewer",
+      "view": {
+        "web": {
+          "layout": "auditLog"
+        },
+        "mobile": {
+          "layout": "auditLog"
+        },
+        "desktop": {
+          "layout": "auditLog",
+          "shortcuts": true
+        }
+      },
+      "states": {
+        "loading": true,
+        "empty": true,
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لعرض سجل التدقيق"
+        }
+      },
+      "permissionsRequired": ["audit.view"]
+    },
+    {
+      "screenId": "screen.settings",
+      "title": "الإعدادات",
+      "intent": "settings",
+      "view": {
+        "web": {
+          "layout": "settingsTabs"
+        },
+        "mobile": {
+          "layout": "settingsList"
+        },
+        "desktop": {
+          "layout": "settingsTabs",
+          "shortcuts": true
+        }
+      },
+      "states": {
+        "loading": true,
+        "error": true,
+        "noPermission": {
+          "message": "ليس لديك صلاحية لعرض الإعدادات"
+        }
+      },
+      "permissionsRequired": ["settings.view"]
+    }
+  ],
+  "policies": [
+    {
+      "id": "tenantScope",
+      "type": "rowLevel",
+      "rule": "record.tenantId == current.tenantId",
+      "appliesTo": ["*"]
+    },
+    {
+      "id": "requesterTicketScope",
+      "type": "rowLevel",
+      "rule": "current.role != 'requester' || record.requesterId == current.userId",
+      "appliesTo": ["Ticket:list", "Ticket:detail"]
+    }
+  ]
+}
+

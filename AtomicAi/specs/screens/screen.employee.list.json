@@ -1,0 +1,103 @@
+{
+  "screenId": "screen.employee.list",
+  "title": "الموظفون",
+  "intent": "entityList",
+  "entity": "Employee",
+  "view": {
+    "web": {
+      "layout": "dataTablePro",
+      "density": "compact",
+      "columns": [
+        {"field": "name", "label": "الاسم", "sortable": true},
+        {"field": "department", "label": "القسم", "sortable": true},
+        {"field": "position", "label": "المنصب"},
+        {"field": "status", "label": "الحالة", "format": "badge"}
+      ]
+    },
+    "mobile": {
+      "layout": "cardList",
+      "cardFields": ["name", "department", "position", "status"],
+      "filters": "bottomSheet",
+      "actions": "swipeActions"
+    },
+    "desktop": {
+      "layout": "dataTablePro",
+      "density": "comfortable",
+      "shortcuts": true,
+      "contextMenu": true,
+      "multiSelect": true,
+      "columns": [
+        {"field": "name", "label": "الاسم", "sortable": true, "width": "200px"},
+        {"field": "department", "label": "القسم", "sortable": true},
+        {"field": "position", "label": "المنصب"},
+        {"field": "email", "label": "البريد الإلكتروني"},
+        {"field": "phone", "label": "الهاتف"},
+        {"field": "status", "label": "الحالة", "format": "badge"}
+      ]
+    }
+  },
+  "toolbar": {
+    "web": ["search", "filters", "columns", "export", "create"],
+    "mobile": ["search", "create"],
+    "desktop": ["search", "filters", "columns", "export", "create", "bulkActions"]
+  },
+  "filters": [
+    {"field": "department", "type": "enum", "label": "القسم"},
+    {"field": "status", "type": "enum", "label": "الحالة"},
+    {"field": "hireDate", "type": "dateRange", "label": "تاريخ التوظيف"}
+  ],
+  "actions": [
+    {
+      "id": "create",
+      "label": "إضافة موظف",
+      "variant": "primary",
+      "permission": "employee.create"
+    },
+    {
+      "id": "export",
+      "label": "تصدير",
+      "variant": "secondary",
+      "permission": "employee.export"
+    },
+    {
+      "id": "bulkEdit",
+      "label": "تعديل متعدد",
+      "variant": "secondary",
+      "permission": "employee.edit",
+      "requiresSelection": true
+    }
+  ],
+  "bulkActions": [
+    {
+      "id": "activate",
+      "label": "تفعيل",
+      "permission": "employee.edit"
+    },
+    {
+      "id": "deactivate",
+      "label": "تعطيل",
+      "permission": "employee.edit"
+    },
+    {
+      "id": "export",
+      "label": "تصدير المحدد",
+      "permission": "employee.export"
+    }
+  ],
+  "emptyState": {
+    "title": "لا يوجد موظفون",
+    "description": "ابدأ بإضافة أول موظف",
+    "action": {
+      "label": "إضافة موظف",
+      "permission": "employee.create"
+    }
+  },
+  "permissions": {
+    "view": ["admin", "hr_manager", "employee"],
+    "create": ["admin", "hr_manager"],
+    "edit": ["admin", "hr_manager"],
+    "delete": ["admin"],
+    "export": ["admin", "hr_manager"]
+  }
+}
+

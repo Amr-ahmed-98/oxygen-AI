@@ -1,0 +1,32 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T12:01:56.274864+00:00",
+  "items": [
+    {
+      "id": "atom.phoneInput",
+      "type": "atom",
+      "name": "Phone Input",
+      "tags": [
+        "ui",
+        "atom",
+        "input",
+        "phone",
+        "mask",
+        "forms",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Phone Input ui atom input phone mask forms erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "phoneInput_atom_manifest_v8.json",
+        "phoneInput_variants_library_v8.json",
+        "catalog_index_phoneInput_pack_v8.json"
+      ]
+    }
+  ]
+}

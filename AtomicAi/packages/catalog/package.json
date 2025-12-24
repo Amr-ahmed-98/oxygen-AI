@@ -1,0 +1,15 @@
+{
+  "name": "@atomic-ai/catalog",
+  "version": "1.0.0",
+  "description": "Atomic AI Catalog - Unified component index",
+  "type": "module",
+  "main": "./index.json",
+  "scripts": {
+    "build": "node scripts/build-unified-index.mjs",
+    "dev": "node scripts/build-unified-index.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0"
+  }
+}
+

@@ -1,0 +1,224 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T17:17:07.950609+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "input-group",
+    "goal": "ThemeForest-grade InputGroup molecule (Prefix/Suffix + Input + actions)"
+  },
+  "component": {
+    "id": "molecule.inputGroup",
+    "name": "Input Group",
+    "type": "molecule",
+    "aliases": [
+      "InputAddon",
+      "AffixInput",
+      "PrefixSuffixInput"
+    ],
+    "description": "Composes input with prefix/suffix addons, icons, buttons, and unit labels (e.g., currency, %).",
+    "tags": [
+      "ui",
+      "molecule",
+      "forms",
+      "input",
+      "prefix",
+      "suffix",
+      "addon",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.textField",
+        "atom.button",
+        "atom.iconButton",
+        "atom.badge"
+      ],
+      "optional": [
+        "atom.select",
+        "atom.tooltip"
+      ]
+    },
+    "events": {
+      "web": [
+        "onValueChange",
+        "onAction"
+      ],
+      "mobile": [
+        "onValueChange",
+        "onAction"
+      ],
+      "desktop": [
+        "onValueChange",
+        "onAction"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "outline",
+          "soft",
+          "solid",
+          "minimal"
+        ],
+        "default": "outline"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "info",
+          "success",
+          "warning",
+          "danger"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "comfortable"
+      },
+      "prefix": {
+        "type": "enum",
+        "enum": [
+          "none",
+          "icon",
+          "text",
+          "select",
+          "badge"
+        ],
+        "default": "none"
+      },
+      "suffix": {
+        "type": "enum",
+        "enum": [
+          "none",
+          "icon",
+          "text",
+          "button",
+          "iconButton",
+          "clear"
+        ],
+        "default": "none"
+      },
+      "unit": {
+        "type": "enum",
+        "enum": [
+          "none",
+          "%",
+          "USD",
+          "EGP",
+          "EUR",
+          "kg",
+          "m",
+          "hrs"
+        ],
+        "default": "none"
+      },
+      "state": {
+        "type": "enum",
+        "enum": [
+          "default",
+          "error",
+          "success",
+          "warning",
+          "disabled",
+          "readonly",
+          "loading"
+        ],
+        "default": "default"
+      },
+      "rounded": {
+        "type": "enum",
+        "enum": [
+          "md",
+          "lg",
+          "pill"
+        ],
+        "default": "md"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "error",
+      "success",
+      "warning",
+      "disabled",
+      "readonly",
+      "loading",
+      "prefix",
+      "suffix",
+      "unit",
+      "compact"
+    ],
+    "a11y": {
+      "requirements": [
+        "Ensure merged controls remain keyboard accessible.",
+        "Action buttons must have aria-label.",
+        "Prefix/suffix must not trap focus."
+      ]
+    }
+  }
+}

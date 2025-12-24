@@ -1,0 +1,288 @@
+{
+  "version": "1.0.0",
+  "description": "Web Renderer Mapping Table: intent → component IDs",
+  "shell": {
+    "app": "shell.app",
+    "sidebar": "shell.sidebar.grouped",
+    "header": "shell.header.breadcrumbs",
+    "userMenu": "shell.userMenu",
+    "tenantSwitcher": "shell.tenantSwitcher",
+    "commandPalette": "shell.commandPalette",
+    "notificationCenter": "shell.notificationCenter"
+  },
+  "intents": {
+    "ticketQueue": {
+      "web": [
+        "data.toolbar.searchSortColumns",
+        "data.filters.builder",
+        "data.table.pro",
+        "data.pagination.server",
+        "state.loading.skeleton",
+        "state.empty",
+        "state.error",
+        "state.noPermission"
+      ],
+      "mobile": [
+        "data.list.cards",
+        "data.filters.sheet",
+        "state.loading.skeleton",
+        "state.empty",
+        "state.error",
+        "state.noPermission"
+      ],
+      "desktop": [
+        "data.toolbar.searchSortColumns",
+        "data.filters.builder",
+        "data.table.pro",
+        "data.pagination.server",
+        "data.bulkActions",
+        "state.loading.skeleton",
+        "state.empty",
+        "state.error",
+        "state.noPermission"
+      ]
+    },
+    "entityList": {
+      "web": [
+        "data.toolbar.searchSortColumns",
+        "data.filters.builder",
+        "data.table.pro",
+        "data.pagination.server",
+        "state.loading.skeleton",
+        "state.empty",
+        "state.error",
+        "state.noPermission"
+      ],
+      "mobile": [
+        "data.list.cards",
+        "data.filters.sheet",
+        "state.loading.skeleton",
+        "state.empty",
+        "state.error",
+        "state.noPermission"
+      ],
+      "desktop": [
+        "data.toolbar.searchSortColumns",
+        "data.filters.builder",
+        "data.table.pro",
+        "data.pagination.server",
+        "data.bulkActions",
+        "state.loading.skeleton",
+        "state.empty",
+        "state.error",
+        "state.noPermission"
+      ]
+    },
+    "entityDetail": {
+      "web": [
+        "data.detail.tabs",
+        "data.timeline.activity",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ],
+      "mobile": [
+        "data.detail.tabs",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ],
+      "desktop": [
+        "data.detail.tabs",
+        "data.timeline.activity",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ]
+    },
+    "entityForm": {
+      "web": [
+        "form.builder.schemaDriven",
+        "form.validation.summary",
+        "form.confirmDestructive",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ],
+      "mobile": [
+        "form.builder.schemaDriven",
+        "form.stepper",
+        "form.validation.summary",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ],
+      "desktop": [
+        "form.builder.schemaDriven",
+        "form.drawerEdit",
+        "form.validation.summary",
+        "form.confirmDestructive",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ]
+    },
+    "ruleBuilder": {
+      "web": [
+        "form.builder.schemaDriven",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ],
+      "mobile": [
+        "form.builder.schemaDriven",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ],
+      "desktop": [
+        "form.builder.schemaDriven",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ]
+    },
+    "dashboard": {
+      "web": [
+        "layout.grid",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ],
+      "mobile": [
+        "layout.stack",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ],
+      "desktop": [
+        "layout.grid",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ]
+    },
+    "articleReader": {
+      "web": [
+        "layout.prose",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ],
+      "mobile": [
+        "layout.prose",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ],
+      "desktop": [
+        "layout.prose",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ]
+    },
+    "auditViewer": {
+      "web": [
+        "audit.log.viewer",
+        "data.table.pro",
+        "data.pagination.server",
+        "state.loading.skeleton",
+        "state.empty",
+        "state.error",
+        "state.noPermission"
+      ],
+      "mobile": [
+        "audit.log.viewer",
+        "data.list.cards",
+        "state.loading.skeleton",
+        "state.empty",
+        "state.error",
+        "state.noPermission"
+      ],
+      "desktop": [
+        "audit.log.viewer",
+        "data.table.pro",
+        "data.pagination.server",
+        "state.loading.skeleton",
+        "state.empty",
+        "state.error",
+        "state.noPermission"
+      ]
+    },
+    "reports": {
+      "web": [
+        "layout.grid",
+        "state.loading.skeleton",
+        "state.empty",
+        "state.error",
+        "state.noPermission"
+      ],
+      "mobile": [
+        "layout.stack",
+        "state.loading.skeleton",
+        "state.empty",
+        "state.error",
+        "state.noPermission"
+      ],
+      "desktop": [
+        "layout.grid",
+        "state.loading.skeleton",
+        "state.empty",
+        "state.error",
+        "state.noPermission"
+      ]
+    },
+    "settings": {
+      "web": [
+        "layout.tabs",
+        "form.builder.schemaDriven",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ],
+      "mobile": [
+        "layout.list",
+        "form.builder.schemaDriven",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ],
+      "desktop": [
+        "layout.tabs",
+        "form.builder.schemaDriven",
+        "state.loading.skeleton",
+        "state.error",
+        "state.noPermission"
+      ]
+    }
+  },
+  "states": {
+    "loading": "state.loading.skeleton",
+    "empty": "state.empty",
+    "error": "state.error",
+    "noPermission": "state.noPermission"
+  },
+  "security": {
+    "guard": "security.rbac.guard"
+  },
+  "layoutMappings": {
+    "dataTablePro": "data.table.pro",
+    "cardList": "data.list.cards",
+    "detailWithRightPanel": "data.detail.tabs",
+    "tabsTop": "data.detail.tabs",
+    "formPage": "form.builder.schemaDriven",
+    "formDrawer": "form.drawerEdit",
+    "dashboardGrid": "layout.grid",
+    "dashboardStack": "layout.stack",
+    "readerWithSidebar": "layout.prose",
+    "reader": "layout.prose",
+    "auditLog": "audit.log.viewer",
+    "reportsDashboard": "layout.grid",
+    "reportsStack": "layout.stack",
+    "settingsTabs": "layout.tabs",
+    "settingsList": "layout.list",
+    "ruleBuilder": "form.builder.schemaDriven"
+  }
+}
+

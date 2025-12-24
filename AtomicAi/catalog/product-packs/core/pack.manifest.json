@@ -1,0 +1,90 @@
+{
+  "packId": "core",
+  "name": "Core Pack",
+  "description": "Core modules shared across all products",
+  "productType": "GENERIC",
+  "defaultAudience": "B2B",
+  "primaryPatterns": [],
+  "coreModules": [],
+  "modules": [
+    {
+      "moduleId": "core.auth",
+      "title": "Authentication",
+      "entities": ["User", "Session", "Token"],
+      "required": true
+    },
+    {
+      "moduleId": "core.rbac",
+      "title": "Role-Based Access Control",
+      "entities": ["Role", "Permission", "Policy"],
+      "required": true
+    },
+    {
+      "moduleId": "core.tenants",
+      "title": "Multi-tenancy",
+      "entities": ["Tenant", "Workspace"],
+      "required": false
+    },
+    {
+      "moduleId": "core.auditLogs",
+      "title": "Audit Logs",
+      "entities": ["AuditLog", "Activity"],
+      "required": true
+    },
+    {
+      "moduleId": "core.notifications",
+      "title": "Notifications",
+      "entities": ["Notification", "NotificationPreference"],
+      "required": true
+    },
+    {
+      "moduleId": "core.settings",
+      "title": "Settings",
+      "entities": ["Setting", "UserPreference", "OrgSetting"],
+      "required": true
+    },
+    {
+      "moduleId": "core.importExport",
+      "title": "Import / Export",
+      "entities": ["Import", "Export", "Template"],
+      "required": false
+    },
+    {
+      "moduleId": "core.reports",
+      "title": "Reports",
+      "entities": ["Report", "Dashboard"],
+      "required": false
+    },
+    {
+      "moduleId": "core.help",
+      "title": "Help & Docs",
+      "entities": ["Article", "Guide", "FAQ"],
+      "required": false
+    },
+    {
+      "moduleId": "core.billing",
+      "title": "Billing",
+      "entities": ["Plan", "Subscription", "Invoice"],
+      "required": false
+    },
+    {
+      "moduleId": "core.apiKeys",
+      "title": "API Keys",
+      "entities": ["APIKey", "Webhook"],
+      "required": false
+    },
+    {
+      "moduleId": "core.sync",
+      "title": "Sync",
+      "entities": ["SyncQueue", "SyncStatus"],
+      "required": false
+    }
+  ],
+  "workflows": [],
+  "integrations": [],
+  "platformAdapters": {
+    "mobile": {},
+    "desktop": {}
+  }
+}
+

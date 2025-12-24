@@ -1,0 +1,292 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:03:17.374948+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "avatar",
+    "goal": "ThemeForest-grade Avatar dataset for users, teams, entities (ERP)"
+  },
+  "component": {
+    "id": "atom.avatar",
+    "name": "Avatar",
+    "type": "atom",
+    "aliases": [
+      "UserAvatar",
+      "EntityAvatar",
+      "ProfileImage",
+      "InitialsAvatar"
+    ],
+    "description": "Circular/rounded avatar supporting image, initials, status dot, group stack, and fallback icons.",
+    "tags": [
+      "ui",
+      "atom",
+      "avatar",
+      "user",
+      "status",
+      "presence",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "image": {
+        "type": "image",
+        "required": false
+      },
+      "fallback": {
+        "type": "node",
+        "required": false
+      },
+      "badge": {
+        "type": "node",
+        "required": false
+      },
+      "statusDot": {
+        "type": "node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [
+        "onClick",
+        "onError"
+      ],
+      "mobile": [
+        "onPress",
+        "onError"
+      ]
+    },
+    "props": {
+      "size": {
+        "type": "enum",
+        "enum": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+          "2xl"
+        ],
+        "default": "md"
+      },
+      "shape": {
+        "type": "enum",
+        "enum": [
+          "circle",
+          "rounded",
+          "square"
+        ],
+        "default": "circle"
+      },
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "image",
+          "initials",
+          "icon"
+        ],
+        "default": "image"
+      },
+      "initials": {
+        "type": "string",
+        "default": "AB"
+      },
+      "alt": {
+        "type": "string",
+        "default": "User avatar"
+      },
+      "status": {
+        "type": "enum",
+        "enum": [
+          "none",
+          "online",
+          "offline",
+          "busy",
+          "away",
+          "verified",
+          "locked"
+        ],
+        "default": "none"
+      },
+      "border": {
+        "type": "enum",
+        "enum": [
+          "none",
+          "subtle",
+          "ring",
+          "double"
+        ],
+        "default": "subtle"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "success",
+          "warning",
+          "danger",
+          "info"
+        ],
+        "default": "neutral"
+      },
+      "stacked": {
+        "type": "boolean",
+        "default": false
+      },
+      "stackCount": {
+        "type": "number",
+        "default": 0,
+        "description": "Used when stacked=true."
+      },
+      "showTooltip": {
+        "type": "boolean",
+        "default": false
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": false
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "hover",
+      "focus",
+      "disabled",
+      "image-loaded",
+      "image-error",
+      "stacked",
+      "with-status"
+    ],
+    "a11y": {
+      "requirements": [
+        "Provide meaningful alt text when image is informative.",
+        "If clickable, use button semantics and focus ring.",
+        "Ensure status is not only color-based (support text/tooltip)."
+      ]
+    }
+  },
+  "designTokens": {
+    "namespace": "tf",
+    "strategy": "semantic tokens -> css vars -> adapters",
+    "baseTokens": {
+      "--av-radius": "999px",
+      "--av-border-width": "1px",
+      "--av-border": "var(--border-subtle)",
+      "--av-bg": "var(--surface-1)",
+      "--av-fg": "var(--color-fg)",
+      "--av-shadow": "none",
+      "--av-focus-ring": "var(--focus-ring)"
+    },
+    "sizeScale": {
+      "xs": {
+        "px": "22px",
+        "font": "11px"
+      },
+      "sm": {
+        "px": "28px",
+        "font": "12px"
+      },
+      "md": {
+        "px": "36px",
+        "font": "13px"
+      },
+      "lg": {
+        "px": "44px",
+        "font": "14px"
+      },
+      "xl": {
+        "px": "56px",
+        "font": "16px"
+      },
+      "2xl": {
+        "px": "72px",
+        "font": "18px"
+      }
+    }
+  },
+  "personas": [
+    {
+      "id": "persona.enterprise",
+      "name": "Enterprise",
+      "tokenOverrides": {
+        "--av-radius": "12px"
+      }
+    },
+    {
+      "id": "persona.minimal",
+      "name": "Minimal",
+      "tokenOverrides": {
+        "--av-border": "transparent"
+      }
+    },
+    {
+      "id": "persona.glass",
+      "name": "Glass",
+      "tokenOverrides": {
+        "--av-bg": "rgba(255,255,255,0.08)",
+        "--av-border": "rgba(255,255,255,0.18)"
+      }
+    },
+    {
+      "id": "persona.neon",
+      "name": "Neon",
+      "tokenOverrides": {
+        "--av-shadow": "0 0 0 1px rgba(168,85,247,0.35)"
+      }
+    },
+    {
+      "id": "persona.gov",
+      "name": "Gov / On-prem",
+      "tokenOverrides": {
+        "--av-border-width": "2px",
+        "--av-radius": "10px"
+      }
+    }
+  ]
+}

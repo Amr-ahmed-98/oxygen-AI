@@ -1,0 +1,202 @@
+{
+  "$schema": "./tokens-structure.json",
+  "id": "gov-onprem-rtl",
+  "name": "Government On-Prem RTL",
+  "description": "رسمي، محافظ، قابل للطباعة، مناسب للجهات الحكومية",
+  "personality": {
+    "typography": "عربي واضح + تباين قوي",
+    "spacing": "comfortable",
+    "shape": "radius قليل (سمات رسمية)",
+    "surface": "أقل shadows، أكثر borders",
+    "motion": "شبه معدوم"
+  },
+  "suits": ["On-prem ERP", "منصات حكومية", "بلديات", "أرشفة"],
+  "policy": {
+    "noExternalCDN": true,
+    "assetsPolicy": "localOnly",
+    "printFriendly": true
+  },
+  "core": {
+    "colors": {
+      "bg": "#ffffff",
+      "surface": "#fafafa",
+      "elevated": "#ffffff",
+      "text": "#000000",
+      "muted": "#4a5568",
+      "border": "#cbd5e0",
+      "primary": "#2d3748",
+      "secondary": "#4a5568",
+      "success": "#22543d",
+      "warn": "#744210",
+      "danger": "#742a2a"
+    },
+    "typography": {
+      "fontFamily": {
+        "heading": "Cairo, Arial, sans-serif",
+        "body": "Cairo, Arial, sans-serif",
+        "mono": "Courier New, monospace"
+      },
+      "headingsScale": {
+        "h1": "2rem",
+        "h2": "1.75rem",
+        "h3": "1.5rem",
+        "h4": "1.25rem",
+        "h5": "1.125rem",
+        "h6": "1rem"
+      },
+      "bodyScale": {
+        "base": "1rem",
+        "sm": "0.875rem",
+        "lg": "1.125rem",
+        "xl": "1.25rem"
+      },
+      "lineHeight": {
+        "tight": "1.4",
+        "normal": "1.6",
+        "relaxed": "1.8"
+      },
+      "fontWeight": {
+        "normal": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      }
+    },
+    "radii": {
+      "xs": "0px",
+      "sm": "2px",
+      "md": "4px",
+      "lg": "6px",
+      "xl": "8px",
+      "2xl": "10px"
+    },
+    "shadows": {
+      "sm": "none",
+      "md": "0 1px 2px rgba(0, 0, 0, 0.1)",
+      "lg": "0 2px 4px rgba(0, 0, 0, 0.1)",
+      "xl": "0 4px 8px rgba(0, 0, 0, 0.1)"
+    },
+    "spacing": {
+      "2": "0.5rem",
+      "4": "1rem",
+      "6": "1.5rem",
+      "8": "2rem",
+      "12": "3rem",
+      "16": "4rem",
+      "24": "6rem",
+      "32": "8rem",
+      "48": "12rem",
+      "64": "16rem"
+    },
+    "layout": {
+      "maxWidth": {
+        "sm": "640px",
+        "md": "768px",
+        "lg": "1024px",
+        "xl": "1280px",
+        "2xl": "1400px"
+      },
+      "gutter": "2rem",
+      "gridCols": 12,
+      "breakpoints": {
+        "sm": "640px",
+        "md": "768px",
+        "lg": "1024px",
+        "xl": "1280px",
+        "2xl": "1536px"
+      }
+    },
+    "motion": {
+      "durationFast": "0ms",
+      "durationNormal": "0ms",
+      "durationSlow": "0ms",
+      "ease": {
+        "default": "none",
+        "in": "none",
+        "out": "none",
+        "inOut": "none"
+      }
+    }
+  },
+  "components": {
+    "button": {
+      "padding": {
+        "sm": "0.5rem 1rem",
+        "md": "0.625rem 1.25rem",
+        "lg": "0.75rem 1.5rem"
+      },
+      "radius": "2px",
+      "fontWeight": "500",
+      "shadows": {
+        "default": "none",
+        "hover": "0 1px 2px rgba(0, 0, 0, 0.1)"
+      }
+    },
+    "table": {
+      "rowHeight": {
+        "compact": "40px",
+        "comfortable": "52px",
+        "airy": "68px"
+      },
+      "headerStyle": {
+        "bg": "#f7fafc",
+        "text": "#1a202c",
+        "border": "2px solid #cbd5e0"
+      },
+      "zebra": true,
+      "hover": {
+        "bg": "#f7fafc",
+        "border": "1px solid #cbd5e0"
+      }
+    },
+    "card": {
+      "padding": "1.5rem",
+      "radius": "4px",
+      "shadow": "none",
+      "border": "1px solid #cbd5e0"
+    },
+    "input": {
+      "padding": "0.5rem 0.75rem",
+      "radius": "2px",
+      "border": "1px solid #a0aec0",
+      "focus": {
+        "border": "2px solid #2d3748",
+        "ring": "none"
+      }
+    }
+  },
+  "erp": {
+    "density": {
+      "compact": {
+        "tableRowHeight": "40px",
+        "formFieldSpacing": "1rem",
+        "cardPadding": "1.25rem"
+      },
+      "comfortable": {
+        "tableRowHeight": "52px",
+        "formFieldSpacing": "1.25rem",
+        "cardPadding": "1.5rem"
+      },
+      "airy": {
+        "tableRowHeight": "68px",
+        "formFieldSpacing": "1.5rem",
+        "cardPadding": "2rem"
+      }
+    },
+    "forms": {
+      "labelPlacement": "top",
+      "helperStyle": {
+        "color": "#4a5568",
+        "fontSize": "0.875rem"
+      },
+      "fieldRadius": "2px"
+    }
+  },
+  "rtl": {
+    "direction": "rtl",
+    "textAlign": "right",
+    "logicalProperties": true
+  },
+  "version": "1.0.0"
+}
+

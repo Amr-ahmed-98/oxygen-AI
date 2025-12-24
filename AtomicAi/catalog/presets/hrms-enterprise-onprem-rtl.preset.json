@@ -1,0 +1,94 @@
+{
+  "presetId": "hrms-enterprise-onprem-rtl",
+  "title": "HRMS Enterprise (On-Prem) RTL",
+  "description": "Complete HRMS system for enterprise on-premise deployment with RTL support",
+  "productType": "HRMS_HCM",
+  "vertical": "GovTech",
+  "audience": "B2B",
+  "delivery": {
+    "mode": "onPremise",
+    "architecture": "modularMonolith",
+    "deployment": "hybrid",
+    "headless": false,
+    "pwa": true,
+    "desktop": "tauri",
+    "platformMode": "standard"
+  },
+  "businessModel": {
+    "type": "license",
+    "billing": "perpetual",
+    "plans": ["Standard", "Enterprise"]
+  },
+  "app": {
+    "name": "NileHR",
+    "platforms": ["web", "mobile", "desktop"],
+    "locale": {
+      "default": "ar-EG",
+      "rtl": true,
+      "supported": ["ar-EG", "en-US"]
+    },
+    "themePack": "erp-professional",
+    "density": "compact"
+  },
+  "security": {
+    "multiTenant": false,
+    "auth": {
+      "method": "email_password",
+      "twoFactor": true,
+      "sso": false
+    },
+    "rbac": true
+  },
+  "modules": [
+    "hr.employee",
+    "hr.attendance",
+    "hr.leave",
+    "core.auditLogs",
+    "core.rbac",
+    "core.settings",
+    "core.license",
+    "core.backup"
+  ],
+  "roles": [
+    {
+      "id": "admin",
+      "name": "مدير النظام",
+      "permissions": ["*"]
+    },
+    {
+      "id": "hr_manager",
+      "name": "مدير الموارد البشرية",
+      "permissions": [
+        "employee.*",
+        "attendance.*",
+        "leave.*",
+        "report.*"
+      ]
+    },
+    {
+      "id": "employee",
+      "name": "موظف",
+      "permissions": [
+        "employee.view.own",
+        "attendance.view.own",
+        "leave.create",
+        "leave.view.own"
+      ]
+    }
+  ],
+  "sensitiveData": {
+    "fieldMasking": true,
+    "auditRequired": true,
+    "defaultRetentionDays": 3650,
+    "piiFields": ["salary", "bankAccount", "nationalId"]
+  },
+  "features": [
+    "licenseScreen",
+    "backupRestoreUI",
+    "offlineDocs",
+    "rtlLayout",
+    "auditTrail",
+    "fieldMasking"
+  ]
+}
+

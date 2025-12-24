@@ -1,0 +1,794 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "name": "Oxygen DNA Component Registry",
+  "description": "Unified registry of all components, sections, and templates",
+  "lastUpdated": "2024-01-01",
+  
+  "levels": {
+    "atoms": {
+      "description": "Basic building blocks - cannot be broken down further",
+      "components": [
+        {
+          "id": "button",
+          "name": "Button",
+          "category": ["form", "interaction"],
+          "level": "atom",
+          "manifestPath": "../manifests/button.manifest.json",
+          "dependencies": [],
+          "tags": ["form", "cta", "interaction"]
+        },
+        {
+          "id": "input",
+          "name": "Input",
+          "category": ["form"],
+          "level": "atom",
+          "manifestPath": "../manifests/input.manifest.json",
+          "dependencies": [],
+          "tags": ["form", "text"]
+        },
+        {
+          "id": "badge",
+          "name": "Badge",
+          "category": ["display"],
+          "level": "atom",
+          "tags": ["display", "status", "label"]
+        },
+        {
+          "id": "avatar",
+          "name": "Avatar",
+          "category": ["display"],
+          "level": "atom",
+          "tags": ["display", "user", "profile"]
+        },
+        {
+          "id": "icon",
+          "name": "Icon",
+          "category": ["display"],
+          "level": "atom",
+          "tags": ["display", "visual"]
+        },
+        {
+          "id": "typography",
+          "name": "Typography",
+          "category": ["display"],
+          "level": "atom",
+          "tags": ["display", "text"]
+        },
+        {
+          "id": "link",
+          "name": "Link",
+          "category": ["navigation"],
+          "level": "atom",
+          "tags": ["navigation", "link"]
+        },
+        {
+          "id": "label",
+          "name": "Label",
+          "category": ["form"],
+          "level": "atom",
+          "tags": ["form", "text"]
+        },
+        {
+          "id": "chip",
+          "name": "Chip",
+          "category": ["display"],
+          "level": "atom",
+          "tags": ["display", "filter", "tag"]
+        },
+        {
+          "id": "spinner",
+          "name": "Spinner",
+          "category": ["feedback"],
+          "level": "atom",
+          "tags": ["feedback", "loading"]
+        },
+        {
+          "id": "progress",
+          "name": "Progress",
+          "category": ["feedback"],
+          "level": "atom",
+          "tags": ["feedback", "loading"]
+        },
+        {
+          "id": "skeleton",
+          "name": "Skeleton",
+          "category": ["feedback"],
+          "level": "atom",
+          "tags": ["feedback", "loading"]
+        },
+        {
+          "id": "tooltip",
+          "name": "Tooltip",
+          "category": ["overlay"],
+          "level": "atom",
+          "tags": ["overlay", "help"]
+        },
+        {
+          "id": "divider",
+          "name": "Divider",
+          "category": ["layout"],
+          "level": "atom",
+          "tags": ["layout", "separator"]
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "category": ["media"],
+          "level": "atom",
+          "tags": ["media", "image"]
+        },
+        {
+          "id": "kbd",
+          "name": "Keyboard",
+          "category": ["display"],
+          "level": "atom",
+          "tags": ["display", "keyboard"]
+        },
+        {
+          "id": "indicator",
+          "name": "Indicator",
+          "category": ["display"],
+          "level": "atom",
+          "tags": ["display", "status"]
+        },
+        {
+          "id": "fab",
+          "name": "Floating Action Button",
+          "category": ["interaction"],
+          "level": "atom",
+          "tags": ["interaction", "floating"]
+        }
+      ]
+    },
+    
+    "molecules": {
+      "description": "Simple combinations of atoms",
+      "components": [
+        {
+          "id": "input-group",
+          "name": "Input Group",
+          "category": ["form"],
+          "level": "molecule",
+          "dependencies": ["input", "label", "button"],
+          "tags": ["form"]
+        },
+        {
+          "id": "select",
+          "name": "Select",
+          "category": ["form"],
+          "level": "molecule",
+          "dependencies": ["input", "menu"],
+          "tags": ["form", "dropdown"]
+        },
+        {
+          "id": "textarea",
+          "name": "Textarea",
+          "category": ["form"],
+          "level": "molecule",
+          "dependencies": ["input"],
+          "tags": ["form"]
+        },
+        {
+          "id": "checkbox",
+          "name": "Checkbox",
+          "category": ["form"],
+          "level": "molecule",
+          "dependencies": ["input"],
+          "tags": ["form"]
+        },
+        {
+          "id": "radio",
+          "name": "Radio",
+          "category": ["form"],
+          "level": "molecule",
+          "dependencies": ["input"],
+          "tags": ["form"]
+        },
+        {
+          "id": "slider",
+          "name": "Slider",
+          "category": ["form"],
+          "level": "molecule",
+          "dependencies": ["input"],
+          "tags": ["form"]
+        },
+        {
+          "id": "alert",
+          "name": "Alert",
+          "category": ["feedback"],
+          "level": "molecule",
+          "dependencies": ["button", "icon", "typography"],
+          "tags": ["feedback", "notification"]
+        },
+        {
+          "id": "toast",
+          "name": "Toast",
+          "category": ["feedback"],
+          "level": "molecule",
+          "dependencies": ["button", "icon"],
+          "tags": ["feedback", "notification"]
+        },
+        {
+          "id": "breadcrumb",
+          "name": "Breadcrumb",
+          "category": ["navigation"],
+          "level": "molecule",
+          "dependencies": ["link"],
+          "tags": ["navigation"]
+        },
+        {
+          "id": "menu",
+          "name": "Menu",
+          "category": ["navigation"],
+          "level": "molecule",
+          "dependencies": ["link", "button"],
+          "tags": ["navigation"]
+        },
+        {
+          "id": "card",
+          "name": "Card",
+          "category": ["display"],
+          "level": "molecule",
+          "dependencies": ["typography", "button", "image"],
+          "tags": ["display", "container"]
+        },
+        {
+          "id": "accordion",
+          "name": "Accordion",
+          "category": ["display"],
+          "level": "molecule",
+          "dependencies": ["button", "typography"],
+          "tags": ["display", "collapsible"]
+        },
+        {
+          "id": "tabs",
+          "name": "Tabs",
+          "category": ["navigation"],
+          "level": "molecule",
+          "dependencies": ["button"],
+          "tags": ["navigation", "tabs"]
+        },
+        {
+          "id": "modal",
+          "name": "Modal",
+          "category": ["overlay"],
+          "level": "molecule",
+          "dependencies": ["button", "card"],
+          "tags": ["overlay", "dialog"]
+        },
+        {
+          "id": "drawer",
+          "name": "Drawer",
+          "category": ["overlay"],
+          "level": "molecule",
+          "dependencies": ["button", "card"],
+          "tags": ["overlay", "side-panel"]
+        },
+        {
+          "id": "carousel",
+          "name": "Carousel",
+          "category": ["media"],
+          "level": "molecule",
+          "dependencies": ["button", "image"],
+          "tags": ["media", "slider"]
+        },
+        {
+          "id": "pagination",
+          "name": "Pagination",
+          "category": ["navigation"],
+          "level": "molecule",
+          "dependencies": ["button", "link"],
+          "tags": ["navigation"]
+        },
+        {
+          "id": "stepper",
+          "name": "Stepper",
+          "category": ["navigation"],
+          "level": "molecule",
+          "dependencies": ["badge", "typography"],
+          "tags": ["navigation", "steps"]
+        },
+        {
+          "id": "callout",
+          "name": "Callout",
+          "category": ["display"],
+          "level": "molecule",
+          "dependencies": ["icon", "typography"],
+          "tags": ["display", "highlight"]
+        },
+        {
+          "id": "image-gallery",
+          "name": "Image Gallery",
+          "category": ["media"],
+          "level": "molecule",
+          "dependencies": ["image", "button"],
+          "tags": ["media", "gallery"]
+        }
+      ]
+    },
+    
+    "sections": {
+      "description": "Complete page sections ready for composition",
+      "sections": [
+        {
+          "id": "hero.split.image",
+          "name": "Hero - Split with Image",
+          "category": ["hero", "marketing"],
+          "level": "section",
+          "manifestPath": "../sections/hero.split.image.manifest.json",
+          "dependencies": ["button", "badge", "image", "typography"],
+          "tags": ["hero", "marketing", "landing"],
+          "variants": ["light", "dark", "glass", "gradient", "minimal", "image-left", "image-right", "centered"]
+        },
+        {
+          "id": "hero.centered",
+          "name": "Hero - Centered",
+          "category": ["hero", "marketing"],
+          "level": "section",
+          "dependencies": ["button", "badge", "typography"],
+          "tags": ["hero", "marketing"],
+          "variants": ["minimal", "bold", "gradient"]
+        },
+        {
+          "id": "hero.product.mockup",
+          "name": "Hero - Product Mockup",
+          "category": ["hero", "marketing"],
+          "level": "section",
+          "dependencies": ["button", "image", "typography"],
+          "tags": ["hero", "product", "saas"],
+          "variants": ["device-frame", "floating", "split"]
+        },
+        {
+          "id": "hero.video",
+          "name": "Hero - Video Background",
+          "category": ["hero", "marketing"],
+          "level": "section",
+          "dependencies": ["button", "video", "typography"],
+          "tags": ["hero", "video"],
+          "variants": ["background", "inline", "overlay"]
+        },
+        {
+          "id": "hero.gradient.blob",
+          "name": "Hero - Gradient Blob",
+          "category": ["hero", "marketing"],
+          "level": "section",
+          "dependencies": ["button", "typography"],
+          "tags": ["hero", "modern"],
+          "variants": ["animated", "static"]
+        },
+        {
+          "id": "hero.with.stats",
+          "name": "Hero - With Stats",
+          "category": ["hero", "marketing"],
+          "level": "section",
+          "dependencies": ["button", "badge", "typography"],
+          "tags": ["hero", "social-proof"],
+          "variants": ["inline", "below"]
+        },
+        {
+          "id": "hero.with.logos",
+          "name": "Hero - With Logos",
+          "category": ["hero", "marketing"],
+          "level": "section",
+          "dependencies": ["button", "image", "typography"],
+          "tags": ["hero", "social-proof"],
+          "variants": ["above", "below"]
+        },
+        {
+          "id": "hero.with.form",
+          "name": "Hero - With Form",
+          "category": ["hero", "marketing"],
+          "level": "section",
+          "dependencies": ["button", "input", "form", "typography"],
+          "tags": ["hero", "lead-capture"],
+          "variants": ["inline", "side-by-side"]
+        },
+        {
+          "id": "header.simple",
+          "name": "Header - Simple",
+          "category": ["navigation"],
+          "level": "section",
+          "manifestPath": "../sections/header.manifest.json",
+          "dependencies": ["menu", "logo", "button"],
+          "tags": ["navigation", "header"],
+          "variants": ["simple", "centered", "transparent", "sticky"]
+        },
+        {
+          "id": "header.mega.menu",
+          "name": "Header - Mega Menu",
+          "category": ["navigation"],
+          "level": "section",
+          "dependencies": ["menu", "logo", "button", "card"],
+          "tags": ["navigation", "header"],
+          "variants": ["dropdown", "full-width"]
+        },
+        {
+          "id": "header.with.top.bar",
+          "name": "Header - With Top Bar",
+          "category": ["navigation"],
+          "level": "section",
+          "dependencies": ["menu", "logo", "button", "badge"],
+          "tags": ["navigation", "announcement"],
+          "variants": ["banner", "compact"]
+        },
+        {
+          "id": "mobile.drawer.nav",
+          "name": "Mobile - Drawer Navigation",
+          "category": ["navigation"],
+          "level": "section",
+          "dependencies": ["drawer", "menu", "button"],
+          "tags": ["navigation", "mobile"],
+          "variants": ["left", "right", "bottom"]
+        },
+        {
+          "id": "logos.cloud",
+          "name": "Logos Cloud",
+          "category": ["social-proof"],
+          "level": "section",
+          "dependencies": ["image"],
+          "tags": ["social-proof", "logos"],
+          "variants": ["grid", "marquee", "carousel"]
+        },
+        {
+          "id": "logos.marquee",
+          "name": "Logos Marquee",
+          "category": ["social-proof"],
+          "level": "section",
+          "dependencies": ["image"],
+          "tags": ["social-proof", "logos", "animated"],
+          "variants": ["horizontal", "vertical"]
+        },
+        {
+          "id": "testimonials.grid",
+          "name": "Testimonials - Grid",
+          "category": ["social-proof"],
+          "level": "section",
+          "manifestPath": "../sections/testimonials.manifest.json",
+          "dependencies": ["card", "avatar", "typography", "badge"],
+          "tags": ["social-proof", "testimonials"],
+          "variants": ["2-col", "3-col", "4-col"]
+        },
+        {
+          "id": "testimonials.slider",
+          "name": "Testimonials - Slider",
+          "category": ["social-proof"],
+          "level": "section",
+          "dependencies": ["card", "carousel", "avatar", "typography"],
+          "tags": ["social-proof", "testimonials"],
+          "variants": ["single", "multiple"]
+        },
+        {
+          "id": "ratings.summary",
+          "name": "Ratings Summary",
+          "category": ["social-proof"],
+          "level": "section",
+          "dependencies": ["badge", "typography", "progress"],
+          "tags": ["social-proof", "ratings"],
+          "variants": ["stars", "bars", "numbers"]
+        },
+        {
+          "id": "features.icon.grid",
+          "name": "Features - Icon Grid",
+          "category": ["features"],
+          "level": "section",
+          "manifestPath": "../manifests/feature.grid.manifest.json",
+          "dependencies": ["icon", "card", "typography"],
+          "tags": ["features", "marketing"],
+          "variants": ["2-col", "3-col", "4-col"]
+        },
+        {
+          "id": "features.bento",
+          "name": "Features - Bento Grid",
+          "category": ["features"],
+          "level": "section",
+          "dependencies": ["card", "icon", "image", "typography"],
+          "tags": ["features", "modern"],
+          "variants": ["asymmetric", "symmetric"]
+        },
+        {
+          "id": "features.split.list",
+          "name": "Features - Split List",
+          "category": ["features"],
+          "level": "section",
+          "dependencies": ["icon", "typography", "image"],
+          "tags": ["features"],
+          "variants": ["left-image", "right-image", "alternating"]
+        },
+        {
+          "id": "features.with.screenshots",
+          "name": "Features - With Screenshots",
+          "category": ["features"],
+          "level": "section",
+          "dependencies": ["image", "card", "typography", "tabs"],
+          "tags": ["features", "product"],
+          "variants": ["tabs", "accordion", "side-by-side"]
+        },
+        {
+          "id": "features.comparison.mini",
+          "name": "Features - Mini Comparison",
+          "category": ["features"],
+          "level": "section",
+          "dependencies": ["badge", "typography", "card"],
+          "tags": ["features", "comparison"],
+          "variants": ["table", "cards"]
+        },
+        {
+          "id": "features.steps.timeline",
+          "name": "Features - Steps Timeline",
+          "category": ["features"],
+          "level": "section",
+          "dependencies": ["badge", "stepper", "typography"],
+          "tags": ["features", "process"],
+          "variants": ["horizontal", "vertical", "zigzag"]
+        },
+        {
+          "id": "features.metrics.cards",
+          "name": "Features - Metrics Cards",
+          "category": ["features"],
+          "level": "section",
+          "dependencies": ["card", "typography", "badge"],
+          "tags": ["features", "stats"],
+          "variants": ["grid", "carousel"]
+        },
+        {
+          "id": "features.security.trust",
+          "name": "Features - Security & Trust",
+          "category": ["features"],
+          "level": "section",
+          "dependencies": ["badge", "icon", "card", "typography"],
+          "tags": ["features", "security"],
+          "variants": ["badges", "cards", "list"]
+        },
+        {
+          "id": "pricing.cards.3",
+          "name": "Pricing - 3 Cards",
+          "category": ["pricing"],
+          "level": "section",
+          "manifestPath": "../sections/pricing.manifest.json",
+          "dependencies": ["card", "button", "badge", "typography"],
+          "tags": ["pricing", "marketing"],
+          "variants": ["highlighted", "equal", "featured"]
+        },
+        {
+          "id": "pricing.table.comparison",
+          "name": "Pricing - Table Comparison",
+          "category": ["pricing"],
+          "level": "section",
+          "dependencies": ["table", "button", "badge", "typography"],
+          "tags": ["pricing", "comparison"],
+          "variants": ["simple", "featured", "expandable"]
+        },
+        {
+          "id": "pricing.toggle.monthly.yearly",
+          "name": "Pricing - Toggle Monthly/Yearly",
+          "category": ["pricing"],
+          "level": "section",
+          "dependencies": ["button", "card", "badge", "typography"],
+          "tags": ["pricing", "toggle"],
+          "variants": ["switch", "tabs"]
+        },
+        {
+          "id": "pricing.enterprise.cta",
+          "name": "Pricing - Enterprise CTA",
+          "category": ["pricing"],
+          "level": "section",
+          "dependencies": ["button", "card", "typography"],
+          "tags": ["pricing", "enterprise"],
+          "variants": ["inline", "separate"]
+        },
+        {
+          "id": "pricing.faq.below",
+          "name": "Pricing - With FAQ Below",
+          "category": ["pricing"],
+          "level": "section",
+          "dependencies": ["card", "accordion", "button", "typography"],
+          "tags": ["pricing", "faq"],
+          "variants": ["inline", "separate-section"]
+        },
+        {
+          "id": "blog.featured.grid",
+          "name": "Blog - Featured + Grid",
+          "category": ["content", "blog"],
+          "level": "section",
+          "dependencies": ["card", "image", "typography", "badge"],
+          "tags": ["blog", "content"],
+          "variants": ["featured-left", "featured-top", "grid-only"]
+        },
+        {
+          "id": "blog.cards.grid",
+          "name": "Blog - Cards Grid",
+          "category": ["content", "blog"],
+          "level": "section",
+          "dependencies": ["card", "image", "typography", "badge"],
+          "tags": ["blog", "content"],
+          "variants": ["2-col", "3-col", "4-col"]
+        },
+        {
+          "id": "blog.categories.filter",
+          "name": "Blog - Categories Filter",
+          "category": ["content", "blog"],
+          "level": "section",
+          "dependencies": ["button", "card", "typography", "chip"],
+          "tags": ["blog", "filter"],
+          "variants": ["tabs", "buttons", "dropdown"]
+        },
+        {
+          "id": "article.layout",
+          "name": "Article Layout",
+          "category": ["content", "blog"],
+          "level": "section",
+          "dependencies": ["typography", "toc", "card", "avatar", "button"],
+          "tags": ["blog", "article"],
+          "variants": ["sidebar-toc", "inline-toc", "no-toc"]
+        },
+        {
+          "id": "newsletter.inline.cta",
+          "name": "Newsletter - Inline CTA",
+          "category": ["content", "marketing"],
+          "level": "section",
+          "dependencies": ["form", "input", "button", "card", "typography"],
+          "tags": ["newsletter", "lead-capture"],
+          "variants": ["inline", "card", "split"]
+        },
+        {
+          "id": "faq.accordion",
+          "name": "FAQ - Accordion",
+          "category": ["content"],
+          "level": "section",
+          "manifestPath": "../sections/faq.manifest.json",
+          "dependencies": ["accordion", "typography"],
+          "tags": ["faq", "content"],
+          "variants": ["simple", "grouped", "searchable"]
+        },
+        {
+          "id": "cta.ribbon",
+          "name": "CTA - Ribbon",
+          "category": ["marketing"],
+          "level": "section",
+          "manifestPath": "../sections/cta.manifest.json",
+          "dependencies": ["button", "typography"],
+          "tags": ["cta", "marketing"],
+          "variants": ["centered", "split", "minimal"]
+        },
+        {
+          "id": "cta.split",
+          "name": "CTA - Split",
+          "category": ["marketing"],
+          "level": "section",
+          "dependencies": ["button", "image", "typography"],
+          "tags": ["cta", "marketing"],
+          "variants": ["left-content", "right-content"]
+        },
+        {
+          "id": "contact.form.split",
+          "name": "Contact - Form Split",
+          "category": ["contact"],
+          "level": "section",
+          "dependencies": ["form", "input", "textarea", "button", "card"],
+          "tags": ["contact", "form"],
+          "variants": ["left-form", "right-form"]
+        },
+        {
+          "id": "contact.cards",
+          "name": "Contact - Cards",
+          "category": ["contact"],
+          "level": "section",
+          "dependencies": ["card", "icon", "typography"],
+          "tags": ["contact", "info"],
+          "variants": ["3-cards", "4-cards"]
+        },
+        {
+          "id": "map.embed.block",
+          "name": "Map - Embed Block",
+          "category": ["contact"],
+          "level": "section",
+          "dependencies": ["iframe", "card"],
+          "tags": ["contact", "map"],
+          "variants": ["full-width", "card"]
+        },
+        {
+          "id": "footer.columns",
+          "name": "Footer - Columns",
+          "category": ["layout"],
+          "level": "section",
+          "manifestPath": "../sections/footer.manifest.json",
+          "dependencies": ["link", "typography", "icon"],
+          "tags": ["footer", "layout"],
+          "variants": ["2-col", "3-col", "4-col", "5-col"]
+        },
+        {
+          "id": "footer.minimal",
+          "name": "Footer - Minimal",
+          "category": ["layout"],
+          "level": "section",
+          "dependencies": ["link", "typography"],
+          "tags": ["footer", "minimal"],
+          "variants": ["centered", "split"]
+        }
+      ]
+    }
+  },
+  
+  "categories": {
+    "navigation": ["header", "footer", "menu", "breadcrumb", "pagination", "tabs"],
+    "marketing": ["hero", "cta", "pricing", "testimonials", "features", "logos"],
+    "form": ["input", "select", "textarea", "checkbox", "radio", "button", "form"],
+    "display": ["card", "badge", "avatar", "typography", "icon", "image"],
+    "feedback": ["alert", "toast", "spinner", "progress", "skeleton"],
+    "overlay": ["modal", "drawer", "tooltip", "popover"],
+    "content": ["blog", "article", "faq", "prose"],
+    "social-proof": ["testimonials", "logos", "ratings"],
+    "contact": ["contact-form", "contact-cards", "map"]
+  },
+  
+  "siteTypePresets": {
+    "saas": {
+      "recommendedSections": [
+        "header.simple",
+        "hero.split.image",
+        "logos.marquee",
+        "features.icon.grid",
+        "features.with.screenshots",
+        "testimonials.grid",
+        "pricing.cards.3",
+        "faq.accordion",
+        "cta.ribbon",
+        "footer.columns"
+      ],
+      "recommendedTheme": "theme-saas-modern",
+      "tags": ["saas", "startup", "tech"]
+    },
+    "agency": {
+      "recommendedSections": [
+        "header.mega.menu",
+        "hero.centered",
+        "features.bento",
+        "testimonials.slider",
+        "blog.featured.grid",
+        "contact.form.split",
+        "footer.columns"
+      ],
+      "recommendedTheme": "theme-agency-bold",
+      "tags": ["agency", "creative", "portfolio"]
+    },
+    "portfolio": {
+      "recommendedSections": [
+        "header.simple",
+        "hero.with.stats",
+        "features.bento",
+        "blog.cards.grid",
+        "contact.cards",
+        "footer.minimal"
+      ],
+      "recommendedTheme": "theme-portfolio-editorial",
+      "tags": ["portfolio", "personal", "creative"]
+    },
+    "ecommerce": {
+      "recommendedSections": [
+        "header.with.top.bar",
+        "hero.product.mockup",
+        "features.icon.grid",
+        "testimonials.grid",
+        "pricing.toggle.monthly.yearly",
+        "faq.accordion",
+        "footer.columns"
+      ],
+      "recommendedTheme": "theme-ecommerce-premium",
+      "tags": ["ecommerce", "shop", "product"]
+    },
+    "blog": {
+      "recommendedSections": [
+        "header.simple",
+        "hero.centered",
+        "blog.categories.filter",
+        "blog.cards.grid",
+        "newsletter.inline.cta",
+        "footer.columns"
+      ],
+      "recommendedTheme": "theme-minimal-clean",
+      "tags": ["blog", "content", "news"]
+    }
+  }
+}
+

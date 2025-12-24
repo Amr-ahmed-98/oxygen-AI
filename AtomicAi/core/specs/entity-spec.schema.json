@@ -1,0 +1,476 @@
+{
+  "$schema": "http://json-schema.org/draft/2020-12/schema",
+  "title": "Entity Specification Schema",
+  "description": "Specification for data entities (Invoices, Customers, etc.) with fields, relations, and views",
+  "type": "object",
+  "required": ["id", "name", "module", "fields"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique entity identifier (e.g., 'invoice', 'customer')"
+    },
+    "name": {
+      "type": "string",
+      "description": "Entity singular name"
+    },
+    "pluralName": {
+      "type": "string",
+      "description": "Entity plural name"
+    },
+    "module": {
+      "type": "string",
+      "description": "Module ID this entity belongs to"
+    },
+    "description": {
+      "type": "string",
+      "description": "Entity description"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Icon identifier"
+    },
+    "fields": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/fieldSpec" },
+      "minItems": 1,
+      "description": "Entity fields"
+    },
+    "relations": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/relationSpec" },
+      "description": "Relations to other entities"
+    },
+    "indexes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fields": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "unique": { "type": "boolean" }
+        }
+      }
+    },
+    "permissions": {
+      "type": "object",
+      "description": "Entity-level permissions",
+      "properties": {
+        "view": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Roles that can view"
+        },
+        "create": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Roles that can create"
+        },
+        "edit": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Roles that can edit"
+        },
+        "delete": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Roles that can delete"
+        },
+        "export": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Roles that can export"
+        }
+      }
+    },
+    "views": {
+      "type": "object",
+      "description": "View configurations",
+      "properties": {
+        "list": { "$ref": "#/definitions/listViewSpec" },
+        "create": { "$ref": "#/definitions/formViewSpec" },
+        "edit": { "$ref": "#/definitions/formViewSpec" },
+        "details": { "$ref": "#/definitions/detailsViewSpec" }
+      }
+    },
+    "workflows": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/workflowSpec" },
+      "description": "Workflow definitions (statuses, transitions)"
+    },
+    "hooks": {
+      "type": "object",
+      "description": "Lifecycle hooks",
+      "properties": {
+        "beforeCreate": { "type": "string" },
+        "afterCreate": { "type": "string" },
+        "beforeUpdate": { "type": "string" },
+        "afterUpdate": { "type": "string" },
+        "beforeDelete": { "type": "string" },
+        "afterDelete": { "type": "string" }
+      }
+    }
+  },
+  "definitions": {
+    "fieldSpec": {
+      "type": "object",
+      "required": ["name", "type"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z][a-zA-Z0-9]*$",
+          "description": "Field name (camelCase)"
+        },
+        "label": {
+          "type": "string",
+          "description": "Display label"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "string", "text", "number", "integer", "boolean",
+            "date", "datetime", "time",
+            "enum", "relation",
+            "money", "percentage",
+            "email", "url", "phone",
+            "json", "array", "file", "image"
+          ]
+        },
+        "required": {
+          "type": "boolean",
+          "default": false
+        },
+        "unique": {
+          "type": "boolean",
+          "default": false
+        },
+        "readonly": {
+          "type": "boolean",
+          "default": false
+        },
+        "default": {
+          "description": "Default value"
+        },
+        "validation": {
+          "type": "object",
+          "properties": {
+            "min": {},
+            "max": {},
+            "minLength": { "type": "integer" },
+            "maxLength": { "type": "integer" },
+            "pattern": { "type": "string" },
+            "custom": { "type": "string" }
+          }
+        },
+        "ui": {
+          "type": "object",
+          "properties": {
+            "component": {
+              "type": "string",
+              "enum": [
+                "input", "textarea", "select", "multiSelect",
+                "datePicker", "dateTimePicker",
+                "checkbox", "radio", "switch",
+                "moneyInput", "numberInput",
+                "fileUpload", "imageUpload",
+                "autocomplete", "relationSelect"
+              ]
+            },
+            "placeholder": { "type": "string" },
+            "options": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "value": {},
+                  "label": { "type": "string" }
+                }
+              }
+            },
+            "hidden": { "type": "boolean" },
+            "readonly": { "type": "boolean" },
+            "disabled": { "type": "boolean" },
+            "width": {
+              "type": "string",
+              "enum": ["full", "half", "third", "quarter"]
+            },
+            "group": { "type": "string" },
+            "helpText": { "type": "string" }
+          }
+        },
+        "searchable": {
+          "type": "boolean",
+          "default": false,
+          "description": "Include in search"
+        },
+        "sortable": {
+          "type": "boolean",
+          "default": false,
+          "description": "Allow sorting"
+        },
+        "filterable": {
+          "type": "boolean",
+          "default": false,
+          "description": "Allow filtering"
+        }
+      }
+    },
+    "relationSpec": {
+      "type": "object",
+      "required": ["type", "entity", "field"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["oneToOne", "oneToMany", "manyToOne", "manyToMany"]
+        },
+        "entity": {
+          "type": "string",
+          "description": "Related entity ID"
+        },
+        "field": {
+          "type": "string",
+          "description": "Foreign key field name"
+        },
+        "displayField": {
+          "type": "string",
+          "description": "Field to display in relation selector"
+        },
+        "cascade": {
+          "type": "boolean",
+          "default": false,
+          "description": "Cascade delete"
+        }
+      }
+    },
+    "listViewSpec": {
+      "type": "object",
+      "properties": {
+        "columns": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/columnSpec" },
+          "description": "Table columns configuration"
+        },
+        "defaultSort": {
+          "type": "object",
+          "properties": {
+            "field": { "type": "string" },
+            "order": { "type": "string", "enum": ["asc", "desc"] }
+          }
+        },
+        "pageSize": {
+          "type": "integer",
+          "default": 20,
+          "minimum": 5,
+          "maximum": 100
+        },
+        "filters": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/filterSpec" }
+        },
+        "actions": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/actionSpec" }
+        },
+        "bulkActions": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/actionSpec" }
+        },
+        "emptyState": {
+          "type": "object",
+          "properties": {
+            "title": { "type": "string" },
+            "description": { "type": "string" },
+            "action": { "$ref": "#/definitions/actionSpec" }
+          }
+        }
+      }
+    },
+    "columnSpec": {
+      "type": "object",
+      "required": ["field"],
+      "properties": {
+        "field": { "type": "string" },
+        "label": { "type": "string" },
+        "width": { "type": "string" },
+        "align": {
+          "type": "string",
+          "enum": ["left", "center", "right"]
+        },
+        "sortable": { "type": "boolean" },
+        "filterable": { "type": "boolean" },
+        "hidden": { "type": "boolean" },
+        "format": {
+          "type": "string",
+          "enum": ["text", "number", "money", "date", "datetime", "boolean", "enum", "badge", "avatar"]
+        },
+        "render": { "type": "string" }
+      }
+    },
+    "filterSpec": {
+      "type": "object",
+      "properties": {
+        "field": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["text", "number", "date", "dateRange", "enum", "boolean", "relation"]
+        },
+        "label": { "type": "string" },
+        "default": {}
+      }
+    },
+    "actionSpec": {
+      "type": "object",
+      "required": ["id", "label", "type"],
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["button", "link", "menu", "bulk"]
+        },
+        "icon": { "type": "string" },
+        "permission": { "type": "string" },
+        "action": {
+          "type": "string",
+          "enum": ["create", "edit", "delete", "export", "import", "custom", "navigate"]
+        },
+        "variant": {
+          "type": "string",
+          "enum": ["primary", "secondary", "danger", "ghost"]
+        },
+        "confirm": {
+          "type": "object",
+          "properties": {
+            "title": { "type": "string" },
+            "message": { "type": "string" }
+          }
+        }
+      }
+    },
+    "formViewSpec": {
+      "type": "object",
+      "properties": {
+        "layout": {
+          "type": "string",
+          "enum": ["single", "steps", "sections"],
+          "default": "single"
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": { "type": "string" },
+              "fields": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": { "type": "string" },
+              "fields": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        },
+        "actions": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/actionSpec" }
+        },
+        "validation": {
+          "type": "object",
+          "description": "Form-level validation rules"
+        }
+      }
+    },
+    "detailsViewSpec": {
+      "type": "object",
+      "properties": {
+        "layout": {
+          "type": "string",
+          "enum": ["single", "tabs"],
+          "default": "single"
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": { "type": "string" },
+              "fields": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        },
+        "tabs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "label": { "type": "string" },
+              "type": {
+                "type": "string",
+                "enum": ["fields", "relation", "activity", "comments", "custom"]
+              },
+              "relation": { "type": "string" },
+              "component": { "type": "string" }
+            }
+          }
+        },
+        "actions": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/actionSpec" }
+        },
+        "activityLog": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "workflowSpec": {
+      "type": "object",
+      "properties": {
+        "field": {
+          "type": "string",
+          "description": "Status field name (e.g., 'status')"
+        },
+        "states": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": { "type": "string" },
+              "label": { "type": "string" },
+              "color": { "type": "string" }
+            }
+          }
+        },
+        "transitions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": { "type": "string" },
+              "to": { "type": "string" },
+              "label": { "type": "string" },
+              "permission": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,31 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T12:26:02.355835+00:00",
+  "items": [
+    {
+      "id": "atom.text",
+      "type": "atom",
+      "name": "Text",
+      "tags": [
+        "ui",
+        "atom",
+        "typography",
+        "text",
+        "content",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Text ui atom typography text content erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "text_atom_manifest_v10.json",
+        "text_variants_library_v10.json",
+        "catalog_index_text_pack_v10.json"
+      ]
+    }
+  ]
+}

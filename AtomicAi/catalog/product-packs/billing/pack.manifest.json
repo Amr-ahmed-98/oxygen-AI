@@ -1,0 +1,72 @@
+{
+  "packId": "billing",
+  "name": "Billing & Subscription Platform",
+  "productType": "BILLING_SUBSCRIPTION",
+  "defaultAudience": "B2B",
+  "primaryPatterns": [
+    "pattern.entityCrud",
+    "pattern.subscriptionManagement",
+    "pattern.usageMetering",
+    "pattern.invoiceGeneration"
+  ],
+  "coreModules": [
+    "core.auth",
+    "core.rbac",
+    "core.tenants",
+    "core.auditLogs",
+    "core.settings"
+  ],
+  "modules": [
+    {
+      "moduleId": "billing.plans",
+      "title": "Plans",
+      "entities": ["Plan", "PlanFeature", "Pricing"],
+      "required": true
+    },
+    {
+      "moduleId": "billing.subscriptions",
+      "title": "Subscriptions",
+      "entities": ["Subscription", "SubscriptionItem"],
+      "required": true
+    },
+    {
+      "moduleId": "billing.invoices",
+      "title": "Invoices",
+      "entities": ["Invoice", "InvoiceItem", "Payment"],
+      "required": true
+    },
+    {
+      "moduleId": "billing.metering",
+      "title": "Usage Metering",
+      "entities": ["UsageRecord", "Meter", "Quota"],
+      "required": false
+    },
+    {
+      "moduleId": "billing.coupons",
+      "title": "Coupons & Promotions",
+      "entities": ["Coupon", "Promotion"],
+      "required": false
+    }
+  ],
+  "workflows": [
+    "workflow.subscriptionActivation",
+    "workflow.paymentRetry",
+    "workflow.dunning"
+  ],
+  "integrations": [
+    "paymentGateway",
+    "webhook",
+    "accounting"
+  ],
+  "businessModels": ["subscription", "usageBased", "freemium"],
+  "platformAdapters": {
+    "mobile": {
+      "emphasize": ["planSelection", "payment", "usageView"],
+      "avoid": ["complexPricing"]
+    },
+    "desktop": {
+      "emphasize": ["bulkOps", "analytics", "export"]
+    }
+  }
+}
+

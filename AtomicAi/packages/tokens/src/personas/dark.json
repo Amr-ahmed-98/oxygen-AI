@@ -1,0 +1,42 @@
+{
+  "name": "dark",
+  "displayName": "Dark",
+  "description": "Dark mode design system",
+  "colors": {
+    "primary": {
+      "50": "#1e293b",
+      "100": "#334155",
+      "500": "#60a5fa",
+      "600": "#3b82f6",
+      "700": "#2563eb"
+    },
+    "neutral": {
+      "50": "#0f172a",
+      "100": "#1e293b",
+      "500": "#64748b",
+      "600": "#94a3b8",
+      "700": "#cbd5e1",
+      "900": "#f1f5f9"
+    }
+  },
+  "radius": {
+    "sm": "6px",
+    "md": "8px",
+    "lg": "12px"
+  },
+  "typography": {
+    "fontFamily": "Inter, system-ui, sans-serif",
+    "fontWeight": {
+      "normal": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    }
+  },
+  "shadows": {
+    "sm": "0 1px 3px rgba(0, 0, 0, 0.3)",
+    "md": "0 4px 6px rgba(0, 0, 0, 0.3)",
+    "lg": "0 10px 15px rgba(0, 0, 0, 0.3)"
+  }
+}
+

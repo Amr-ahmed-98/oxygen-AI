@@ -1,0 +1,35 @@
+{
+  "moduleId": "helpdesk.tickets",
+  "title": "التذاكر",
+  "description": "Ticket management module",
+  "entities": ["Ticket", "Comment", "Attachment", "Tag", "Queue"],
+  "patterns": ["pattern.ticketingQueue", "pattern.entityCrud", "pattern.activityTimeline"],
+  "permissionsNamespace": "ticket",
+  "routes": [
+    {
+      "id": "ticket.list",
+      "path": "/tickets",
+      "screen": "screen.ticket.list",
+      "permission": "ticket.view"
+    },
+    {
+      "id": "ticket.create",
+      "path": "/tickets/new",
+      "screen": "screen.ticket.create",
+      "permission": "ticket.create"
+    },
+    {
+      "id": "ticket.detail",
+      "path": "/tickets/:id",
+      "screen": "screen.ticket.detail",
+      "permission": "ticket.view"
+    },
+    {
+      "id": "ticket.edit",
+      "path": "/tickets/:id/edit",
+      "screen": "screen.ticket.edit",
+      "permission": "ticket.edit"
+    }
+  ]
+}
+

@@ -1,0 +1,228 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T12:01:56.274864+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "currency-input",
+    "goal": "ThemeForest-grade CurrencyInput atom with formatting and locale support"
+  },
+  "component": {
+    "id": "atom.currencyInput",
+    "name": "Currency Input",
+    "type": "atom",
+    "aliases": [
+      "MoneyInput",
+      "PriceInput"
+    ],
+    "description": "Currency input with locale formatting, symbol placement, precision, and negative control. Useful for billing/ERP.",
+    "tags": [
+      "ui",
+      "atom",
+      "input",
+      "currency",
+      "money",
+      "billing",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "prefix": {
+        "type": "node",
+        "required": false
+      },
+      "suffix": {
+        "type": "node",
+        "required": false
+      },
+      "helper": {
+        "type": "node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [
+        "onValueChange"
+      ],
+      "mobile": [
+        "onValueChange"
+      ],
+      "desktop": [
+        "onValueChange"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "outline",
+          "soft",
+          "solid",
+          "minimal"
+        ],
+        "default": "outline"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "success",
+          "warning",
+          "danger"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "comfortable"
+      },
+      "currency": {
+        "type": "enum",
+        "enum": [
+          "USD",
+          "EUR",
+          "GBP",
+          "EGP",
+          "SAR",
+          "AED"
+        ],
+        "default": "USD"
+      },
+      "locale": {
+        "type": "string",
+        "default": "en-US"
+      },
+      "precision": {
+        "type": "enum",
+        "enum": [
+          0,
+          2,
+          3
+        ],
+        "default": 2
+      },
+      "symbol": {
+        "type": "enum",
+        "enum": [
+          "auto",
+          "prefix",
+          "suffix"
+        ],
+        "default": "auto"
+      },
+      "allowNegative": {
+        "type": "boolean",
+        "default": true
+      },
+      "state": {
+        "type": "enum",
+        "enum": [
+          "default",
+          "error",
+          "success",
+          "disabled",
+          "readonly",
+          "loading"
+        ],
+        "default": "default"
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": false
+      },
+      "readonly": {
+        "type": "boolean",
+        "default": false
+      },
+      "placeholder": {
+        "type": "string",
+        "default": "0.00"
+      },
+      "ariaLabel": {
+        "type": "string",
+        "default": "Amount"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "focus",
+      "error",
+      "success",
+      "disabled",
+      "readonly",
+      "loading",
+      "compact",
+      "precision-0",
+      "precision-2",
+      "precision-3",
+      "currency"
+    ],
+    "a11y": {
+      "requirements": [
+        "Input must have label/aria-label.",
+        "Use aria-describedby for helper/error.",
+        "Respect locale direction and symbol placement."
+      ]
+    }
+  }
+}

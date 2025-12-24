@@ -1,0 +1,179 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:54:04.518719+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "icon",
+    "goal": "ThemeForest-grade Icon dataset for ERP/SaaS: consistent sizing, tones, styles and accessibility"
+  },
+  "component": {
+    "id": "atom.icon",
+    "name": "Icon",
+    "type": "atom",
+    "aliases": [
+      "SvgIcon",
+      "Glyph",
+      "Symbol",
+      "AppIcon"
+    ],
+    "description": "Icon primitive that renders a vector glyph with consistent sizing, stroke/fill styles and semantic tones.",
+    "tags": [
+      "ui",
+      "atom",
+      "icon",
+      "glyph",
+      "svg",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "badge": {
+        "type": "node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [],
+      "mobile": [],
+      "desktop": []
+    },
+    "props": {
+      "name": {
+        "type": "string",
+        "default": "plus",
+        "description": "Icon name key from the icon set"
+      },
+      "style": {
+        "type": "enum",
+        "enum": [
+          "outline",
+          "solid",
+          "duotone",
+          "filled",
+          "brand"
+        ],
+        "default": "outline"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "success",
+          "warning",
+          "danger",
+          "info",
+          "purple",
+          "teal",
+          "muted",
+          "inverse"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "2xs",
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+          "2xl"
+        ],
+        "default": "md"
+      },
+      "strokeWidth": {
+        "type": "enum",
+        "enum": [
+          "hairline",
+          "thin",
+          "regular",
+          "thick"
+        ],
+        "default": "regular"
+      },
+      "spin": {
+        "type": "boolean",
+        "default": false
+      },
+      "mirroredRtl": {
+        "type": "boolean",
+        "default": false,
+        "description": "Mirror in RTL for directional icons"
+      },
+      "decorative": {
+        "type": "boolean",
+        "default": true,
+        "description": "If true, aria-hidden; otherwise requires ariaLabel"
+      },
+      "ariaLabel": {
+        "type": "string",
+        "default": ""
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "hover",
+      "active",
+      "disabled",
+      "spinning",
+      "rtl-mirrored",
+      "decorative",
+      "labeled"
+    ],
+    "a11y": {
+      "requirements": [
+        "Decorative icons should be aria-hidden=true.",
+        "Informative icons require accessible name (aria-label).",
+        "Directional icons may be mirrored in RTL when appropriate."
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "minimal",
+  "displayName": "Minimal",
+  "description": "Clean, minimal design system",
+  "colors": {
+    "primary": {
+      "50": "#f8fafc",
+      "100": "#f1f5f9",
+      "500": "#64748b",
+      "600": "#475569",
+      "700": "#334155"
+    },
+    "neutral": {
+      "50": "#ffffff",
+      "100": "#f8f9fa",
+      "500": "#6c757d",
+      "600": "#495057",
+      "700": "#343a40",
+      "900": "#212529"
+    }
+  },
+  "radius": {
+    "sm": "2px",
+    "md": "4px",
+    "lg": "8px"
+  },
+  "typography": {
+    "fontFamily": "system-ui, -apple-system, sans-serif",
+    "fontWeight": {
+      "normal": 400,
+      "medium": 500,
+      "semibold": 600
+    }
+  },
+  "shadows": {
+    "sm": "0 1px 2px rgba(0, 0, 0, 0.05)",
+    "md": "0 2px 4px rgba(0, 0, 0, 0.05)",
+    "lg": "0 4px 8px rgba(0, 0, 0, 0.05)"
+  }
+}
+

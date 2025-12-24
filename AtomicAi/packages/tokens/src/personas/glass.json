@@ -1,0 +1,42 @@
+{
+  "name": "glass",
+  "displayName": "Glass",
+  "description": "Glassmorphism design system",
+  "colors": {
+    "primary": {
+      "50": "#f0f9ff",
+      "100": "#e0f2fe",
+      "500": "#0ea5e9",
+      "600": "#0284c7",
+      "700": "#0369a1"
+    },
+    "neutral": {
+      "50": "rgba(255, 255, 255, 0.1)",
+      "100": "rgba(255, 255, 255, 0.2)",
+      "500": "rgba(255, 255, 255, 0.5)",
+      "600": "rgba(255, 255, 255, 0.6)",
+      "700": "rgba(255, 255, 255, 0.7)",
+      "900": "rgba(0, 0, 0, 0.8)"
+    }
+  },
+  "radius": {
+    "sm": "8px",
+    "md": "12px",
+    "lg": "16px"
+  },
+  "typography": {
+    "fontFamily": "Inter, system-ui, sans-serif",
+    "fontWeight": {
+      "normal": 400,
+      "medium": 500,
+      "semibold": 600
+    }
+  },
+  "shadows": {
+    "sm": "0 8px 32px rgba(0, 0, 0, 0.1)",
+    "md": "0 8px 32px rgba(0, 0, 0, 0.15)",
+    "lg": "0 8px 32px rgba(0, 0, 0, 0.2)"
+  },
+  "backdropBlur": "10px"
+}
+

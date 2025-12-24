@@ -1,0 +1,209 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:39:20.992587+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "tabs",
+    "goal": "ThemeForest-grade Tabs dataset for ERP dashboards, settings, detail views"
+  },
+  "component": {
+    "id": "atom.tabs",
+    "name": "Tabs",
+    "type": "atom",
+    "aliases": [
+      "TabBar",
+      "SegmentedTabs",
+      "ScrollableTabs",
+      "IconTabs"
+    ],
+    "description": "Tabs control supporting underline/pills/segmented, icons, badges, scrollable overflow and vertical tabs.",
+    "tags": [
+      "ui",
+      "atom",
+      "tabs",
+      "navigation",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "tab": {
+        "type": "node",
+        "required": true
+      },
+      "icon": {
+        "type": "icon|node",
+        "required": false
+      },
+      "badge": {
+        "type": "node",
+        "required": false
+      },
+      "panel": {
+        "type": "node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [
+        "onValueChange",
+        "onTabClick"
+      ],
+      "mobile": [
+        "onValueChange"
+      ],
+      "desktop": [
+        "onValueChange"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "underline",
+          "pills",
+          "segmented",
+          "soft",
+          "minimal"
+        ],
+        "default": "underline"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "info",
+          "success",
+          "warning",
+          "danger",
+          "purple",
+          "teal"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "orientation": {
+        "type": "enum",
+        "enum": [
+          "horizontal",
+          "vertical"
+        ],
+        "default": "horizontal"
+      },
+      "scrollable": {
+        "type": "boolean",
+        "default": false
+      },
+      "withIcons": {
+        "type": "boolean",
+        "default": false
+      },
+      "withBadges": {
+        "type": "boolean",
+        "default": false
+      },
+      "fit": {
+        "type": "enum",
+        "enum": [
+          "content",
+          "equal"
+        ],
+        "default": "content"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "comfortable"
+      },
+      "state": {
+        "type": "enum",
+        "enum": [
+          "default",
+          "disabled"
+        ],
+        "default": "default"
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": false
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "active",
+      "hover",
+      "focus",
+      "disabled",
+      "scrollable",
+      "vertical",
+      "with-icons",
+      "with-badges",
+      "compact"
+    ],
+    "a11y": {
+      "requirements": [
+        "Use role=tablist/tab/tabpanel, with aria-selected, aria-controls, and roving tabindex.",
+        "Support keyboard navigation (Arrow keys, Home/End).",
+        "RTL should reverse arrow behavior and scroll direction."
+      ]
+    }
+  }
+}

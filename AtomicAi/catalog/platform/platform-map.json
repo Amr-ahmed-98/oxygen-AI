@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "description": "Platform component mapping - maps manifest IDs to actual components per platform",
+  "rules": {
+    "mobile": {
+      "noDataTables": "Use CardListPro instead of DataTablePro",
+      "filtersAsBottomSheet": "Filters should be BottomSheetModal on mobile",
+      "minTouchTarget": "44px minimum touch targets",
+      "navigation": "Tabs + Stack navigation pattern"
+    },
+    "desktop": {
+      "reuseWeb": "Desktop typically reuses web components",
+      "multiWindow": "Support multi-window (optional)",
+      "fileSystem": "File system access available"
+    }
+  },
+  "mappings": {
+    "atoms": {
+      "atom.button": {
+        "web": "packages/ui-web/src/atoms/Button",
+        "mobile": "packages/ui-native/src/atoms/Button",
+        "desktop": "packages/ui-web/src/atoms/Button"
+      },
+      "atom.icon": {
+        "web": "packages/ui-web/src/atoms/Icon",
+        "mobile": "packages/ui-native/src/atoms/Icon",
+        "desktop": "packages/ui-web/src/atoms/Icon"
+      },
+      "atom.text": {
+        "web": "packages/ui-web/src/atoms/Text",
+        "mobile": "packages/ui-native/src/atoms/Text",
+        "desktop": "packages/ui-web/src/atoms/Text"
+      },
+      "atom.badge": {
+        "web": "packages/ui-web/src/atoms/Badge",
+        "mobile": "packages/ui-native/src/atoms/Badge",
+        "desktop": "packages/ui-web/src/atoms/Badge"
+      },
+      "atom.link": {
+        "web": "packages/ui-web/src/atoms/Link",
+        "mobile": "packages/ui-native/src/atoms/Link",
+        "desktop": "packages/ui-web/src/atoms/Link"
+      },
+      "atom.avatar": {
+        "web": "packages/ui-web/src/atoms/Avatar",
+        "mobile": "packages/ui-native/src/atoms/Avatar",
+        "desktop": "packages/ui-web/src/atoms/Avatar"
+      },
+      "atom.spinner": {
+        "web": "packages/ui-web/src/atoms/Spinner",
+        "mobile": "packages/ui-native/src/atoms/Spinner",
+        "desktop": "packages/ui-web/src/atoms/Spinner"
+      },
+      "atom.skeleton": {
+        "web": "packages/ui-web/src/atoms/Skeleton",
+        "mobile": "packages/ui-native/src/atoms/Skeleton",
+        "desktop": "packages/ui-web/src/atoms/Skeleton"
+      },
+      "atom.tooltip": {
+        "web": "packages/ui-web/src/atoms/Tooltip",
+        "mobile": "packages/ui-native/src/atoms/Tooltip",
+        "desktop": "packages/ui-web/src/atoms/Tooltip"
+      },
+      "atom.chip": {
+        "web": "packages/ui-web/src/atoms/Chip",
+        "mobile": "packages/ui-native/src/atoms/Chip",
+        "desktop": "packages/ui-web/src/atoms/Chip"
+      },
+      "atom.progress": {
+        "web": "packages/ui-web/src/atoms/Progress",
+        "mobile": "packages/ui-native/src/atoms/Progress",
+        "desktop": "packages/ui-web/src/atoms/Progress"
+      },
+      "atom.label": {
+        "web": "packages/ui-web/src/atoms/Label",
+        "mobile": "packages/ui-native/src/atoms/Label",
+        "desktop": "packages/ui-web/src/atoms/Label"
+      },
+      "atom.divider": {
+        "web": "packages/ui-web/src/atoms/Divider",
+        "mobile": "packages/ui-native/src/atoms/Divider",
+        "desktop": "packages/ui-web/src/atoms/Divider"
+      }
+    },
+    "molecules": {
+      "molecule.inputField": {
+        "web": "packages/ui-web/src/molecules/InputField",
+        "mobile": "packages/ui-native/src/molecules/InputField",
+        "desktop": "packages/ui-web/src/molecules/InputField"
+      },
+      "molecule.selectField": {
+        "web": "packages/ui-web/src/molecules/SelectField",
+        "mobile": "packages/ui-native/src/molecules/SelectField",
+        "desktop": "packages/ui-web/src/molecules/SelectField"
+      },
+      "molecule.searchBox": {
+        "web": "packages/ui-web/src/molecules/SearchBox",
+        "mobile": "packages/ui-native/src/molecules/SearchBox",
+        "desktop": "packages/ui-web/src/molecules/SearchBox"
+      },
+      "molecule.toastHost": {
+        "web": "packages/ui-web/src/molecules/ToastHost",
+        "mobile": "packages/ui-native/src/molecules/ToastHost",
+        "desktop": "packages/ui-web/src/molecules/ToastHost"
+      }
+    },
+    "organisms": {
+      "organism.appShell": {
+        "web": "packages/ui-web/src/organisms/AppShell",
+        "mobile": "packages/ui-native/src/organisms/MobileShell",
+        "desktop": "packages/ui-web/src/organisms/AppShell"
+      },
+      "organism.sidebar": {
+        "web": "packages/ui-web/src/organisms/Sidebar",
+        "mobile": "packages/ui-native/src/organisms/BottomNav",
+        "desktop": "packages/ui-web/src/organisms/Sidebar"
+      },
+      "organism.dataTablePro": {
+        "web": "packages/ui-web/src/organisms/DataTablePro",
+        "mobile": "packages/ui-native/src/organisms/CardListPro",
+        "desktop": "packages/ui-web/src/organisms/DataTablePro"
+      },
+      "organism.formBuilder": {
+        "web": "packages/ui-web/src/organisms/FormBuilder",
+        "mobile": "packages/ui-native/src/organisms/FormBuilderStepper",
+        "desktop": "packages/ui-web/src/organisms/FormBuilder"
+      },
+      "organism.modal": {
+        "web": "packages/ui-web/src/organisms/Modal",
+        "mobile": "packages/ui-native/src/organisms/BottomSheetModal",
+        "desktop": "packages/ui-web/src/organisms/Modal"
+      },
+      "organism.drawer": {
+        "web": "packages/ui-web/src/organisms/Drawer",
+        "mobile": "packages/ui-native/src/organisms/Drawer",
+        "desktop": "packages/ui-web/src/organisms/Drawer"
+      }
+    }
+  }
+}
+

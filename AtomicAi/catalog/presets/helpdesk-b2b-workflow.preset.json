@@ -1,0 +1,90 @@
+{
+  "presetId": "helpdesk-b2b-workflow",
+  "title": "Helpdesk B2B with Workflow Automation",
+  "description": "Complete helpdesk system with workflow automation for B2B",
+  "productType": "HELPDESK_ITSM",
+  "vertical": null,
+  "audience": "B2B",
+  "delivery": {
+    "mode": "multiTenantSaaS",
+    "architecture": "modularMonolith",
+    "deployment": "cloudNative",
+    "headless": false,
+    "pwa": true,
+    "desktop": false,
+    "platformMode": "workflowAutomation"
+  },
+  "businessModel": {
+    "type": "subscription",
+    "billing": "subscription",
+    "plans": ["Starter", "Professional", "Enterprise"],
+    "metering": "agentBased"
+  },
+  "app": {
+    "name": "SupportHub",
+    "platforms": ["web", "mobile"],
+    "locale": {
+      "default": "en-US",
+      "rtl": false,
+      "supported": ["en-US"]
+    },
+    "themePack": "theme-saas-modern",
+    "density": "comfortable"
+  },
+  "security": {
+    "multiTenant": true,
+    "auth": {
+      "method": "email_password",
+      "twoFactor": true,
+      "sso": true
+    },
+    "rbac": true
+  },
+  "modules": [
+    "ticket.tickets",
+    "ticket.agents",
+    "ticket.knowledge",
+    "ticket.automation",
+    "core.workflowBuilder",
+    "core.automation",
+    "core.tenants",
+    "core.billing"
+  ],
+  "roles": [
+    {
+      "id": "admin",
+      "name": "Administrator",
+      "permissions": ["*"]
+    },
+    {
+      "id": "agent",
+      "name": "Support Agent",
+      "permissions": [
+        "ticket.view",
+        "ticket.edit",
+        "ticket.assign",
+        "ticket.comment",
+        "knowledge.view"
+      ]
+    },
+    {
+      "id": "customer",
+      "name": "Customer",
+      "permissions": [
+        "ticket.create",
+        "ticket.view.own",
+        "ticket.comment.own",
+        "knowledge.view"
+      ]
+    }
+  ],
+  "features": [
+    "tenantSwitcher",
+    "workflowBuilder",
+    "automation",
+    "slaTimers",
+    "knowledgeBase",
+    "ticketingQueue"
+  ]
+}
+

@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import tokens CSS variables */
+@import "@atomic-ai/tokens/css";
+

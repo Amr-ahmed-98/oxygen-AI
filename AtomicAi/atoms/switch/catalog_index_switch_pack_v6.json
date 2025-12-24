@@ -1,0 +1,31 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:39:20.992587+00:00",
+  "items": [
+    {
+      "id": "atom.switch",
+      "type": "atom",
+      "name": "Switch",
+      "tags": [
+        "ui",
+        "atom",
+        "switch",
+        "toggle",
+        "settings",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Switch toggle settings approvals a11y role switch rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "switch_atom_manifest_v6.json",
+        "switch_variants_library_v6.json",
+        "catalog_index_switch_pack_v6.json"
+      ]
+    }
+  ]
+}

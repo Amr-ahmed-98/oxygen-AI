@@ -1,0 +1,80 @@
+{
+  "packId": "marketplace",
+  "name": "Marketplace Platform",
+  "productType": "MARKETPLACE",
+  "defaultAudience": "B2B2C",
+  "primaryPatterns": [
+    "pattern.marketplaceSearchAndMatch",
+    "pattern.vendorDashboard",
+    "pattern.orderManagement",
+    "pattern.escrowPayment",
+    "pattern.reviewRating"
+  ],
+  "coreModules": [
+    "core.auth",
+    "core.rbac",
+    "core.tenants",
+    "core.notifications",
+    "core.messaging"
+  ],
+  "modules": [
+    {
+      "moduleId": "marketplace.vendors",
+      "title": "Vendors",
+      "entities": ["Vendor", "VendorProfile", "Commission"],
+      "required": true
+    },
+    {
+      "moduleId": "marketplace.products",
+      "title": "Products",
+      "entities": ["Product", "Listing", "Category"],
+      "required": true
+    },
+    {
+      "moduleId": "marketplace.orders",
+      "title": "Orders",
+      "entities": ["Order", "OrderItem", "Escrow"],
+      "required": true
+    },
+    {
+      "moduleId": "marketplace.messaging",
+      "title": "Messaging",
+      "entities": ["Message", "Conversation"],
+      "required": false
+    },
+    {
+      "moduleId": "marketplace.reviews",
+      "title": "Reviews",
+      "entities": ["Review", "Rating"],
+      "required": false
+    },
+    {
+      "moduleId": "marketplace.disputes",
+      "title": "Disputes",
+      "entities": ["Dispute", "Resolution"],
+      "required": false
+    }
+  ],
+  "workflows": [
+    "workflow.vendorOnboarding",
+    "workflow.orderFlow",
+    "workflow.escrowRelease",
+    "workflow.disputeResolution"
+  ],
+  "integrations": [
+    "paymentGateway",
+    "shipping",
+    "identityVerification"
+  ],
+  "multiTenant": true,
+  "platformAdapters": {
+    "mobile": {
+      "emphasize": ["productSearch", "vendorProfile", "messaging"],
+      "avoid": ["vendorDashboard"]
+    },
+    "desktop": {
+      "emphasize": ["vendorDashboard", "bulkOps", "analytics"]
+    }
+  }
+}
+

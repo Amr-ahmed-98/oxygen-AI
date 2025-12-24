@@ -1,0 +1,70 @@
+{
+  "$schema": "../schema/manifest.schema.json",
+  "id": "REPLACE_WITH_ID",
+  "level": "atom|molecule|organism|section|pattern|shell|state|security",
+  "category": ["REPLACE_CATEGORY"],
+  "title": "Human readable name",
+  "description": "What it does and when to use it.",
+  "tags": ["saas", "erp", "rtl", "responsive"],
+  "slots": {
+    "default": {
+      "type": "slot",
+      "required": false,
+      "description": "children/content slot"
+    }
+  },
+  "props": {
+    "variant": {
+      "type": "enum",
+      "values": ["default"],
+      "default": "default"
+    },
+    "density": {
+      "type": "enum",
+      "values": ["compact", "comfortable", "airy"],
+      "default": "comfortable"
+    }
+  },
+  "constraints": {
+    "rtlSafe": true,
+    "a11yRequired": true,
+    "maxNesting": 6
+  },
+  "a11y": {
+    "keyboardNavigable": true,
+    "focusOrder": "logical",
+    "ariaLabelsRequired": false
+  },
+  "perf": {
+    "critical": false,
+    "virtualize": false,
+    "lazy": true
+  },
+  "platformSupport": {
+    "web": true,
+    "mobile": true,
+    "desktop": true
+  },
+  "adapters": {
+    "mobile": {},
+    "desktop": {}
+  },
+  "examples": [
+    {
+      "name": "basic",
+      "intent": "usage",
+      "snippet": {
+        "slots": {},
+        "props": {}
+      }
+    }
+  ],
+  "fallbacks": [
+    {
+      "ifMissing": "someDependencyId",
+      "use": "alternativeId"
+    }
+  ],
+  "version": "1.0.0"
+}
+

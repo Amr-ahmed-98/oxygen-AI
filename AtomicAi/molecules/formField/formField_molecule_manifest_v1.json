@@ -1,0 +1,237 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T17:17:07.950609+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "form-field",
+    "goal": "ThemeForest-grade FormField molecule (Label + Control + Helper) for ERP/SaaS forms"
+  },
+  "component": {
+    "id": "molecule.formField",
+    "name": "Form Field",
+    "type": "molecule",
+    "aliases": [
+      "Field",
+      "FormRow",
+      "LabeledControl"
+    ],
+    "description": "Composes label + control (input/select/date...) + helper text with robust states, required/optional, and dense ERP layouts.",
+    "tags": [
+      "ui",
+      "molecule",
+      "forms",
+      "field",
+      "label",
+      "helper",
+      "validation",
+      "erp",
+      "saas",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.label",
+        "atom.helperText"
+      ],
+      "controls": [
+        "atom.textField",
+        "atom.textarea",
+        "atom.select",
+        "atom.datePicker",
+        "atom.timePicker",
+        "atom.dateTimePicker",
+        "atom.numberInput",
+        "atom.phoneInput",
+        "atom.currencyInput",
+        "atom.passwordInput",
+        "atom.searchInput"
+      ]
+    },
+    "events": {
+      "web": [
+        "onValueChange",
+        "onBlur",
+        "onFocus"
+      ],
+      "mobile": [
+        "onValueChange"
+      ],
+      "desktop": [
+        "onValueChange",
+        "onBlur"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "stacked",
+          "inline",
+          "floating",
+          "compact-row"
+        ],
+        "default": "stacked"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "info",
+          "success",
+          "warning",
+          "danger"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "comfortable"
+      },
+      "controlType": {
+        "type": "enum",
+        "enum": [
+          "text",
+          "textarea",
+          "select",
+          "date",
+          "time",
+          "datetime",
+          "number",
+          "phone",
+          "currency",
+          "password",
+          "search"
+        ],
+        "default": "text"
+      },
+      "required": {
+        "type": "boolean",
+        "default": false
+      },
+      "optional": {
+        "type": "boolean",
+        "default": false
+      },
+      "state": {
+        "type": "enum",
+        "enum": [
+          "default",
+          "error",
+          "success",
+          "warning",
+          "disabled",
+          "readonly",
+          "loading"
+        ],
+        "default": "default"
+      },
+      "withHintIcon": {
+        "type": "boolean",
+        "default": false
+      },
+      "helperMode": {
+        "type": "enum",
+        "enum": [
+          "hint",
+          "validation",
+          "none"
+        ],
+        "default": "hint"
+      },
+      "labelPosition": {
+        "type": "enum",
+        "enum": [
+          "top",
+          "start"
+        ],
+        "default": "top"
+      },
+      "showCounter": {
+        "type": "boolean",
+        "default": false
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "error",
+      "success",
+      "warning",
+      "disabled",
+      "readonly",
+      "loading",
+      "required",
+      "optional",
+      "dense",
+      "floating",
+      "inline"
+    ],
+    "a11y": {
+      "requirements": [
+        "Associate label with control (id/htmlFor).",
+        "Use aria-describedby for helper/validation.",
+        "Error text should be announced (aria-live)."
+      ]
+    }
+  }
+}

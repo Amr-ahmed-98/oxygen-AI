@@ -1,0 +1,131 @@
+{
+  "entity": "Ticket",
+  "title": {
+    "singular": "تذكرة",
+    "plural": "التذاكر"
+  },
+  "fields": [
+    {
+      "name": "ticketNo",
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "ui": {"list": true, "form": false, "label": "رقم التذكرة"}
+    },
+    {
+      "name": "subject",
+      "type": "string",
+      "required": true,
+      "ui": {"list": true, "form": true, "label": "الموضوع"}
+    },
+    {
+      "name": "description",
+      "type": "richText",
+      "required": true,
+      "ui": {"list": false, "form": true, "label": "الوصف"}
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "values": ["new", "open", "pending", "resolved", "closed"],
+      "default": "new",
+      "ui": {"list": true, "form": true, "label": "الحالة", "format": "badge"}
+    },
+    {
+      "name": "priority",
+      "type": "enum",
+      "values": ["low", "normal", "high", "urgent"],
+      "default": "normal",
+      "ui": {"list": true, "form": true, "label": "الأولوية", "format": "badge"}
+    },
+    {
+      "name": "channel",
+      "type": "enum",
+      "values": ["web", "email", "whatsapp", "phone"],
+      "default": "web",
+      "ui": {"list": true, "form": true, "label": "القناة"}
+    },
+    {
+      "name": "requesterId",
+      "type": "relation",
+      "to": "User",
+      "required": true,
+      "ui": {"list": true, "form": true, "label": "طالب الخدمة"}
+    },
+    {
+      "name": "assigneeId",
+      "type": "relation",
+      "to": "User",
+      "required": false,
+      "ui": {"list": true, "form": true, "label": "المكلف"}
+    },
+    {
+      "name": "queueId",
+      "type": "relation",
+      "to": "Queue",
+      "required": false,
+      "ui": {"list": true, "form": true, "label": "قائمة الانتظار"}
+    },
+    {
+      "name": "tags",
+      "type": "list",
+      "itemType": "relation",
+      "to": "Tag",
+      "ui": {"list": false, "form": true, "label": "العلامات"}
+    },
+    {
+      "name": "slaPolicyId",
+      "type": "relation",
+      "to": "SlaPolicy",
+      "ui": {"list": false, "form": true, "label": "سياسة SLA"}
+    },
+    {
+      "name": "firstResponseDueAt",
+      "type": "dateTime",
+      "ui": {"list": true, "form": false, "label": "موعد الرد الأول"}
+    },
+    {
+      "name": "resolveDueAt",
+      "type": "dateTime",
+      "ui": {"list": true, "form": false, "label": "موعد الحل"}
+    },
+    {
+      "name": "createdAt",
+      "type": "dateTime",
+      "ui": {"list": true, "form": false, "label": "تاريخ الإنشاء"}
+    }
+  ],
+  "views": {
+    "list": {
+      "layout": "dataTableOrQueue",
+      "filters": ["status", "priority", "assigneeId", "queueId", "createdAt"],
+      "bulkActions": ["assign", "changeStatus", "addTag", "exportCSV"],
+      "savedViews": true
+    },
+    "detail": {
+      "tabs": ["overview", "conversation", "activity", "sla", "related"],
+      "rightPanel": ["assignee", "status", "priority", "tags", "slaTimers"]
+    },
+    "form": {
+      "mode": ["create", "edit"],
+      "layout": "oneColumnMobile_twoColumnDesktop",
+      "attachments": true
+    }
+  },
+  "workflows": [
+    {
+      "id": "ticketStatusFlow",
+      "type": "statusMachine",
+      "states": ["new", "open", "pending", "resolved", "closed"]
+    }
+  ],
+  "permissions": {
+    "ticket.view": ["admin", "agent", "manager", "requester"],
+    "ticket.create": ["admin", "requester", "agent"],
+    "ticket.assign": ["admin", "agent", "manager"],
+    "ticket.edit": ["admin", "agent", "manager"],
+    "ticket.comment": ["admin", "agent", "manager", "requester"],
+    "ticket.close": ["admin", "manager"]
+  }
+}
+
