@@ -1,0 +1,174 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T12:00:01.407961+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "pagination",
+    "goal": "ThemeForest-grade Pagination molecule for tables/lists with compact ERP modes"
+  },
+  "component": {
+    "id": "molecule.pagination",
+    "name": "Pagination",
+    "type": "molecule",
+    "aliases": [
+      "Pager",
+      "TablePagination",
+      "ListPagination"
+    ],
+    "description": "Pagination with prev/next, page numbers, page size selector, jump-to, and total count; responsive compact modes.",
+    "tags": [
+      "ui",
+      "molecule",
+      "pagination",
+      "tables",
+      "lists",
+      "erp",
+      "saas",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.button",
+        "atom.iconButton",
+        "atom.select",
+        "atom.text",
+        "atom.badge"
+      ]
+    },
+    "events": {
+      "web": [
+        "onPageChange",
+        "onPageSizeChange"
+      ],
+      "mobile": [
+        "onPageChange",
+        "onPageSizeChange"
+      ],
+      "desktop": [
+        "onPageChange",
+        "onPageSizeChange"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "numbers",
+          "simple",
+          "compact",
+          "minimal"
+        ],
+        "default": "numbers"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "compact"
+      },
+      "withPageSize": {
+        "type": "boolean",
+        "default": true
+      },
+      "withJumpTo": {
+        "type": "boolean",
+        "default": false
+      },
+      "withTotal": {
+        "type": "boolean",
+        "default": true
+      },
+      "alignment": {
+        "type": "enum",
+        "enum": [
+          "start",
+          "center",
+          "end",
+          "space-between"
+        ],
+        "default": "end"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "compact",
+      "with-pagesize",
+      "with-jumpto",
+      "with-total",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Use aria-labels for nav buttons.",
+        "Indicate current page with aria-current.",
+        "Ensure focus order and keyboard navigation."
+      ]
+    }
+  }
+}

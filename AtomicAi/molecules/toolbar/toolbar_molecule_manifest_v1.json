@@ -1,0 +1,199 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T12:00:01.407961+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "toolbar",
+    "goal": "ThemeForest-grade Toolbar for CRUD/list pages with primary actions and contextual controls"
+  },
+  "component": {
+    "id": "molecule.toolbar",
+    "name": "Toolbar",
+    "type": "molecule",
+    "aliases": [
+      "CRUDToolbar",
+      "PageToolbar",
+      "ActionToolbar"
+    ],
+    "description": "Toolbar with title area, primary CTA, secondary actions, view toggles, and selection summary.",
+    "tags": [
+      "ui",
+      "molecule",
+      "toolbar",
+      "crud",
+      "actions",
+      "lists",
+      "erp",
+      "dashboard",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.heading",
+        "atom.text",
+        "atom.button",
+        "atom.iconButton",
+        "atom.badge"
+      ],
+      "optional": [
+        "molecule.searchBar",
+        "molecule.actionMenu"
+      ]
+    },
+    "events": {
+      "web": [
+        "onPrimary",
+        "onSecondary",
+        "onToggleView"
+      ],
+      "mobile": [
+        "onPrimary",
+        "onSecondary"
+      ],
+      "desktop": [
+        "onPrimary",
+        "onSecondary",
+        "onToggleView"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "page",
+          "card",
+          "sticky",
+          "minimal",
+          "glass"
+        ],
+        "default": "page"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "brand"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "comfortable"
+      },
+      "withSearch": {
+        "type": "boolean",
+        "default": false
+      },
+      "withSelectionSummary": {
+        "type": "boolean",
+        "default": false
+      },
+      "primaryAction": {
+        "type": "enum",
+        "enum": [
+          "create",
+          "save",
+          "export",
+          "import",
+          "none"
+        ],
+        "default": "create"
+      },
+      "secondaryActions": {
+        "type": "enum",
+        "enum": [
+          "filters",
+          "bulk",
+          "menu",
+          "none"
+        ],
+        "default": "filters"
+      },
+      "layout": {
+        "type": "enum",
+        "enum": [
+          "split",
+          "center",
+          "stacked"
+        ],
+        "default": "split"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "sticky",
+      "compact",
+      "with-search",
+      "with-selection",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Toolbar actions must be reachable via keyboard.",
+        "Sticky toolbars should not trap focus.",
+        "Selection summary should be announced politely."
+      ]
+    }
+  }
+}
