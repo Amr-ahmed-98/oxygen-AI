@@ -1,0 +1,167 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T15:31:57.224026+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "permission-matrix-mini",
+    "goal": "Mini permission matrix selector for roles/features"
+  },
+  "component": {
+    "id": "molecule.permissionMatrixMini",
+    "name": "Permission Matrix Mini",
+    "type": "molecule",
+    "aliases": [
+      "PermissionsMini",
+      "RolePermissionsMini",
+      "AclMatrixMini"
+    ],
+    "description": "Compact role/feature permission matrix with toggles and bulk actions.",
+    "tags": [
+      "ui",
+      "molecule",
+      "permissions",
+      "iam",
+      "roles",
+      "acl",
+      "security",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.switch",
+        "atom.checkbox",
+        "atom.text",
+        "atom.button"
+      ],
+      "molecules": [
+        "molecule.tableUtilitiesBar",
+        "molecule.confirmDialog"
+      ]
+    },
+    "events": {
+      "web": [
+        "onToggle",
+        "onBulk",
+        "onSave"
+      ],
+      "mobile": [
+        "onToggle",
+        "onBulk",
+        "onSave"
+      ],
+      "desktop": [
+        "onToggle",
+        "onBulk",
+        "onSave"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "table",
+          "cards",
+          "compact",
+          "drawer"
+        ],
+        "default": "table"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "compact"
+      },
+      "roles": {
+        "type": "enum",
+        "enum": [
+          2,
+          3,
+          4,
+          6
+        ],
+        "default": 3
+      },
+      "features": {
+        "type": "enum",
+        "enum": [
+          5,
+          8,
+          12,
+          20
+        ],
+        "default": 8
+      },
+      "withBulkActions": {
+        "type": "boolean",
+        "default": true
+      },
+      "virtualized": {
+        "type": "boolean",
+        "default": false
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "saving",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Matrix cells must be reachable via keyboard.",
+        "Bulk actions must be labeled.",
+        "Use descriptive labels for roles/features."
+      ]
+    }
+  }
+}

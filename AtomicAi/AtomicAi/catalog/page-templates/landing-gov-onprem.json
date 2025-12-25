@@ -1,0 +1,88 @@
+{
+  "pageId": "page.landing.govOnprem",
+  "label": "Government On-Prem Landing Page",
+  "description": "Government / On-prem نصب داخلي",
+  "type": "marketing",
+  "sections": [
+    {
+      "sectionId": "section.header.enterprise",
+      "order": 1,
+      "props": {
+        "dense": true,
+        "layout": "L1"
+      }
+    },
+    {
+      "sectionId": "section.hero.onpremGov",
+      "order": 2,
+      "props": {
+        "layout": "L1",
+        "sealStyle": "official",
+        "printFriendly": true
+      }
+    },
+    {
+      "sectionId": "section.proof.trustCenter",
+      "order": 3,
+      "props": {
+        "layout": "L1",
+        "formal": true
+      }
+    },
+    {
+      "sectionId": "section.features.security",
+      "order": 4,
+      "props": {
+        "layout": "L1",
+        "badgeStyle": "compliance"
+      }
+    },
+    {
+      "sectionId": "section.features.workflow",
+      "order": 5,
+      "props": {
+        "layout": "L1",
+        "stepStyle": "timeline"
+      }
+    },
+    {
+      "sectionId": "section.pricing.onpremLicense",
+      "order": 6,
+      "props": {
+        "layout": "L1",
+        "formal": true
+      }
+    },
+    {
+      "sectionId": "section.faq.split",
+      "order": 7,
+      "props": {
+        "layout": "L1",
+        "ctaStyle": "formal"
+      }
+    },
+    {
+      "sectionId": "section.cta.trust",
+      "order": 8,
+      "props": {
+        "layout": "L1",
+        "badgeStyle": "compliance"
+      }
+    },
+    {
+      "sectionId": "section.footer.enterprise",
+      "order": 9,
+      "props": {
+        "layout": "L1",
+        "formal": true
+      }
+    }
+  ],
+  "bestThemes": ["gov-onprem-rtl", "erp-professional"],
+  "policy": {
+    "noExternalCDN": true,
+    "printFriendly": true
+  },
+  "version": "1.0.0"
+}
+

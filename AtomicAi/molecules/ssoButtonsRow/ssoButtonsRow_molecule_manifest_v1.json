@@ -1,0 +1,160 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T15:38:28.881624+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "sso-buttons-row",
+    "goal": "SSO buttons row with provider icons and variants"
+  },
+  "component": {
+    "id": "molecule.ssoButtonsRow",
+    "name": "SSO Buttons Row",
+    "type": "molecule",
+    "aliases": [
+      "SocialLoginRow",
+      "OAuthButtonsRow"
+    ],
+    "description": "Row/grid of SSO provider buttons (Google/Microsoft/GitHub/etc) with icons and loading states.",
+    "tags": [
+      "ui",
+      "molecule",
+      "sso",
+      "oauth",
+      "auth",
+      "iam",
+      "buttons",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.button",
+        "atom.icon",
+        "atom.text"
+      ],
+      "molecules": [
+        "molecule.tooltip",
+        "molecule.toast"
+      ]
+    },
+    "events": {
+      "web": [
+        "onProviderClick"
+      ],
+      "mobile": [
+        "onProviderClick"
+      ],
+      "desktop": [
+        "onProviderClick"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "row",
+          "grid",
+          "stack",
+          "compact"
+        ],
+        "default": "row"
+      },
+      "providers": {
+        "type": "enum",
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "default": 3
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "compact"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "state": {
+        "type": "enum",
+        "enum": [
+          "ready",
+          "loading",
+          "disabled"
+        ],
+        "default": "ready"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "ready",
+      "loading",
+      "disabled",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Buttons must have provider names.",
+        "Icons must be decorative or labeled.",
+        "Row must wrap on small screens."
+      ]
+    }
+  }
+}

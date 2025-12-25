@@ -1,0 +1,32 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-25T15:38:28.881624+00:00",
+  "items": [
+    {
+      "id": "molecule.inlineEditRow",
+      "type": "molecule",
+      "name": "Inline Edit Row",
+      "tags": [
+        "ui",
+        "molecule",
+        "inline-edit",
+        "lists",
+        "details",
+        "erp",
+        "crm",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Inline Edit Row ui molecule inline-edit lists details erp crm a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "inlineEditRow_molecule_manifest_v1.json",
+        "inlineEditRow_variants_library_v1.json",
+        "catalog_index_inlineEditRow_pack_v1.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:54:04.518719+00:00",
+  "items": [
+    {
+      "id": "atom.iconButton",
+      "type": "atom",
+      "name": "Icon Button",
+      "tags": [
+        "ui",
+        "atom",
+        "button",
+        "iconButton",
+        "actions",
+        "toolbar",
+        "table",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Icon Button ui atom button iconButton actions toolbar table erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "iconButton_atom_manifest_v7.json",
+        "iconButton_variants_library_v7.json",
+        "catalog_index_iconButton_pack_v7.json"
+      ]
+    }
+  ]
+}

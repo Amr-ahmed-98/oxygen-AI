@@ -1,0 +1,192 @@
+{
+  "$schema": "./tokens-structure.json",
+  "id": "erp-professional",
+  "name": "ERP Professional",
+  "description": "احترافي، نظيف، عالي القراءة، مناسب للبيانات",
+  "personality": {
+    "typography": "Sans حديث (واضح + أرقام ممتازة)",
+    "spacing": "tight نسبيًا (خاصة في الجداول)",
+    "shape": "radius متوسط (md)",
+    "surface": "طبقات بسيطة + borders واضحة",
+    "motion": "minimal (micro only)"
+  },
+  "suits": ["ERP", "CRM", "HRMS", "WMS", "Helpdesk", "Gov portals"],
+  "core": {
+    "colors": {
+      "bg": "#ffffff",
+      "surface": "#f8f9fa",
+      "elevated": "#ffffff",
+      "text": "#1a1a1a",
+      "muted": "#6b7280",
+      "border": "#e5e7eb",
+      "primary": "#2563eb",
+      "secondary": "#64748b",
+      "success": "#10b981",
+      "warn": "#f59e0b",
+      "danger": "#ef4444"
+    },
+    "typography": {
+      "fontFamily": {
+        "heading": "Inter, -apple-system, sans-serif",
+        "body": "Inter, -apple-system, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "headingsScale": {
+        "h1": "2.5rem",
+        "h2": "2rem",
+        "h3": "1.75rem",
+        "h4": "1.5rem",
+        "h5": "1.25rem",
+        "h6": "1.125rem"
+      },
+      "bodyScale": {
+        "base": "1rem",
+        "sm": "0.875rem",
+        "lg": "1.125rem",
+        "xl": "1.25rem"
+      },
+      "lineHeight": {
+        "tight": "1.25",
+        "normal": "1.5",
+        "relaxed": "1.75"
+      },
+      "fontWeight": {
+        "normal": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      }
+    },
+    "radii": {
+      "xs": "2px",
+      "sm": "4px",
+      "md": "8px",
+      "lg": "12px",
+      "xl": "16px",
+      "2xl": "20px"
+    },
+    "shadows": {
+      "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+      "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+      "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
+      "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1)"
+    },
+    "spacing": {
+      "2": "0.5rem",
+      "4": "1rem",
+      "6": "1.5rem",
+      "8": "2rem",
+      "12": "3rem",
+      "16": "4rem",
+      "24": "6rem",
+      "32": "8rem",
+      "48": "12rem",
+      "64": "16rem"
+    },
+    "layout": {
+      "maxWidth": {
+        "sm": "640px",
+        "md": "768px",
+        "lg": "1024px",
+        "xl": "1280px",
+        "2xl": "1536px"
+      },
+      "gutter": "1.5rem",
+      "gridCols": 12,
+      "breakpoints": {
+        "sm": "640px",
+        "md": "768px",
+        "lg": "1024px",
+        "xl": "1280px",
+        "2xl": "1536px"
+      }
+    },
+    "motion": {
+      "durationFast": "100ms",
+      "durationNormal": "200ms",
+      "durationSlow": "300ms",
+      "ease": {
+        "default": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "in": "cubic-bezier(0.4, 0, 1, 1)",
+        "out": "cubic-bezier(0, 0, 0.2, 1)",
+        "inOut": "cubic-bezier(0.4, 0, 0.2, 1)"
+      }
+    }
+  },
+  "components": {
+    "button": {
+      "padding": {
+        "sm": "0.5rem 1rem",
+        "md": "0.625rem 1.25rem",
+        "lg": "0.75rem 1.5rem"
+      },
+      "radius": "6px",
+      "fontWeight": "500",
+      "shadows": {
+        "default": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+        "hover": "0 4px 6px -1px rgba(0, 0, 0, 0.1)"
+      }
+    },
+    "table": {
+      "rowHeight": {
+        "compact": "36px",
+        "comfortable": "48px",
+        "airy": "64px"
+      },
+      "headerStyle": {
+        "bg": "#f8f9fa",
+        "text": "#1a1a1a",
+        "border": "#e5e7eb"
+      },
+      "zebra": true,
+      "hover": {
+        "bg": "#f8f9fa",
+        "border": "#e5e7eb"
+      }
+    },
+    "card": {
+      "padding": "1.5rem",
+      "radius": "8px",
+      "shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1)",
+      "border": "1px solid #e5e7eb"
+    },
+    "input": {
+      "padding": "0.5rem 0.75rem",
+      "radius": "6px",
+      "border": "1px solid #d1d5db",
+      "focus": {
+        "border": "1px solid #2563eb",
+        "ring": "0 0 0 3px rgba(37, 99, 235, 0.1)"
+      }
+    }
+  },
+  "erp": {
+    "density": {
+      "compact": {
+        "tableRowHeight": "36px",
+        "formFieldSpacing": "0.75rem",
+        "cardPadding": "1rem"
+      },
+      "comfortable": {
+        "tableRowHeight": "48px",
+        "formFieldSpacing": "1rem",
+        "cardPadding": "1.5rem"
+      },
+      "airy": {
+        "tableRowHeight": "64px",
+        "formFieldSpacing": "1.5rem",
+        "cardPadding": "2rem"
+      }
+    },
+    "forms": {
+      "labelPlacement": "top",
+      "helperStyle": {
+        "color": "#6b7280",
+        "fontSize": "0.875rem"
+      },
+      "fieldRadius": "6px"
+    }
+  },
+  "version": "1.0.0"
+}
+

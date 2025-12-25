@@ -1,0 +1,70 @@
+{
+  "packId": "project",
+  "name": "Project / Work Management",
+  "productType": "PROJECT_WORK",
+  "defaultAudience": "B2B",
+  "primaryPatterns": [
+    "pattern.kanbanBoard",
+    "pattern.ganttChart",
+    "pattern.taskList",
+    "pattern.sprintPlanning"
+  ],
+  "coreModules": [
+    "core.auth",
+    "core.rbac",
+    "core.tenants",
+    "core.notifications"
+  ],
+  "modules": [
+    {
+      "moduleId": "project.projects",
+      "title": "Projects",
+      "entities": ["Project", "ProjectTemplate"],
+      "required": true
+    },
+    {
+      "moduleId": "project.tasks",
+      "title": "Tasks",
+      "entities": ["Task", "Subtask", "Dependency"],
+      "required": true
+    },
+    {
+      "moduleId": "project.team",
+      "title": "Team",
+      "entities": ["Member", "Team", "Role"],
+      "required": true
+    },
+    {
+      "moduleId": "project.sprints",
+      "title": "Sprints",
+      "entities": ["Sprint", "Backlog", "BurnDown"],
+      "required": false
+    },
+    {
+      "moduleId": "project.reports",
+      "title": "Reports",
+      "entities": ["Report", "Dashboard", "Workload"],
+      "required": false
+    }
+  ],
+  "workflows": [
+    "workflow.taskAssignment",
+    "workflow.sprintPlanning",
+    "workflow.projectCompletion"
+  ],
+  "integrations": [
+    "git",
+    "slack",
+    "calendar"
+  ],
+  "platformAdapters": {
+    "mobile": {
+      "emphasize": ["quickTaskCreate", "kanban", "notifications"],
+      "avoid": ["gantt", "complexReports"]
+    },
+    "desktop": {
+      "emphasize": ["gantt", "bulkOps", "reports", "shortcuts"]
+    }
+  }
+}
+

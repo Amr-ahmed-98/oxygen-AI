@@ -1,0 +1,35 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-25T13:40:51.189135+00:00",
+  "items": [
+    {
+      "id": "molecule.docPreviewCard",
+      "type": "molecule",
+      "name": "Doc Preview Card",
+      "tags": [
+        "ui",
+        "molecule",
+        "documents",
+        "preview",
+        "pdf",
+        "files",
+        "card",
+        "cms",
+        "helpdesk",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Doc Preview Card ui molecule documents preview pdf files card cms helpdesk erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "docPreviewCard_molecule_manifest_v1.json",
+        "docPreviewCard_variants_library_v1.json",
+        "catalog_index_docPreviewCard_pack_v1.json"
+      ]
+    }
+  ]
+}

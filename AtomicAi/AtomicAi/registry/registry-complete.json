@@ -1,0 +1,625 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "2.0.0",
+  "name": "Oxygen DNA Complete Registry",
+  "description": "Unified registry of all components across all 5 levels (Atoms, Molecules, Organisms, Layouts, Pages)",
+  "lastUpdated": "2024-01-01",
+  
+  "levels": {
+    "atoms": {
+      "description": "Basic building blocks - cannot be broken down further",
+      "count": 20,
+      "components": [
+        {
+          "id": "button",
+          "name": "Button",
+          "level": "atom",
+          "category": ["form", "interaction"],
+          "manifestPath": "../atoms-complete/manifests/button.manifest.json",
+          "dependencies": [],
+          "tags": ["form", "cta", "interaction", "action"]
+        },
+        {
+          "id": "icon",
+          "name": "Icon",
+          "level": "atom",
+          "category": ["display"],
+          "manifestPath": "../atoms-complete/manifests/icon.manifest.json",
+          "dependencies": [],
+          "tags": ["display", "visual", "symbol"]
+        },
+        {
+          "id": "badge",
+          "name": "Badge",
+          "level": "atom",
+          "category": ["display"],
+          "manifestPath": "../atoms-complete/manifests/badge.manifest.json",
+          "dependencies": [],
+          "tags": ["display", "status", "label", "indicator"]
+        },
+        {
+          "id": "avatar",
+          "name": "Avatar",
+          "level": "atom",
+          "category": ["display"],
+          "manifestPath": "../atoms-complete/manifests/avatar.manifest.json",
+          "dependencies": ["image"],
+          "tags": ["display", "user", "profile", "identity"]
+        },
+        {
+          "id": "link",
+          "name": "Link",
+          "level": "atom",
+          "category": ["navigation"],
+          "manifestPath": "../atoms-complete/manifests/link.manifest.json",
+          "dependencies": [],
+          "tags": ["navigation", "link", "anchor"]
+        },
+        {
+          "id": "typography",
+          "name": "Typography",
+          "level": "atom",
+          "category": ["display"],
+          "manifestPath": "../atoms-complete/manifests/typography.manifest.json",
+          "dependencies": [],
+          "tags": ["display", "text", "heading", "paragraph"]
+        },
+        {
+          "id": "label",
+          "name": "Label",
+          "level": "atom",
+          "category": ["form"],
+          "manifestPath": "../atoms-complete/manifests/label.manifest.json",
+          "dependencies": [],
+          "tags": ["form", "text", "label"]
+        },
+        {
+          "id": "chip",
+          "name": "Chip",
+          "level": "atom",
+          "category": ["display"],
+          "manifestPath": "../atoms-complete/manifests/chip.manifest.json",
+          "dependencies": [],
+          "tags": ["display", "filter", "tag", "badge"]
+        },
+        {
+          "id": "spinner",
+          "name": "Spinner",
+          "level": "atom",
+          "category": ["feedback"],
+          "manifestPath": "../atoms-complete/manifests/spinner.manifest.json",
+          "dependencies": [],
+          "tags": ["feedback", "loading", "indicator"]
+        },
+        {
+          "id": "progress",
+          "name": "Progress",
+          "level": "atom",
+          "category": ["feedback"],
+          "manifestPath": "../atoms-complete/manifests/progress.manifest.json",
+          "dependencies": [],
+          "tags": ["feedback", "loading", "progress"]
+        },
+        {
+          "id": "skeleton",
+          "name": "Skeleton",
+          "level": "atom",
+          "category": ["feedback"],
+          "manifestPath": "../atoms-complete/manifests/skeleton.manifest.json",
+          "dependencies": [],
+          "tags": ["feedback", "loading", "placeholder"]
+        },
+        {
+          "id": "tooltip",
+          "name": "Tooltip",
+          "level": "atom",
+          "category": ["overlay"],
+          "manifestPath": "../atoms-complete/manifests/tooltip.manifest.json",
+          "dependencies": [],
+          "tags": ["overlay", "help", "hint"]
+        },
+        {
+          "id": "divider",
+          "name": "Divider",
+          "level": "atom",
+          "category": ["layout"],
+          "manifestPath": "../atoms-complete/manifests/divider.manifest.json",
+          "dependencies": [],
+          "tags": ["layout", "separator", "line"]
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "level": "atom",
+          "category": ["media"],
+          "manifestPath": "../atoms-complete/manifests/image.manifest.json",
+          "dependencies": [],
+          "tags": ["media", "image", "picture"]
+        },
+        {
+          "id": "kbd",
+          "name": "Keyboard",
+          "level": "atom",
+          "category": ["display"],
+          "manifestPath": "../atoms-complete/manifests/kbd.manifest.json",
+          "dependencies": [],
+          "tags": ["display", "keyboard", "shortcut"]
+        },
+        {
+          "id": "indicator",
+          "name": "Indicator",
+          "level": "atom",
+          "category": ["display"],
+          "manifestPath": "../atoms-complete/manifests/indicator.manifest.json",
+          "dependencies": [],
+          "tags": ["display", "status", "dot"]
+        },
+        {
+          "id": "fab",
+          "name": "Floating Action Button",
+          "level": "atom",
+          "category": ["interaction"],
+          "manifestPath": "../atoms-complete/manifests/fab.manifest.json",
+          "dependencies": ["button", "icon"],
+          "tags": ["interaction", "floating", "action"]
+        }
+      ]
+    },
+    
+    "molecules": {
+      "description": "Simple combinations of atoms",
+      "count": 48,
+      "manifestPath": "../molecules-complete/manifests/",
+      "components": [
+        {
+          "id": "input",
+          "name": "Input",
+          "level": "molecule",
+          "category": ["form"],
+          "manifestPath": "../molecules-complete/manifests/input.manifest.json",
+          "dependencies": ["label", "icon"],
+          "tags": ["form", "input", "text"]
+        },
+        {
+          "id": "select",
+          "name": "Select",
+          "level": "molecule",
+          "category": ["form"],
+          "manifestPath": "../molecules-complete/manifests/select.manifest.json",
+          "dependencies": ["input", "menu"],
+          "tags": ["form", "dropdown", "select"]
+        },
+        {
+          "id": "card",
+          "name": "Card",
+          "level": "molecule",
+          "category": ["display"],
+          "manifestPath": "../molecules-complete/manifests/card.manifest.json",
+          "dependencies": ["typography", "button", "image"],
+          "tags": ["display", "container", "card"]
+        },
+        {
+          "id": "accordion",
+          "name": "Accordion",
+          "level": "molecule",
+          "category": ["display"],
+          "manifestPath": "../molecules-complete/manifests/accordion.manifest.json",
+          "dependencies": ["button", "typography"],
+          "tags": ["display", "collapsible", "expandable"]
+        },
+        {
+          "id": "tabs",
+          "name": "Tabs",
+          "level": "molecule",
+          "category": ["navigation"],
+          "manifestPath": "../molecules-complete/manifests/tabs.manifest.json",
+          "dependencies": ["button"],
+          "tags": ["navigation", "tabs", "switcher"]
+        },
+        {
+          "id": "modal",
+          "name": "Modal",
+          "level": "molecule",
+          "category": ["overlay"],
+          "manifestPath": "../molecules-complete/manifests/modal.manifest.json",
+          "dependencies": ["button", "card"],
+          "tags": ["overlay", "dialog", "popup"]
+        },
+        {
+          "id": "drawer",
+          "name": "Drawer",
+          "level": "molecule",
+          "category": ["overlay"],
+          "manifestPath": "../molecules-complete/manifests/drawer.manifest.json",
+          "dependencies": ["button", "card"],
+          "tags": ["overlay", "side-panel", "slideout"]
+        },
+        {
+          "id": "carousel",
+          "name": "Carousel",
+          "level": "molecule",
+          "category": ["media"],
+          "manifestPath": "../molecules-complete/manifests/carousel.manifest.json",
+          "dependencies": ["button", "image"],
+          "tags": ["media", "slider", "carousel"]
+        },
+        {
+          "id": "breadcrumb",
+          "name": "Breadcrumb",
+          "level": "molecule",
+          "category": ["navigation"],
+          "manifestPath": "../molecules-complete/manifests/breadcrumb.manifest.json",
+          "dependencies": ["link"],
+          "tags": ["navigation", "breadcrumb", "path"]
+        },
+        {
+          "id": "menu",
+          "name": "Menu",
+          "level": "molecule",
+          "category": ["navigation"],
+          "manifestPath": "../molecules-complete/manifests/menu.manifest.json",
+          "dependencies": ["link", "button"],
+          "tags": ["navigation", "menu", "dropdown"]
+        }
+      ]
+    },
+    
+    "organisms": {
+      "description": "Complex components combining molecules and atoms",
+      "count": 51,
+      "manifestPath": "../organisms-complete/manifests/",
+      "components": [
+        {
+          "id": "filter-bar",
+          "name": "Filter Bar",
+          "level": "organism",
+          "category": ["data-ui", "filter"],
+          "manifestPath": "../organisms-complete/manifests/filter-bar.manifest.json",
+          "dependencies": ["input", "select", "button", "chip"],
+          "tags": ["filter", "search", "data", "table"],
+          "dataUI": true
+        },
+        {
+          "id": "table-toolbar",
+          "name": "Table Toolbar",
+          "level": "organism",
+          "category": ["data-ui", "table"],
+          "manifestPath": "../organisms-complete/manifests/table-toolbar.manifest.json",
+          "dependencies": ["button", "input", "menu"],
+          "tags": ["table", "toolbar", "data", "crud"],
+          "dataUI": true
+        },
+        {
+          "id": "bulk-selection-actions",
+          "name": "Bulk Selection Actions",
+          "level": "organism",
+          "category": ["data-ui", "table"],
+          "manifestPath": "../organisms-complete/manifests/bulk-selection-actions.manifest.json",
+          "dependencies": ["button", "badge"],
+          "tags": ["table", "bulk", "selection", "actions"],
+          "dataUI": true
+        },
+        {
+          "id": "empty-table-state",
+          "name": "Empty Table State",
+          "level": "organism",
+          "category": ["data-ui", "state"],
+          "manifestPath": "../organisms-complete/manifests/empty-table-state.manifest.json",
+          "dependencies": ["icon", "typography", "button"],
+          "tags": ["empty", "state", "table", "data"],
+          "dataUI": true
+        },
+        {
+          "id": "inline-editing-row",
+          "name": "Inline Editing Row",
+          "level": "organism",
+          "category": ["data-ui", "table"],
+          "manifestPath": "../organisms-complete/manifests/inline-editing-row.manifest.json",
+          "dependencies": ["input", "button"],
+          "tags": ["table", "edit", "inline", "data"],
+          "dataUI": true
+        },
+        {
+          "id": "audit-log-list",
+          "name": "Audit Log List",
+          "level": "organism",
+          "category": ["data-ui", "audit"],
+          "manifestPath": "../organisms-complete/manifests/audit-log-list.manifest.json",
+          "dependencies": ["timeline", "avatar", "typography"],
+          "tags": ["audit", "log", "history", "timeline"],
+          "dataUI": true
+        },
+        {
+          "id": "permissions-matrix",
+          "name": "Permissions Matrix",
+          "level": "organism",
+          "category": ["admin", "rbac"],
+          "manifestPath": "../organisms-complete/manifests/permissions-matrix.manifest.json",
+          "dependencies": ["table", "checkbox", "tooltip"],
+          "tags": ["permissions", "rbac", "admin", "security"],
+          "rbac": true
+        },
+        {
+          "id": "roles-permissions-ui",
+          "name": "Roles & Permissions UI",
+          "level": "organism",
+          "category": ["admin", "rbac"],
+          "manifestPath": "../organisms-complete/manifests/roles-permissions-ui.manifest.json",
+          "dependencies": ["form", "table", "accordion"],
+          "tags": ["roles", "permissions", "rbac", "admin"],
+          "rbac": true
+        },
+        {
+          "id": "activity-card",
+          "name": "Activity Card",
+          "level": "organism",
+          "category": ["display", "activity"],
+          "manifestPath": "../organisms-complete/manifests/activity-card.manifest.json",
+          "dependencies": ["card", "avatar", "typography", "timeline"],
+          "tags": ["activity", "card", "timeline", "feed"]
+        },
+        {
+          "id": "notification-card",
+          "name": "Notification Card",
+          "level": "organism",
+          "category": ["display", "notification"],
+          "manifestPath": "../organisms-complete/manifests/notification-card.manifest.json",
+          "dependencies": ["card", "icon", "button", "avatar"],
+          "tags": ["notification", "alert", "message"]
+        }
+      ]
+    },
+    
+    "layouts": {
+      "description": "Layout structures and containers",
+      "count": 39,
+      "manifestPath": "../layouts-complete/manifests/",
+      "components": [
+        {
+          "id": "app-shell",
+          "name": "App Shell",
+          "level": "layout",
+          "category": ["app-shell", "layout"],
+          "manifestPath": "../layouts-complete/manifests/app-shell.manifest.json",
+          "dependencies": ["sidebar", "navbar", "container"],
+          "tags": ["app-shell", "layout", "structure", "shell"],
+          "appShell": true
+        },
+        {
+          "id": "sidebar",
+          "name": "Sidebar",
+          "level": "layout",
+          "category": ["navigation", "layout"],
+          "manifestPath": "../layouts-complete/manifests/sidebar.manifest.json",
+          "dependencies": ["menu", "link", "icon"],
+          "tags": ["sidebar", "navigation", "layout"],
+          "appShell": true
+        },
+        {
+          "id": "navbar",
+          "name": "Navbar",
+          "level": "layout",
+          "category": ["navigation", "layout"],
+          "manifestPath": "../layouts-complete/manifests/navbar.manifest.json",
+          "dependencies": ["menu", "link", "button"],
+          "tags": ["navbar", "navigation", "header"],
+          "appShell": true
+        },
+        {
+          "id": "sidebar-layout",
+          "name": "Sidebar Layout",
+          "level": "layout",
+          "category": ["layout"],
+          "manifestPath": "../layouts-complete/manifests/sidebar-layout.manifest.json",
+          "dependencies": ["sidebar", "container"],
+          "tags": ["layout", "sidebar", "structure"]
+        },
+        {
+          "id": "container",
+          "name": "Container",
+          "level": "layout",
+          "category": ["layout"],
+          "manifestPath": "../layouts-complete/manifests/container.manifest.json",
+          "dependencies": [],
+          "tags": ["layout", "container", "wrapper"]
+        },
+        {
+          "id": "grid",
+          "name": "Grid",
+          "level": "layout",
+          "category": ["layout"],
+          "manifestPath": "../layouts-complete/manifests/grid.manifest.json",
+          "dependencies": [],
+          "tags": ["layout", "grid", "columns"]
+        },
+        {
+          "id": "workspace-switcher",
+          "name": "Workspace Switcher",
+          "level": "layout",
+          "category": ["app-shell", "multi-tenant"],
+          "manifestPath": "../layouts-complete/manifests/workspace-switcher.manifest.json",
+          "dependencies": ["select", "menu"],
+          "tags": ["workspace", "tenant", "switcher", "multi-tenant"],
+          "appShell": true,
+          "multiTenant": true
+        },
+        {
+          "id": "notification-center-panel",
+          "name": "Notification Center Panel",
+          "level": "layout",
+          "category": ["app-shell", "notification"],
+          "manifestPath": "../layouts-complete/manifests/notification-center-panel.manifest.json",
+          "dependencies": ["panel", "card", "button"],
+          "tags": ["notification", "center", "panel", "app-shell"],
+          "appShell": true
+        },
+        {
+          "id": "user-menu",
+          "name": "User Menu",
+          "level": "layout",
+          "category": ["app-shell", "user"],
+          "manifestPath": "../layouts-complete/manifests/user-menu.manifest.json",
+          "dependencies": ["menu", "avatar", "link"],
+          "tags": ["user", "menu", "profile", "app-shell"],
+          "appShell": true
+        }
+      ]
+    },
+    
+    "pages": {
+      "description": "Complete page templates and compositions",
+      "count": 48,
+      "manifestPath": "../pages-complete/manifests/",
+      "components": [
+        {
+          "id": "login-form",
+          "name": "Login Form",
+          "level": "page",
+          "category": ["auth", "form"],
+          "manifestPath": "../pages-complete/manifests/login-form.manifest.json",
+          "dependencies": ["form", "input", "button"],
+          "tags": ["auth", "login", "form", "page"]
+        },
+        {
+          "id": "invoice-list",
+          "name": "Invoice List",
+          "level": "page",
+          "category": ["data", "list", "erp"],
+          "manifestPath": "../pages-complete/manifests/invoice-list.manifest.json",
+          "dependencies": ["table", "filter-bar", "toolbar"],
+          "tags": ["invoice", "list", "table", "erp", "sales"],
+          "erp": true
+        },
+        {
+          "id": "checkout",
+          "name": "Checkout",
+          "level": "page",
+          "category": ["ecommerce", "form"],
+          "manifestPath": "../pages-complete/manifests/checkout.manifest.json",
+          "dependencies": ["form", "card", "button"],
+          "tags": ["checkout", "ecommerce", "payment", "form"]
+        },
+        {
+          "id": "pricing-section",
+          "name": "Pricing Section",
+          "level": "page",
+          "category": ["marketing", "pricing"],
+          "manifestPath": "../pages-complete/manifests/pricing-section.manifest.json",
+          "dependencies": ["card", "button", "badge"],
+          "tags": ["pricing", "marketing", "plans", "section"]
+        },
+        {
+          "id": "testimonials-section",
+          "name": "Testimonials Section",
+          "level": "page",
+          "category": ["marketing", "social-proof"],
+          "manifestPath": "../pages-complete/manifests/testimonials-section.manifest.json",
+          "dependencies": ["card", "avatar", "typography"],
+          "tags": ["testimonials", "reviews", "social-proof"]
+        }
+      ]
+    },
+    
+    "sections": {
+      "description": "Pre-built marketing/content sections",
+      "count": 45,
+      "manifestPath": "../molecules-complete/sections/",
+      "sections": [
+        {
+          "id": "hero.split.image",
+          "name": "Hero - Split with Image",
+          "level": "section",
+          "category": ["hero", "marketing"],
+          "manifestPath": "../molecules-complete/sections/hero.split.image.manifest.json",
+          "dependencies": ["button", "badge", "image", "typography"],
+          "tags": ["hero", "marketing", "landing"]
+        },
+        {
+          "id": "features.icon.grid",
+          "name": "Features - Icon Grid",
+          "level": "section",
+          "category": ["features", "marketing"],
+          "manifestPath": "../molecules-complete/sections/features.icon.grid.manifest.json",
+          "dependencies": ["icon", "card", "typography"],
+          "tags": ["features", "marketing"]
+        }
+      ]
+    }
+  },
+  
+  "categories": {
+    "form": ["input", "select", "textarea", "checkbox", "radio", "button"],
+    "display": ["card", "badge", "avatar", "typography", "icon", "image"],
+    "navigation": ["header", "footer", "menu", "breadcrumb", "sidebar", "navbar"],
+    "data-ui": ["datatable", "filter-bar", "table-toolbar", "bulk-selection-actions"],
+    "app-shell": ["app-shell", "sidebar", "navbar", "workspace-switcher", "user-menu"],
+    "rbac": ["permissions-matrix", "roles-permissions-ui"],
+    "auth": ["login-form", "register-form", "forgot-password"],
+    "marketing": ["hero", "pricing", "testimonials", "features"],
+    "erp": ["invoice-list", "filter-bar", "table-toolbar"]
+  },
+  
+  "integrations": {
+    "dataUI": {
+      "description": "Data UI Kit components",
+      "components": [
+        "filter-bar",
+        "table-toolbar",
+        "bulk-selection-actions",
+        "empty-table-state",
+        "inline-editing-row",
+        "audit-log-list"
+      ],
+      "level": "organisms"
+    },
+    "appShell": {
+      "description": "App Shell components",
+      "components": [
+        "app-shell",
+        "sidebar",
+        "navbar",
+        "workspace-switcher",
+        "notification-center-panel",
+        "user-menu"
+      ],
+      "levels": ["layouts", "organisms"]
+    },
+    "rbac": {
+      "description": "RBAC components",
+      "components": [
+        "permissions-matrix",
+        "roles-permissions-ui"
+      ],
+      "level": "organisms"
+    }
+  },
+  
+  "siteTypePresets": {
+    "saas": {
+      "recommendedComponents": {
+        "atoms": ["button", "badge", "icon"],
+        "molecules": ["input", "card", "modal"],
+        "organisms": ["filter-bar", "table-toolbar"],
+        "layouts": ["app-shell", "sidebar", "navbar"],
+        "pages": ["login-form", "invoice-list", "pricing-section"]
+      },
+      "recommendedSections": [
+        "hero.split.image",
+        "features.icon.grid",
+        "pricing.cards.3"
+      ],
+      "recommendedTheme": "theme-saas-modern"
+    },
+    "erp": {
+      "recommendedComponents": {
+        "atoms": ["button", "icon", "badge"],
+        "molecules": ["input", "select", "card"],
+        "organisms": ["filter-bar", "table-toolbar", "bulk-selection-actions", "empty-table-state"],
+        "layouts": ["app-shell", "sidebar", "navbar"],
+        "pages": ["invoice-list"]
+      },
+      "recommendedTheme": "theme-saas-modern"
+    }
+  }
+}
+

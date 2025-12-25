@@ -1,0 +1,72 @@
+{
+  "packId": "booking",
+  "name": "Booking / Reservation System",
+  "productType": "BOOKING",
+  "defaultAudience": "B2C",
+  "primaryPatterns": [
+    "pattern.bookingAvailability",
+    "pattern.calendarScheduler",
+    "pattern.bookingFlow",
+    "pattern.resourceManagement"
+  ],
+  "coreModules": [
+    "core.auth",
+    "core.rbac",
+    "core.notifications",
+    "core.calendar"
+  ],
+  "modules": [
+    {
+      "moduleId": "booking.resources",
+      "title": "Resources",
+      "entities": ["Resource", "ResourceType", "Availability"],
+      "required": true
+    },
+    {
+      "moduleId": "booking.bookings",
+      "title": "Bookings",
+      "entities": ["Booking", "BookingSlot", "Payment"],
+      "required": true
+    },
+    {
+      "moduleId": "booking.customers",
+      "title": "Customers",
+      "entities": ["Customer", "CustomerPreference"],
+      "required": true
+    },
+    {
+      "moduleId": "booking.staff",
+      "title": "Staff",
+      "entities": ["Staff", "Schedule", "Service"],
+      "required": false
+    },
+    {
+      "moduleId": "booking.reminders",
+      "title": "Reminders",
+      "entities": ["Reminder", "Notification"],
+      "required": false
+    }
+  ],
+  "workflows": [
+    "workflow.bookingFlow",
+    "workflow.availabilityCheck",
+    "workflow.reminderSend",
+    "workflow.cancellationRefund"
+  ],
+  "integrations": [
+    "calendar",
+    "paymentGateway",
+    "sms",
+    "email"
+  ],
+  "platformAdapters": {
+    "mobile": {
+      "emphasize": ["quickBooking", "calendarView", "reminders"],
+      "avoid": ["bulkOps"]
+    },
+    "desktop": {
+      "emphasize": ["availabilityManagement", "bulkBooking", "reports"]
+    }
+  }
+}
+

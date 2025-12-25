@@ -1,0 +1,138 @@
+{
+  "$schema": "../../schema/manifest.schema.json",
+  "id": "data.table.pro",
+  "level": "organism",
+  "category": ["dataTable", "erp", "data"],
+  "title": "Data Table Pro",
+  "description": "High-density table with server pagination, column controls, bulk actions, sorting, filtering.",
+  "tags": ["table", "filters", "bulk", "erp", "saas"],
+  "slots": {
+    "toolbar": {
+      "type": "slot",
+      "required": true,
+      "description": "Table toolbar (search, filters, columns, export)"
+    },
+    "rowActions": {
+      "type": "slot",
+      "required": false,
+      "description": "Row action buttons"
+    },
+    "bulkActions": {
+      "type": "slot",
+      "required": false,
+      "description": "Bulk action menu"
+    }
+  },
+  "props": {
+    "pagination": {
+      "type": "enum",
+      "values": ["server", "client"],
+      "default": "server",
+      "description": "Pagination mode"
+    },
+    "density": {
+      "type": "enum",
+      "values": ["compact", "comfortable"],
+      "default": "compact",
+      "description": "Table row density"
+    },
+    "virtualized": {
+      "type": "boolean",
+      "default": true,
+      "description": "Enable row virtualization for performance"
+    },
+    "selectable": {
+      "type": "boolean",
+      "default": true,
+      "description": "Enable row selection"
+    },
+    "sortable": {
+      "type": "boolean",
+      "default": true,
+      "description": "Enable column sorting"
+    },
+    "filterable": {
+      "type": "boolean",
+      "default": true,
+      "description": "Enable column filtering"
+    }
+  },
+  "constraints": {
+    "rtlSafe": true,
+    "a11yRequired": true,
+    "mobileForbidden": true,
+    "minColumns": 1,
+    "maxColumns": 20
+  },
+  "a11y": {
+    "keyboardNavigable": true,
+    "ariaLabelsRequired": true,
+    "sortAnnouncements": true
+  },
+  "perf": {
+    "virtualize": true,
+    "critical": true,
+    "lazy": false
+  },
+  "platformSupport": {
+    "web": true,
+    "mobile": false,
+    "desktop": true
+  },
+  "adapters": {
+    "mobile": {
+      "fallback": "data.list.cards",
+      "hint": "Use cardList layout on mobile"
+    },
+    "desktop": {
+      "shortcuts": true,
+      "contextMenu": true,
+      "multiSelect": true
+    }
+  },
+  "dependencies": {
+    "required": ["data.toolbar.searchSortColumns", "data.pagination.server"],
+    "optional": ["data.bulkActions", "data.filters.builder"]
+  },
+  "examples": [
+    {
+      "name": "basic",
+      "intent": "entityList",
+      "snippet": {
+        "props": {
+          "pagination": "server",
+          "density": "compact",
+          "virtualized": true,
+          "selectable": true
+        },
+        "slots": {
+          "toolbar": "data.toolbar.searchSortColumns"
+        }
+      }
+    },
+    {
+      "name": "with-bulk-actions",
+      "intent": "entityList",
+      "snippet": {
+        "props": {
+          "pagination": "server",
+          "density": "compact",
+          "virtualized": true,
+          "selectable": true
+        },
+        "slots": {
+          "toolbar": "data.toolbar.searchSortColumns",
+          "bulkActions": "data.bulkActions"
+        }
+      }
+    }
+  ],
+  "fallbacks": [
+    {
+      "ifMissing": "data.table.pro",
+      "use": "data.list.cards"
+    }
+  ],
+  "version": "1.0.0"
+}
+

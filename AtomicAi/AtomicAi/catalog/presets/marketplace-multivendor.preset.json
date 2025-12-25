@@ -1,0 +1,43 @@
+{
+  "presetId": "marketplace-multivendor",
+  "label": "Marketplace Multi-vendor with Vendor Portal",
+  "productType": "MARKETPLACE",
+  "delivery": {
+    "mode": "multiTenantSaaS",
+    "deployment": "cloudNative",
+    "architecture": "modularMonolith",
+    "headless": true,
+    "pwa": true,
+    "desktop": "none"
+  },
+  "businessModel": {
+    "type": "usageBased",
+    "billing": "per transaction"
+  },
+  "themePack": "marketplace-warm",
+  "density": "comfortable",
+  "pages": {
+    "marketing": ["page.marketplace.landing", "page.pricing.full"],
+    "app": ["page.app.auth", "page.app.dashboard", "page.app.entityCrud", "page.app.workflow"]
+  },
+  "patterns": ["pattern.approvalWorkflow", "pattern.integrationCenter", "pattern.dashboardReports"],
+  "modules": [
+    "core.auth",
+    "core.rbac",
+    "core.tenants",
+    "core.auditLogs",
+    "core.settings",
+    "marketplace.vendors",
+    "marketplace.listings",
+    "marketplace.orders",
+    "marketplace.payouts",
+    "marketplace.disputes"
+  ],
+  "entities": ["Vendor", "Listing", "Order", "Payout", "Dispute", "User", "Role", "Tenant"],
+  "assumptions": [
+    "Vendor approval workflow enabled",
+    "Commission rules configurable"
+  ],
+  "version": "1.0.0"
+}
+

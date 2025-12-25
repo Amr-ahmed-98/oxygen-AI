@@ -1,0 +1,254 @@
+{
+  "version": "1.0.0",
+  "description": "أول 30 Pattern/Component IDs أساسية لأي SaaS/ERP متعدد المنصات",
+  "patterns": [
+    {
+      "id": "shell.app",
+      "name": "App Shell Layout",
+      "category": "shell",
+      "description": "Layout wrapper رئيسي للتطبيق",
+      "platforms": ["web", "mobile", "desktop"],
+      "manifests": ["shell.app.manifest.json"]
+    },
+    {
+      "id": "shell.sidebar.grouped",
+      "name": "Grouped Sidebar",
+      "category": "shell",
+      "description": "Sidebar مع تجميع العناصر",
+      "platforms": ["web", "desktop"],
+      "manifests": ["shell.sidebar.grouped.manifest.json"]
+    },
+    {
+      "id": "shell.header.breadcrumbs",
+      "name": "Header with Breadcrumbs",
+      "category": "shell",
+      "description": "Header مع breadcrumb navigation",
+      "platforms": ["web", "desktop"],
+      "manifests": ["shell.header.breadcrumbs.manifest.json"]
+    },
+    {
+      "id": "shell.userMenu",
+      "name": "User Menu",
+      "category": "shell",
+      "description": "قائمة المستخدم (profile, settings, logout)",
+      "platforms": ["web", "mobile", "desktop"],
+      "manifests": ["shell.userMenu.manifest.json"]
+    },
+    {
+      "id": "shell.tenantSwitcher",
+      "name": "Tenant/Workspace Switcher",
+      "category": "shell",
+      "description": "مبدّل Workspace/Tenant (للمنتجات multi-tenant)",
+      "platforms": ["web", "desktop"],
+      "manifests": ["shell.tenantSwitcher.manifest.json"]
+    },
+    {
+      "id": "shell.commandPalette",
+      "name": "Command Palette (Ctrl+K)",
+      "category": "shell",
+      "description": "Command palette للتنقل السريع",
+      "platforms": ["web", "desktop"],
+      "manifests": ["shell.commandPalette.manifest.json"]
+    },
+    {
+      "id": "shell.notificationCenter",
+      "name": "Notification Center",
+      "category": "shell",
+      "description": "مركز الإشعارات",
+      "platforms": ["web", "mobile", "desktop"],
+      "manifests": ["shell.notificationCenter.manifest.json"]
+    },
+    {
+      "id": "data.table.pro",
+      "name": "Data Table Pro",
+      "category": "data",
+      "description": "جدول بيانات متقدم (sorting, filtering, columns, pagination)",
+      "platforms": ["web", "desktop"],
+      "manifests": ["data.table.pro.manifest.json"]
+    },
+    {
+      "id": "data.list.cards",
+      "name": "Card List (Mobile)",
+      "category": "data",
+      "description": "قائمة بطاقات للموبايل",
+      "platforms": ["mobile"],
+      "manifests": ["data.list.cards.manifest.json"]
+    },
+    {
+      "id": "data.filters.builder",
+      "name": "Filter Builder",
+      "category": "data",
+      "description": "باني الفلاتر المتقدم",
+      "platforms": ["web", "desktop"],
+      "manifests": ["data.filters.builder.manifest.json"]
+    },
+    {
+      "id": "data.filters.sheet",
+      "name": "Filter Bottom Sheet (Mobile)",
+      "category": "data",
+      "description": "Bottom sheet للفلاتر في الموبايل",
+      "platforms": ["mobile"],
+      "manifests": ["data.filters.sheet.manifest.json"]
+    },
+    {
+      "id": "data.toolbar.searchSortColumns",
+      "name": "Data Toolbar",
+      "category": "data",
+      "description": "شريط أدوات (search, sort, columns, export)",
+      "platforms": ["web", "desktop"],
+      "manifests": ["data.toolbar.searchSortColumns.manifest.json"]
+    },
+    {
+      "id": "data.pagination.server",
+      "name": "Server-side Pagination",
+      "category": "data",
+      "description": "Pagination من السيرفر",
+      "platforms": ["web", "mobile", "desktop"],
+      "manifests": ["data.pagination.server.manifest.json"]
+    },
+    {
+      "id": "data.bulkActions",
+      "name": "Bulk Actions",
+      "category": "data",
+      "description": "إجراءات متعددة على العناصر المحددة",
+      "platforms": ["web", "desktop"],
+      "manifests": ["data.bulkActions.manifest.json"]
+    },
+    {
+      "id": "data.detail.tabs",
+      "name": "Detail View with Tabs",
+      "category": "data",
+      "description": "عرض التفاصيل مع تبويبات",
+      "platforms": ["web", "mobile", "desktop"],
+      "manifests": ["data.detail.tabs.manifest.json"]
+    },
+    {
+      "id": "data.timeline.activity",
+      "name": "Activity Timeline",
+      "category": "data",
+      "description": "Timeline للأنشطة (CRM, Helpdesk)",
+      "platforms": ["web", "mobile", "desktop"],
+      "manifests": ["data.timeline.activity.manifest.json"]
+    },
+    {
+      "id": "data.importExport",
+      "name": "Import/Export",
+      "category": "data",
+      "description": "استيراد/تصدير البيانات",
+      "platforms": ["web", "desktop"],
+      "manifests": ["data.importExport.manifest.json"]
+    },
+    {
+      "id": "form.builder.schemaDriven",
+      "name": "Schema-driven Form Builder",
+      "category": "form",
+      "description": "نموذج ديناميكي من Schema",
+      "platforms": ["web", "mobile", "desktop"],
+      "manifests": ["form.builder.schemaDriven.manifest.json"]
+    },
+    {
+      "id": "form.stepper",
+      "name": "Stepper Form",
+      "category": "form",
+      "description": "نموذج متعدد الخطوات (للشاشات الطويلة/الموبايل)",
+      "platforms": ["mobile", "web"],
+      "manifests": ["form.stepper.manifest.json"]
+    },
+    {
+      "id": "form.validation.summary",
+      "name": "Validation Summary",
+      "category": "form",
+      "description": "ملخص أخطاء التحقق",
+      "platforms": ["web", "mobile", "desktop"],
+      "manifests": ["form.validation.summary.manifest.json"]
+    },
+    {
+      "id": "form.masking",
+      "name": "Input Masking",
+      "category": "form",
+      "description": "إخفاء المدخلات (phone, ID, money)",
+      "platforms": ["web", "mobile", "desktop"],
+      "manifests": ["form.masking.manifest.json"]
+    },
+    {
+      "id": "form.attachments",
+      "name": "File Attachments",
+      "category": "form",
+      "description": "مرفقات الملفات",
+      "platforms": ["web", "mobile", "desktop"],
+      "manifests": ["form.attachments.manifest.json"]
+    },
+    {
+      "id": "form.confirmDestructive",
+      "name": "Destructive Action Confirmation",
+      "category": "form",
+      "description": "تأكيد الإجراءات المدمرة",
+      "platforms": ["web", "mobile", "desktop"],
+      "manifests": ["form.confirmDestructive.manifest.json"]
+    },
+    {
+      "id": "form.drawerEdit",
+      "name": "Edit in Drawer",
+      "category": "form",
+      "description": "تعديل في Drawer (web/desktop)",
+      "platforms": ["web", "desktop"],
+      "manifests": ["form.drawerEdit.manifest.json"]
+    },
+    {
+      "id": "state.loading.skeleton",
+      "name": "Loading Skeleton",
+      "category": "state",
+      "description": "Skeleton loading state",
+      "platforms": ["web", "mobile", "desktop"],
+      "manifests": ["state.loading.skeleton.manifest.json"]
+    },
+    {
+      "id": "state.empty",
+      "name": "Empty State",
+      "category": "state",
+      "description": "حالة فارغة مع CTA",
+      "platforms": ["web", "mobile", "desktop"],
+      "manifests": ["state.empty.manifest.json"]
+    },
+    {
+      "id": "state.error",
+      "name": "Error State",
+      "category": "state",
+      "description": "حالة الخطأ مع retry",
+      "platforms": ["web", "mobile", "desktop"],
+      "manifests": ["state.error.manifest.json"]
+    },
+    {
+      "id": "state.noPermission",
+      "name": "No Permission State",
+      "category": "state",
+      "description": "حالة عدم وجود صلاحية",
+      "platforms": ["web", "mobile", "desktop"],
+      "manifests": ["state.noPermission.manifest.json"]
+    },
+    {
+      "id": "security.rbac.guard",
+      "name": "RBAC Guard",
+      "category": "security",
+      "description": "حماية Routes/Components بناءً على الصلاحيات",
+      "platforms": ["web", "mobile", "desktop"],
+      "manifests": ["security.rbac.guard.manifest.json"]
+    },
+    {
+      "id": "audit.log.viewer",
+      "name": "Audit Log Viewer",
+      "category": "security",
+      "description": "عارض سجلات التدقيق",
+      "platforms": ["web", "desktop"],
+      "manifests": ["audit.log.viewer.manifest.json"]
+    }
+  ],
+  "categories": {
+    "shell": "App Shell Components",
+    "data": "Data Display & Management",
+    "form": "Forms & Input",
+    "state": "UI States",
+    "security": "Security & Permissions"
+  }
+}
+

@@ -1,0 +1,32 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-25T15:38:28.881624+00:00",
+  "items": [
+    {
+      "id": "molecule.ssoButtonsRow",
+      "type": "molecule",
+      "name": "SSO Buttons Row",
+      "tags": [
+        "ui",
+        "molecule",
+        "sso",
+        "oauth",
+        "auth",
+        "iam",
+        "buttons",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "SSO Buttons Row ui molecule sso oauth auth iam buttons a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "ssoButtonsRow_molecule_manifest_v1.json",
+        "ssoButtonsRow_variants_library_v1.json",
+        "catalog_index_ssoButtonsRow_pack_v1.json"
+      ]
+    }
+  ]
+}

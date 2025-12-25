@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { ArrowRight, Check } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { Card } from "@/components/ui/Card"
@@ -28,7 +29,12 @@ interface SolutionsSectionProps {
 }
 
 export function SolutionsSection({ data }: SolutionsSectionProps) {
-  const categories = Array.from(new Set(data.solutions.map(s => s.category)))
+  const categories = Array.from(new Set(data.solutions.map(s => s.category))).sort()
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+
+  const filteredSolutions = selectedCategory
+    ? data.solutions.filter(s => s.category === selectedCategory)
+    : data.solutions
 
   return (
     <div className="dark min-h-screen bg-background">
@@ -43,9 +49,41 @@ export function SolutionsSection({ data }: SolutionsSectionProps) {
           </p>
         </div>
 
+        {/* Category Filter */}
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
+          <button
+            onClick={() => setSelectedCategory(null)}
+            className={cn(
+              "px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer",
+              selectedCategory === null
+                ? "bg-primary text-primary-foreground"
+                : "bg-sidebar-accent/50 text-foreground hover:bg-sidebar-accent"
+            )}
+          >
+            All Solutions ({data.solutions.length})
+          </button>
+          {categories.map((category) => {
+            const count = data.solutions.filter(s => s.category === category).length
+            return (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={cn(
+                  "px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer",
+                  selectedCategory === category
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-sidebar-accent/50 text-foreground hover:bg-sidebar-accent"
+                )}
+              >
+                {category} ({count})
+              </button>
+            )
+          })}
+        </div>
+
         {/* Solutions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          {data.solutions.map((solution) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {filteredSolutions.map((solution) => (
             <Card
               key={solution.id}
               className="relative p-6 flex flex-col h-full group hover:border-primary/50 transition-all cursor-pointer"

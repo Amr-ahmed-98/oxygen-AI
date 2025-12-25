@@ -1,0 +1,175 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T12:00:01.407961+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "breadcrumbs",
+    "goal": "ThemeForest-grade Breadcrumbs molecule for navigation and context in ERP"
+  },
+  "component": {
+    "id": "molecule.breadcrumbs",
+    "name": "Breadcrumbs",
+    "type": "molecule",
+    "aliases": [
+      "Crumbs",
+      "NavTrail"
+    ],
+    "description": "Breadcrumb trail with separators, overflow collapse, icons, and action slot.",
+    "tags": [
+      "ui",
+      "molecule",
+      "breadcrumbs",
+      "navigation",
+      "erp",
+      "dashboard",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.link",
+        "atom.text",
+        "atom.icon",
+        "atom.iconButton"
+      ],
+      "optional": [
+        "atom.dropdown"
+      ]
+    },
+    "events": {
+      "web": [
+        "onNavigate"
+      ],
+      "mobile": [
+        "onNavigate"
+      ],
+      "desktop": [
+        "onNavigate"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "default",
+          "withIcons",
+          "minimal",
+          "card"
+        ],
+        "default": "default"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "muted",
+          "brand"
+        ],
+        "default": "muted"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "maxItems": {
+        "type": "enum",
+        "enum": [
+          3,
+          4,
+          5,
+          6,
+          8,
+          "auto"
+        ],
+        "default": "auto"
+      },
+      "collapse": {
+        "type": "enum",
+        "enum": [
+          "none",
+          "middle",
+          "menu"
+        ],
+        "default": "middle"
+      },
+      "separator": {
+        "type": "enum",
+        "enum": [
+          "slash",
+          "chevron",
+          "dot"
+        ],
+        "default": "chevron"
+      },
+      "withAction": {
+        "type": "boolean",
+        "default": false
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "collapsed",
+      "with-icons",
+      "with-action",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Use nav with aria-label='Breadcrumb'.",
+        "Current item should be aria-current='page'.",
+        "Collapsed menu must be keyboard accessible."
+      ]
+    }
+  }
+}

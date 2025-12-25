@@ -1,0 +1,33 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-23T20:21:12.076607+00:00",
+  "items": [
+    {
+      "id": "atom.textarea",
+      "type": "atom",
+      "name": "Textarea",
+      "tags": [
+        "ui",
+        "atom",
+        "textarea",
+        "multiline",
+        "forms",
+        "erp",
+        "saas",
+        "notes",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Textarea multiline notes comments ticketing crm long description counter autosize toolbar erp forms a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "textarea_atom_manifest_v3.json",
+        "textarea_variants_library_v3.json",
+        "catalog_index_textarea_pack_v3.json"
+      ]
+    }
+  ]
+}

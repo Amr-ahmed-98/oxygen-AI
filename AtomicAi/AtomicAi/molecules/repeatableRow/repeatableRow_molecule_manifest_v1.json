@@ -1,0 +1,170 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T15:38:28.881624+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "repeatable-row",
+    "goal": "Repeatable list of field rows (add/remove) for addresses, phones, etc."
+  },
+  "component": {
+    "id": "molecule.repeatableRow",
+    "name": "Repeatable Row",
+    "type": "molecule",
+    "aliases": [
+      "RepeaterRow",
+      "AddRemoveRow",
+      "DynamicRow"
+    ],
+    "description": "Repeatable set of rows with add/remove, supports max/min, drag reorder, and validation summary.",
+    "tags": [
+      "ui",
+      "molecule",
+      "repeater",
+      "dynamic-form",
+      "addresses",
+      "phones",
+      "erp",
+      "crm",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.button",
+        "atom.iconButton",
+        "atom.text"
+      ],
+      "molecules": [
+        "molecule.formRow",
+        "molecule.toast"
+      ]
+    },
+    "events": {
+      "web": [
+        "onAdd",
+        "onRemove",
+        "onReorder"
+      ],
+      "mobile": [
+        "onAdd",
+        "onRemove",
+        "onReorder"
+      ],
+      "desktop": [
+        "onAdd",
+        "onRemove",
+        "onReorder"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "stack",
+          "table",
+          "cards",
+          "compact"
+        ],
+        "default": "stack"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "compact"
+      },
+      "min": {
+        "type": "enum",
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "default": 0
+      },
+      "max": {
+        "type": "enum",
+        "enum": [
+          3,
+          5,
+          10
+        ],
+        "default": 5
+      },
+      "withReorder": {
+        "type": "boolean",
+        "default": false
+      },
+      "state": {
+        "type": "enum",
+        "enum": [
+          "ready",
+          "error",
+          "disabled"
+        ],
+        "default": "ready"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "ready",
+      "error",
+      "disabled",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Add/remove buttons must be labeled.",
+        "Reorder must be keyboard accessible when enabled.",
+        "Errors must be readable."
+      ]
+    }
+  }
+}

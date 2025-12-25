@@ -1,0 +1,163 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T12:22:39.281627+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "progress",
+    "goal": "ThemeForest-grade progress indicators for tasks, uploads, imports"
+  },
+  "component": {
+    "id": "molecule.progressIndicator",
+    "name": "Progress Indicator",
+    "type": "molecule",
+    "aliases": [
+      "Progress",
+      "LoaderWithLabel",
+      "TaskProgress"
+    ],
+    "description": "Progress indicators: linear/circular with optional labels, steps, and status.",
+    "tags": [
+      "ui",
+      "molecule",
+      "progress",
+      "loading",
+      "upload",
+      "import",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.text",
+        "atom.badge",
+        "atom.icon"
+      ]
+    },
+    "events": {
+      "web": [
+        "onCancel"
+      ],
+      "mobile": [
+        "onCancel"
+      ],
+      "desktop": [
+        "onCancel"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "linear",
+          "circular",
+          "steps",
+          "striped"
+        ],
+        "default": "linear"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "brand",
+          "success",
+          "warning",
+          "danger"
+        ],
+        "default": "brand"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "withLabel": {
+        "type": "boolean",
+        "default": true
+      },
+      "withPercent": {
+        "type": "boolean",
+        "default": false
+      },
+      "indeterminate": {
+        "type": "boolean",
+        "default": false
+      },
+      "status": {
+        "type": "enum",
+        "enum": [
+          "running",
+          "paused",
+          "success",
+          "error"
+        ],
+        "default": "running"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "indeterminate",
+      "running",
+      "paused",
+      "success",
+      "error",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Use role=progressbar with aria-valuenow when determinate.",
+        "Indeterminate should have accessible label.",
+        "Announce completion status."
+      ]
+    }
+  }
+}

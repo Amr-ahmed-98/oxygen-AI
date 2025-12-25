@@ -1,0 +1,162 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T14:48:11.791803+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "activity-feed",
+    "goal": "Activity feed with grouping (day), infinite scroll, and filters"
+  },
+  "component": {
+    "id": "molecule.activityFeed",
+    "name": "Activity Feed",
+    "type": "molecule",
+    "aliases": [
+      "Timeline",
+      "AuditFeed",
+      "EventsFeed"
+    ],
+    "description": "List of activity items, supports grouping by date, load more/infinite, and simple filters.",
+    "tags": [
+      "ui",
+      "molecule",
+      "activity",
+      "feed",
+      "timeline",
+      "audit",
+      "infinite-scroll",
+      "filters",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.button",
+        "atom.text",
+        "atom.spinner"
+      ],
+      "molecules": [
+        "molecule.activityItem",
+        "molecule.filterChipsRow",
+        "molecule.emptyStateCompact"
+      ]
+    },
+    "events": {
+      "web": [
+        "onLoadMore",
+        "onFilterChange",
+        "onItemOpen"
+      ],
+      "mobile": [
+        "onLoadMore",
+        "onFilterChange",
+        "onItemOpen"
+      ],
+      "desktop": [
+        "onLoadMore",
+        "onFilterChange",
+        "onItemOpen"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "flat",
+          "grouped",
+          "compact",
+          "with-filters"
+        ],
+        "default": "grouped"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "compact"
+      },
+      "items": {
+        "type": "enum",
+        "enum": [
+          5,
+          10,
+          20,
+          50
+        ],
+        "default": 10
+      },
+      "withGrouping": {
+        "type": "boolean",
+        "default": true
+      },
+      "withInfinite": {
+        "type": "boolean",
+        "default": false
+      },
+      "withFilters": {
+        "type": "boolean",
+        "default": true
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "loading",
+      "empty",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Load more button must be labeled.",
+        "Grouped headings must be semantic.",
+        "Infinite scroll should have fallback."
+      ]
+    }
+  }
+}

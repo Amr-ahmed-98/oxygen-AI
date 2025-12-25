@@ -1,0 +1,110 @@
+{
+  "$schema": "../entity-spec.schema.json",
+  "entity": "AutomationRule",
+  "title": {
+    "singular": "قاعدة أتمتة",
+    "plural": "قواعد الأتمتة"
+  },
+  "namespace": "automation",
+  "fields": [
+    {
+      "name": "id",
+      "type": "id",
+      "primary": true,
+      "ui": {
+        "list": false,
+        "form": false
+      }
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": true,
+      "ui": {
+        "list": true,
+        "form": true,
+        "label": "الاسم"
+      }
+    },
+    {
+      "name": "enabled",
+      "type": "boolean",
+      "default": true,
+      "ui": {
+        "list": true,
+        "form": true,
+        "label": "مفعّل"
+      }
+    },
+    {
+      "name": "trigger",
+      "type": "enum",
+      "values": ["ticketCreated", "statusChanged", "slaBreached", "commentAdded"],
+      "required": true,
+      "ui": {
+        "list": true,
+        "form": true,
+        "label": "المشغّل"
+      }
+    },
+    {
+      "name": "conditions",
+      "type": "json",
+      "required": true,
+      "ui": {
+        "list": false,
+        "form": true,
+        "label": "الشروط",
+        "component": "ruleConditions"
+      }
+    },
+    {
+      "name": "actions",
+      "type": "json",
+      "required": true,
+      "ui": {
+        "list": false,
+        "form": true,
+        "label": "الإجراءات",
+        "component": "ruleActions"
+      }
+    },
+    {
+      "name": "createdAt",
+      "type": "dateTime",
+      "readonly": true,
+      "ui": {
+        "list": true,
+        "form": false,
+        "label": "تاريخ الإنشاء"
+      }
+    }
+  ],
+  "views": {
+    "list": {
+      "layout": "dataTablePro",
+      "filters": ["enabled", "trigger"],
+      "search": ["name"],
+      "bulkActions": ["enable", "disable", "delete"],
+      "savedViews": false
+    },
+    "detail": {
+      "layout": "ruleBuilder",
+      "tabs": []
+    },
+    "form": {
+      "mode": ["create", "edit"],
+      "layout": "oneColumn",
+      "validation": "schemaDriven",
+      "attachments": false
+    }
+  },
+  "permissions": {
+    "automation.view": ["admin", "manager"],
+    "automation.edit": ["admin"]
+  },
+  "policies": [],
+  "computed": [],
+  "version": "1.0.0"
+}
+

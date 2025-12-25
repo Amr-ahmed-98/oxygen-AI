@@ -1,0 +1,207 @@
+{
+  "id": "datatable.pro",
+  "type": "component",
+  "category": ["data-ui", "table"],
+  "name": "Data Table Pro",
+  "description": "Production-grade data table with pagination, sorting, filtering, selection, and export",
+  "variants": [
+    "bordered",
+    "striped",
+    "minimal",
+    "compact",
+    "comfortable"
+  ],
+  "props": {
+    "variant": {
+      "type": "string",
+      "required": false,
+      "default": "minimal",
+      "range": ["bordered", "striped", "minimal"],
+      "description": "Table style variant"
+    },
+    "density": {
+      "type": "string",
+      "required": false,
+      "default": "comfortable",
+      "range": ["compact", "comfortable", "airy"],
+      "description": "Row density"
+    },
+    "serverSide": {
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Server-side pagination/sorting"
+    },
+    "pageSize": {
+      "type": "number",
+      "required": false,
+      "default": 20,
+      "range": [5, 100],
+      "description": "Rows per page"
+    },
+    "pageSizeOptions": {
+      "type": "array",
+      "required": false,
+      "default": [10, 20, 50, 100],
+      "description": "Page size options"
+    },
+    "selectable": {
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Enable row selection"
+    },
+    "multiSelect": {
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Multiple row selection"
+    },
+    "sortable": {
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "description": "Enable column sorting"
+    },
+    "filterable": {
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Enable column filtering"
+    },
+    "resizable": {
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Resizable columns"
+    },
+    "reorderable": {
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Reorderable columns"
+    },
+    "columnVisibility": {
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Show/hide columns toggle"
+    },
+    "export": {
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Export functionality"
+    },
+    "exportFormats": {
+      "type": "array",
+      "required": false,
+      "default": ["csv", "excel"],
+      "items": {"type": "string", "enum": ["csv", "excel", "pdf", "json"]}
+    },
+    "emptyState": {
+      "type": "object",
+      "required": false,
+      "description": "Empty state configuration"
+    },
+    "loadingState": {
+      "type": "object",
+      "required": false,
+      "description": "Loading state configuration"
+    }
+  },
+  "slots": {
+    "columns": {
+      "type": "array",
+      "required": true,
+      "itemType": "column",
+      "description": "Table columns",
+      "itemSchema": {
+        "id": {"type": "string", "required": true},
+        "label": {"type": "string", "required": true},
+        "field": {"type": "string", "required": true},
+        "width": {"type": "string", "required": false},
+        "minWidth": {"type": "string", "required": false},
+        "sortable": {"type": "boolean", "required": false},
+        "filterable": {"type": "boolean", "required": false},
+        "format": {
+          "type": "string",
+          "range": ["text", "number", "money", "date", "datetime", "boolean", "badge", "avatar", "custom"]
+        },
+        "render": {"type": "string", "required": false},
+        "hidden": {"type": "boolean", "required": false}
+      }
+    },
+    "data": {
+      "type": "array",
+      "required": true,
+      "itemType": "object",
+      "description": "Table data rows"
+    },
+    "toolbar": {
+      "type": "component",
+      "required": false,
+      "description": "Table toolbar (search, filters, actions)"
+    },
+    "rowActions": {
+      "type": "array",
+      "required": false,
+      "itemType": "action",
+      "description": "Row action buttons"
+    },
+    "bulkActions": {
+      "type": "array",
+      "required": false,
+      "itemType": "action",
+      "description": "Bulk action buttons (when rows selected)"
+    }
+  },
+  "constraints": {
+    "columnsRequired": true,
+    "minColumns": 1,
+    "dataRequired": true
+  },
+  "a11y": {
+    "tableHasCaption": true,
+    "sortableColumnsHaveAriaLabels": true,
+    "keyboardNavigation": true,
+    "screenReaderRowCount": true,
+    "focusManagement": true
+  },
+  "responsive": {
+    "mobile": {
+      "variant": "minimal",
+      "density": "compact",
+      "resizable": false,
+      "reorderable": false
+    },
+    "tablet": {
+      "density": "comfortable"
+    },
+    "desktop": {
+      "density": "comfortable",
+      "resizable": true
+    }
+  },
+  "dependencies": [
+    "table",
+    "pagination",
+    "button",
+    "menu",
+    "input",
+    "checkbox"
+  ],
+  "whenToUse": [
+    "Data lists with sorting/filtering",
+    "Entity management (CRM, ERP)",
+    "Admin tables",
+    "Reports and analytics"
+  ],
+  "whenNotToUse": [
+    "Simple static lists",
+    "Card-based layouts",
+    "Mobile-only views (use list cards)"
+  ],
+  "tags": ["table", "data", "crud", "admin", "erp", "crm"]
+}
+

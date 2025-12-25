@@ -1,0 +1,321 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-23T20:15:18.726523+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "radio"
+  },
+  "component": {
+    "id": "atom.radio",
+    "name": "Radio",
+    "type": "atom",
+    "aliases": [
+      "RadioButton",
+      "OptionRadio"
+    ],
+    "description": "Single-choice selection control used in groups; pairs with RadioGroup molecule.",
+    "tags": [
+      "ui",
+      "atom",
+      "radio",
+      "forms",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "label": {
+        "type": "text|node",
+        "required": false
+      },
+      "description": {
+        "type": "text|node",
+        "required": false
+      },
+      "error": {
+        "type": "text|node",
+        "required": false
+      },
+      "startIcon": {
+        "type": "icon|node",
+        "required": false
+      },
+      "endIcon": {
+        "type": "icon|node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [
+        "onChange",
+        "onFocus",
+        "onBlur"
+      ],
+      "mobile": [
+        "onValueChange",
+        "onFocus",
+        "onBlur"
+      ]
+    },
+    "props": {
+      "checked": {
+        "type": "boolean",
+        "default": false
+      },
+      "defaultChecked": {
+        "type": "boolean",
+        "default": false
+      },
+      "name": {
+        "type": "string",
+        "default": ""
+      },
+      "value": {
+        "type": "string",
+        "default": ""
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ],
+        "default": "md"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "comfortable"
+      },
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "outline",
+          "filled",
+          "ghost"
+        ],
+        "default": "outline"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "success",
+          "warning",
+          "danger",
+          "info"
+        ],
+        "default": "neutral"
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": false
+      },
+      "readOnly": {
+        "type": "boolean",
+        "default": false
+      },
+      "required": {
+        "type": "boolean",
+        "default": false
+      },
+      "invalid": {
+        "type": "boolean",
+        "default": false
+      },
+      "valid": {
+        "type": "boolean",
+        "default": false
+      },
+      "indeterminate": {
+        "type": "boolean",
+        "default": false,
+        "description": "Not used for radio; kept for schema uniformity but should be false."
+      },
+      "ariaLabel": {
+        "type": "string",
+        "default": ""
+      },
+      "ariaDescribedBy": {
+        "type": "string",
+        "default": ""
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      },
+      "align": {
+        "type": "enum",
+        "enum": [
+          "start",
+          "center"
+        ],
+        "default": "start"
+      },
+      "labelPosition": {
+        "type": "enum",
+        "enum": [
+          "right",
+          "left"
+        ],
+        "default": "right"
+      },
+      "hitArea": {
+        "type": "enum",
+        "enum": [
+          "auto",
+          "44px",
+          "48px"
+        ],
+        "default": "auto"
+      }
+    },
+    "states": [
+      "default",
+      "hover",
+      "focus",
+      "disabled",
+      "readonly",
+      "invalid",
+      "valid",
+      "checked",
+      "unchecked"
+    ],
+    "a11y": {
+      "requirements": [
+        "Prefer visible label; if absent provide ariaLabel.",
+        "Keyboard navigable; focus ring visible and contrast-compliant.",
+        "Touch target >= 44px on mobile (use container hit area).",
+        "RTL: icon/label alignment respects direction.",
+        "Radio should be used with group semantics (radiogroup) in higher level molecule/organism."
+      ]
+    }
+  },
+  "designTokens": {
+    "namespace": "tf",
+    "strategy": "semantic tokens -> css vars -> adapters",
+    "baseTokens": {
+      "--sc-radius": "var(--radius-md)",
+      "--sc-border-width": "1px",
+      "--sc-control-size": "16px",
+      "--sc-gap": "10px",
+      "--sc-bg": "var(--surface-0)",
+      "--sc-border": "var(--border-subtle)",
+      "--sc-fg": "var(--color-fg)",
+      "--sc-muted": "var(--color-fg-muted)",
+      "--sc-focus-ring": "var(--focus-ring)",
+      "--sc-checked": "var(--primary-600)",
+      "--sc-danger": "var(--danger-600)",
+      "--sc-success": "var(--success-600)"
+    },
+    "sizeScale": {
+      "xs": {
+        "control": "14px",
+        "font": "12px"
+      },
+      "sm": {
+        "control": "15px",
+        "font": "13px"
+      },
+      "md": {
+        "control": "16px",
+        "font": "14px"
+      },
+      "lg": {
+        "control": "18px",
+        "font": "16px"
+      },
+      "xl": {
+        "control": "20px",
+        "font": "18px"
+      }
+    }
+  },
+  "personas": [
+    {
+      "id": "persona.enterprise",
+      "name": "Enterprise",
+      "tokenOverrides": {
+        "--sc-radius": "var(--radius-md)"
+      }
+    },
+    {
+      "id": "persona.minimal",
+      "name": "Minimal",
+      "tokenOverrides": {
+        "--sc-bg": "transparent"
+      }
+    },
+    {
+      "id": "persona.glass",
+      "name": "Glass",
+      "tokenOverrides": {
+        "--sc-bg": "rgba(255,255,255,0.06)",
+        "--sc-border": "rgba(255,255,255,0.18)"
+      }
+    },
+    {
+      "id": "persona.neon",
+      "name": "Neon",
+      "tokenOverrides": {
+        "--sc-focus-ring": "0 0 0 3px rgba(168,85,247,0.35)"
+      }
+    },
+    {
+      "id": "persona.gov",
+      "name": "Gov / On-prem",
+      "tokenOverrides": {
+        "--sc-border-width": "2px",
+        "--sc-radius": "var(--radius-sm)"
+      }
+    }
+  ]
+}

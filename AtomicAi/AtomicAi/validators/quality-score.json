@@ -1,0 +1,124 @@
+{
+  "version": "1.0.0",
+  "description": "Quality scoring criteria for generated projects",
+  "threshold": 80,
+  "criteria": {
+    "spec": {
+      "weight": 25,
+      "checks": [
+        {
+          "id": "spec_complete",
+          "description": "App spec has all required fields",
+          "weight": 10,
+          "validator": "validateAppSpecStructure"
+        },
+        {
+          "id": "routes_valid",
+          "description": "All routes map to valid screens",
+          "weight": 8,
+          "validator": "validateRoutes"
+        },
+        {
+          "id": "screens_complete",
+          "description": "All screens have title, states, permissions",
+          "weight": 7,
+          "validator": "validateScreens"
+        }
+      ]
+    },
+    "architecture": {
+      "weight": 20,
+      "checks": [
+        {
+          "id": "modules_coherent",
+          "description": "Modules form coherent product",
+          "weight": 8,
+          "validator": "validateModules"
+        },
+        {
+          "id": "entities_complete",
+          "description": "Entities have required fields and relations",
+          "weight": 7,
+          "validator": "validateEntities"
+        },
+        {
+          "id": "rbac_complete",
+          "description": "RBAC properly configured",
+          "weight": 5,
+          "validator": "validateRBAC"
+        }
+      ]
+    },
+    "ui": {
+      "weight": 25,
+      "checks": [
+        {
+          "id": "sections_used",
+          "description": "Marketing pages use diverse sections",
+          "weight": 10,
+          "validator": "validateSectionDiversity"
+        },
+        {
+          "id": "patterns_appropriate",
+          "description": "App patterns match product type",
+          "weight": 8,
+          "validator": "validatePatterns"
+        },
+        {
+          "id": "theme_consistent",
+          "description": "Theme applied consistently",
+          "weight": 7,
+          "validator": "validateTheme"
+        }
+      ]
+    },
+    "platform": {
+      "weight": 15,
+      "checks": [
+        {
+          "id": "mobile_adapted",
+          "description": "Mobile views properly adapted",
+          "weight": 8,
+          "validator": "validateMobileAdaptation"
+        },
+        {
+          "id": "rtl_safe",
+          "description": "RTL properly configured if needed",
+          "weight": 7,
+          "validator": "validateRTL"
+        }
+      ]
+    },
+    "quality": {
+      "weight": 15,
+      "checks": [
+        {
+          "id": "a11y_basic",
+          "description": "Basic accessibility requirements met",
+          "weight": 5,
+          "validator": "validateA11y"
+        },
+        {
+          "id": "performance_basic",
+          "description": "Performance best practices followed",
+          "weight": 5,
+          "validator": "validatePerformance"
+        },
+        {
+          "id": "seo_basic",
+          "description": "SEO basics included for marketing pages",
+          "weight": 5,
+          "validator": "validateSEO"
+        }
+      ]
+    }
+  },
+  "grading": {
+    "excellent": 90,
+    "good": 80,
+    "acceptable": 70,
+    "poor": 0
+  },
+  "notes": "Total score must be >= 80 to pass quality gate"
+}
+

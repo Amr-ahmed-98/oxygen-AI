@@ -1,0 +1,36 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-25T16:25:59.823153+00:00",
+  "items": [
+    {
+      "id": "organism.entityList",
+      "type": "organism",
+      "name": "Entity List",
+      "tags": [
+        "ui",
+        "organism",
+        "list",
+        "table",
+        "filters",
+        "bulk-actions",
+        "pagination",
+        "erp",
+        "crm",
+        "wms",
+        "helpdesk",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Entity List ui organism list table filters bulk-actions pagination erp crm wms helpdesk a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "entityList_organism_manifest_v1.json",
+        "entityList_variants_library_v1.json",
+        "catalog_index_entityList_pack_v1.json"
+      ]
+    }
+  ]
+}

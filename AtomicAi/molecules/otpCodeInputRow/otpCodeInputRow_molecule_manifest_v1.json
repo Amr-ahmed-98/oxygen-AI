@@ -1,0 +1,168 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T15:38:28.881624+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "otp-code-row",
+    "goal": "OTP/MFA code entry row with resend + timer + errors"
+  },
+  "component": {
+    "id": "molecule.otpCodeInputRow",
+    "name": "OTP Code Input Row",
+    "type": "molecule",
+    "aliases": [
+      "MfaCodeRow",
+      "OtpRow",
+      "TwoFactorRow"
+    ],
+    "description": "OTP/MFA code entry with N-digit boxes, paste support, resend link, timer, and error state.",
+    "tags": [
+      "ui",
+      "molecule",
+      "otp",
+      "mfa",
+      "2fa",
+      "auth",
+      "iam",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.textField",
+        "atom.button",
+        "atom.link",
+        "atom.text"
+      ],
+      "molecules": [
+        "molecule.toast",
+        "molecule.alertInline"
+      ]
+    },
+    "events": {
+      "web": [
+        "onChange",
+        "onComplete",
+        "onResend"
+      ],
+      "mobile": [
+        "onChange",
+        "onComplete",
+        "onResend"
+      ],
+      "desktop": [
+        "onChange",
+        "onComplete",
+        "onResend"
+      ]
+    },
+    "props": {
+      "digits": {
+        "type": "enum",
+        "enum": [
+          4,
+          5,
+          6,
+          8
+        ],
+        "default": 6
+      },
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "boxed",
+          "underline",
+          "minimal",
+          "card"
+        ],
+        "default": "boxed"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "compact"
+      },
+      "withResend": {
+        "type": "boolean",
+        "default": true
+      },
+      "withTimer": {
+        "type": "boolean",
+        "default": true
+      },
+      "state": {
+        "type": "enum",
+        "enum": [
+          "ready",
+          "invalid",
+          "expired",
+          "loading"
+        ],
+        "default": "ready"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "ready",
+      "invalid",
+      "expired",
+      "loading",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Inputs must be labeled or grouped.",
+        "Paste must work.",
+        "Timer must be readable."
+      ]
+    }
+  }
+}

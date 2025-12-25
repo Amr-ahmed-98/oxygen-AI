@@ -1,0 +1,155 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T15:38:28.881624+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "key-value-row",
+    "goal": "Key/value row for details panels (label + value + optional copy)"
+  },
+  "component": {
+    "id": "molecule.keyValueRow",
+    "name": "Key/Value Row",
+    "type": "molecule",
+    "aliases": [
+      "DetailRow",
+      "MetaRow",
+      "PropertyRow"
+    ],
+    "description": "Key/value row for details panels, supports copy, link, badge, and multi-line values.",
+    "tags": [
+      "ui",
+      "molecule",
+      "details",
+      "key-value",
+      "properties",
+      "erp",
+      "crm",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.text",
+        "atom.label",
+        "atom.badge",
+        "atom.iconButton",
+        "atom.link"
+      ],
+      "molecules": [
+        "molecule.tooltip",
+        "molecule.popoverCard"
+      ]
+    },
+    "events": {
+      "web": [
+        "onCopy",
+        "onOpen"
+      ],
+      "mobile": [
+        "onCopy",
+        "onOpen"
+      ],
+      "desktop": [
+        "onCopy",
+        "onOpen"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "row",
+          "two-column",
+          "compact",
+          "cards"
+        ],
+        "default": "two-column"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "compact"
+      },
+      "valueType": {
+        "type": "enum",
+        "enum": [
+          "text",
+          "number",
+          "date",
+          "status",
+          "link",
+          "json"
+        ],
+        "default": "text"
+      },
+      "withCopy": {
+        "type": "boolean",
+        "default": true
+      },
+      "wrap": {
+        "type": "boolean",
+        "default": true
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Key must be semantic label.",
+        "Copy button must be labeled.",
+        "Links must be focusable."
+      ]
+    }
+  }
+}

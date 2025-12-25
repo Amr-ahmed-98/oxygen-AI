@@ -1,0 +1,170 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T12:40:03.847933+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "confirm-dialog",
+    "goal": "ThemeForest-grade confirmation dialogs (danger/success/neutral) for ERP actions"
+  },
+  "component": {
+    "id": "molecule.confirmDialog",
+    "name": "Confirm Dialog",
+    "type": "molecule",
+    "aliases": [
+      "ConfirmModal",
+      "DangerConfirm",
+      "ActionConfirm"
+    ],
+    "description": "Confirmation dialog with title/description, optional checklist, and primary/secondary actions; supports danger emphasis.",
+    "tags": [
+      "ui",
+      "molecule",
+      "overlay",
+      "modal",
+      "dialog",
+      "confirm",
+      "danger",
+      "erp",
+      "saas",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.heading",
+        "atom.text",
+        "atom.button",
+        "atom.icon",
+        "atom.checkbox"
+      ],
+      "molecules": [
+        "molecule.formField"
+      ]
+    },
+    "events": {
+      "web": [
+        "onConfirm",
+        "onCancel"
+      ],
+      "mobile": [
+        "onConfirm",
+        "onCancel"
+      ],
+      "desktop": [
+        "onConfirm",
+        "onCancel"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "danger",
+          "neutral",
+          "success",
+          "warning"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "layout": {
+        "type": "enum",
+        "enum": [
+          "stack",
+          "split",
+          "centered"
+        ],
+        "default": "stack"
+      },
+      "withIcon": {
+        "type": "boolean",
+        "default": true
+      },
+      "withChecklist": {
+        "type": "boolean",
+        "default": false
+      },
+      "confirmStyle": {
+        "type": "enum",
+        "enum": [
+          "solid",
+          "soft",
+          "outline"
+        ],
+        "default": "solid"
+      },
+      "requiresTyping": {
+        "type": "boolean",
+        "default": false
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "open",
+      "danger",
+      "requires-typing",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Use role=dialog and aria-modal=true.",
+        "Focus trap inside dialog; restore focus on close.",
+        "Confirm button label must be explicit.",
+        "Danger dialog should not auto-focus confirm by default."
+      ]
+    }
+  }
+}

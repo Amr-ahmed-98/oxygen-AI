@@ -1,0 +1,165 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T12:58:02.970652+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "pagination",
+    "goal": "ThemeForest-grade pagination bar for tables/lists with page size and jump-to"
+  },
+  "component": {
+    "id": "molecule.paginationBar",
+    "name": "Pagination Bar",
+    "type": "molecule",
+    "aliases": [
+      "Pager",
+      "TablePagination",
+      "ListPagination"
+    ],
+    "description": "Pagination controls with next/prev, page numbers, page size selector, jump-to, and total count label.",
+    "tags": [
+      "ui",
+      "molecule",
+      "data",
+      "pagination",
+      "table",
+      "list",
+      "erp",
+      "saas",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.button",
+        "atom.iconButton",
+        "atom.select",
+        "atom.text",
+        "atom.input"
+      ],
+      "molecules": [
+        "molecule.select",
+        "molecule.inputGroup"
+      ]
+    },
+    "events": {
+      "web": [
+        "onPageChange",
+        "onPageSizeChange",
+        "onJump"
+      ],
+      "mobile": [
+        "onPageChange",
+        "onPageSizeChange",
+        "onJump"
+      ],
+      "desktop": [
+        "onPageChange",
+        "onPageSizeChange",
+        "onJump"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "numbers",
+          "simple",
+          "compact",
+          "with-jump"
+        ],
+        "default": "numbers"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "compact"
+      },
+      "withPageSize": {
+        "type": "boolean",
+        "default": true
+      },
+      "withTotal": {
+        "type": "boolean",
+        "default": true
+      },
+      "withJumpTo": {
+        "type": "boolean",
+        "default": false
+      },
+      "showFirstLast": {
+        "type": "boolean",
+        "default": false
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "disabled",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Buttons must have labels.",
+        "Current page should be announced.",
+        "Jump-to input must be labeled."
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:29:29.303340+00:00",
+  "items": [
+    {
+      "id": "atom.avatar",
+      "type": "atom",
+      "name": "Avatar",
+      "tags": [
+        "ui",
+        "atom",
+        "avatar",
+        "user",
+        "presence",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Avatar user initials image status ring group rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "avatar_atom_manifest_v5.json",
+        "avatar_variants_library_v5.json",
+        "catalog_index_avatar_pack_v5.json"
+      ]
+    }
+  ]
+}

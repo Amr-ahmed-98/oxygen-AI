@@ -1,0 +1,222 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:14:56.353277+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "slider",
+    "goal": "ThemeForest-grade Slider dataset for ranges, filters, KPI thresholds"
+  },
+  "component": {
+    "id": "atom.slider",
+    "name": "Slider",
+    "type": "atom",
+    "aliases": [
+      "RangeSlider",
+      "SingleSlider",
+      "PriceSlider",
+      "KPIThresholdSlider"
+    ],
+    "description": "Slider supporting single and range values, marks, steps, tooltips, and vertical orientation.",
+    "tags": [
+      "ui",
+      "atom",
+      "slider",
+      "range",
+      "filters",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "label": {
+        "type": "text|node",
+        "required": false
+      },
+      "valueLabel": {
+        "type": "text|node",
+        "required": false
+      },
+      "tooltip": {
+        "type": "node",
+        "required": false
+      },
+      "mark": {
+        "type": "node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [
+        "onValueChange",
+        "onCommit"
+      ],
+      "mobile": [
+        "onValueChange",
+        "onSlidingComplete"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "solid",
+          "soft",
+          "outline",
+          "gradient",
+          "minimal"
+        ],
+        "default": "soft"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "success",
+          "warning",
+          "danger",
+          "info",
+          "purple",
+          "teal"
+        ],
+        "default": "primary"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "mode": {
+        "type": "enum",
+        "enum": [
+          "single",
+          "range"
+        ],
+        "default": "single"
+      },
+      "min": {
+        "type": "number",
+        "default": 0
+      },
+      "max": {
+        "type": "number",
+        "default": 100
+      },
+      "step": {
+        "type": "number",
+        "default": 1
+      },
+      "value": {
+        "type": "number",
+        "default": 40
+      },
+      "valueRange": {
+        "type": "array",
+        "default": [
+          20,
+          80
+        ]
+      },
+      "withMarks": {
+        "type": "boolean",
+        "default": false
+      },
+      "marks": {
+        "type": "array",
+        "default": [],
+        "description": "e.g. [0,25,50,75,100]"
+      },
+      "withTooltip": {
+        "type": "boolean",
+        "default": false
+      },
+      "showValue": {
+        "type": "boolean",
+        "default": false
+      },
+      "orientation": {
+        "type": "enum",
+        "enum": [
+          "horizontal",
+          "vertical"
+        ],
+        "default": "horizontal"
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": false
+      },
+      "invalid": {
+        "type": "boolean",
+        "default": false
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "dragging",
+      "focus",
+      "disabled",
+      "invalid",
+      "with-marks",
+      "with-tooltip",
+      "range",
+      "vertical"
+    ],
+    "a11y": {
+      "requirements": [
+        "Use aria-valuemin/max/now and aria-orientation; ensure keyboard increment/decrement.",
+        "Provide visible focus ring on thumb; tooltip/value label should be accessible.",
+        "RTL should flip direction when horizontal."
+      ]
+    }
+  }
+}

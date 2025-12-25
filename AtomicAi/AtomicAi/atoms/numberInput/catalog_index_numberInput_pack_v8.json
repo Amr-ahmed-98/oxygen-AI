@@ -1,0 +1,31 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T12:01:56.274864+00:00",
+  "items": [
+    {
+      "id": "atom.numberInput",
+      "type": "atom",
+      "name": "Number Input",
+      "tags": [
+        "ui",
+        "atom",
+        "input",
+        "number",
+        "forms",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Number Input ui atom input number forms erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "numberInput_atom_manifest_v8.json",
+        "numberInput_variants_library_v8.json",
+        "catalog_index_numberInput_pack_v8.json"
+      ]
+    }
+  ]
+}

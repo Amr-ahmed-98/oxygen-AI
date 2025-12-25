@@ -1,0 +1,97 @@
+{
+  "version": "1.0.0",
+  "description": "Presets index for fast matching without loading full preset files",
+  "presets": [
+    {
+      "presetId": "helpdesk-b2b-sla-saas",
+      "productType": "HELPDESK_ITSM",
+      "tags": ["b2b", "saas", "sla", "kb", "automation", "enterprise"],
+      "delivery": ["multiTenantSaaS", "cloudNative"],
+      "platforms": ["web", "mobile", "desktop"],
+      "rtl": true,
+      "defaultTheme": "erp-professional"
+    },
+    {
+      "presetId": "crm-pipeline-saas",
+      "productType": "CRM",
+      "tags": ["b2b", "saas", "pipeline", "kanban", "sales"],
+      "delivery": ["multiTenantSaaS", "cloudNative"],
+      "platforms": ["web", "mobile", "desktop"],
+      "rtl": true,
+      "defaultTheme": "enterprise-dense"
+    },
+    {
+      "presetId": "hrms-attendance-leave",
+      "productType": "HRMS_HCM",
+      "tags": ["hr", "attendance", "leave", "approvals"],
+      "delivery": ["singleTenant", "hybrid"],
+      "platforms": ["web", "mobile", "desktop"],
+      "rtl": true,
+      "defaultTheme": "erp-professional"
+    },
+    {
+      "presetId": "wms-inventory-pickpack",
+      "productType": "WMS_TMS",
+      "tags": ["warehouse", "inventory", "barcode", "onprem"],
+      "delivery": ["onPremise"],
+      "platforms": ["web", "mobile", "desktop"],
+      "rtl": true,
+      "defaultTheme": "enterprise-dense"
+    },
+    {
+      "presetId": "pos-retail",
+      "productType": "POS",
+      "tags": ["pos", "checkout", "offline", "retail"],
+      "delivery": ["hybrid", "singleTenant"],
+      "platforms": ["web", "desktop"],
+      "rtl": true,
+      "defaultTheme": "marketplace-warm"
+    },
+    {
+      "presetId": "ecommerce-platform",
+      "productType": "ECOMMERCE",
+      "tags": ["commerce", "catalog", "orders", "payments", "headless"],
+      "delivery": ["multiTenantSaaS", "cloudNative"],
+      "platforms": ["web", "mobile"],
+      "rtl": true,
+      "defaultTheme": "minimal-saas"
+    },
+    {
+      "presetId": "marketplace-multivendor",
+      "productType": "MARKETPLACE",
+      "tags": ["marketplace", "vendors", "payouts", "disputes"],
+      "delivery": ["multiTenantSaaS", "cloudNative"],
+      "platforms": ["web", "mobile"],
+      "rtl": true,
+      "defaultTheme": "marketplace-warm"
+    },
+    {
+      "presetId": "billing-subscription-platform",
+      "productType": "BILLING_SUBSCRIPTION",
+      "tags": ["billing", "invoices", "usage", "metering", "fintech"],
+      "delivery": ["multiTenantSaaS", "cloudNative"],
+      "platforms": ["web", "desktop"],
+      "rtl": true,
+      "defaultTheme": "fintech-dark"
+    },
+    {
+      "presetId": "iam-sso-policies",
+      "productType": "IAM",
+      "tags": ["iam", "sso", "policies", "audit"],
+      "delivery": ["multiTenantSaaS", "cloudNative"],
+      "platforms": ["web", "desktop"],
+      "rtl": true,
+      "defaultTheme": "enterprise-dense"
+    },
+    {
+      "presetId": "booking-reservation",
+      "productType": "BOOKING",
+      "tags": ["booking", "calendar", "resources", "freemium"],
+      "delivery": ["multiTenantSaaS", "cloudNative"],
+      "platforms": ["web", "mobile"],
+      "rtl": true,
+      "defaultTheme": "minimal-saas"
+    }
+  ]
+}
+

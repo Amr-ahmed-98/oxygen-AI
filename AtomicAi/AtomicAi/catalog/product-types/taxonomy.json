@@ -1,0 +1,225 @@
+{
+  "productTypes": [
+    {
+      "id": "CRM",
+      "name": "Customer Relationship Management",
+      "description": "Manage customer relationships, sales pipeline, and activities",
+      "packId": "crm",
+      "defaultAudience": "B2B",
+      "patterns": ["kanbanPipeline", "activityTimeline", "entityCrud"]
+    },
+    {
+      "id": "HRMS_HCM",
+      "name": "HRMS / HCM",
+      "description": "Human Resource Management System",
+      "packId": "hrms",
+      "defaultAudience": "B2B",
+      "patterns": ["approvalWorkflow", "calendarScheduler", "orgChart"]
+    },
+    {
+      "id": "WMS_TMS",
+      "name": "Warehouse / Transport Management",
+      "description": "Warehouse and transportation logistics",
+      "packId": "wms",
+      "defaultAudience": "B2B",
+      "patterns": ["inventoryDashboard", "pickPackFlow", "shipmentTracking"]
+    },
+    {
+      "id": "POS",
+      "name": "Point of Sale",
+      "description": "Retail point of sale system",
+      "packId": "pos",
+      "defaultAudience": "B2C",
+      "patterns": ["pointOfSaleCheckout", "catalogGrid", "cart"]
+    },
+    {
+      "id": "CMS_DXP",
+      "name": "Content Management / Digital Experience",
+      "description": "Content management and digital experience platform",
+      "packId": "cms",
+      "defaultAudience": "B2B",
+      "patterns": ["pageBuilder", "contentTypes", "personalization"]
+    },
+    {
+      "id": "LMS",
+      "name": "Learning Management System",
+      "description": "Educational and training platform",
+      "packId": "lms",
+      "defaultAudience": "B2B",
+      "patterns": ["coursePlayer", "progressTracking", "assessmentQuiz"]
+    },
+    {
+      "id": "ECOMMERCE",
+      "name": "E-commerce Platform",
+      "description": "Online store and marketplace",
+      "packId": "ecommerce",
+      "defaultAudience": "B2C",
+      "patterns": ["catalogGrid", "checkout", "orderManagement"]
+    },
+    {
+      "id": "MARKETPLACE",
+      "name": "Marketplace Platform",
+      "description": "Multi-vendor marketplace",
+      "packId": "marketplace",
+      "defaultAudience": "B2B2C",
+      "patterns": ["marketplaceSearch", "vendorDashboard", "escrowPayment"]
+    },
+    {
+      "id": "BOOKING",
+      "name": "Booking / Reservation System",
+      "description": "Appointment and reservation booking",
+      "packId": "booking",
+      "defaultAudience": "B2C",
+      "patterns": ["bookingAvailability", "calendarScheduler", "bookingFlow"]
+    },
+    {
+      "id": "HELPDESK_ITSM",
+      "name": "Helpdesk / ITSM",
+      "description": "Customer support and IT service management",
+      "packId": "helpdesk",
+      "defaultAudience": "B2B",
+      "patterns": ["ticketingQueue", "slaTimer", "knowledgeBase"]
+    },
+    {
+      "id": "PROJECT_WORK",
+      "name": "Project / Work Management",
+      "description": "Project and task management",
+      "packId": "project",
+      "defaultAudience": "B2B",
+      "patterns": ["kanbanBoard", "ganttChart", "sprintPlanning"]
+    },
+    {
+      "id": "BI_ANALYTICS",
+      "name": "Business Intelligence / Analytics",
+      "description": "Data analytics and business intelligence",
+      "packId": "bi",
+      "defaultAudience": "B2B",
+      "patterns": ["dashboardBuilder", "dataConnectors", "reporting"]
+    },
+    {
+      "id": "CPQ",
+      "name": "Configure, Price, Quote",
+      "description": "Complex B2B pricing and quoting",
+      "packId": "cpq",
+      "defaultAudience": "B2B",
+      "patterns": ["productConfig", "quoteBuilder", "approvalWorkflow"]
+    },
+    {
+      "id": "BILLING_SUBSCRIPTION",
+      "name": "Billing & Subscription Platform",
+      "description": "Subscription and billing management",
+      "packId": "billing",
+      "defaultAudience": "B2B",
+      "patterns": ["subscriptionManagement", "usageMetering", "invoiceGeneration"]
+    },
+    {
+      "id": "IDENTITY_IAM",
+      "name": "Identity & Access Management",
+      "description": "User authentication and authorization",
+      "packId": "iam",
+      "defaultAudience": "B2B",
+      "patterns": ["userManagement", "sso", "mfa", "auditLogs"]
+    },
+    {
+      "id": "EAM_CMMS",
+      "name": "Enterprise Asset Management / CMMS",
+      "description": "Asset maintenance and management",
+      "packId": "eam",
+      "defaultAudience": "B2B",
+      "patterns": ["assetRegistry", "maintenanceSchedules", "workOrders"]
+    }
+  ],
+  "deliveryModes": [
+    {
+      "id": "multiTenantSaaS",
+      "name": "Multi-tenant SaaS",
+      "features": ["tenantSwitcher", "orgBranding", "planLimitsUI"]
+    },
+    {
+      "id": "onPremise",
+      "name": "On-premise",
+      "features": ["licenseScreen", "backupRestoreUI", "localMonitoringUI"]
+    },
+    {
+      "id": "hybrid",
+      "name": "Hybrid",
+      "features": ["syncQueue", "conflictResolution", "cloudBackup"]
+    }
+  ],
+  "businessModels": [
+    {
+      "id": "subscription",
+      "name": "Subscription",
+      "features": ["subscriptionManagement", "billingHistory"]
+    },
+    {
+      "id": "usageBased",
+      "name": "Usage-based",
+      "features": ["usageMetering", "quotaWarnings"]
+    },
+    {
+      "id": "freemium",
+      "name": "Freemium",
+      "features": ["paywall", "planComparison"]
+    },
+    {
+      "id": "license",
+      "name": "Perpetual License",
+      "features": ["licenseScreen"]
+    }
+  ],
+  "platformModes": [
+    {
+      "id": "standard",
+      "name": "Standard Application"
+    },
+    {
+      "id": "apiFirst",
+      "name": "API-first",
+      "features": ["apiKeys", "webhooks", "sdkDocs"]
+    },
+    {
+      "id": "workflowAutomation",
+      "name": "Workflow Automation",
+      "features": ["workflowBuilder", "automation"]
+    },
+    {
+      "id": "lowCode",
+      "name": "Low-code",
+      "features": ["formBuilder", "pageBuilder"]
+    }
+  ],
+  "verticals": [
+    {
+      "id": "HealthTech",
+      "name": "Healthcare Technology",
+      "constraints": ["strongAudit", "fieldMasking", "dataRetention"],
+      "features": ["consentManagement", "hipaa"]
+    },
+    {
+      "id": "FinTech",
+      "name": "Financial Technology",
+      "constraints": ["strongAudit", "encryptionRequired"],
+      "features": ["transactionLogging", "pci"]
+    },
+    {
+      "id": "GovTech",
+      "name": "Government Technology",
+      "constraints": ["strongAudit", "dataRetention", "accessControl"],
+      "features": ["complianceReporting"]
+    },
+    {
+      "id": "EdTech",
+      "name": "Education Technology"
+    },
+    {
+      "id": "PropTech",
+      "name": "Property Technology"
+    },
+    {
+      "id": "RetailTech",
+      "name": "Retail Technology"
+    }
+  ]
+}
+

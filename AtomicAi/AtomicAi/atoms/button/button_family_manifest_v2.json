@@ -1,0 +1,2256 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-23T19:29:27.224571+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "family": "button"
+  },
+  "components": [
+    {
+      "id": "atom.button",
+      "name": "Button",
+      "type": "atom",
+      "aliases": [
+        "CTA",
+        "ActionButton",
+        "PrimaryAction",
+        "IconButton",
+        "SubmitButton",
+        "LinkButton",
+        "ToggleButton",
+        "SplitButton"
+      ],
+      "description": "Universal action control supporting clicks/press, navigation, loading/disabled states, icons, toggles, menus, and analytics hooks.",
+      "tags": [
+        "accessibility",
+        "action",
+        "atom",
+        "button",
+        "cta",
+        "desktop",
+        "enterprise",
+        "erp",
+        "family:button",
+        "form",
+        "mobile",
+        "navigation",
+        "performance",
+        "rtl",
+        "saas",
+        "security",
+        "submit",
+        "subtype:base",
+        "themeable",
+        "tokens",
+        "ui",
+        "web"
+      ],
+      "compatibility": {
+        "platforms": [
+          "web",
+          "mobile",
+          "desktop"
+        ],
+        "renderingTargets": [
+          "react",
+          "nextjs",
+          "vue",
+          "nuxt",
+          "svelte",
+          "sveltekit",
+          "angular",
+          "solid",
+          "web-components",
+          "react-native",
+          "flutter",
+          "swiftui",
+          "jetpack-compose",
+          "dotnet-maui",
+          "qt-qml"
+        ],
+        "styleEngines": [
+          "css-vars",
+          "tailwind",
+          "css-modules",
+          "styled-components",
+          "emotion",
+          "vanilla-css",
+          "nativewind"
+        ],
+        "i18n": {
+          "rtl": true,
+          "ltr": true
+        },
+        "theming": {
+          "supportsMultiplePersonas": true,
+          "supportsDarkMode": true,
+          "supportsHighContrast": true
+        },
+        "formContexts": [
+          "submit",
+          "reset",
+          "button"
+        ],
+        "inputMethods": [
+          "mouse",
+          "touch",
+          "keyboard",
+          "pen",
+          "screen-reader"
+        ]
+      },
+      "slots": {
+        "children": {
+          "type": "text|node",
+          "required": false,
+          "description": "Button label/content. Required unless iconOnly=true and ariaLabel provided."
+        },
+        "startIcon": {
+          "type": "icon|node",
+          "required": false,
+          "description": "Leading icon (LTR) / trailing in RTL if autoFlip=true."
+        },
+        "endIcon": {
+          "type": "icon|node",
+          "required": false,
+          "description": "Trailing icon (LTR) / leading in RTL if autoFlip=true."
+        },
+        "badge": {
+          "type": "badge|node",
+          "required": false,
+          "description": "Optional badge/chip counter attached to button."
+        },
+        "loader": {
+          "type": "spinner|node",
+          "required": false,
+          "description": "Loader shown in loading state; defaults to Spinner atom."
+        }
+      },
+      "events": {
+        "web": [
+          "onClick",
+          "onKeyDown",
+          "onKeyUp",
+          "onFocus",
+          "onBlur",
+          "onPointerEnter",
+          "onPointerLeave"
+        ],
+        "mobile": [
+          "onPress",
+          "onLongPress",
+          "onPressIn",
+          "onPressOut",
+          "onFocus",
+          "onBlur"
+        ],
+        "analytics": [
+          "onTrack"
+        ]
+      },
+      "props": {
+        "as": {
+          "type": "enum",
+          "enum": [
+            "button",
+            "a",
+            "routerLink"
+          ],
+          "default": "button",
+          "description": "Render as native <button>, <a>, or framework router link component."
+        },
+        "type": {
+          "type": "enum",
+          "enum": [
+            "button",
+            "submit",
+            "reset"
+          ],
+          "default": "button",
+          "description": "HTML button type (web only; ignored for links)."
+        },
+        "href": {
+          "type": "string",
+          "default": "",
+          "description": "When as='a' or as='routerLink', destination URL/path."
+        },
+        "target": {
+          "type": "enum",
+          "enum": [
+            "_self",
+            "_blank",
+            "_parent",
+            "_top"
+          ],
+          "default": "_self",
+          "description": "Link target for as='a'."
+        },
+        "rel": {
+          "type": "string",
+          "default": "",
+          "description": "Link rel attribute. If target='_blank', enforce 'noopener noreferrer'."
+        },
+        "variant": {
+          "type": "enum",
+          "enum": [
+            "solid",
+            "outline",
+            "ghost",
+            "soft",
+            "link"
+          ],
+          "default": "solid",
+          "description": "Visual treatment."
+        },
+        "tone": {
+          "type": "enum",
+          "enum": [
+            "primary",
+            "neutral",
+            "success",
+            "warning",
+            "danger",
+            "info"
+          ],
+          "default": "primary",
+          "description": "Semantic intent."
+        },
+        "size": {
+          "type": "enum",
+          "enum": [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ],
+          "default": "md",
+          "description": "Sizing scale."
+        },
+        "shape": {
+          "type": "enum",
+          "enum": [
+            "rounded",
+            "pill",
+            "square"
+          ],
+          "default": "rounded",
+          "description": "Corner shape."
+        },
+        "density": {
+          "type": "enum",
+          "enum": [
+            "comfortable",
+            "compact"
+          ],
+          "default": "comfortable",
+          "description": "Padding density; useful for ERP tables/toolbars."
+        },
+        "fullWidth": {
+          "type": "boolean",
+          "default": false,
+          "description": "Stretch to container width."
+        },
+        "iconOnly": {
+          "type": "boolean",
+          "default": false,
+          "description": "Button contains only an icon; requires ariaLabel."
+        },
+        "autoFlip": {
+          "type": "boolean",
+          "default": true,
+          "description": "Auto-swap start/end icons in RTL."
+        },
+        "loading": {
+          "type": "boolean",
+          "default": false,
+          "description": "Shows loader and disables interaction."
+        },
+        "disabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Disables interaction."
+        },
+        "pressed": {
+          "type": "boolean",
+          "default": false,
+          "description": "Toggle state; use aria-pressed when true/false and role is button."
+        },
+        "selected": {
+          "type": "boolean",
+          "default": false,
+          "description": "Selection state for segmented/tabs-like usage."
+        },
+        "expanded": {
+          "type": "boolean",
+          "default": false,
+          "description": "Menu button expanded state; use aria-expanded."
+        },
+        "ariaLabel": {
+          "type": "string",
+          "default": "",
+          "description": "Accessible label. Required when iconOnly=true or children is not plain text."
+        },
+        "ariaControls": {
+          "type": "string",
+          "default": "",
+          "description": "ID of controlled element for menu/dialog."
+        },
+        "ariaDescribedBy": {
+          "type": "string",
+          "default": "",
+          "description": "ID(s) of describing element(s)."
+        },
+        "tabIndex": {
+          "type": "number",
+          "default": 0,
+          "description": "Tab order control."
+        },
+        "dataTestId": {
+          "type": "string",
+          "default": "",
+          "description": "Testing hook attribute."
+        },
+        "trackingId": {
+          "type": "string",
+          "default": "",
+          "description": "Analytics identifier."
+        },
+        "hotkey": {
+          "type": "string",
+          "default": "",
+          "description": "Keyboard shortcut hint, e.g. 'Ctrl+K'. Desktop/web optional."
+        }
+      },
+      "states": [
+        "default",
+        "hover",
+        "active",
+        "focusVisible",
+        "disabled",
+        "loading",
+        "pressed",
+        "selected",
+        "expanded"
+      ],
+      "a11y": {
+        "requirements": [
+          "Use <button> for actions; use <a> only for navigation.",
+          "If iconOnly=true then ariaLabel must be non-empty.",
+          "If pressed is used, set aria-pressed=true/false.",
+          "If expanded is used, set aria-expanded and aria-controls.",
+          "Ensure focus-visible ring is present and meets contrast guidelines.",
+          "Touch target minimum 44px on mobile (or equivalent dp)."
+        ],
+        "keyboard": {
+          "web": [
+            "Enter/Space activates when as=button",
+            "Enter activates link when as=a",
+            "Escape should close menus if button controls a menu (handled by parent)"
+          ],
+          "desktop": [
+            "Support hotkey hint; actual hotkey binding usually in app layer"
+          ]
+        },
+        "contrast": {
+          "default": "Aim for WCAG AA contrast for text/icons vs background.",
+          "highContrastMode": "Provide high-contrast token overrides."
+        }
+      },
+      "security": {
+        "linkSafety": [
+          "If target=_blank, force rel to include 'noopener noreferrer'.",
+          "Optionally validate href against allowlist in enterprise deployments."
+        ]
+      }
+    },
+    {
+      "id": "atom.iconButton",
+      "name": "IconButton",
+      "type": "atom",
+      "aliases": [
+        "CTA",
+        "ActionButton",
+        "PrimaryAction",
+        "IconButton",
+        "SubmitButton",
+        "LinkButton",
+        "ToggleButton",
+        "SplitButton"
+      ],
+      "description": "Icon-only button for toolbars and compact actions. Requires ariaLabel.",
+      "tags": [
+        "a11y",
+        "accessibility",
+        "action",
+        "atom",
+        "button",
+        "compact",
+        "cta",
+        "desktop",
+        "enterprise",
+        "erp",
+        "family:button",
+        "form",
+        "mobile",
+        "navigation",
+        "performance",
+        "rtl",
+        "saas",
+        "security",
+        "submit",
+        "subtype:icon",
+        "themeable",
+        "tokens",
+        "toolbar",
+        "ui",
+        "web"
+      ],
+      "compatibility": {
+        "platforms": [
+          "web",
+          "mobile",
+          "desktop"
+        ],
+        "renderingTargets": [
+          "react",
+          "nextjs",
+          "vue",
+          "nuxt",
+          "svelte",
+          "sveltekit",
+          "angular",
+          "solid",
+          "web-components",
+          "react-native",
+          "flutter",
+          "swiftui",
+          "jetpack-compose",
+          "dotnet-maui",
+          "qt-qml"
+        ],
+        "styleEngines": [
+          "css-vars",
+          "tailwind",
+          "css-modules",
+          "styled-components",
+          "emotion",
+          "vanilla-css",
+          "nativewind"
+        ],
+        "i18n": {
+          "rtl": true,
+          "ltr": true
+        },
+        "theming": {
+          "supportsMultiplePersonas": true,
+          "supportsDarkMode": true,
+          "supportsHighContrast": true
+        },
+        "formContexts": [
+          "submit",
+          "reset",
+          "button"
+        ],
+        "inputMethods": [
+          "mouse",
+          "touch",
+          "keyboard",
+          "pen",
+          "screen-reader"
+        ]
+      },
+      "slots": {
+        "children": {
+          "type": "text|node",
+          "required": false,
+          "description": "Button label/content. Required unless iconOnly=true and ariaLabel provided."
+        },
+        "startIcon": {
+          "type": "icon|node",
+          "required": false,
+          "description": "Leading icon (LTR) / trailing in RTL if autoFlip=true."
+        },
+        "endIcon": {
+          "type": "icon|node",
+          "required": false,
+          "description": "Trailing icon (LTR) / leading in RTL if autoFlip=true."
+        },
+        "badge": {
+          "type": "badge|node",
+          "required": false,
+          "description": "Optional badge/chip counter attached to button."
+        },
+        "loader": {
+          "type": "spinner|node",
+          "required": false,
+          "description": "Loader shown in loading state; defaults to Spinner atom."
+        }
+      },
+      "events": {
+        "web": [
+          "onClick",
+          "onKeyDown",
+          "onKeyUp",
+          "onFocus",
+          "onBlur",
+          "onPointerEnter",
+          "onPointerLeave"
+        ],
+        "mobile": [
+          "onPress",
+          "onLongPress",
+          "onPressIn",
+          "onPressOut",
+          "onFocus",
+          "onBlur"
+        ],
+        "analytics": [
+          "onTrack"
+        ]
+      },
+      "props": {
+        "as": {
+          "type": "enum",
+          "enum": [
+            "button",
+            "a",
+            "routerLink"
+          ],
+          "default": "button",
+          "description": "Render as native <button>, <a>, or framework router link component."
+        },
+        "type": {
+          "type": "enum",
+          "enum": [
+            "button",
+            "submit",
+            "reset"
+          ],
+          "default": "button",
+          "description": "HTML button type (web only; ignored for links)."
+        },
+        "href": {
+          "type": "string",
+          "default": "",
+          "description": "When as='a' or as='routerLink', destination URL/path."
+        },
+        "target": {
+          "type": "enum",
+          "enum": [
+            "_self",
+            "_blank",
+            "_parent",
+            "_top"
+          ],
+          "default": "_self",
+          "description": "Link target for as='a'."
+        },
+        "rel": {
+          "type": "string",
+          "default": "",
+          "description": "Link rel attribute. If target='_blank', enforce 'noopener noreferrer'."
+        },
+        "variant": {
+          "type": "enum",
+          "enum": [
+            "solid",
+            "outline",
+            "ghost",
+            "soft",
+            "link"
+          ],
+          "default": "solid",
+          "description": "Visual treatment."
+        },
+        "tone": {
+          "type": "enum",
+          "enum": [
+            "primary",
+            "neutral",
+            "success",
+            "warning",
+            "danger",
+            "info"
+          ],
+          "default": "primary",
+          "description": "Semantic intent."
+        },
+        "size": {
+          "type": "enum",
+          "enum": [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ],
+          "default": "md",
+          "description": "Sizing scale."
+        },
+        "shape": {
+          "type": "enum",
+          "enum": [
+            "rounded",
+            "pill",
+            "square"
+          ],
+          "default": "rounded",
+          "description": "Corner shape."
+        },
+        "density": {
+          "type": "enum",
+          "enum": [
+            "comfortable",
+            "compact"
+          ],
+          "default": "comfortable",
+          "description": "Padding density; useful for ERP tables/toolbars."
+        },
+        "fullWidth": {
+          "type": "boolean",
+          "default": false,
+          "description": "Stretch to container width."
+        },
+        "iconOnly": {
+          "type": "boolean",
+          "default": true,
+          "description": "IconButton is icon-only by default; ariaLabel required."
+        },
+        "autoFlip": {
+          "type": "boolean",
+          "default": true,
+          "description": "Auto-swap start/end icons in RTL."
+        },
+        "loading": {
+          "type": "boolean",
+          "default": false,
+          "description": "Shows loader and disables interaction."
+        },
+        "disabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Disables interaction."
+        },
+        "pressed": {
+          "type": "boolean",
+          "default": false,
+          "description": "Toggle state; use aria-pressed when true/false and role is button."
+        },
+        "selected": {
+          "type": "boolean",
+          "default": false,
+          "description": "Selection state for segmented/tabs-like usage."
+        },
+        "expanded": {
+          "type": "boolean",
+          "default": false,
+          "description": "Menu button expanded state; use aria-expanded."
+        },
+        "ariaLabel": {
+          "type": "string",
+          "default": "",
+          "description": "Required. Accessible label for icon-only buttons."
+        },
+        "ariaControls": {
+          "type": "string",
+          "default": "",
+          "description": "ID of controlled element for menu/dialog."
+        },
+        "ariaDescribedBy": {
+          "type": "string",
+          "default": "",
+          "description": "ID(s) of describing element(s)."
+        },
+        "tabIndex": {
+          "type": "number",
+          "default": 0,
+          "description": "Tab order control."
+        },
+        "dataTestId": {
+          "type": "string",
+          "default": "",
+          "description": "Testing hook attribute."
+        },
+        "trackingId": {
+          "type": "string",
+          "default": "",
+          "description": "Analytics identifier."
+        },
+        "hotkey": {
+          "type": "string",
+          "default": "",
+          "description": "Keyboard shortcut hint, e.g. 'Ctrl+K'. Desktop/web optional."
+        },
+        "badgeCount": {
+          "type": "number",
+          "default": 0,
+          "description": "Optional badge count rendered near icon."
+        }
+      },
+      "states": [
+        "default",
+        "hover",
+        "active",
+        "focusVisible",
+        "disabled",
+        "loading",
+        "pressed",
+        "selected",
+        "expanded"
+      ],
+      "a11y": {
+        "requirements": [
+          "Use <button> for actions; use <a> only for navigation.",
+          "If iconOnly=true then ariaLabel must be non-empty.",
+          "If pressed is used, set aria-pressed=true/false.",
+          "If expanded is used, set aria-expanded and aria-controls.",
+          "Ensure focus-visible ring is present and meets contrast guidelines.",
+          "Touch target minimum 44px on mobile (or equivalent dp)."
+        ],
+        "keyboard": {
+          "web": [
+            "Enter/Space activates when as=button",
+            "Enter activates link when as=a",
+            "Escape should close menus if button controls a menu (handled by parent)"
+          ],
+          "desktop": [
+            "Support hotkey hint; actual hotkey binding usually in app layer"
+          ]
+        },
+        "contrast": {
+          "default": "Aim for WCAG AA contrast for text/icons vs background.",
+          "highContrastMode": "Provide high-contrast token overrides."
+        }
+      },
+      "security": {
+        "linkSafety": [
+          "If target=_blank, force rel to include 'noopener noreferrer'.",
+          "Optionally validate href against allowlist in enterprise deployments."
+        ]
+      },
+      "usage": {
+        "recommendedContexts": [
+          "toolbar",
+          "datatable",
+          "app-shell"
+        ],
+        "avoid": [
+          "primary-cta-without-text"
+        ]
+      }
+    },
+    {
+      "id": "atom.fab",
+      "name": "FloatingActionButton",
+      "type": "atom",
+      "aliases": [
+        "CTA",
+        "ActionButton",
+        "PrimaryAction",
+        "IconButton",
+        "SubmitButton",
+        "LinkButton",
+        "ToggleButton",
+        "SplitButton"
+      ],
+      "description": "Floating action button for primary contextual actions on mobile/desktop shells.",
+      "tags": [
+        "accessibility",
+        "action",
+        "atom",
+        "button",
+        "cta",
+        "desktop",
+        "enterprise",
+        "erp",
+        "family:button",
+        "form",
+        "mobile",
+        "navigation",
+        "overlay",
+        "performance",
+        "primary-action",
+        "rtl",
+        "saas",
+        "security",
+        "submit",
+        "subtype:fab",
+        "themeable",
+        "tokens",
+        "ui",
+        "web"
+      ],
+      "compatibility": {
+        "platforms": [
+          "web",
+          "mobile",
+          "desktop"
+        ],
+        "renderingTargets": [
+          "react",
+          "nextjs",
+          "vue",
+          "nuxt",
+          "svelte",
+          "sveltekit",
+          "angular",
+          "solid",
+          "web-components",
+          "react-native",
+          "flutter",
+          "swiftui",
+          "jetpack-compose",
+          "dotnet-maui",
+          "qt-qml"
+        ],
+        "styleEngines": [
+          "css-vars",
+          "tailwind",
+          "css-modules",
+          "styled-components",
+          "emotion",
+          "vanilla-css",
+          "nativewind"
+        ],
+        "i18n": {
+          "rtl": true,
+          "ltr": true
+        },
+        "theming": {
+          "supportsMultiplePersonas": true,
+          "supportsDarkMode": true,
+          "supportsHighContrast": true
+        },
+        "formContexts": [
+          "submit",
+          "reset",
+          "button"
+        ],
+        "inputMethods": [
+          "mouse",
+          "touch",
+          "keyboard",
+          "pen",
+          "screen-reader"
+        ]
+      },
+      "slots": {
+        "children": {
+          "type": "text|node",
+          "required": false,
+          "description": "Button label/content. Required unless iconOnly=true and ariaLabel provided."
+        },
+        "startIcon": {
+          "type": "icon|node",
+          "required": false,
+          "description": "Leading icon (LTR) / trailing in RTL if autoFlip=true."
+        },
+        "endIcon": {
+          "type": "icon|node",
+          "required": false,
+          "description": "Trailing icon (LTR) / leading in RTL if autoFlip=true."
+        },
+        "badge": {
+          "type": "badge|node",
+          "required": false,
+          "description": "Optional badge/chip counter attached to button."
+        },
+        "loader": {
+          "type": "spinner|node",
+          "required": false,
+          "description": "Loader shown in loading state; defaults to Spinner atom."
+        }
+      },
+      "events": {
+        "web": [
+          "onClick",
+          "onKeyDown",
+          "onKeyUp",
+          "onFocus",
+          "onBlur",
+          "onPointerEnter",
+          "onPointerLeave"
+        ],
+        "mobile": [
+          "onPress",
+          "onLongPress",
+          "onPressIn",
+          "onPressOut",
+          "onFocus",
+          "onBlur"
+        ],
+        "analytics": [
+          "onTrack"
+        ]
+      },
+      "props": {
+        "as": {
+          "type": "enum",
+          "enum": [
+            "button",
+            "a",
+            "routerLink"
+          ],
+          "default": "button",
+          "description": "Render as native <button>, <a>, or framework router link component."
+        },
+        "type": {
+          "type": "enum",
+          "enum": [
+            "button",
+            "submit",
+            "reset"
+          ],
+          "default": "button",
+          "description": "HTML button type (web only; ignored for links)."
+        },
+        "href": {
+          "type": "string",
+          "default": "",
+          "description": "When as='a' or as='routerLink', destination URL/path."
+        },
+        "target": {
+          "type": "enum",
+          "enum": [
+            "_self",
+            "_blank",
+            "_parent",
+            "_top"
+          ],
+          "default": "_self",
+          "description": "Link target for as='a'."
+        },
+        "rel": {
+          "type": "string",
+          "default": "",
+          "description": "Link rel attribute. If target='_blank', enforce 'noopener noreferrer'."
+        },
+        "variant": {
+          "type": "enum",
+          "enum": [
+            "solid",
+            "soft",
+            "outline"
+          ],
+          "default": "solid",
+          "description": "FAB restricted variants for clarity."
+        },
+        "tone": {
+          "type": "enum",
+          "enum": [
+            "primary",
+            "neutral",
+            "success",
+            "warning",
+            "danger",
+            "info"
+          ],
+          "default": "primary",
+          "description": "Semantic intent."
+        },
+        "size": {
+          "type": "enum",
+          "enum": [
+            "md",
+            "lg",
+            "xl"
+          ],
+          "default": "lg",
+          "description": "FAB uses larger sizes."
+        },
+        "shape": {
+          "type": "enum",
+          "enum": [
+            "rounded",
+            "pill",
+            "square"
+          ],
+          "default": "rounded",
+          "description": "Corner shape."
+        },
+        "density": {
+          "type": "enum",
+          "enum": [
+            "comfortable",
+            "compact"
+          ],
+          "default": "comfortable",
+          "description": "Padding density; useful for ERP tables/toolbars."
+        },
+        "fullWidth": {
+          "type": "boolean",
+          "default": false,
+          "description": "Stretch to container width."
+        },
+        "iconOnly": {
+          "type": "boolean",
+          "default": false,
+          "description": "Button contains only an icon; requires ariaLabel."
+        },
+        "autoFlip": {
+          "type": "boolean",
+          "default": true,
+          "description": "Auto-swap start/end icons in RTL."
+        },
+        "loading": {
+          "type": "boolean",
+          "default": false,
+          "description": "Shows loader and disables interaction."
+        },
+        "disabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Disables interaction."
+        },
+        "pressed": {
+          "type": "boolean",
+          "default": false,
+          "description": "Toggle state; use aria-pressed when true/false and role is button."
+        },
+        "selected": {
+          "type": "boolean",
+          "default": false,
+          "description": "Selection state for segmented/tabs-like usage."
+        },
+        "expanded": {
+          "type": "boolean",
+          "default": false,
+          "description": "Menu button expanded state; use aria-expanded."
+        },
+        "ariaLabel": {
+          "type": "string",
+          "default": "",
+          "description": "Accessible label. Required when iconOnly=true or children is not plain text."
+        },
+        "ariaControls": {
+          "type": "string",
+          "default": "",
+          "description": "ID of controlled element for menu/dialog."
+        },
+        "ariaDescribedBy": {
+          "type": "string",
+          "default": "",
+          "description": "ID(s) of describing element(s)."
+        },
+        "tabIndex": {
+          "type": "number",
+          "default": 0,
+          "description": "Tab order control."
+        },
+        "dataTestId": {
+          "type": "string",
+          "default": "",
+          "description": "Testing hook attribute."
+        },
+        "trackingId": {
+          "type": "string",
+          "default": "",
+          "description": "Analytics identifier."
+        },
+        "hotkey": {
+          "type": "string",
+          "default": "",
+          "description": "Keyboard shortcut hint, e.g. 'Ctrl+K'. Desktop/web optional."
+        },
+        "placement": {
+          "type": "enum",
+          "enum": [
+            "bottom-right",
+            "bottom-left",
+            "top-right",
+            "top-left"
+          ],
+          "default": "bottom-right"
+        },
+        "elevationPreset": {
+          "type": "enum",
+          "enum": [
+            "md",
+            "lg",
+            "xl"
+          ],
+          "default": "lg",
+          "description": "Shadow/elevation preset."
+        }
+      },
+      "states": [
+        "default",
+        "hover",
+        "active",
+        "focusVisible",
+        "disabled",
+        "loading",
+        "pressed",
+        "selected",
+        "expanded"
+      ],
+      "a11y": {
+        "requirements": [
+          "Use <button> for actions; use <a> only for navigation.",
+          "If iconOnly=true then ariaLabel must be non-empty.",
+          "If pressed is used, set aria-pressed=true/false.",
+          "If expanded is used, set aria-expanded and aria-controls.",
+          "Ensure focus-visible ring is present and meets contrast guidelines.",
+          "Touch target minimum 44px on mobile (or equivalent dp)."
+        ],
+        "keyboard": {
+          "web": [
+            "Enter/Space activates when as=button",
+            "Enter activates link when as=a",
+            "Escape should close menus if button controls a menu (handled by parent)"
+          ],
+          "desktop": [
+            "Support hotkey hint; actual hotkey binding usually in app layer"
+          ]
+        },
+        "contrast": {
+          "default": "Aim for WCAG AA contrast for text/icons vs background.",
+          "highContrastMode": "Provide high-contrast token overrides."
+        }
+      },
+      "security": {
+        "linkSafety": [
+          "If target=_blank, force rel to include 'noopener noreferrer'.",
+          "Optionally validate href against allowlist in enterprise deployments."
+        ]
+      },
+      "usage": {
+        "recommendedContexts": [
+          "mobile-shell",
+          "dashboard"
+        ],
+        "notes": [
+          "Keep one FAB per screen."
+        ]
+      }
+    },
+    {
+      "id": "atom.toggleButton",
+      "name": "ToggleButton",
+      "type": "atom",
+      "aliases": [
+        "CTA",
+        "ActionButton",
+        "PrimaryAction",
+        "IconButton",
+        "SubmitButton",
+        "LinkButton",
+        "ToggleButton",
+        "SplitButton"
+      ],
+      "description": "Button with pressed state for toggles, view switches, and filters.",
+      "tags": [
+        "accessibility",
+        "action",
+        "atom",
+        "button",
+        "cta",
+        "desktop",
+        "enterprise",
+        "erp",
+        "family:button",
+        "filters",
+        "form",
+        "mobile",
+        "navigation",
+        "performance",
+        "rtl",
+        "saas",
+        "security",
+        "segmented",
+        "stateful",
+        "submit",
+        "subtype:toggle",
+        "themeable",
+        "tokens",
+        "ui",
+        "web"
+      ],
+      "compatibility": {
+        "platforms": [
+          "web",
+          "mobile",
+          "desktop"
+        ],
+        "renderingTargets": [
+          "react",
+          "nextjs",
+          "vue",
+          "nuxt",
+          "svelte",
+          "sveltekit",
+          "angular",
+          "solid",
+          "web-components",
+          "react-native",
+          "flutter",
+          "swiftui",
+          "jetpack-compose",
+          "dotnet-maui",
+          "qt-qml"
+        ],
+        "styleEngines": [
+          "css-vars",
+          "tailwind",
+          "css-modules",
+          "styled-components",
+          "emotion",
+          "vanilla-css",
+          "nativewind"
+        ],
+        "i18n": {
+          "rtl": true,
+          "ltr": true
+        },
+        "theming": {
+          "supportsMultiplePersonas": true,
+          "supportsDarkMode": true,
+          "supportsHighContrast": true
+        },
+        "formContexts": [
+          "submit",
+          "reset",
+          "button"
+        ],
+        "inputMethods": [
+          "mouse",
+          "touch",
+          "keyboard",
+          "pen",
+          "screen-reader"
+        ]
+      },
+      "slots": {
+        "children": {
+          "type": "text|node",
+          "required": false,
+          "description": "Button label/content. Required unless iconOnly=true and ariaLabel provided."
+        },
+        "startIcon": {
+          "type": "icon|node",
+          "required": false,
+          "description": "Leading icon (LTR) / trailing in RTL if autoFlip=true."
+        },
+        "endIcon": {
+          "type": "icon|node",
+          "required": false,
+          "description": "Trailing icon (LTR) / leading in RTL if autoFlip=true."
+        },
+        "badge": {
+          "type": "badge|node",
+          "required": false,
+          "description": "Optional badge/chip counter attached to button."
+        },
+        "loader": {
+          "type": "spinner|node",
+          "required": false,
+          "description": "Loader shown in loading state; defaults to Spinner atom."
+        }
+      },
+      "events": {
+        "web": [
+          "onClick",
+          "onKeyDown",
+          "onKeyUp",
+          "onFocus",
+          "onBlur",
+          "onPointerEnter",
+          "onPointerLeave"
+        ],
+        "mobile": [
+          "onPress",
+          "onLongPress",
+          "onPressIn",
+          "onPressOut",
+          "onFocus",
+          "onBlur"
+        ],
+        "analytics": [
+          "onTrack"
+        ]
+      },
+      "props": {
+        "as": {
+          "type": "enum",
+          "enum": [
+            "button",
+            "a",
+            "routerLink"
+          ],
+          "default": "button",
+          "description": "Render as native <button>, <a>, or framework router link component."
+        },
+        "type": {
+          "type": "enum",
+          "enum": [
+            "button",
+            "submit",
+            "reset"
+          ],
+          "default": "button",
+          "description": "HTML button type (web only; ignored for links)."
+        },
+        "href": {
+          "type": "string",
+          "default": "",
+          "description": "When as='a' or as='routerLink', destination URL/path."
+        },
+        "target": {
+          "type": "enum",
+          "enum": [
+            "_self",
+            "_blank",
+            "_parent",
+            "_top"
+          ],
+          "default": "_self",
+          "description": "Link target for as='a'."
+        },
+        "rel": {
+          "type": "string",
+          "default": "",
+          "description": "Link rel attribute. If target='_blank', enforce 'noopener noreferrer'."
+        },
+        "variant": {
+          "type": "enum",
+          "enum": [
+            "solid",
+            "outline",
+            "ghost",
+            "soft",
+            "link"
+          ],
+          "default": "solid",
+          "description": "Visual treatment."
+        },
+        "tone": {
+          "type": "enum",
+          "enum": [
+            "primary",
+            "neutral",
+            "success",
+            "warning",
+            "danger",
+            "info"
+          ],
+          "default": "primary",
+          "description": "Semantic intent."
+        },
+        "size": {
+          "type": "enum",
+          "enum": [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ],
+          "default": "md",
+          "description": "Sizing scale."
+        },
+        "shape": {
+          "type": "enum",
+          "enum": [
+            "rounded",
+            "pill",
+            "square"
+          ],
+          "default": "rounded",
+          "description": "Corner shape."
+        },
+        "density": {
+          "type": "enum",
+          "enum": [
+            "comfortable",
+            "compact"
+          ],
+          "default": "comfortable",
+          "description": "Padding density; useful for ERP tables/toolbars."
+        },
+        "fullWidth": {
+          "type": "boolean",
+          "default": false,
+          "description": "Stretch to container width."
+        },
+        "iconOnly": {
+          "type": "boolean",
+          "default": false,
+          "description": "Button contains only an icon; requires ariaLabel."
+        },
+        "autoFlip": {
+          "type": "boolean",
+          "default": true,
+          "description": "Auto-swap start/end icons in RTL."
+        },
+        "loading": {
+          "type": "boolean",
+          "default": false,
+          "description": "Shows loader and disables interaction."
+        },
+        "disabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Disables interaction."
+        },
+        "pressed": {
+          "type": "boolean",
+          "default": false,
+          "description": "Toggle state. Must set aria-pressed accordingly."
+        },
+        "selected": {
+          "type": "boolean",
+          "default": false,
+          "description": "Selection state for segmented/tabs-like usage."
+        },
+        "expanded": {
+          "type": "boolean",
+          "default": false,
+          "description": "Menu button expanded state; use aria-expanded."
+        },
+        "ariaLabel": {
+          "type": "string",
+          "default": "",
+          "description": "Accessible label. Required when iconOnly=true or children is not plain text."
+        },
+        "ariaControls": {
+          "type": "string",
+          "default": "",
+          "description": "ID of controlled element for menu/dialog."
+        },
+        "ariaDescribedBy": {
+          "type": "string",
+          "default": "",
+          "description": "ID(s) of describing element(s)."
+        },
+        "tabIndex": {
+          "type": "number",
+          "default": 0,
+          "description": "Tab order control."
+        },
+        "dataTestId": {
+          "type": "string",
+          "default": "",
+          "description": "Testing hook attribute."
+        },
+        "trackingId": {
+          "type": "string",
+          "default": "",
+          "description": "Analytics identifier."
+        },
+        "hotkey": {
+          "type": "string",
+          "default": "",
+          "description": "Keyboard shortcut hint, e.g. 'Ctrl+K'. Desktop/web optional."
+        },
+        "allowIndeterminate": {
+          "type": "boolean",
+          "default": false,
+          "description": "Optional tri-state (off/on/indeterminate) at app layer."
+        }
+      },
+      "states": [
+        "default",
+        "hover",
+        "active",
+        "focusVisible",
+        "disabled",
+        "loading",
+        "pressed",
+        "selected",
+        "expanded"
+      ],
+      "a11y": {
+        "requirements": [
+          "Use <button> for actions; use <a> only for navigation.",
+          "If iconOnly=true then ariaLabel must be non-empty.",
+          "If pressed is used, set aria-pressed=true/false.",
+          "If expanded is used, set aria-expanded and aria-controls.",
+          "Ensure focus-visible ring is present and meets contrast guidelines.",
+          "Touch target minimum 44px on mobile (or equivalent dp)."
+        ],
+        "keyboard": {
+          "web": [
+            "Enter/Space activates when as=button",
+            "Enter activates link when as=a",
+            "Escape should close menus if button controls a menu (handled by parent)"
+          ],
+          "desktop": [
+            "Support hotkey hint; actual hotkey binding usually in app layer"
+          ]
+        },
+        "contrast": {
+          "default": "Aim for WCAG AA contrast for text/icons vs background.",
+          "highContrastMode": "Provide high-contrast token overrides."
+        }
+      },
+      "security": {
+        "linkSafety": [
+          "If target=_blank, force rel to include 'noopener noreferrer'.",
+          "Optionally validate href against allowlist in enterprise deployments."
+        ]
+      }
+    },
+    {
+      "id": "atom.socialButton",
+      "name": "SocialButton",
+      "type": "atom",
+      "aliases": [
+        "CTA",
+        "ActionButton",
+        "PrimaryAction",
+        "IconButton",
+        "SubmitButton",
+        "LinkButton",
+        "ToggleButton",
+        "SplitButton"
+      ],
+      "description": "Provider-branded sign-in button with consistent spacing and icons.",
+      "tags": [
+        "accessibility",
+        "action",
+        "atom",
+        "auth",
+        "button",
+        "cta",
+        "desktop",
+        "enterprise",
+        "erp",
+        "family:button",
+        "form",
+        "mobile",
+        "navigation",
+        "oauth",
+        "performance",
+        "rtl",
+        "saas",
+        "security",
+        "submit",
+        "subtype:social",
+        "themeable",
+        "tokens",
+        "ui",
+        "web"
+      ],
+      "compatibility": {
+        "platforms": [
+          "web",
+          "mobile",
+          "desktop"
+        ],
+        "renderingTargets": [
+          "react",
+          "nextjs",
+          "vue",
+          "nuxt",
+          "svelte",
+          "sveltekit",
+          "angular",
+          "solid",
+          "web-components",
+          "react-native",
+          "flutter",
+          "swiftui",
+          "jetpack-compose",
+          "dotnet-maui",
+          "qt-qml"
+        ],
+        "styleEngines": [
+          "css-vars",
+          "tailwind",
+          "css-modules",
+          "styled-components",
+          "emotion",
+          "vanilla-css",
+          "nativewind"
+        ],
+        "i18n": {
+          "rtl": true,
+          "ltr": true
+        },
+        "theming": {
+          "supportsMultiplePersonas": true,
+          "supportsDarkMode": true,
+          "supportsHighContrast": true
+        },
+        "formContexts": [
+          "submit",
+          "reset",
+          "button"
+        ],
+        "inputMethods": [
+          "mouse",
+          "touch",
+          "keyboard",
+          "pen",
+          "screen-reader"
+        ]
+      },
+      "slots": {
+        "children": {
+          "type": "text|node",
+          "required": false,
+          "description": "Button label/content. Required unless iconOnly=true and ariaLabel provided."
+        },
+        "startIcon": {
+          "type": "icon|node",
+          "required": false,
+          "description": "Leading icon (LTR) / trailing in RTL if autoFlip=true."
+        },
+        "endIcon": {
+          "type": "icon|node",
+          "required": false,
+          "description": "Trailing icon (LTR) / leading in RTL if autoFlip=true."
+        },
+        "badge": {
+          "type": "badge|node",
+          "required": false,
+          "description": "Optional badge/chip counter attached to button."
+        },
+        "loader": {
+          "type": "spinner|node",
+          "required": false,
+          "description": "Loader shown in loading state; defaults to Spinner atom."
+        }
+      },
+      "events": {
+        "web": [
+          "onClick",
+          "onKeyDown",
+          "onKeyUp",
+          "onFocus",
+          "onBlur",
+          "onPointerEnter",
+          "onPointerLeave"
+        ],
+        "mobile": [
+          "onPress",
+          "onLongPress",
+          "onPressIn",
+          "onPressOut",
+          "onFocus",
+          "onBlur"
+        ],
+        "analytics": [
+          "onTrack"
+        ]
+      },
+      "props": {
+        "as": {
+          "type": "enum",
+          "enum": [
+            "button",
+            "a",
+            "routerLink"
+          ],
+          "default": "button",
+          "description": "Render as native <button>, <a>, or framework router link component."
+        },
+        "type": {
+          "type": "enum",
+          "enum": [
+            "button",
+            "submit",
+            "reset"
+          ],
+          "default": "button",
+          "description": "HTML button type (web only; ignored for links)."
+        },
+        "href": {
+          "type": "string",
+          "default": "",
+          "description": "When as='a' or as='routerLink', destination URL/path."
+        },
+        "target": {
+          "type": "enum",
+          "enum": [
+            "_self",
+            "_blank",
+            "_parent",
+            "_top"
+          ],
+          "default": "_self",
+          "description": "Link target for as='a'."
+        },
+        "rel": {
+          "type": "string",
+          "default": "",
+          "description": "Link rel attribute. If target='_blank', enforce 'noopener noreferrer'."
+        },
+        "variant": {
+          "type": "enum",
+          "enum": [
+            "solid",
+            "outline",
+            "ghost",
+            "soft",
+            "link"
+          ],
+          "default": "solid",
+          "description": "Visual treatment."
+        },
+        "tone": {
+          "type": "enum",
+          "enum": [
+            "primary",
+            "neutral",
+            "success",
+            "warning",
+            "danger",
+            "info"
+          ],
+          "default": "primary",
+          "description": "Semantic intent."
+        },
+        "size": {
+          "type": "enum",
+          "enum": [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ],
+          "default": "md",
+          "description": "Sizing scale."
+        },
+        "shape": {
+          "type": "enum",
+          "enum": [
+            "rounded",
+            "pill",
+            "square"
+          ],
+          "default": "rounded",
+          "description": "Corner shape."
+        },
+        "density": {
+          "type": "enum",
+          "enum": [
+            "comfortable",
+            "compact"
+          ],
+          "default": "comfortable",
+          "description": "Padding density; useful for ERP tables/toolbars."
+        },
+        "fullWidth": {
+          "type": "boolean",
+          "default": false,
+          "description": "Stretch to container width."
+        },
+        "iconOnly": {
+          "type": "boolean",
+          "default": false,
+          "description": "Button contains only an icon; requires ariaLabel."
+        },
+        "autoFlip": {
+          "type": "boolean",
+          "default": true,
+          "description": "Auto-swap start/end icons in RTL."
+        },
+        "loading": {
+          "type": "boolean",
+          "default": false,
+          "description": "Shows loader and disables interaction."
+        },
+        "disabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Disables interaction."
+        },
+        "pressed": {
+          "type": "boolean",
+          "default": false,
+          "description": "Toggle state; use aria-pressed when true/false and role is button."
+        },
+        "selected": {
+          "type": "boolean",
+          "default": false,
+          "description": "Selection state for segmented/tabs-like usage."
+        },
+        "expanded": {
+          "type": "boolean",
+          "default": false,
+          "description": "Menu button expanded state; use aria-expanded."
+        },
+        "ariaLabel": {
+          "type": "string",
+          "default": "",
+          "description": "Accessible label. Required when iconOnly=true or children is not plain text."
+        },
+        "ariaControls": {
+          "type": "string",
+          "default": "",
+          "description": "ID of controlled element for menu/dialog."
+        },
+        "ariaDescribedBy": {
+          "type": "string",
+          "default": "",
+          "description": "ID(s) of describing element(s)."
+        },
+        "tabIndex": {
+          "type": "number",
+          "default": 0,
+          "description": "Tab order control."
+        },
+        "dataTestId": {
+          "type": "string",
+          "default": "",
+          "description": "Testing hook attribute."
+        },
+        "trackingId": {
+          "type": "string",
+          "default": "",
+          "description": "Analytics identifier."
+        },
+        "hotkey": {
+          "type": "string",
+          "default": "",
+          "description": "Keyboard shortcut hint, e.g. 'Ctrl+K'. Desktop/web optional."
+        },
+        "provider": {
+          "type": "enum",
+          "enum": [
+            "google",
+            "microsoft",
+            "apple",
+            "github",
+            "facebook",
+            "x",
+            "linkedin"
+          ],
+          "default": "google"
+        },
+        "brandMode": {
+          "type": "enum",
+          "enum": [
+            "brand",
+            "neutral"
+          ],
+          "default": "brand",
+          "description": "Brand colors vs neutral outlined."
+        }
+      },
+      "states": [
+        "default",
+        "hover",
+        "active",
+        "focusVisible",
+        "disabled",
+        "loading",
+        "pressed",
+        "selected",
+        "expanded"
+      ],
+      "a11y": {
+        "requirements": [
+          "Use <button> for actions; use <a> only for navigation.",
+          "If iconOnly=true then ariaLabel must be non-empty.",
+          "If pressed is used, set aria-pressed=true/false.",
+          "If expanded is used, set aria-expanded and aria-controls.",
+          "Ensure focus-visible ring is present and meets contrast guidelines.",
+          "Touch target minimum 44px on mobile (or equivalent dp)."
+        ],
+        "keyboard": {
+          "web": [
+            "Enter/Space activates when as=button",
+            "Enter activates link when as=a",
+            "Escape should close menus if button controls a menu (handled by parent)"
+          ],
+          "desktop": [
+            "Support hotkey hint; actual hotkey binding usually in app layer"
+          ]
+        },
+        "contrast": {
+          "default": "Aim for WCAG AA contrast for text/icons vs background.",
+          "highContrastMode": "Provide high-contrast token overrides."
+        }
+      },
+      "security": {
+        "linkSafety": [
+          "If target=_blank, force rel to include 'noopener noreferrer'.",
+          "Optionally validate href against allowlist in enterprise deployments."
+        ]
+      }
+    },
+    {
+      "id": "atom.uploadButton",
+      "name": "UploadButton",
+      "type": "atom",
+      "aliases": [
+        "CTA",
+        "ActionButton",
+        "PrimaryAction",
+        "IconButton",
+        "SubmitButton",
+        "LinkButton",
+        "ToggleButton",
+        "SplitButton"
+      ],
+      "description": "Button that triggers file picking (web) or file selection flow (mobile/desktop).",
+      "tags": [
+        "accessibility",
+        "action",
+        "atom",
+        "attachments",
+        "button",
+        "cta",
+        "desktop",
+        "enterprise",
+        "erp",
+        "family:button",
+        "files",
+        "form",
+        "mobile",
+        "navigation",
+        "performance",
+        "rtl",
+        "saas",
+        "security",
+        "submit",
+        "subtype:upload",
+        "themeable",
+        "tokens",
+        "ui",
+        "web"
+      ],
+      "compatibility": {
+        "platforms": [
+          "web",
+          "mobile",
+          "desktop"
+        ],
+        "renderingTargets": [
+          "react",
+          "nextjs",
+          "vue",
+          "nuxt",
+          "svelte",
+          "sveltekit",
+          "angular",
+          "solid",
+          "web-components",
+          "react-native",
+          "flutter",
+          "swiftui",
+          "jetpack-compose",
+          "dotnet-maui",
+          "qt-qml"
+        ],
+        "styleEngines": [
+          "css-vars",
+          "tailwind",
+          "css-modules",
+          "styled-components",
+          "emotion",
+          "vanilla-css",
+          "nativewind"
+        ],
+        "i18n": {
+          "rtl": true,
+          "ltr": true
+        },
+        "theming": {
+          "supportsMultiplePersonas": true,
+          "supportsDarkMode": true,
+          "supportsHighContrast": true
+        },
+        "formContexts": [
+          "submit",
+          "reset",
+          "button"
+        ],
+        "inputMethods": [
+          "mouse",
+          "touch",
+          "keyboard",
+          "pen",
+          "screen-reader"
+        ]
+      },
+      "slots": {
+        "children": {
+          "type": "text|node",
+          "required": false,
+          "description": "Button label/content. Required unless iconOnly=true and ariaLabel provided."
+        },
+        "startIcon": {
+          "type": "icon|node",
+          "required": false,
+          "description": "Leading icon (LTR) / trailing in RTL if autoFlip=true."
+        },
+        "endIcon": {
+          "type": "icon|node",
+          "required": false,
+          "description": "Trailing icon (LTR) / leading in RTL if autoFlip=true."
+        },
+        "badge": {
+          "type": "badge|node",
+          "required": false,
+          "description": "Optional badge/chip counter attached to button."
+        },
+        "loader": {
+          "type": "spinner|node",
+          "required": false,
+          "description": "Loader shown in loading state; defaults to Spinner atom."
+        }
+      },
+      "events": {
+        "web": [
+          "onClick",
+          "onKeyDown",
+          "onKeyUp",
+          "onFocus",
+          "onBlur",
+          "onPointerEnter",
+          "onPointerLeave"
+        ],
+        "mobile": [
+          "onPress",
+          "onLongPress",
+          "onPressIn",
+          "onPressOut",
+          "onFocus",
+          "onBlur"
+        ],
+        "analytics": [
+          "onTrack"
+        ]
+      },
+      "props": {
+        "as": {
+          "type": "enum",
+          "enum": [
+            "button",
+            "a",
+            "routerLink"
+          ],
+          "default": "button",
+          "description": "Render as native <button>, <a>, or framework router link component."
+        },
+        "type": {
+          "type": "enum",
+          "enum": [
+            "button",
+            "submit",
+            "reset"
+          ],
+          "default": "button",
+          "description": "HTML button type (web only; ignored for links)."
+        },
+        "href": {
+          "type": "string",
+          "default": "",
+          "description": "When as='a' or as='routerLink', destination URL/path."
+        },
+        "target": {
+          "type": "enum",
+          "enum": [
+            "_self",
+            "_blank",
+            "_parent",
+            "_top"
+          ],
+          "default": "_self",
+          "description": "Link target for as='a'."
+        },
+        "rel": {
+          "type": "string",
+          "default": "",
+          "description": "Link rel attribute. If target='_blank', enforce 'noopener noreferrer'."
+        },
+        "variant": {
+          "type": "enum",
+          "enum": [
+            "solid",
+            "outline",
+            "ghost",
+            "soft",
+            "link"
+          ],
+          "default": "solid",
+          "description": "Visual treatment."
+        },
+        "tone": {
+          "type": "enum",
+          "enum": [
+            "primary",
+            "neutral",
+            "success",
+            "warning",
+            "danger",
+            "info"
+          ],
+          "default": "primary",
+          "description": "Semantic intent."
+        },
+        "size": {
+          "type": "enum",
+          "enum": [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ],
+          "default": "md",
+          "description": "Sizing scale."
+        },
+        "shape": {
+          "type": "enum",
+          "enum": [
+            "rounded",
+            "pill",
+            "square"
+          ],
+          "default": "rounded",
+          "description": "Corner shape."
+        },
+        "density": {
+          "type": "enum",
+          "enum": [
+            "comfortable",
+            "compact"
+          ],
+          "default": "comfortable",
+          "description": "Padding density; useful for ERP tables/toolbars."
+        },
+        "fullWidth": {
+          "type": "boolean",
+          "default": false,
+          "description": "Stretch to container width."
+        },
+        "iconOnly": {
+          "type": "boolean",
+          "default": false,
+          "description": "Button contains only an icon; requires ariaLabel."
+        },
+        "autoFlip": {
+          "type": "boolean",
+          "default": true,
+          "description": "Auto-swap start/end icons in RTL."
+        },
+        "loading": {
+          "type": "boolean",
+          "default": false,
+          "description": "Shows loader and disables interaction."
+        },
+        "disabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Disables interaction."
+        },
+        "pressed": {
+          "type": "boolean",
+          "default": false,
+          "description": "Toggle state; use aria-pressed when true/false and role is button."
+        },
+        "selected": {
+          "type": "boolean",
+          "default": false,
+          "description": "Selection state for segmented/tabs-like usage."
+        },
+        "expanded": {
+          "type": "boolean",
+          "default": false,
+          "description": "Menu button expanded state; use aria-expanded."
+        },
+        "ariaLabel": {
+          "type": "string",
+          "default": "",
+          "description": "Accessible label. Required when iconOnly=true or children is not plain text."
+        },
+        "ariaControls": {
+          "type": "string",
+          "default": "",
+          "description": "ID of controlled element for menu/dialog."
+        },
+        "ariaDescribedBy": {
+          "type": "string",
+          "default": "",
+          "description": "ID(s) of describing element(s)."
+        },
+        "tabIndex": {
+          "type": "number",
+          "default": 0,
+          "description": "Tab order control."
+        },
+        "dataTestId": {
+          "type": "string",
+          "default": "",
+          "description": "Testing hook attribute."
+        },
+        "trackingId": {
+          "type": "string",
+          "default": "",
+          "description": "Analytics identifier."
+        },
+        "hotkey": {
+          "type": "string",
+          "default": "",
+          "description": "Keyboard shortcut hint, e.g. 'Ctrl+K'. Desktop/web optional."
+        },
+        "accept": {
+          "type": "string",
+          "default": "",
+          "description": "Accepted file types (web)."
+        },
+        "multiple": {
+          "type": "boolean",
+          "default": false,
+          "description": "Allow multiple file selection."
+        },
+        "capture": {
+          "type": "enum",
+          "enum": [
+            "",
+            "user",
+            "environment"
+          ],
+          "default": ""
+        }
+      },
+      "states": [
+        "default",
+        "hover",
+        "active",
+        "focusVisible",
+        "disabled",
+        "loading",
+        "pressed",
+        "selected",
+        "expanded"
+      ],
+      "a11y": {
+        "requirements": [
+          "Use <button> for actions; use <a> only for navigation.",
+          "If iconOnly=true then ariaLabel must be non-empty.",
+          "If pressed is used, set aria-pressed=true/false.",
+          "If expanded is used, set aria-expanded and aria-controls.",
+          "Ensure focus-visible ring is present and meets contrast guidelines.",
+          "Touch target minimum 44px on mobile (or equivalent dp)."
+        ],
+        "keyboard": {
+          "web": [
+            "Enter/Space activates when as=button",
+            "Enter activates link when as=a",
+            "Escape should close menus if button controls a menu (handled by parent)"
+          ],
+          "desktop": [
+            "Support hotkey hint; actual hotkey binding usually in app layer"
+          ]
+        },
+        "contrast": {
+          "default": "Aim for WCAG AA contrast for text/icons vs background.",
+          "highContrastMode": "Provide high-contrast token overrides."
+        }
+      },
+      "security": {
+        "linkSafety": [
+          "If target=_blank, force rel to include 'noopener noreferrer'.",
+          "Optionally validate href against allowlist in enterprise deployments."
+        ]
+      }
+    }
+  ]
+}

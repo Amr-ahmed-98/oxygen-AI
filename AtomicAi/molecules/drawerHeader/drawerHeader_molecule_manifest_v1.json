@@ -1,0 +1,168 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T12:40:03.847933+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "drawer-header",
+    "goal": "ThemeForest-grade drawer header (title/subtitle/steps/actions/close)"
+  },
+  "component": {
+    "id": "molecule.drawerHeader",
+    "name": "Drawer Header",
+    "type": "molecule",
+    "aliases": [
+      "SidePanelHeader",
+      "DrawerTopBar",
+      "SheetDrawerHeader"
+    ],
+    "description": "Drawer header for side panels: title, optional subtitle, step indicator, actions and close; mobile-safe.",
+    "tags": [
+      "ui",
+      "molecule",
+      "overlay",
+      "drawer",
+      "header",
+      "steps",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.heading",
+        "atom.text",
+        "atom.iconButton",
+        "atom.button",
+        "atom.badge"
+      ],
+      "molecules": [
+        "molecule.stepper",
+        "molecule.actionMenu"
+      ]
+    },
+    "events": {
+      "web": [
+        "onClose",
+        "onAction"
+      ],
+      "mobile": [
+        "onClose",
+        "onAction"
+      ],
+      "desktop": [
+        "onClose",
+        "onAction"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "divider",
+          "sticky",
+          "minimal",
+          "glass"
+        ],
+        "default": "divider"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "layout": {
+        "type": "enum",
+        "enum": [
+          "split",
+          "stack",
+          "compact"
+        ],
+        "default": "split"
+      },
+      "withSubtitle": {
+        "type": "boolean",
+        "default": false
+      },
+      "withClose": {
+        "type": "boolean",
+        "default": true
+      },
+      "withStepper": {
+        "type": "boolean",
+        "default": false
+      },
+      "actions": {
+        "type": "enum",
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "default": 1
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "sticky",
+      "with-stepper",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Close must be labeled.",
+        "Step indicator must have accessible current step.",
+        "Sticky header must respect safe-area on mobile."
+      ]
+    }
+  }
+}

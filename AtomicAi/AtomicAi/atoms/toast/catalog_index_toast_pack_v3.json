@@ -1,0 +1,32 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T10:59:44.421659+00:00",
+  "items": [
+    {
+      "id": "atom.toast",
+      "type": "atom",
+      "name": "Toast / Alert",
+      "tags": [
+        "ui",
+        "atom",
+        "toast",
+        "alert",
+        "notification",
+        "snackbar",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop",
+        "erp"
+      ],
+      "embeddingText": "Toast alert snackbar banner inline notification success error warning info actions progress stacking a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "toast_atom_manifest_v3.json",
+        "toast_variants_library_v3.json",
+        "catalog_index_toast_pack_v3.json"
+      ]
+    }
+  ]
+}

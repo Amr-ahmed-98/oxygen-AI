@@ -1,0 +1,158 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:29:29.303340+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "kbd",
+    "goal": "ThemeForest-grade KBD dataset for keyboard shortcuts and hints in ERP apps"
+  },
+  "component": {
+    "id": "atom.kbd",
+    "name": "KBD",
+    "type": "atom",
+    "aliases": [
+      "KeyboardHint",
+      "ShortcutKey",
+      "Hotkey"
+    ],
+    "description": "Keyboard hint pill supporting combos, sizes, platform glyphs (⌘, Ctrl), and inline usage with buttons/menus.",
+    "tags": [
+      "ui",
+      "atom",
+      "kbd",
+      "shortcut",
+      "keyboard",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "children": {
+        "type": "text|node",
+        "required": true
+      }
+    },
+    "events": {
+      "web": [],
+      "mobile": []
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "solid",
+          "soft",
+          "outline",
+          "minimal",
+          "glass"
+        ],
+        "default": "soft"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "info",
+          "success",
+          "warning",
+          "danger"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "xs",
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "sm"
+      },
+      "platform": {
+        "type": "enum",
+        "enum": [
+          "auto",
+          "mac",
+          "windows",
+          "linux"
+        ],
+        "default": "auto"
+      },
+      "combo": {
+        "type": "array",
+        "default": [
+          "Ctrl",
+          "K"
+        ],
+        "description": "e.g. ['Ctrl','K'] or ['⌘','K']"
+      },
+      "monospace": {
+        "type": "boolean",
+        "default": true
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "inline",
+      "combo",
+      "mac",
+      "windows",
+      "dark"
+    ],
+    "a11y": {
+      "requirements": [
+        "KBD is informational; ensure it is readable and does not rely on color only.",
+        "Use semantic <kbd> element on web when possible.",
+        "For screen readers, expand symbols (⌘ as Command) when needed."
+      ]
+    }
+  }
+}

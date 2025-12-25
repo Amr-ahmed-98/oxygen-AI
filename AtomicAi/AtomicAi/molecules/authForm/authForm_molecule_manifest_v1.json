@@ -1,0 +1,174 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T15:38:28.881624+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "auth-form",
+    "goal": "Login/Register/Forgot forms with states + SSO + validation"
+  },
+  "component": {
+    "id": "molecule.authForm",
+    "name": "Auth Form",
+    "type": "molecule",
+    "aliases": [
+      "LoginForm",
+      "RegisterForm",
+      "ForgotPasswordForm"
+    ],
+    "description": "Auth form body: fields, submit, SSO buttons, validation, loading/error, remember me.",
+    "tags": [
+      "ui",
+      "molecule",
+      "auth",
+      "login",
+      "register",
+      "forgot",
+      "iam",
+      "sso",
+      "mfa",
+      "erp",
+      "saas",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.textField",
+        "atom.passwordField",
+        "atom.button",
+        "atom.checkbox",
+        "atom.link",
+        "atom.helperText"
+      ],
+      "molecules": [
+        "molecule.toast",
+        "molecule.alertInline",
+        "molecule.otpCodeInputRow",
+        "molecule.passwordStrengthRow"
+      ]
+    },
+    "events": {
+      "web": [
+        "onSubmit",
+        "onSSO",
+        "onForgot",
+        "onToggleRemember"
+      ],
+      "mobile": [
+        "onSubmit",
+        "onSSO",
+        "onForgot",
+        "onToggleRemember"
+      ],
+      "desktop": [
+        "onSubmit",
+        "onSSO",
+        "onForgot",
+        "onToggleRemember"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "login",
+          "register",
+          "forgot",
+          "reset",
+          "invite"
+        ],
+        "default": "login"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "compact"
+      },
+      "withSSO": {
+        "type": "boolean",
+        "default": true
+      },
+      "withRememberMe": {
+        "type": "boolean",
+        "default": true
+      },
+      "withCaptcha": {
+        "type": "boolean",
+        "default": false
+      },
+      "state": {
+        "type": "enum",
+        "enum": [
+          "ready",
+          "loading",
+          "error",
+          "locked"
+        ],
+        "default": "ready"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "ready",
+      "loading",
+      "error",
+      "locked",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Inputs must have labels.",
+        "Error summary must be announced.",
+        "Submit button must have aria-busy when loading."
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:08:57.706124+00:00",
+  "items": [
+    {
+      "id": "atom.switch",
+      "type": "atom",
+      "name": "Switch / Toggle",
+      "tags": [
+        "ui",
+        "atom",
+        "switch",
+        "toggle",
+        "settings",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Switch toggle settings feature flag checkbox role switch rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "switch_atom_manifest_v4.json",
+        "switch_variants_library_v4.json",
+        "catalog_index_switch_pack_v4.json"
+      ]
+    }
+  ]
+}

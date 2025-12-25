@@ -1,0 +1,187 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T17:17:07.950609+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "search-bar",
+    "goal": "ThemeForest-grade SearchBar molecule (search + filters + actions)"
+  },
+  "component": {
+    "id": "molecule.searchBar",
+    "name": "Search Bar",
+    "type": "molecule",
+    "aliases": [
+      "SearchHeader",
+      "SearchToolbar",
+      "QueryBar"
+    ],
+    "description": "Search input with optional filter button, clear, scope selector, and submit action—optimized for dashboards.",
+    "tags": [
+      "ui",
+      "molecule",
+      "search",
+      "filters",
+      "toolbar",
+      "dashboard",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.searchInput",
+        "atom.button",
+        "atom.iconButton",
+        "atom.badge"
+      ],
+      "optional": [
+        "atom.select",
+        "atom.tooltip"
+      ]
+    },
+    "events": {
+      "web": [
+        "onQueryChange",
+        "onSubmit",
+        "onOpenFilters"
+      ],
+      "mobile": [
+        "onQueryChange",
+        "onSubmit"
+      ],
+      "desktop": [
+        "onQueryChange",
+        "onSubmit",
+        "onOpenFilters"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "flat",
+          "card",
+          "inline",
+          "glass"
+        ],
+        "default": "card"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "info",
+          "success",
+          "warning",
+          "danger"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "comfortable"
+      },
+      "withScope": {
+        "type": "boolean",
+        "default": false
+      },
+      "withFilters": {
+        "type": "boolean",
+        "default": true
+      },
+      "withSubmit": {
+        "type": "boolean",
+        "default": false
+      },
+      "withHotkeysHint": {
+        "type": "boolean",
+        "default": false
+      },
+      "layout": {
+        "type": "enum",
+        "enum": [
+          "left",
+          "center",
+          "split"
+        ],
+        "default": "left"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "compact",
+      "with-filters",
+      "with-scope",
+      "with-submit",
+      "hotkeys",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Search input should have type=search and aria-label.",
+        "Filter button must be labeled.",
+        "Hotkey hints must not be the only way to discover actions."
+      ]
+    }
+  }
+}

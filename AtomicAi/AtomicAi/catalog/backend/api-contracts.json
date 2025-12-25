@@ -1,0 +1,77 @@
+{
+  "version": "1.0.0",
+  "description": "Standard API contracts for all entities",
+  "rest": {
+    "basePath": "/api",
+    "entities": {
+      "defaultEndpoints": {
+        "list": {
+          "method": "GET",
+          "path": "/{entity}"
+        },
+        "detail": {
+          "method": "GET",
+          "path": "/{entity}/{id}"
+        },
+        "create": {
+          "method": "POST",
+          "path": "/{entity}"
+        },
+        "update": {
+          "method": "PATCH",
+          "path": "/{entity}/{id}"
+        },
+        "delete": {
+          "method": "DELETE",
+          "path": "/{entity}/{id}"
+        }
+      },
+      "extras": {
+        "bulkUpdate": {
+          "method": "POST",
+          "path": "/{entity}/bulk"
+        },
+        "import": {
+          "method": "POST",
+          "path": "/{entity}/import"
+        },
+        "export": {
+          "method": "GET",
+          "path": "/{entity}/export"
+        }
+      }
+    }
+  },
+  "responseShapes": {
+    "listResponse": {
+      "data": "array",
+      "meta": {
+        "page": "number",
+        "pageSize": "number",
+        "total": "number",
+        "hasNext": "boolean"
+      }
+    },
+    "detailResponse": {
+      "data": "object"
+    },
+    "mutationResponse": {
+      "data": "object"
+    },
+    "errorResponse": {
+      "error": {
+        "code": "string",
+        "message": "string",
+        "details": "object"
+      }
+    }
+  },
+  "conventions": {
+    "idField": "id",
+    "tenantField": "tenantId",
+    "softDelete": true,
+    "timestamps": ["createdAt", "updatedAt"],
+    "audit": true
+  }
+}
+

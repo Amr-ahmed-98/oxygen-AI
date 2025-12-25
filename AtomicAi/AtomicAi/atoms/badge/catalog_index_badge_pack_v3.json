@@ -1,0 +1,34 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T10:59:44.421659+00:00",
+  "items": [
+    {
+      "id": "atom.badge",
+      "type": "atom",
+      "name": "Badge / Tag / Chip",
+      "tags": [
+        "ui",
+        "atom",
+        "badge",
+        "tag",
+        "chip",
+        "status",
+        "filters",
+        "erp",
+        "saas",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Badge tag chip status pill filter chip removable selectable counter avatar category label rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "badge_atom_manifest_v3.json",
+        "badge_variants_library_v3.json",
+        "catalog_index_badge_pack_v3.json"
+      ]
+    }
+  ]
+}

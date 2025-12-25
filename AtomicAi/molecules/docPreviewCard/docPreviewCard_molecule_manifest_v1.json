@@ -1,0 +1,171 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T13:40:51.189135+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "doc-preview-card",
+    "goal": "Document preview card for pdf/doc with metadata and actions"
+  },
+  "component": {
+    "id": "molecule.docPreviewCard",
+    "name": "Doc Preview Card",
+    "type": "molecule",
+    "aliases": [
+      "DocumentCard",
+      "FilePreviewCard",
+      "PdfPreviewCard"
+    ],
+    "description": "Card showing file icon/thumbnail, title, meta (size/date/type), and actions (open/download).",
+    "tags": [
+      "ui",
+      "molecule",
+      "documents",
+      "preview",
+      "pdf",
+      "files",
+      "card",
+      "cms",
+      "helpdesk",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.icon",
+        "atom.text",
+        "atom.badge",
+        "atom.button"
+      ],
+      "molecules": [
+        "molecule.contextMenu",
+        "molecule.popoverCard"
+      ]
+    },
+    "events": {
+      "web": [
+        "onOpen",
+        "onDownload",
+        "onShare",
+        "onMore"
+      ],
+      "mobile": [
+        "onOpen",
+        "onDownload",
+        "onShare",
+        "onMore"
+      ],
+      "desktop": [
+        "onOpen",
+        "onDownload",
+        "onShare",
+        "onMore"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "card",
+          "row",
+          "compact",
+          "grid"
+        ],
+        "default": "card"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "withThumbnail": {
+        "type": "boolean",
+        "default": true
+      },
+      "withMeta": {
+        "type": "boolean",
+        "default": true
+      },
+      "withActions": {
+        "type": "boolean",
+        "default": true
+      },
+      "withShare": {
+        "type": "boolean",
+        "default": false
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "info",
+          "success",
+          "warning"
+        ],
+        "default": "neutral"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "hover",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Card actions must be labeled.",
+        "If thumbnail is decorative mark it so.",
+        "Ensure focus ring visible on card."
+      ]
+    }
+  }
+}

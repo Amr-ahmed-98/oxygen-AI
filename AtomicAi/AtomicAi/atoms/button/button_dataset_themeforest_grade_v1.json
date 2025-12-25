@@ -1,0 +1,759 @@
+{
+  "datasetVersion": "1.0.0",
+  "generatedAt": "2025-12-23T19:19:34.207691+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "button",
+    "goal": "ThemeForest-grade, multi-platform, style-engine-agnostic Button dataset for AI retrieval + deterministic builders",
+    "notes": [
+      "This dataset describes one component (Button) with exhaustive metadata, variants, states, tokens, accessibility rules, and code templates.",
+      "It is language/framework-agnostic via adapters + templates. You can extend 'codeTemplates' with more targets as needed."
+    ]
+  },
+  "component": {
+    "id": "atom.button",
+    "name": "Button",
+    "type": "atom",
+    "aliases": [
+      "CTA",
+      "ActionButton",
+      "PrimaryAction",
+      "IconButton",
+      "SubmitButton",
+      "LinkButton",
+      "ToggleButton",
+      "SplitButton"
+    ],
+    "description": "Universal action control supporting clicks/press, navigation, loading/disabled states, icons, toggles, menus, and analytics hooks.",
+    "tags": [
+      "ui",
+      "atom",
+      "button",
+      "cta",
+      "action",
+      "navigation",
+      "form",
+      "submit",
+      "accessibility",
+      "rtl",
+      "themeable",
+      "tokens",
+      "enterprise",
+      "saas",
+      "erp",
+      "mobile",
+      "desktop",
+      "web",
+      "performance",
+      "security"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "nuxt",
+        "svelte",
+        "sveltekit",
+        "angular",
+        "solid",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "qt-qml"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "vanilla-css",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      },
+      "formContexts": [
+        "submit",
+        "reset",
+        "button"
+      ],
+      "inputMethods": [
+        "mouse",
+        "touch",
+        "keyboard",
+        "pen",
+        "screen-reader"
+      ]
+    },
+    "slots": {
+      "children": {
+        "type": "text|node",
+        "required": false,
+        "description": "Button label/content. Required unless iconOnly=true and ariaLabel provided."
+      },
+      "startIcon": {
+        "type": "icon|node",
+        "required": false,
+        "description": "Leading icon (LTR) / trailing in RTL if autoFlip=true."
+      },
+      "endIcon": {
+        "type": "icon|node",
+        "required": false,
+        "description": "Trailing icon (LTR) / leading in RTL if autoFlip=true."
+      },
+      "badge": {
+        "type": "badge|node",
+        "required": false,
+        "description": "Optional badge/chip counter attached to button."
+      },
+      "loader": {
+        "type": "spinner|node",
+        "required": false,
+        "description": "Loader shown in loading state; defaults to Spinner atom."
+      }
+    },
+    "events": {
+      "web": [
+        "onClick",
+        "onKeyDown",
+        "onKeyUp",
+        "onFocus",
+        "onBlur",
+        "onPointerEnter",
+        "onPointerLeave"
+      ],
+      "mobile": [
+        "onPress",
+        "onLongPress",
+        "onPressIn",
+        "onPressOut",
+        "onFocus",
+        "onBlur"
+      ],
+      "analytics": [
+        "onTrack"
+      ]
+    },
+    "props": {
+      "as": {
+        "type": "enum",
+        "enum": [
+          "button",
+          "a",
+          "routerLink"
+        ],
+        "default": "button",
+        "description": "Render as native <button>, <a>, or framework router link component."
+      },
+      "type": {
+        "type": "enum",
+        "enum": [
+          "button",
+          "submit",
+          "reset"
+        ],
+        "default": "button",
+        "description": "HTML button type (web only; ignored for links)."
+      },
+      "href": {
+        "type": "string",
+        "default": "",
+        "description": "When as='a' or as='routerLink', destination URL/path."
+      },
+      "target": {
+        "type": "enum",
+        "enum": [
+          "_self",
+          "_blank",
+          "_parent",
+          "_top"
+        ],
+        "default": "_self",
+        "description": "Link target for as='a'."
+      },
+      "rel": {
+        "type": "string",
+        "default": "",
+        "description": "Link rel attribute. If target='_blank', enforce 'noopener noreferrer'."
+      },
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "solid",
+          "outline",
+          "ghost",
+          "soft",
+          "link"
+        ],
+        "default": "solid",
+        "description": "Visual treatment."
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "primary",
+          "neutral",
+          "success",
+          "warning",
+          "danger",
+          "info"
+        ],
+        "default": "primary",
+        "description": "Semantic intent."
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ],
+        "default": "md",
+        "description": "Sizing scale."
+      },
+      "shape": {
+        "type": "enum",
+        "enum": [
+          "rounded",
+          "pill",
+          "square"
+        ],
+        "default": "rounded",
+        "description": "Corner shape."
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "comfortable",
+        "description": "Padding density; useful for ERP tables/toolbars."
+      },
+      "fullWidth": {
+        "type": "boolean",
+        "default": false,
+        "description": "Stretch to container width."
+      },
+      "iconOnly": {
+        "type": "boolean",
+        "default": false,
+        "description": "Button contains only an icon; requires ariaLabel."
+      },
+      "autoFlip": {
+        "type": "boolean",
+        "default": true,
+        "description": "Auto-swap start/end icons in RTL."
+      },
+      "loading": {
+        "type": "boolean",
+        "default": false,
+        "description": "Shows loader and disables interaction."
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": false,
+        "description": "Disables interaction."
+      },
+      "pressed": {
+        "type": "boolean",
+        "default": false,
+        "description": "Toggle state; use aria-pressed when true/false and role is button."
+      },
+      "selected": {
+        "type": "boolean",
+        "default": false,
+        "description": "Selection state for segmented/tabs-like usage."
+      },
+      "expanded": {
+        "type": "boolean",
+        "default": false,
+        "description": "Menu button expanded state; use aria-expanded."
+      },
+      "ariaLabel": {
+        "type": "string",
+        "default": "",
+        "description": "Accessible label. Required when iconOnly=true or children is not plain text."
+      },
+      "ariaControls": {
+        "type": "string",
+        "default": "",
+        "description": "ID of controlled element for menu/dialog."
+      },
+      "ariaDescribedBy": {
+        "type": "string",
+        "default": "",
+        "description": "ID(s) of describing element(s)."
+      },
+      "tabIndex": {
+        "type": "number",
+        "default": 0,
+        "description": "Tab order control."
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": "",
+        "description": "Testing hook attribute."
+      },
+      "trackingId": {
+        "type": "string",
+        "default": "",
+        "description": "Analytics identifier."
+      },
+      "hotkey": {
+        "type": "string",
+        "default": "",
+        "description": "Keyboard shortcut hint, e.g. 'Ctrl+K'. Desktop/web optional."
+      }
+    },
+    "states": [
+      "default",
+      "hover",
+      "active",
+      "focusVisible",
+      "disabled",
+      "loading",
+      "pressed",
+      "selected",
+      "expanded"
+    ],
+    "a11y": {
+      "requirements": [
+        "Use <button> for actions; use <a> only for navigation.",
+        "If iconOnly=true then ariaLabel must be non-empty.",
+        "If pressed is used, set aria-pressed=true/false.",
+        "If expanded is used, set aria-expanded and aria-controls.",
+        "Ensure focus-visible ring is present and meets contrast guidelines.",
+        "Touch target minimum 44px on mobile (or equivalent dp)."
+      ],
+      "keyboard": {
+        "web": [
+          "Enter/Space activates when as=button",
+          "Enter activates link when as=a",
+          "Escape should close menus if button controls a menu (handled by parent)"
+        ],
+        "desktop": [
+          "Support hotkey hint; actual hotkey binding usually in app layer"
+        ]
+      },
+      "contrast": {
+        "default": "Aim for WCAG AA contrast for text/icons vs background.",
+        "highContrastMode": "Provide high-contrast token overrides."
+      }
+    },
+    "security": {
+      "linkSafety": [
+        "If target=_blank, force rel to include 'noopener noreferrer'.",
+        "Optionally validate href against allowlist in enterprise deployments."
+      ]
+    }
+  },
+  "designTokens": {
+    "namespace": "btn",
+    "strategy": "semantic tokens -> css variables -> adapters (tailwind/native/etc)",
+    "baseTokens": {
+      "--btn-radius": "var(--radius-md)",
+      "--btn-font-size": "var(--font-md)",
+      "--btn-font-weight": "600",
+      "--btn-gap": "8px",
+      "--btn-padding-x": "12px",
+      "--btn-padding-y": "10px",
+      "--btn-border-width": "1px",
+      "--btn-shadow": "none",
+      "--btn-focus-ring": "var(--focus-ring)",
+      "--btn-disabled-opacity": "0.6",
+      "--btn-transition": "background 160ms ease, color 160ms ease, border-color 160ms ease, box-shadow 160ms ease, transform 80ms ease"
+    },
+    "semanticByTone": {
+      "primary": {
+        "bg": "var(--primary-600)",
+        "fg": "#fff",
+        "border": "var(--primary-600)"
+      },
+      "neutral": {
+        "bg": "var(--neutral-200)",
+        "fg": "var(--color-fg)",
+        "border": "var(--neutral-300)"
+      },
+      "success": {
+        "bg": "var(--success-600)",
+        "fg": "#fff",
+        "border": "var(--success-600)"
+      },
+      "warning": {
+        "bg": "var(--warning-600)",
+        "fg": "#fff",
+        "border": "var(--warning-600)"
+      },
+      "danger": {
+        "bg": "var(--danger-600)",
+        "fg": "#fff",
+        "border": "var(--danger-600)"
+      },
+      "info": {
+        "bg": "var(--info-600, var(--primary-600))",
+        "fg": "#fff",
+        "border": "var(--info-600, var(--primary-600))"
+      }
+    },
+    "variantRules": {
+      "solid": {
+        "uses": [
+          "bg",
+          "fg",
+          "border"
+        ],
+        "hoverDelta": "darken(4%)",
+        "activeDelta": "darken(7%)"
+      },
+      "soft": {
+        "bgAlpha": "0.12",
+        "borderAlpha": "0.20",
+        "fg": "tone.bg",
+        "hoverDelta": "alpha(+0.03)",
+        "activeDelta": "alpha(+0.05)"
+      },
+      "outline": {
+        "bg": "transparent",
+        "fg": "tone.bg",
+        "border": "tone.border",
+        "hoverBg": "tone.bg@0.08"
+      },
+      "ghost": {
+        "bg": "transparent",
+        "fg": "tone.bg",
+        "border": "transparent",
+        "hoverBg": "tone.bg@0.08"
+      },
+      "link": {
+        "bg": "transparent",
+        "fg": "tone.bg",
+        "border": "transparent",
+        "textDecoration": "underline"
+      }
+    },
+    "sizeScale": {
+      "xs": {
+        "px": "8px",
+        "py": "6px",
+        "font": "12px",
+        "minH": "28px"
+      },
+      "sm": {
+        "px": "10px",
+        "py": "8px",
+        "font": "13px",
+        "minH": "34px"
+      },
+      "md": {
+        "px": "12px",
+        "py": "10px",
+        "font": "14px",
+        "minH": "40px"
+      },
+      "lg": {
+        "px": "14px",
+        "py": "12px",
+        "font": "16px",
+        "minH": "46px"
+      },
+      "xl": {
+        "px": "16px",
+        "py": "14px",
+        "font": "18px",
+        "minH": "52px"
+      }
+    },
+    "shapeScale": {
+      "rounded": "var(--radius-md)",
+      "pill": "999px",
+      "square": "6px"
+    }
+  },
+  "personas": [
+    {
+      "id": "persona.enterprise",
+      "name": "Enterprise",
+      "notes": "Conservative, high readability, subtle shadows, strong focus rings",
+      "tokenOverrides": {
+        "--btn-shadow": "0 1px 0 rgba(15,23,42,0.06)",
+        "--btn-font-weight": "650"
+      }
+    },
+    {
+      "id": "persona.minimal",
+      "name": "Minimal",
+      "notes": "Flat, low-noise",
+      "tokenOverrides": {
+        "--btn-shadow": "none",
+        "--btn-border-width": "1px"
+      }
+    },
+    {
+      "id": "persona.glass",
+      "name": "Glass",
+      "notes": "Glassmorphism vibes",
+      "tokenOverrides": {
+        "--btn-shadow": "0 10px 30px rgba(0,0,0,0.10)",
+        "--btn-border-width": "1px"
+      }
+    },
+    {
+      "id": "persona.neon",
+      "name": "Neon",
+      "notes": "Cyber/neon accent with stronger glow focus",
+      "tokenOverrides": {
+        "--btn-focus-ring": "0 0 0 3px rgba(168,85,247,0.35)"
+      }
+    },
+    {
+      "id": "persona.gov",
+      "name": "Gov / On-prem",
+      "notes": "High contrast, clear borders",
+      "tokenOverrides": {
+        "--btn-border-width": "2px",
+        "--btn-shadow": "none"
+      }
+    }
+  ],
+  "platformMappings": {
+    "web": {
+      "preferred": "<button> for actions; <a> for navigation",
+      "implementationNotes": [
+        "Use focus-visible, not focus, for rings.",
+        "Ensure disabled links are rendered as <button> or prevent default + aria-disabled."
+      ],
+      "propsMap": {
+        "onPress": "onClick",
+        "accessibilityLabel": "aria-label",
+        "testID": "data-testid"
+      }
+    },
+    "mobile": {
+      "preferred": "Pressable (React Native) or Gesture handler button",
+      "implementationNotes": [
+        "Enforce minimum touch target (44px).",
+        "Use accessibilityRole='button'.",
+        "For links, use navigation actions rather than href."
+      ],
+      "propsMap": {
+        "onClick": "onPress",
+        "ariaLabel": "accessibilityLabel",
+        "disabled": "disabled"
+      },
+      "fallbacks": {
+        "variant:link": "use Pressable with text style + underline",
+        "hover": "not available; approximate with pressIn"
+      }
+    },
+    "desktop": {
+      "preferred": "Reuse web button in Electron/Tauri; optionally add native menu integration",
+      "implementationNotes": [
+        "Support keyboard shortcuts hint display (hotkey prop).",
+        "Consider right-click context menu integration at app layer."
+      ]
+    }
+  },
+  "styleAdapters": {
+    "css-vars": {
+      "description": "Default. Uses class names + CSS variables tokens.",
+      "assets": [
+        "btn.css"
+      ],
+      "recommendedFor": [
+        "multi-theme",
+        "design-token driven systems"
+      ]
+    },
+    "tailwind": {
+      "description": "Maps recipe tokens to tailwind utility classes (optionally via cn()).",
+      "notes": [
+        "Prefer semantic class maps so tokens can still drive colors via tailwind config."
+      ]
+    },
+    "css-modules": {
+      "description": "Maps recipe keys to local scoped CSS module classes.",
+      "notes": [
+        "Generate .module.css alongside component."
+      ]
+    },
+    "styled-components": {
+      "description": "Uses styled wrappers; tokens applied via theme + css vars.",
+      "notes": [
+        "Still keep css vars as source-of-truth."
+      ]
+    },
+    "nativewind": {
+      "description": "Tailwind-like classes for React Native; keep same variant/tone/size API.",
+      "notes": [
+        "For typography/spacing, mirror token scale."
+      ]
+    }
+  },
+  "codeTemplates": {
+    "react_tsx_cssvars": {
+      "language": "TypeScript",
+      "target": "React",
+      "styleEngine": "css-vars",
+      "fileHints": [
+        "Button.tsx",
+        "btn.css"
+      ],
+      "template": "// Button.tsx (React + TS) - css-vars engine\nimport React from \"react\";\nimport \"./btn.css\";\n\ntype Variant = \"solid\"|\"outline\"|\"ghost\"|\"soft\"|\"link\";\ntype Tone = \"primary\"|\"neutral\"|\"success\"|\"warning\"|\"danger\"|\"info\";\ntype Size = \"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\";\ntype Shape = \"rounded\"|\"pill\"|\"square\";\n\nexport type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {\n  as?: \"button\"|\"a\";\n  href?: string;\n  variant?: Variant;\n  tone?: Tone;\n  size?: Size;\n  shape?: Shape;\n  fullWidth?: boolean;\n  loading?: boolean;\n  iconOnly?: boolean;\n  ariaLabel?: string;\n  trackingId?: string;\n};\n\nexport function Button({\n  as=\"button\",\n  href,\n  variant=\"solid\",\n  tone=\"primary\",\n  size=\"md\",\n  shape=\"rounded\",\n  fullWidth=false,\n  loading=false,\n  disabled=false,\n  iconOnly=false,\n  ariaLabel,\n  trackingId,\n  children,\n  ...rest\n}: ButtonProps){\n  const isDisabled = disabled || loading;\n  const cls = [\n    \"btn\",\n    `btn--${variant}`,\n    `btn--${tone}`,\n    `btn--${size}`,\n    `btn--${shape}`,\n    fullWidth ? \"btn--full\" : \"\",\n    isDisabled ? \"btn--disabled\" : \"\",\n    loading ? \"btn--loading\" : \"\",\n    iconOnly ? \"btn--iconOnly\" : \"\"\n  ].filter(Boolean).join(\" \");\n\n  if(iconOnly && !ariaLabel){\n    console.warn(\"Button: ariaLabel is required when iconOnly=true\");\n  }\n\n  if(as === \"a\"){\n    const rel = (rest as any).target === \"_blank\"\n      ? `${((rest as any).rel || \"\")} noopener noreferrer`.trim()\n      : (rest as any).rel;\n    return (\n      <a\n        href={href || \"#\"}\n        className={cls}\n        aria-label={ariaLabel}\n        aria-disabled={isDisabled ? \"true\" : undefined}\n        data-tracking-id={trackingId || undefined}\n        rel={rel}\n        onClick={(e) => { if(isDisabled) e.preventDefault(); (rest as any).onClick?.(e); }}\n        {...(rest as any)}\n      >\n        {loading ? <span className=\"btn__loader\" aria-hidden=\"true\" /> : null}\n        <span className=\"btn__content\">{children}</span>\n      </a>\n    );\n  }\n\n  return (\n    <button\n      type={(rest as any).type || \"button\"}\n      className={cls}\n      disabled={isDisabled}\n      aria-busy={loading ? \"true\" : undefined}\n      aria-label={ariaLabel}\n      data-tracking-id={trackingId || undefined}\n      {...rest}\n    >\n      {loading ? <span className=\"btn__loader\" aria-hidden=\"true\" /> : null}\n      <span className=\"btn__content\">{children}</span>\n    </button>\n  );\n}\n"
+    },
+    "vue_sfc": {
+      "language": "TypeScript",
+      "target": "Vue 3",
+      "styleEngine": "css-vars",
+      "fileHints": [
+        "Button.vue",
+        "btn.css"
+      ],
+      "template": "<!-- Button.vue (Vue 3 + TS) - css-vars engine -->\n<script setup lang=\"ts\">\ntype Variant = \"solid\"|\"outline\"|\"ghost\"|\"soft\"|\"link\";\ntype Tone = \"primary\"|\"neutral\"|\"success\"|\"warning\"|\"danger\"|\"info\";\ntype Size = \"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\";\ntype Shape = \"rounded\"|\"pill\"|\"square\";\n\nconst props = withDefaults(defineProps<{\n  as?: \"button\"|\"a\";\n  href?: string;\n  variant?: Variant;\n  tone?: Tone;\n  size?: Size;\n  shape?: Shape;\n  fullWidth?: boolean;\n  loading?: boolean;\n  disabled?: boolean;\n  iconOnly?: boolean;\n  ariaLabel?: string;\n}>(), {\n  as: \"button\",\n  variant: \"solid\",\n  tone: \"primary\",\n  size: \"md\",\n  shape: \"rounded\",\n  fullWidth: false,\n  loading: false,\n  disabled: false,\n  iconOnly: false\n});\n\nconst cls = computed(() => [\n  \"btn\",\n  `btn--${props.variant}`,\n  `btn--${props.tone}`,\n  `btn--${props.size}`,\n  `btn--${props.shape}`,\n  props.fullWidth ? \"btn--full\" : \"\",\n  (props.disabled || props.loading) ? \"btn--disabled\" : \"\",\n  props.loading ? \"btn--loading\" : \"\",\n  props.iconOnly ? \"btn--iconOnly\" : \"\"\n].filter(Boolean).join(\" \"));\n</script>\n\n<template>\n  <component\n    :is=\"props.as\"\n    :href=\"props.as==='a' ? (props.href || '#') : undefined\"\n    :class=\"cls\"\n    :disabled=\"props.as==='button' ? (props.disabled || props.loading) : undefined\"\n    :aria-label=\"props.ariaLabel\"\n    :aria-busy=\"props.loading ? 'true' : undefined\"\n    :aria-disabled=\"props.as==='a' && (props.disabled || props.loading) ? 'true' : undefined\"\n  >\n    <span v-if=\"props.loading\" class=\"btn__loader\" aria-hidden=\"true\"></span>\n    <span class=\"btn__content\"><slot /></span>\n  </component>\n</template>\n\n<style scoped src=\"./btn.css\"></style>\n"
+    },
+    "react_native_expo_nativewind": {
+      "language": "TypeScript",
+      "target": "React Native (Expo)",
+      "styleEngine": "nativewind",
+      "fileHints": [
+        "Button.tsx"
+      ],
+      "template": "// Button.tsx (React Native + NativeWind)\nimport React from \"react\";\nimport { Pressable, Text, View } from \"react-native\";\n\ntype Variant = \"solid\"|\"outline\"|\"ghost\"|\"soft\"|\"link\";\ntype Tone = \"primary\"|\"neutral\"|\"success\"|\"warning\"|\"danger\"|\"info\";\ntype Size = \"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\";\n\nconst sizeMap: Record<Size, string> = {\n  xs: \"px-2 py-1 text-xs min-h-[28px]\",\n  sm: \"px-2.5 py-2 text-sm min-h-[34px]\",\n  md: \"px-3 py-2.5 text-sm min-h-[40px]\",\n  lg: \"px-3.5 py-3 text-base min-h-[46px]\",\n  xl: \"px-4 py-3.5 text-lg min-h-[52px]\"\n};\n\n// You can route tone colors through NativeWind theme config.\nconst toneMap: Record<Tone, {bg:string; fg:string; border:string}> = {\n  primary: { bg: \"bg-blue-600\", fg: \"text-white\", border: \"border-blue-600\" },\n  neutral: { bg: \"bg-zinc-200\", fg: \"text-zinc-900\", border: \"border-zinc-300\" },\n  success: { bg: \"bg-green-600\", fg: \"text-white\", border: \"border-green-600\" },\n  warning: { bg: \"bg-amber-600\", fg: \"text-white\", border: \"border-amber-600\" },\n  danger:  { bg: \"bg-red-600\", fg: \"text-white\", border: \"border-red-600\" },\n  info:    { bg: \"bg-sky-600\", fg: \"text-white\", border: \"border-sky-600\" }\n};\n\nexport function Button({\n  variant=\"solid\",\n  tone=\"primary\",\n  size=\"md\",\n  fullWidth=false,\n  loading=false,\n  disabled=false,\n  accessibilityLabel,\n  children,\n  onPress\n}: {\n  variant?: Variant;\n  tone?: Tone;\n  size?: Size;\n  fullWidth?: boolean;\n  loading?: boolean;\n  disabled?: boolean;\n  accessibilityLabel?: string;\n  children?: React.ReactNode;\n  onPress?: () => void;\n}) {\n  const isDisabled = disabled || loading;\n  const toneCls = toneMap[tone];\n\n  const variantCls =\n    variant === \"solid\" ? `${toneCls.bg} ${toneCls.fg}` :\n    variant === \"outline\" ? `bg-transparent border ${toneCls.border} ${toneCls.fg.replace(\"text-white\",\"text-blue-600\")}` :\n    variant === \"link\" ? `bg-transparent ${toneCls.fg.replace(\"text-white\",\"text-blue-600\")} underline` :\n    variant === \"soft\" ? `bg-blue-600/10 ${toneCls.fg.replace(\"text-white\",\"text-blue-700\")}` :\n    `bg-transparent ${toneCls.fg.replace(\"text-white\",\"text-blue-700\")}`;\n\n  const cls = [\n    \"rounded-xl\",\n    \"items-center\",\n    \"justify-center\",\n    \"flex-row\",\n    \"gap-2\",\n    \"active:opacity-90\",\n    \"opacity-100\",\n    sizeMap[size],\n    variantCls,\n    fullWidth ? \"w-full\" : \"\",\n    isDisabled ? \"opacity-60\" : \"\"\n  ].filter(Boolean).join(\" \");\n\n  return (\n    <Pressable\n      className={cls}\n      disabled={isDisabled}\n      accessibilityRole=\"button\"\n      accessibilityLabel={accessibilityLabel}\n      onPress={onPress}\n    >\n      {loading ? <View className=\"w-4 h-4 rounded-full border border-white/60\" /> : null}\n      <Text className=\"font-semibold\">{children}</Text>\n    </Pressable>\n  );\n}\n"
+    },
+    "flutter_dart": {
+      "language": "Dart",
+      "target": "Flutter",
+      "styleEngine": "theme + tokens",
+      "fileHints": [
+        "button.dart"
+      ],
+      "template": "// button.dart (Flutter) - Theme-driven\nimport 'package:flutter/material.dart';\n\nenum BtnVariant { solid, outline, ghost, soft, link }\nenum BtnTone { primary, neutral, success, warning, danger, info }\nenum BtnSize { xs, sm, md, lg, xl }\n\nclass AtomButton extends StatelessWidget {\n  final BtnVariant variant;\n  final BtnTone tone;\n  final BtnSize size;\n  final bool fullWidth;\n  final bool loading;\n  final bool disabled;\n  final VoidCallback? onPressed;\n  final Widget child;\n\n  const AtomButton({\n    super.key,\n    this.variant = BtnVariant.solid,\n    this.tone = BtnTone.primary,\n    this.size = BtnSize.md,\n    this.fullWidth = false,\n    this.loading = false,\n    this.disabled = false,\n    required this.child,\n    this.onPressed,\n  });\n\n  @override\n  Widget build(BuildContext context) {\n    final isDisabled = disabled || loading;\n    final minH = switch(size){\n      BtnSize.xs => 28.0,\n      BtnSize.sm => 34.0,\n      BtnSize.md => 40.0,\n      BtnSize.lg => 46.0,\n      BtnSize.xl => 52.0,\n    };\n    final pad = switch(size){\n      BtnSize.xs => const EdgeInsets.symmetric(horizontal: 8, vertical: 6),\n      BtnSize.sm => const EdgeInsets.symmetric(horizontal: 10, vertical: 8),\n      BtnSize.md => const EdgeInsets.symmetric(horizontal: 12, vertical: 10),\n      BtnSize.lg => const EdgeInsets.symmetric(horizontal: 14, vertical: 12),\n      BtnSize.xl => const EdgeInsets.symmetric(horizontal: 16, vertical: 14),\n    };\n\n    // Map tones to your ThemeExtension or ColorScheme\n    final scheme = Theme.of(context).colorScheme;\n    final toneBg = switch(tone){\n      BtnTone.primary => scheme.primary,\n      BtnTone.neutral => scheme.surfaceVariant,\n      BtnTone.success => Colors.green,\n      BtnTone.warning => Colors.orange,\n      BtnTone.danger => Colors.red,\n      BtnTone.info => Colors.lightBlue,\n    };\n\n    ButtonStyle style;\n    switch(variant){\n      case BtnVariant.solid:\n        style = ElevatedButton.styleFrom(\n          backgroundColor: toneBg,\n          foregroundColor: Colors.white,\n          padding: pad,\n          minimumSize: Size(fullWidth ? double.infinity : 0, minH),\n          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),\n        );\n        break;\n      case BtnVariant.outline:\n        style = OutlinedButton.styleFrom(\n          foregroundColor: toneBg,\n          side: BorderSide(color: toneBg),\n          padding: pad,\n          minimumSize: Size(fullWidth ? double.infinity : 0, minH),\n          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),\n        );\n        break;\n      default:\n        style = TextButton.styleFrom(\n          foregroundColor: toneBg,\n          padding: pad,\n          minimumSize: Size(fullWidth ? double.infinity : 0, minH),\n        );\n    }\n\n    return SizedBox(\n      height: minH,\n      child: ElevatedButton(\n        style: style,\n        onPressed: isDisabled ? null : onPressed,\n        child: loading\n          ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2))\n          : child,\n      ),\n    );\n  }\n}\n"
+    }
+  },
+  "examples": [
+    {
+      "label": "Primary solid CTA",
+      "props": {
+        "variant": "solid",
+        "tone": "primary",
+        "size": "lg"
+      },
+      "content": {
+        "children": "Get Started"
+      },
+      "useCaseTags": [
+        "marketing",
+        "cta",
+        "landing"
+      ]
+    },
+    {
+      "label": "ERP toolbar compact neutral outline",
+      "props": {
+        "variant": "outline",
+        "tone": "neutral",
+        "size": "sm",
+        "density": "compact"
+      },
+      "content": {
+        "children": "Export"
+      },
+      "useCaseTags": [
+        "erp",
+        "toolbar",
+        "datatable"
+      ]
+    },
+    {
+      "label": "Icon-only menu button",
+      "props": {
+        "variant": "ghost",
+        "tone": "neutral",
+        "size": "md",
+        "iconOnly": true,
+        "ariaLabel": "Open menu",
+        "expanded": false
+      },
+      "content": {
+        "children": "<Icon name='menu'/>"
+      },
+      "useCaseTags": [
+        "navigation",
+        "icon-only",
+        "a11y"
+      ]
+    },
+    {
+      "label": "Danger soft confirm",
+      "props": {
+        "variant": "soft",
+        "tone": "danger",
+        "size": "md"
+      },
+      "content": {
+        "children": "Delete"
+      },
+      "useCaseTags": [
+        "destructive",
+        "confirmation"
+      ]
+    },
+    {
+      "label": "Link style button",
+      "props": {
+        "variant": "link",
+        "tone": "primary",
+        "size": "md",
+        "as": "a",
+        "href": "/docs"
+      },
+      "content": {
+        "children": "Read Docs"
+      },
+      "useCaseTags": [
+        "navigation",
+        "docs"
+      ]
+    }
+  ],
+  "retrievalHints": {
+    "embeddingText": [
+      "Button atom with variants solid outline ghost soft link",
+      "Supports loading disabled pressed expanded iconOnly fullWidth density compact",
+      "Works on web mobile desktop; React Next.js Vue Svelte Angular React Native Flutter",
+      "Tokens: css variables; personas enterprise minimal glass neon gov",
+      "Accessibility: aria-label for icon only, aria-pressed for toggle, focus-visible ring"
+    ],
+    "rankingSignals": {
+      "prefer": [
+        "a11yComplete",
+        "hasLoadingState",
+        "supportsRTL",
+        "hasPlatformFallbacks"
+      ],
+      "avoid": [
+        "missingAriaLabelRule",
+        "noFocusRing",
+        "hardCodedColorsWithoutTokens"
+      ]
+    }
+  }
+}

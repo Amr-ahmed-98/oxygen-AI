@@ -1,0 +1,178 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:23:10.317724+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "breadcrumb",
+    "goal": "ThemeForest-grade Breadcrumb dataset for app navigation and deep ERP paths"
+  },
+  "component": {
+    "id": "atom.breadcrumb",
+    "name": "Breadcrumb",
+    "type": "atom",
+    "aliases": [
+      "Breadcrumbs",
+      "PathNav",
+      "CrumbTrail",
+      "CompactBreadcrumb"
+    ],
+    "description": "Breadcrumb navigation supporting icons, separators, collapsible middle crumbs and current item styling.",
+    "tags": [
+      "ui",
+      "atom",
+      "breadcrumb",
+      "navigation",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "separator": {
+        "type": "icon|node",
+        "required": false
+      },
+      "itemIcon": {
+        "type": "icon|node",
+        "required": false
+      },
+      "menu": {
+        "type": "node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [
+        "onCrumbClick"
+      ],
+      "mobile": [
+        "onCrumbPress"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "text",
+          "pills",
+          "underline",
+          "soft",
+          "minimal"
+        ],
+        "default": "text"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "info",
+          "success",
+          "warning",
+          "danger"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "showIcons": {
+        "type": "boolean",
+        "default": false
+      },
+      "separatorStyle": {
+        "type": "enum",
+        "enum": [
+          "slash",
+          "chevron",
+          "dot",
+          "arrow",
+          "custom"
+        ],
+        "default": "chevron"
+      },
+      "collapseMiddle": {
+        "type": "boolean",
+        "default": false
+      },
+      "maxItems": {
+        "type": "number",
+        "default": 4
+      },
+      "currentIsLink": {
+        "type": "boolean",
+        "default": false
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": false
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "hover",
+      "focus",
+      "disabled",
+      "with-icons",
+      "collapsed",
+      "current"
+    ],
+    "a11y": {
+      "requirements": [
+        "Use nav aria-label='Breadcrumb' with ordered list; aria-current='page' on current crumb.",
+        "Collapse middle crumbs should be accessible via menu button with label.",
+        "RTL should flip chevron direction."
+      ]
+    }
+  }
+}

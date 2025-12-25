@@ -1,0 +1,164 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T15:38:28.881624+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "inline-edit-row",
+    "goal": "Inline edit pattern for lists/details with save/cancel"
+  },
+  "component": {
+    "id": "molecule.inlineEditRow",
+    "name": "Inline Edit Row",
+    "type": "molecule",
+    "aliases": [
+      "EditableRow",
+      "QuickEditRow"
+    ],
+    "description": "Inline edit row with display mode, edit mode, save/cancel, and validation state.",
+    "tags": [
+      "ui",
+      "molecule",
+      "inline-edit",
+      "lists",
+      "details",
+      "erp",
+      "crm",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.text",
+        "atom.iconButton",
+        "atom.button"
+      ],
+      "molecules": [
+        "molecule.confirmDialog",
+        "molecule.toast",
+        "molecule.formRow"
+      ]
+    },
+    "events": {
+      "web": [
+        "onEdit",
+        "onSave",
+        "onCancel"
+      ],
+      "mobile": [
+        "onEdit",
+        "onSave",
+        "onCancel"
+      ],
+      "desktop": [
+        "onEdit",
+        "onSave",
+        "onCancel"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "row",
+          "card",
+          "compact",
+          "with-history"
+        ],
+        "default": "row"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "compact"
+      },
+      "controlType": {
+        "type": "enum",
+        "enum": [
+          "text",
+          "number",
+          "select",
+          "date",
+          "status"
+        ],
+        "default": "text"
+      },
+      "state": {
+        "type": "enum",
+        "enum": [
+          "view",
+          "edit",
+          "saving",
+          "error"
+        ],
+        "default": "view"
+      },
+      "withUndo": {
+        "type": "boolean",
+        "default": false
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "view",
+      "edit",
+      "saving",
+      "error",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Edit controls must be labeled.",
+        "Save must announce saving.",
+        "Keyboard shortcuts optional."
+      ]
+    }
+  }
+}

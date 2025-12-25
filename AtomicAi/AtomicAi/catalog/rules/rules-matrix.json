@@ -1,0 +1,198 @@
+{
+  "$schema": "http://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "name": "Rules Matrix",
+  "description": "Rules for automatic feature/module selection based on Product Type × Delivery × Business Model × Platform × Vertical",
+  "rules": [
+    {
+      "id": "multi-tenant-saas",
+      "when": {
+        "delivery.mode": "multiTenantSaaS"
+      },
+      "apply": {
+        "features": ["tenantSwitcher", "orgBranding", "planLimitsUI", "tenantIsolation"],
+        "modulesAdd": ["core.tenants", "core.billing"],
+        "uiComponents": ["organism.workspaceSwitcher", "organism.tenantSettings"]
+      }
+    },
+    {
+      "id": "on-premise",
+      "when": {
+        "delivery.mode": "onPremise"
+      },
+      "apply": {
+        "features": ["licenseScreen", "backupRestoreUI", "localMonitoringUI", "offlineDocs"],
+        "constraints": ["noExternalCDN", "selfHostedAssets"],
+        "modulesAdd": ["core.license", "core.backup"],
+        "uiComponents": ["page.licenseActivation", "page.backupRestore"]
+      }
+    },
+    {
+      "id": "hybrid",
+      "when": {
+        "delivery.mode": "hybrid"
+      },
+      "apply": {
+        "features": ["syncQueue", "conflictResolution", "cloudBackup"],
+        "modulesAdd": ["core.sync"]
+      }
+    },
+    {
+      "id": "headless",
+      "when": {
+        "delivery.headless": true
+      },
+      "apply": {
+        "modulesAdd": ["core.apiKeys", "core.webhooks", "core.sdkDocs"],
+        "uiPatternsAdd": ["pattern.integrationCenter"],
+        "uiComponents": ["page.apiKeys", "page.webhooks", "page.sdkDocs"]
+      }
+    },
+    {
+      "id": "pwa",
+      "when": {
+        "delivery.pwa": true
+      },
+      "apply": {
+        "features": ["offlineCaching", "syncQueue", "installPrompt"],
+        "uiComponents": ["organism.offlineIndicator", "organism.syncStatus"]
+      }
+    },
+    {
+      "id": "desktop-app",
+      "when": {
+        "delivery.desktop": true
+      },
+      "apply": {
+        "features": ["keyboardShortcuts", "contextMenu", "nativeMenus", "fileSystem"],
+        "uiComponents": ["organism.commandPalette", "organism.contextMenu"]
+      }
+    },
+    {
+      "id": "mobile-platform",
+      "when": {
+        "app.platforms": {"$contains": "mobile"}
+      },
+      "apply": {
+        "uiOverrides": {
+          "listView": "cardList",
+          "filters": "bottomSheet",
+          "forms": "stepperWhenLong",
+          "navigation": "tabsOrDrawer"
+        },
+        "features": ["offlineQueue", "syncStatusUI", "pullToRefresh"],
+        "uiComponents": ["organism.bottomSheet", "organism.swipeActions"]
+      }
+    },
+    {
+      "id": "usage-based-billing",
+      "when": {
+        "businessModel.type": "usageBased"
+      },
+      "apply": {
+        "modulesAdd": ["core.usageMetering", "billing.metering"],
+        "features": ["usageDashboard", "quotaWarnings", "usageAlerts"],
+        "uiComponents": ["organism.usageDashboard", "organism.quotaIndicator"]
+      }
+    },
+    {
+      "id": "freemium",
+      "when": {
+        "businessModel.type": "freemium"
+      },
+      "apply": {
+        "features": ["paywall", "planComparison", "upgradePrompts"],
+        "uiComponents": ["organism.paywall", "organism.planComparison"]
+      }
+    },
+    {
+      "id": "subscription",
+      "when": {
+        "businessModel.billing": "subscription"
+      },
+      "apply": {
+        "modulesAdd": ["billing.subscriptions"],
+        "features": ["subscriptionManagement", "billingHistory", "cancelFlow"],
+        "uiComponents": ["organism.subscriptionManagement", "page.cancellationFlow"]
+      }
+    },
+    {
+      "id": "healthtech-vertical",
+      "when": {
+        "vertical": "HealthTech"
+      },
+      "apply": {
+        "modulesAdd": ["core.consent", "core.dataAccessLog", "core.hipaa"],
+        "constraints": ["strongAudit", "fieldMasking", "dataRetention", "accessLogging"],
+        "features": ["consentManagement", "auditTrail", "dataExport"],
+        "uiComponents": ["organism.consentManager", "organism.auditLogViewer"]
+      }
+    },
+    {
+      "id": "fintech-vertical",
+      "when": {
+        "vertical": "FinTech"
+      },
+      "apply": {
+        "modulesAdd": ["core.pci", "core.auditLogs"],
+        "constraints": ["strongAudit", "encryptionRequired", "compliance"],
+        "features": ["transactionLogging", "fraudDetectionUI"]
+      }
+    },
+    {
+      "id": "govtech-vertical",
+      "when": {
+        "vertical": "GovTech"
+      },
+      "apply": {
+        "modulesAdd": ["core.auditLogs", "core.compliance"],
+        "constraints": ["strongAudit", "dataRetention", "accessControl"],
+        "features": ["complianceReporting", "auditTrail"]
+      }
+    },
+    {
+      "id": "api-first",
+      "when": {
+        "delivery.platformMode": "apiFirst"
+      },
+      "apply": {
+        "modulesAdd": ["core.apiKeys", "core.webhooks", "core.sdkDocs"],
+        "uiPatternsAdd": ["pattern.integrationCenter"],
+        "features": ["apiExplorer", "webhookTesting", "sdkDownloads"]
+      }
+    },
+    {
+      "id": "workflow-automation",
+      "when": {
+        "delivery.platformMode": "workflowAutomation"
+      },
+      "apply": {
+        "modulesAdd": ["core.workflowBuilder", "core.automation"],
+        "uiPatternsAdd": ["pattern.workflowBuilder"],
+        "uiComponents": ["organism.workflowBuilder", "organism.ruleBuilder"]
+      }
+    },
+    {
+      "id": "low-code",
+      "when": {
+        "delivery.platformMode": "lowCode"
+      },
+      "apply": {
+        "modulesAdd": ["core.formBuilder", "core.pageBuilder"],
+        "uiPatternsAdd": ["pattern.formBuilder", "pattern.pageBuilder"],
+        "uiComponents": ["organism.formBuilder", "organism.pageBuilder"]
+      }
+    },
+    {
+      "id": "rtl-support",
+      "when": {
+        "app.locale.rtl": true
+      },
+      "apply": {
+        "features": ["rtlLayout", "rtlTypography", "rtlSpacing"],
+        "constraints": ["rtlSafe"]
+      }
+    }
+  ]
+}
+

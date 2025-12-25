@@ -1,0 +1,36 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-25T15:38:28.881624+00:00",
+  "items": [
+    {
+      "id": "molecule.authForm",
+      "type": "molecule",
+      "name": "Auth Form",
+      "tags": [
+        "ui",
+        "molecule",
+        "auth",
+        "login",
+        "register",
+        "forgot",
+        "iam",
+        "sso",
+        "mfa",
+        "erp",
+        "saas",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Auth Form ui molecule auth login register forgot iam sso mfa erp saas a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "authForm_molecule_manifest_v1.json",
+        "authForm_variants_library_v1.json",
+        "catalog_index_authForm_pack_v1.json"
+      ]
+    }
+  ]
+}

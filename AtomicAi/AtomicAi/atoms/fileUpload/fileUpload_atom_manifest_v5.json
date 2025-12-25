@@ -1,0 +1,208 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:29:29.303340+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "file-upload",
+    "goal": "ThemeForest-grade File Upload dataset for ERP attachments, drag/drop, validations"
+  },
+  "component": {
+    "id": "atom.fileUpload",
+    "name": "File Upload",
+    "type": "atom",
+    "aliases": [
+      "Upload",
+      "Dropzone",
+      "AttachmentUploader",
+      "FilePicker"
+    ],
+    "description": "File upload supporting button picker, drag/drop zone, multiple files, previews, progress, validation and error states.",
+    "tags": [
+      "ui",
+      "atom",
+      "upload",
+      "file",
+      "dropzone",
+      "attachments",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "label": {
+        "type": "text|node",
+        "required": false
+      },
+      "hint": {
+        "type": "text|node",
+        "required": false
+      },
+      "preview": {
+        "type": "node",
+        "required": false
+      },
+      "icon": {
+        "type": "icon|node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [
+        "onSelect",
+        "onDrop",
+        "onRemove",
+        "onRetry"
+      ],
+      "mobile": [
+        "onSelect",
+        "onRemove"
+      ],
+      "desktop": [
+        "onSelect",
+        "onDrop"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "button",
+          "dropzone",
+          "inline",
+          "minimal",
+          "card"
+        ],
+        "default": "dropzone"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "info",
+          "success",
+          "warning",
+          "danger"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "multiple": {
+        "type": "boolean",
+        "default": true
+      },
+      "accept": {
+        "type": "string",
+        "default": "*/*"
+      },
+      "maxFiles": {
+        "type": "number",
+        "default": 10
+      },
+      "maxSizeMB": {
+        "type": "number",
+        "default": 25
+      },
+      "showPreview": {
+        "type": "boolean",
+        "default": true
+      },
+      "showProgress": {
+        "type": "boolean",
+        "default": true
+      },
+      "state": {
+        "type": "enum",
+        "enum": [
+          "idle",
+          "dragging",
+          "uploading",
+          "success",
+          "error",
+          "disabled"
+        ],
+        "default": "idle"
+      },
+      "invalid": {
+        "type": "boolean",
+        "default": false
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": false
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "idle",
+      "dragging",
+      "uploading",
+      "success",
+      "error",
+      "disabled",
+      "invalid",
+      "with-preview",
+      "with-progress"
+    ],
+    "a11y": {
+      "requirements": [
+        "Provide keyboard accessible file picker button; dropzone should be focusable and announce instructions.",
+        "Use aria-live for upload progress and errors; show text hints beyond color.",
+        "Ensure removable file items have accessible labels."
+      ]
+    }
+  }
+}

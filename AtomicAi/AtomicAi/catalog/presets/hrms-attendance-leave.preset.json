@@ -1,0 +1,42 @@
+{
+  "presetId": "hrms-attendance-leave",
+  "label": "HRMS Attendance + Leave + Payroll-lite",
+  "productType": "HRMS_HCM",
+  "delivery": {
+    "mode": "singleTenant",
+    "deployment": "hybrid",
+    "architecture": "modularMonolith",
+    "pwa": true,
+    "desktop": "tauri"
+  },
+  "businessModel": {
+    "type": "subscription",
+    "plans": ["HR Core", "HR Plus"]
+  },
+  "themePack": "erp-professional",
+  "density": "comfortable",
+  "pages": {
+    "marketing": ["page.landing.enterprise", "page.pricing.full"],
+    "app": ["page.app.auth", "page.app.dashboard", "page.app.entityCrud", "page.app.workflow"]
+  },
+  "patterns": ["pattern.approvalWorkflow", "pattern.calendarScheduler", "pattern.dashboardReports"],
+  "modules": [
+    "core.auth",
+    "core.rbac",
+    "core.auditLogs",
+    "core.notifications",
+    "core.settings",
+    "hr.employees",
+    "hr.attendance",
+    "hr.leave",
+    "hr.payrollLite",
+    "hr.approvals"
+  ],
+  "entities": ["Employee", "AttendanceRecord", "LeaveRequest", "PayrollRun", "User", "Role"],
+  "assumptions": [
+    "Approvals required for leave requests",
+    "Holiday calendar seeded"
+  ],
+  "version": "1.0.0"
+}
+

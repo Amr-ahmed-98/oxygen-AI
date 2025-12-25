@@ -1,0 +1,168 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T13:40:51.189135+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "image-preview",
+    "goal": "Lightbox-like image preview with zoom, rotate, and download"
+  },
+  "component": {
+    "id": "molecule.imagePreview",
+    "name": "Image Preview",
+    "type": "molecule",
+    "aliases": [
+      "Lightbox",
+      "ImageViewer",
+      "MediaPreview"
+    ],
+    "description": "Image preview overlay with zoom, rotate, next/prev, and download action.",
+    "tags": [
+      "ui",
+      "molecule",
+      "media",
+      "image",
+      "preview",
+      "lightbox",
+      "zoom",
+      "overlay",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.iconButton",
+        "atom.button",
+        "atom.text"
+      ],
+      "molecules": [
+        "molecule.modal",
+        "molecule.toast"
+      ]
+    },
+    "events": {
+      "web": [
+        "onNext",
+        "onPrev",
+        "onZoom",
+        "onRotate",
+        "onDownload",
+        "onClose"
+      ],
+      "mobile": [
+        "onNext",
+        "onPrev",
+        "onZoom",
+        "onRotate",
+        "onDownload",
+        "onClose"
+      ],
+      "desktop": [
+        "onNext",
+        "onPrev",
+        "onZoom",
+        "onRotate",
+        "onDownload",
+        "onClose"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "modal",
+          "fullscreen",
+          "drawer",
+          "compact"
+        ],
+        "default": "modal"
+      },
+      "controls": {
+        "type": "enum",
+        "enum": [
+          "minimal",
+          "standard",
+          "pro"
+        ],
+        "default": "standard"
+      },
+      "withThumbnails": {
+        "type": "boolean",
+        "default": false
+      },
+      "withDownload": {
+        "type": "boolean",
+        "default": true
+      },
+      "withRotate": {
+        "type": "boolean",
+        "default": true
+      },
+      "withZoom": {
+        "type": "boolean",
+        "default": true
+      },
+      "gallery": {
+        "type": "boolean",
+        "default": false
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "open",
+      "loading",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Focus must be trapped.",
+        "Close button must be reachable.",
+        "Keyboard shortcuts should be optional."
+      ]
+    }
+  }
+}

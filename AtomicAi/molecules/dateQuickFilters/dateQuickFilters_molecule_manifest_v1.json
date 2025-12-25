@@ -1,0 +1,166 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T13:31:26.885221+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "date-quick-filters",
+    "goal": "Quick date range presets bar (today/week/month/custom) for analytics/reports"
+  },
+  "component": {
+    "id": "molecule.dateQuickFilters",
+    "name": "Date Quick Filters",
+    "type": "molecule",
+    "aliases": [
+      "DatePresets",
+      "RangePresets",
+      "QuickRangesBar"
+    ],
+    "description": "Quick range presets (Today, 7d, 30d, This month, Custom) with optional compare toggle.",
+    "tags": [
+      "ui",
+      "molecule",
+      "date",
+      "filters",
+      "presets",
+      "analytics",
+      "reports",
+      "erp",
+      "saas",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.button",
+        "atom.chip",
+        "atom.text"
+      ],
+      "molecules": [
+        "molecule.dateRange",
+        "molecule.popoverCard"
+      ]
+    },
+    "events": {
+      "web": [
+        "onPreset",
+        "onCustom",
+        "onCompareToggle"
+      ],
+      "mobile": [
+        "onPreset",
+        "onCustom",
+        "onCompareToggle"
+      ],
+      "desktop": [
+        "onPreset",
+        "onCustom",
+        "onCompareToggle"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "pills",
+          "segmented",
+          "compact",
+          "with-compare"
+        ],
+        "default": "pills"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "compact"
+      },
+      "presets": {
+        "type": "enum",
+        "enum": [
+          4,
+          5,
+          6,
+          8
+        ],
+        "default": 6
+      },
+      "withCustom": {
+        "type": "boolean",
+        "default": true
+      },
+      "withCompare": {
+        "type": "boolean",
+        "default": false
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "custom-open",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Selected preset should be indicated with aria-current/pressed.",
+        "Custom range control must be labeled.",
+        "Compare toggle must be labeled."
+      ]
+    }
+  }
+}

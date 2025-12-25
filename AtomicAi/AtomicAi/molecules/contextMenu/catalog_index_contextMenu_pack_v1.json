@@ -1,0 +1,34 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-25T12:40:03.847933+00:00",
+  "items": [
+    {
+      "id": "molecule.contextMenu",
+      "type": "molecule",
+      "name": "Context Menu",
+      "tags": [
+        "ui",
+        "molecule",
+        "overlay",
+        "menu",
+        "context",
+        "actions",
+        "table",
+        "crud",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Context Menu ui molecule overlay menu context actions table crud erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "contextMenu_molecule_manifest_v1.json",
+        "contextMenu_variants_library_v1.json",
+        "catalog_index_contextMenu_pack_v1.json"
+      ]
+    }
+  ]
+}

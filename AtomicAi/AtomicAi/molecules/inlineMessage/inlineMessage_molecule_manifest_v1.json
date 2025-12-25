@@ -1,0 +1,175 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T12:22:39.281627+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "inline-message",
+    "goal": "ThemeForest-grade inline feedback for forms/tables (info/warn/error/success)"
+  },
+  "component": {
+    "id": "molecule.inlineMessage",
+    "name": "Inline Message",
+    "type": "molecule",
+    "aliases": [
+      "InlineAlert",
+      "FieldMessage",
+      "ValidationMessage"
+    ],
+    "description": "Compact inline feedback message with icon, title/description, and optional action link/button.",
+    "tags": [
+      "ui",
+      "molecule",
+      "feedback",
+      "validation",
+      "alert",
+      "forms",
+      "tables",
+      "erp",
+      "saas",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.icon",
+        "atom.text",
+        "atom.link",
+        "atom.button",
+        "atom.badge"
+      ]
+    },
+    "events": {
+      "web": [
+        "onAction"
+      ],
+      "mobile": [
+        "onAction"
+      ],
+      "desktop": [
+        "onAction"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "filled",
+          "soft",
+          "outline",
+          "minimal"
+        ],
+        "default": "soft"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "info",
+          "success",
+          "warning",
+          "danger",
+          "neutral"
+        ],
+        "default": "info"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "xs",
+          "sm",
+          "md"
+        ],
+        "default": "sm"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "compact",
+          "comfortable"
+        ],
+        "default": "compact"
+      },
+      "withTitle": {
+        "type": "boolean",
+        "default": true
+      },
+      "withDescription": {
+        "type": "boolean",
+        "default": false
+      },
+      "withAction": {
+        "type": "boolean",
+        "default": false
+      },
+      "actionType": {
+        "type": "enum",
+        "enum": [
+          "link",
+          "button",
+          "none"
+        ],
+        "default": "none"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "info",
+      "success",
+      "warning",
+      "danger",
+      "neutral",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "If conveying status, ensure text alternative exists.",
+        "Action must be keyboard accessible.",
+        "Use aria-live politely for dynamic validation if needed."
+      ]
+    }
+  }
+}

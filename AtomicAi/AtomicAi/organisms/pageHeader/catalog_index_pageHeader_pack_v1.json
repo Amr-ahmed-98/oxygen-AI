@@ -1,0 +1,33 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-25T16:25:59.823153+00:00",
+  "items": [
+    {
+      "id": "organism.pageHeader",
+      "type": "organism",
+      "name": "Page Header",
+      "tags": [
+        "ui",
+        "organism",
+        "page-header",
+        "breadcrumbs",
+        "actions",
+        "meta",
+        "erp",
+        "crm",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Page Header ui organism page-header breadcrumbs actions meta erp crm a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "pageHeader_organism_manifest_v1.json",
+        "pageHeader_variants_library_v1.json",
+        "catalog_index_pageHeader_pack_v1.json"
+      ]
+    }
+  ]
+}

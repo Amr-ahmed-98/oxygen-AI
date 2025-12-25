@@ -1,0 +1,30 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-23T20:15:18.726523+00:00",
+  "items": [
+    {
+      "id": "atom.radio",
+      "type": "atom",
+      "name": "Radio",
+      "tags": [
+        "ui",
+        "atom",
+        "radio",
+        "forms",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Radio option single choice forms filters erp settings a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "radio_atom_manifest_v2.json",
+        "radio_variants_library_v2.json",
+        "catalog_index_radio_pack_v2.json"
+      ]
+    }
+  ]
+}

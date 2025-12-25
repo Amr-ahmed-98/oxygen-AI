@@ -1,0 +1,162 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T15:31:57.224026+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "stat-group",
+    "goal": "Group of KPIs with responsive grid and optional divider"
+  },
+  "component": {
+    "id": "molecule.statGroup",
+    "name": "Stat Group",
+    "type": "molecule",
+    "aliases": [
+      "KpiRow",
+      "StatsGrid",
+      "MetricsStrip"
+    ],
+    "description": "Responsive group of KPI cards with optional header and dividers, supports horizontal scroll on mobile.",
+    "tags": [
+      "ui",
+      "molecule",
+      "kpi",
+      "metrics",
+      "grid",
+      "dashboard",
+      "erp",
+      "bi",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.text",
+        "atom.button"
+      ],
+      "molecules": [
+        "molecule.kpiCard",
+        "molecule.filterChipsRow"
+      ]
+    },
+    "events": {
+      "web": [
+        "onFilter",
+        "onKpiOpen"
+      ],
+      "mobile": [
+        "onFilter",
+        "onKpiOpen"
+      ],
+      "desktop": [
+        "onFilter",
+        "onKpiOpen"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "grid",
+          "row",
+          "scroll",
+          "with-header"
+        ],
+        "default": "grid"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "compact"
+      },
+      "items": {
+        "type": "enum",
+        "enum": [
+          2,
+          3,
+          4,
+          6,
+          8
+        ],
+        "default": 4
+      },
+      "columns": {
+        "type": "enum",
+        "enum": [
+          2,
+          3,
+          4
+        ],
+        "default": 4
+      },
+      "withFilters": {
+        "type": "boolean",
+        "default": false
+      },
+      "withDividers": {
+        "type": "boolean",
+        "default": false
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "empty",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Grid must be responsive.",
+        "Scrollable variant must be keyboard accessible.",
+        "Header should be semantic."
+      ]
+    }
+  }
+}

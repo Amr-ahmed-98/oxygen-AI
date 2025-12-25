@@ -1,0 +1,34 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-25T12:22:39.281627+00:00",
+  "items": [
+    {
+      "id": "molecule.inlineMessage",
+      "type": "molecule",
+      "name": "Inline Message",
+      "tags": [
+        "ui",
+        "molecule",
+        "feedback",
+        "validation",
+        "alert",
+        "forms",
+        "tables",
+        "erp",
+        "saas",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Inline Message ui molecule feedback validation alert forms tables erp saas a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "inlineMessage_molecule_manifest_v1.json",
+        "inlineMessage_variants_library_v1.json",
+        "catalog_index_inlineMessage_pack_v1.json"
+      ]
+    }
+  ]
+}

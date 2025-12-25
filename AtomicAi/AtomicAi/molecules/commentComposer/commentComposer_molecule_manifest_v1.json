@@ -1,0 +1,175 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T14:48:11.791803+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "comment-composer",
+    "goal": "Comment composer with mentions, attachments, emoji, and submit states"
+  },
+  "component": {
+    "id": "molecule.commentComposer",
+    "name": "Comment Composer",
+    "type": "molecule",
+    "aliases": [
+      "MessageComposer",
+      "ReplyBox",
+      "NoteComposer"
+    ],
+    "description": "Composer for comments/messages with textarea, toolbar (emoji/attach/mention), and send button.",
+    "tags": [
+      "ui",
+      "molecule",
+      "messaging",
+      "comments",
+      "mentions",
+      "attachments",
+      "helpdesk",
+      "crm",
+      "pm",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.textarea",
+        "atom.iconButton",
+        "atom.button",
+        "atom.text",
+        "atom.badge"
+      ],
+      "molecules": [
+        "molecule.attachmentList",
+        "molecule.popoverCard",
+        "molecule.toast"
+      ]
+    },
+    "events": {
+      "web": [
+        "onChange",
+        "onSend",
+        "onAttach",
+        "onMention",
+        "onEmoji"
+      ],
+      "mobile": [
+        "onChange",
+        "onSend",
+        "onAttach",
+        "onMention",
+        "onEmoji"
+      ],
+      "desktop": [
+        "onChange",
+        "onSend",
+        "onAttach",
+        "onMention",
+        "onEmoji"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "inline",
+          "card",
+          "compact",
+          "with-preview"
+        ],
+        "default": "card"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "compact"
+      },
+      "withMentions": {
+        "type": "boolean",
+        "default": true
+      },
+      "withAttachments": {
+        "type": "boolean",
+        "default": true
+      },
+      "withEmoji": {
+        "type": "boolean",
+        "default": true
+      },
+      "withFormatting": {
+        "type": "boolean",
+        "default": false
+      },
+      "sendMode": {
+        "type": "enum",
+        "enum": [
+          "button",
+          "enter-to-send",
+          "ctrl-enter"
+        ],
+        "default": "ctrl-enter"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "idle",
+      "typing",
+      "sending",
+      "error",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Textarea must have label.",
+        "Toolbar buttons need labels.",
+        "Sending state should be announced."
+      ]
+    }
+  }
+}

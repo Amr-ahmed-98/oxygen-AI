@@ -1,0 +1,33 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:54:04.518719+00:00",
+  "items": [
+    {
+      "id": "atom.combobox",
+      "type": "atom",
+      "name": "Combobox / Autocomplete",
+      "tags": [
+        "ui",
+        "atom",
+        "combobox",
+        "autocomplete",
+        "select",
+        "search",
+        "filters",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Combobox / Autocomplete ui atom combobox autocomplete select search filters erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "combobox_atom_manifest_v7.json",
+        "combobox_variants_library_v7.json",
+        "catalog_index_combobox_pack_v7.json"
+      ]
+    }
+  ]
+}

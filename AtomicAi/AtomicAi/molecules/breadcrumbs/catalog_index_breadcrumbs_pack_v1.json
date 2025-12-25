@@ -1,0 +1,31 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-25T12:00:01.407961+00:00",
+  "items": [
+    {
+      "id": "molecule.breadcrumbs",
+      "type": "molecule",
+      "name": "Breadcrumbs",
+      "tags": [
+        "ui",
+        "molecule",
+        "breadcrumbs",
+        "navigation",
+        "erp",
+        "dashboard",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Breadcrumbs ui molecule breadcrumbs navigation erp dashboard a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "breadcrumbs_molecule_manifest_v1.json",
+        "breadcrumbs_variants_library_v1.json",
+        "catalog_index_breadcrumbs_pack_v1.json"
+      ]
+    }
+  ]
+}

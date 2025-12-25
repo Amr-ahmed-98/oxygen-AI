@@ -1,0 +1,128 @@
+{
+  "$schema": "../../schema/manifest.schema.json",
+  "id": "shell.app",
+  "level": "shell",
+  "category": ["appShell", "layout"],
+  "title": "Application Shell",
+  "description": "App layout wrapper: sidebar/header/content, supports RTL, tenant switcher and user menu.",
+  "tags": ["saas", "erp", "layout", "rtl", "multi-tenant"],
+  "slots": {
+    "sidebar": {
+      "type": "slot",
+      "required": true,
+      "description": "Sidebar navigation slot"
+    },
+    "header": {
+      "type": "slot",
+      "required": true,
+      "description": "Header with breadcrumbs slot"
+    },
+    "content": {
+      "type": "slot",
+      "required": true,
+      "description": "Main content area slot"
+    }
+  },
+  "props": {
+    "navigation": {
+      "type": "enum",
+      "values": ["sidebar", "topnav"],
+      "default": "sidebar",
+      "description": "Navigation layout type"
+    },
+    "density": {
+      "type": "enum",
+      "values": ["compact", "comfortable", "airy"],
+      "default": "compact",
+      "description": "Layout density"
+    },
+    "rtl": {
+      "type": "boolean",
+      "default": false,
+      "description": "Right-to-left layout"
+    },
+    "multiTenant": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable tenant switcher"
+    }
+  },
+  "constraints": {
+    "rtlSafe": true,
+    "a11yRequired": true,
+    "maxNesting": 6
+  },
+  "a11y": {
+    "keyboardNavigable": true,
+    "focusOrder": "logical",
+    "skipLinks": true
+  },
+  "perf": {
+    "critical": true,
+    "virtualize": false,
+    "lazy": false
+  },
+  "platformSupport": {
+    "web": true,
+    "mobile": true,
+    "desktop": true
+  },
+  "adapters": {
+    "mobile": {
+      "navigation": "tabs+stack",
+      "sidebar": "drawer"
+    },
+    "desktop": {
+      "navigation": "sidebar+menubar",
+      "shortcuts": true
+    }
+  },
+  "dependencies": {
+    "required": ["shell.sidebar.grouped", "shell.header.breadcrumbs"],
+    "optional": ["shell.tenantSwitcher", "shell.commandPalette", "shell.notificationCenter"]
+  },
+  "examples": [
+    {
+      "name": "default",
+      "intent": "appShell",
+      "snippet": {
+        "props": {
+          "navigation": "sidebar",
+          "density": "compact",
+          "rtl": false,
+          "multiTenant": false
+        },
+        "slots": {
+          "sidebar": "shell.sidebar.grouped",
+          "header": "shell.header.breadcrumbs",
+          "content": "<routes/>"
+        }
+      }
+    },
+    {
+      "name": "rtl-multitenant",
+      "intent": "appShell",
+      "snippet": {
+        "props": {
+          "navigation": "sidebar",
+          "density": "compact",
+          "rtl": true,
+          "multiTenant": true
+        },
+        "slots": {
+          "sidebar": "shell.sidebar.grouped",
+          "header": "shell.header.breadcrumbs",
+          "content": "<routes/>"
+        }
+      }
+    }
+  ],
+  "fallbacks": [
+    {
+      "ifMissing": "shell.sidebar.grouped",
+      "use": "shell.sidebar"
+    }
+  ],
+  "version": "1.0.0"
+}
+

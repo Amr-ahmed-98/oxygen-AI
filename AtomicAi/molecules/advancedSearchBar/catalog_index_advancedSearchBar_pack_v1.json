@@ -1,0 +1,35 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-25T13:31:26.885221+00:00",
+  "items": [
+    {
+      "id": "molecule.advancedSearchBar",
+      "type": "molecule",
+      "name": "Advanced Search Bar",
+      "tags": [
+        "ui",
+        "molecule",
+        "search",
+        "suggestions",
+        "recent",
+        "scope",
+        "filters",
+        "erp",
+        "crm",
+        "saas",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Advanced Search Bar ui molecule search suggestions recent scope filters erp crm saas a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "advancedSearchBar_molecule_manifest_v1.json",
+        "advancedSearchBar_variants_library_v1.json",
+        "catalog_index_advancedSearchBar_pack_v1.json"
+      ]
+    }
+  ]
+}

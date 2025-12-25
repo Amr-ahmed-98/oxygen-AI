@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "description": "Fallback strategy for vague/general prompts",
+  "fallbacks": [
+    {
+      "condition": "productType === GENERAL_SAAS && score < 60",
+      "strategy": "generalSaaSStarter",
+      "preset": "helpdesk-b2b-sla-saas",
+      "theme": "erp-professional",
+      "entities": ["Customer", "User", "Team", "Task", "Note"],
+      "pages": {
+        "marketing": ["page.landing.saas", "page.pricing.full"],
+        "app": ["page.app.auth", "page.app.dashboard", "page.app.entityCrud"]
+      },
+      "assumptions": [
+        "افترضت أن النظام B2B SaaS",
+        "افترضت وجود RBAC + Audit",
+        "افترضت منصات Web + Mobile",
+        "يمكن تعديل ذلك لاحقًا في إعدادات التوليد"
+      ]
+    },
+    {
+      "condition": "productType unknown && keywords.length < 5",
+      "strategy": "minimalLanding",
+      "preset": null,
+      "theme": "minimal-saas",
+      "entities": [],
+      "pages": {
+        "marketing": ["page.landing.saas"],
+        "app": ["page.app.auth"]
+      },
+      "assumptions": [
+        "افترضت موقع تسويقي بسيط",
+        "يمكن إضافة تطبيق لاحقًا"
+      ]
+    }
+  ],
+  "assumptionsMode": {
+    "enabled": true,
+    "description": "Include assumptions in spec when confidence is low",
+    "location": "app.assumptions",
+    "format": "array of strings"
+  },
+  "notes": "Fallback ensures system always produces something useful, even with vague inputs"
+}
+

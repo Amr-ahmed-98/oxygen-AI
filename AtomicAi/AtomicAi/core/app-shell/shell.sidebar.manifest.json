@@ -1,0 +1,137 @@
+{
+  "id": "shell.sidebar",
+  "type": "section",
+  "category": ["app-shell", "navigation"],
+  "name": "App Shell - Sidebar",
+  "description": "Application sidebar navigation with collapsible groups, icons, and search",
+  "variants": [
+    "collapsible",
+    "permanent",
+    "overlay",
+    "mini",
+    "with-search"
+  ],
+  "props": {
+    "variant": {
+      "type": "string",
+      "required": false,
+      "default": "collapsible",
+      "range": ["collapsible", "permanent", "overlay", "mini"],
+      "description": "Sidebar behavior variant"
+    },
+    "position": {
+      "type": "string",
+      "required": false,
+      "default": "left",
+      "range": ["left", "right"],
+      "description": "Sidebar position (adapts to RTL)"
+    },
+    "collapsed": {
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Initial collapsed state"
+    },
+    "collapsible": {
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "description": "Allow collapsing"
+    },
+    "width": {
+      "type": "string",
+      "required": false,
+      "default": "256px",
+      "description": "Sidebar width when expanded"
+    },
+    "collapsedWidth": {
+      "type": "string",
+      "required": false,
+      "default": "64px",
+      "description": "Sidebar width when collapsed"
+    },
+    "showSearch": {
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Show search box"
+    },
+    "sticky": {
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "description": "Sticky sidebar"
+    }
+  },
+  "slots": {
+    "logo": {
+      "type": "image",
+      "required": false,
+      "description": "App logo"
+    },
+    "items": {
+      "type": "array",
+      "required": true,
+      "itemType": "navItem",
+      "description": "Navigation items",
+      "itemSchema": {
+        "id": {"type": "string", "required": true},
+        "label": {"type": "string", "required": true},
+        "icon": {"type": "string", "required": false},
+        "href": {"type": "string", "required": false},
+        "badge": {"type": "string", "required": false},
+        "children": {"type": "array", "required": false},
+        "group": {"type": "string", "required": false},
+        "permission": {"type": "string", "required": false}
+      }
+    },
+    "footer": {
+      "type": "component",
+      "required": false,
+      "description": "Sidebar footer content"
+    }
+  },
+  "constraints": {
+    "itemsRequired": true,
+    "minItems": 1
+  },
+  "a11y": {
+    "navHasAriaLabel": true,
+    "keyboardNavigation": true,
+    "focusVisible": true,
+    "collapsedStateAnnounced": true
+  },
+  "responsive": {
+    "mobile": {
+      "variant": "overlay",
+      "width": "280px"
+    },
+    "tablet": {
+      "variant": "collapsible",
+      "width": "240px"
+    },
+    "desktop": {
+      "variant": "collapsible",
+      "width": "256px"
+    }
+  },
+  "dependencies": [
+    "icon",
+    "link",
+    "button",
+    "badge",
+    "menu"
+  ],
+  "whenToUse": [
+    "Main application navigation",
+    "SaaS/ERP dashboard sidebar",
+    "Multi-module applications"
+  ],
+  "whenNotToUse": [
+    "Marketing sites (use header navigation)",
+    "Single-page apps without navigation",
+    "Mobile-only apps (use bottom tabs)"
+  ],
+  "tags": ["app-shell", "navigation", "sidebar", "saas", "erp", "dashboard"]
+}
+

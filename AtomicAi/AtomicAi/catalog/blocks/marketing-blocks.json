@@ -1,0 +1,82 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-01-XX",
+  "type": "block",
+  "category": "marketing",
+  "items": [
+    {
+      "id": "hero.split.image",
+      "name": "Hero Split Image",
+      "description": "Hero section with split layout and image",
+      "component": "Hero",
+      "props": {
+        "variant": "split",
+        "imageUrl": true
+      },
+      "tags": ["hero", "banner", "landing", "marketing"]
+    },
+    {
+      "id": "hero.centered",
+      "name": "Hero Centered",
+      "description": "Centered hero section",
+      "component": "Hero",
+      "props": {
+        "variant": "centered"
+      },
+      "tags": ["hero", "banner", "landing", "marketing"]
+    },
+    {
+      "id": "pricing.cards",
+      "name": "Pricing Cards",
+      "description": "Pricing plans with cards layout",
+      "component": "Pricing",
+      "tags": ["pricing", "plans", "marketing"]
+    },
+    {
+      "id": "features.grid",
+      "name": "Features Grid",
+      "description": "Features section with grid layout",
+      "component": "Features",
+      "props": {
+        "columns": [2, 3, 4]
+      },
+      "tags": ["features", "benefits", "marketing"]
+    },
+    {
+      "id": "testimonials.cards",
+      "name": "Testimonials Cards",
+      "description": "Customer testimonials with cards",
+      "component": "Testimonials",
+      "tags": ["testimonials", "reviews", "marketing"]
+    },
+    {
+      "id": "faq.accordion",
+      "name": "FAQ Accordion",
+      "description": "FAQ section with accordion",
+      "component": "FAQ",
+      "tags": ["faq", "questions", "marketing"]
+    },
+    {
+      "id": "cta.strip",
+      "name": "CTA Strip",
+      "description": "Call to action banner",
+      "component": "CTA",
+      "tags": ["cta", "call-to-action", "marketing"]
+    },
+    {
+      "id": "footer.mega",
+      "name": "Footer Mega",
+      "description": "Mega footer with links",
+      "component": "Footer",
+      "tags": ["footer", "links", "marketing"]
+    },
+    {
+      "id": "navbar.main",
+      "name": "Navbar Main",
+      "description": "Main navigation bar",
+      "component": "Navbar",
+      "tags": ["navbar", "navigation", "marketing"]
+    }
+  ]
+}
+

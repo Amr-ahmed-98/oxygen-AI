@@ -1,0 +1,345 @@
+{
+  "app": {
+    "name": "ApexERP",
+    "type": "erp",
+    "platforms": ["web", "mobile", "desktop"],
+    "locale": {
+      "default": "ar-EG",
+      "rtl": true,
+      "supported": ["ar-EG", "en-US"]
+    },
+    "themePack": "erp-professional",
+    "density": "compact"
+  },
+  "security": {
+    "multiTenant": true,
+    "auth": {
+      "method": "email_password",
+      "twoFactor": false
+    },
+    "rbac": true
+  },
+  "navigation": {
+    "web": {
+      "type": "sidebar",
+      "style": "grouped",
+      "items": [
+        {
+          "id": "dashboard",
+          "label": "Dashboard",
+          "icon": "home",
+          "path": "/"
+        },
+        {
+          "id": "sales",
+          "label": "Sales",
+          "icon": "file-text",
+          "group": "Sales",
+          "children": [
+            {
+              "id": "invoices",
+              "label": "Invoices",
+              "path": "/invoices"
+            },
+            {
+              "id": "customers",
+              "label": "Customers",
+              "path": "/customers"
+            }
+          ]
+        }
+      ]
+    },
+    "mobile": {
+      "type": "tabs+stack",
+      "tabs": [
+        {
+          "id": "dashboard",
+          "label": "Home",
+          "icon": "home",
+          "screen": "screen.dashboard"
+        },
+        {
+          "id": "invoices",
+          "label": "Invoices",
+          "icon": "file-text",
+          "screen": "screen.invoice.list"
+        },
+        {
+          "id": "customers",
+          "label": "Customers",
+          "icon": "users",
+          "screen": "screen.customer.list"
+        }
+      ]
+    },
+    "desktop": {
+      "type": "sidebar+menubar",
+      "sidebar": true,
+      "menuBar": true,
+      "shortcuts": [
+        { "key": "Cmd+K", "action": "commandPalette" },
+        { "key": "Cmd+I", "action": "createInvoice" }
+      ]
+    }
+  },
+  "modules": ["crm", "invoicing"],
+  "routes": [
+    {
+      "id": "dashboard",
+      "path": "/",
+      "screen": "screen.dashboard",
+      "permission": "dashboard.view"
+    },
+    {
+      "id": "invoiceList",
+      "path": "/invoices",
+      "screen": "screen.invoice.list",
+      "permission": "invoice.view"
+    },
+    {
+      "id": "invoiceCreate",
+      "path": "/invoices/new",
+      "screen": "screen.invoice.create",
+      "permission": "invoice.create"
+    },
+    {
+      "id": "invoiceDetail",
+      "path": "/invoices/:id",
+      "screen": "screen.invoice.detail",
+      "permission": "invoice.view"
+    },
+    {
+      "id": "invoiceEdit",
+      "path": "/invoices/:id/edit",
+      "screen": "screen.invoice.edit",
+      "permission": "invoice.edit"
+    }
+  ],
+  "screens": {
+    "screen.dashboard": {
+      "type": "dashboard",
+      "components": [
+        {
+          "component": "layout.appShell",
+          "props": {
+            "sidebar": true,
+            "header": true
+          }
+        },
+        {
+          "component": "organism.kpiCards",
+          "props": {
+            "metrics": [
+              { "label": "Total Invoices", "value": "{{stats.totalInvoices}}" },
+              { "label": "Pending", "value": "{{stats.pending}}" },
+              { "label": "Paid", "value": "{{stats.paid}}" }
+            ]
+          }
+        }
+      ]
+    },
+    "screen.invoice.list": {
+      "type": "list",
+      "entity": "invoice",
+      "components": [
+        {
+          "component": "organism.dataTablePro",
+          "props": {
+            "entity": "invoice",
+            "columns": [
+              { "field": "invoiceNo", "label": "Invoice #", "sortable": true },
+              { "field": "customerId", "label": "Customer", "sortable": true },
+              { "field": "status", "label": "Status", "format": "badge" },
+              { "field": "total", "label": "Total", "format": "money", "align": "right" },
+              { "field": "issuedAt", "label": "Date", "format": "date", "sortable": true }
+            ],
+            "serverSide": true,
+            "selectable": true
+          }
+        },
+        {
+          "component": "organism.tableToolbar",
+          "props": {
+            "showSearch": true,
+            "showFilters": true,
+            "showExport": true,
+            "showCreate": true
+          }
+        },
+        {
+          "component": "organism.filterBar",
+          "props": {
+            "fields": [
+              { "id": "status", "label": "Status", "type": "enum" },
+              { "id": "customerId", "label": "Customer", "type": "relation" },
+              { "id": "issuedAt", "label": "Date Range", "type": "dateRange" }
+            ]
+          }
+        }
+      ]
+    },
+    "screen.invoice.create": {
+      "type": "create",
+      "entity": "invoice",
+      "components": [
+        {
+          "component": "organism.formBuilder",
+          "props": {
+            "entity": "invoice",
+            "mode": "create",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "invoiceNo": { "type": "string", "title": "Invoice #", "required": true },
+                "customerId": { "type": "relation", "title": "Customer", "relation": "customer", "required": true },
+                "status": { "type": "enum", "title": "Status", "enum": ["draft", "sent", "paid"] },
+                "total": { "type": "money", "title": "Total", "currency": "EGP", "required": true },
+                "issuedAt": { "type": "date", "title": "Issue Date", "required": true }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "screen.invoice.detail": {
+      "type": "detail",
+      "entity": "invoice",
+      "components": [
+        {
+          "component": "organism.detailView",
+          "props": {
+            "entity": "invoice",
+            "variant": "tabs",
+            "tabs": [
+              {
+                "id": "overview",
+                "label": "Overview",
+                "type": "fields"
+              },
+              {
+                "id": "payments",
+                "label": "Payments",
+                "type": "relation",
+                "relation": "payment"
+              },
+              {
+                "id": "activity",
+                "label": "Activity",
+                "type": "activity"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "entities": {
+    "invoice": {
+      "id": "invoice",
+      "name": "Invoice",
+      "pluralName": "Invoices",
+      "title": {
+        "singular": "فاتورة",
+        "plural": "الفواتير"
+      },
+      "fields": [
+        {
+          "name": "invoiceNo",
+          "type": "string",
+          "label": "Invoice #",
+          "required": true,
+          "unique": true,
+          "ui": {
+            "list": true,
+            "form": true
+          }
+        },
+        {
+          "name": "customerId",
+          "type": "relation",
+          "label": "Customer",
+          "relation": {
+            "entity": "customer",
+            "displayField": "name"
+          },
+          "required": true,
+          "ui": {
+            "list": true,
+            "form": true
+          }
+        },
+        {
+          "name": "status",
+          "type": "enum",
+          "label": "Status",
+          "values": [
+            { "value": "draft", "label": "Draft" },
+            { "value": "sent", "label": "Sent" },
+            { "value": "paid", "label": "Paid" },
+            { "value": "overdue", "label": "Overdue" }
+          ],
+          "default": "draft",
+          "ui": {
+            "list": true,
+            "form": true,
+            "format": "badge"
+          }
+        },
+        {
+          "name": "total",
+          "type": "money",
+          "label": "Total",
+          "currency": "EGP",
+          "required": true,
+          "ui": {
+            "list": true,
+            "format": "money",
+            "align": "right"
+          }
+        },
+        {
+          "name": "issuedAt",
+          "type": "date",
+          "label": "Issue Date",
+          "required": true,
+          "ui": {
+            "list": true,
+            "form": true,
+            "format": "date",
+            "sortable": true
+          }
+        }
+      ],
+      "permissions": {
+        "view": ["admin", "accountant", "sales"],
+        "create": ["admin", "accountant"],
+        "edit": ["admin", "accountant"],
+        "delete": ["admin"],
+        "export": ["admin", "accountant"]
+      },
+      "views": {
+        "list": {
+          "layout": "dataTable",
+          "columns": [
+            { "field": "invoiceNo", "label": "Invoice #", "sortable": true },
+            { "field": "customerId", "label": "Customer", "sortable": true },
+            { "field": "status", "label": "Status", "format": "badge" },
+            { "field": "total", "label": "Total", "format": "money", "align": "right" },
+            { "field": "issuedAt", "label": "Date", "format": "date", "sortable": true }
+          ],
+          "filters": ["status", "customerId", "issuedAt"],
+          "bulkActions": ["markPaid", "exportCSV"]
+        },
+        "detail": {
+          "tabs": [
+            { "id": "overview", "type": "fields" },
+            { "id": "payments", "type": "relation", "relation": "payment" },
+            { "id": "activity", "type": "activity" }
+          ]
+        }
+      }
+    }
+  }
+}
+

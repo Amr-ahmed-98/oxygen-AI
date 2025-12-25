@@ -1,0 +1,34 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-25T15:38:28.881624+00:00",
+  "items": [
+    {
+      "id": "molecule.sessionBanner",
+      "type": "molecule",
+      "name": "Session Banner",
+      "tags": [
+        "ui",
+        "molecule",
+        "session",
+        "banner",
+        "offline",
+        "maintenance",
+        "security",
+        "iam",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Session Banner ui molecule session banner offline maintenance security iam erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "sessionBanner_molecule_manifest_v1.json",
+        "sessionBanner_variants_library_v1.json",
+        "catalog_index_sessionBanner_pack_v1.json"
+      ]
+    }
+  ]
+}

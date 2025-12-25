@@ -1,0 +1,93 @@
+{
+  "id": "form.builder",
+  "type": "component",
+  "category": ["data-ui", "form"],
+  "name": "Form Builder",
+  "description": "Schema-driven form builder with validation, conditional fields, and multi-step support",
+  "variants": [
+    "single",
+    "steps",
+    "sections",
+    "inline"
+  ],
+  "props": {
+    "variant": {
+      "type": "string",
+      "required": false,
+      "default": "single",
+      "range": ["single", "steps", "sections", "inline"],
+      "description": "Form layout variant"
+    },
+    "schema": {
+      "type": "object",
+      "required": true,
+      "description": "Form schema (JSON Schema or Zod-like)"
+    },
+    "validation": {
+      "type": "object",
+      "required": false,
+      "description": "Validation rules"
+    },
+    "submitLabel": {
+      "type": "string",
+      "required": false,
+      "default": "Submit",
+      "description": "Submit button label"
+    },
+    "cancelLabel": {
+      "type": "string",
+      "required": false,
+      "default": "Cancel",
+      "description": "Cancel button label"
+    },
+    "showCancel": {
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "description": "Show cancel button"
+    },
+    "dirtyTracking": {
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "description": "Track form changes"
+    }
+  },
+  "slots": {
+    "defaultValues": {
+      "type": "object",
+      "required": false,
+      "description": "Default form values"
+    },
+    "sections": {
+      "type": "array",
+      "required": false,
+      "itemType": "section",
+      "description": "Form sections (for sections variant)"
+    },
+    "steps": {
+      "type": "array",
+      "required": false,
+      "itemType": "step",
+      "description": "Form steps (for steps variant)"
+    }
+  },
+  "dependencies": [
+    "input",
+    "textarea",
+    "select",
+    "checkbox",
+    "radio",
+    "datePicker",
+    "button",
+    "stepper"
+  ],
+  "whenToUse": [
+    "Dynamic forms from schema",
+    "Entity create/edit forms",
+    "Multi-step wizards",
+    "Configurable forms"
+  ],
+  "tags": ["form", "builder", "schema", "validation", "crud"]
+}
+

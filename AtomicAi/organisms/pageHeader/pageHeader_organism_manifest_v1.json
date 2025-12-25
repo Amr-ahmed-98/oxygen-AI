@@ -1,0 +1,171 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T16:25:59.823153+00:00",
+  "scope": {
+    "atomicLevel": "organism",
+    "componentFamily": "page-header",
+    "goal": "Standard page header with breadcrumbs, title, meta, actions"
+  },
+  "component": {
+    "id": "organism.pageHeader",
+    "name": "Page Header",
+    "type": "organism",
+    "aliases": [
+      "HeaderBar",
+      "TitleBar",
+      "PageTitle"
+    ],
+    "description": "Page header: breadcrumbs, title, subtitle/meta, actions, optional tabs, sticky option.",
+    "tags": [
+      "ui",
+      "organism",
+      "page-header",
+      "breadcrumbs",
+      "actions",
+      "meta",
+      "erp",
+      "crm",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.text",
+        "atom.badge",
+        "atom.button",
+        "atom.iconButton",
+        "atom.link"
+      ],
+      "molecules": [
+        "molecule.breadcrumbActionsRow",
+        "molecule.statGroup",
+        "molecule.filterChipsRow",
+        "molecule.toast"
+      ],
+      "organisms": []
+    },
+    "events": {
+      "web": [
+        "onAction",
+        "onTabChange",
+        "onBreadcrumb"
+      ],
+      "mobile": [
+        "onAction",
+        "onTabChange",
+        "onBreadcrumb"
+      ],
+      "desktop": [
+        "onAction",
+        "onTabChange",
+        "onBreadcrumb"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "standard",
+          "with-tabs",
+          "with-kpis",
+          "minimal",
+          "sticky"
+        ],
+        "default": "standard"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "compact"
+      },
+      "withBreadcrumbs": {
+        "type": "boolean",
+        "default": true
+      },
+      "withActions": {
+        "type": "boolean",
+        "default": true
+      },
+      "withMeta": {
+        "type": "boolean",
+        "default": true
+      },
+      "withTabs": {
+        "type": "boolean",
+        "default": false
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "info",
+          "success",
+          "warning",
+          "danger"
+        ],
+        "default": "neutral"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "loading",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Heading must be semantic (h1).",
+        "Actions must be reachable.",
+        "Sticky must not cover content."
+      ]
+    }
+  }
+}

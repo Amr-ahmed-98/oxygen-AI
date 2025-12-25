@@ -1,0 +1,160 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T12:13:09.266198+00:00",
+  "scope": {
+    "atomicLevel": "organism",
+    "componentFamily": "kpi-row",
+    "goal": "ThemeForest-grade KPI row for dashboards (stats cards with trends)"
+  },
+  "component": {
+    "id": "organism.kpiRow",
+    "name": "KPI Row",
+    "type": "organism",
+    "aliases": [
+      "StatsRow",
+      "MetricsStrip",
+      "KpiCards"
+    ],
+    "description": "Row of KPI cards with value, delta, sparkline placeholder, and status tones; responsive grid.",
+    "tags": [
+      "ui",
+      "organism",
+      "kpi",
+      "dashboard",
+      "cards",
+      "analytics",
+      "erp",
+      "saas",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "molecules": [
+        "molecule.cardHeader",
+        "molecule.actionMenu"
+      ],
+      "atoms": [
+        "atom.heading",
+        "atom.text",
+        "atom.badge",
+        "atom.icon",
+        "atom.button"
+      ],
+      "slots": [
+        "cards"
+      ]
+    },
+    "events": {
+      "web": [
+        "onCardClick",
+        "onAction"
+      ],
+      "mobile": [
+        "onCardTap",
+        "onAction"
+      ],
+      "desktop": [
+        "onCardClick",
+        "onAction"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "cards",
+          "tiles",
+          "minimal",
+          "glass"
+        ],
+        "default": "cards"
+      },
+      "columns": {
+        "type": "enum",
+        "enum": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "default": 4
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "comfortable"
+      },
+      "withTrends": {
+        "type": "boolean",
+        "default": true
+      },
+      "withActions": {
+        "type": "boolean",
+        "default": false
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "compact",
+      "with-trends",
+      "with-actions",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Cards must have accessible names.",
+        "Clickable cards must be focusable.",
+        "Trend indicators must have text alternatives."
+      ]
+    }
+  }
+}

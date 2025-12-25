@@ -1,0 +1,101 @@
+{
+  "$schema": "../../schema/manifest.schema.json",
+  "id": "form.builder.schemaDriven",
+  "level": "organism",
+  "category": ["forms", "generator"],
+  "title": "Schema-driven Form Builder",
+  "description": "Generates forms from entity schema with validation, submit states and field masks.",
+  "tags": ["forms", "crud", "validation", "schema"],
+  "slots": {
+    "footer": {
+      "type": "slot",
+      "required": false,
+      "description": "Form footer (submit buttons, help text)"
+    }
+  },
+  "props": {
+    "layout": {
+      "type": "enum",
+      "values": ["oneColumn", "twoColumn", "stepper"],
+      "default": "oneColumn",
+      "description": "Form layout type"
+    },
+    "validation": {
+      "type": "enum",
+      "values": ["schemaDriven"],
+      "default": "schemaDriven",
+      "description": "Validation mode"
+    },
+    "submitStates": {
+      "type": "boolean",
+      "default": true,
+      "description": "Enable submit states (idle/submitting/success/error)"
+    },
+    "autoSave": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable auto-save drafts"
+    }
+  },
+  "constraints": {
+    "rtlSafe": true,
+    "a11yRequired": true,
+    "maxFields": 50
+  },
+  "a11y": {
+    "keyboardNavigable": true,
+    "focusOrder": "logical",
+    "errorAnnouncements": true
+  },
+  "perf": {
+    "critical": true,
+    "virtualize": false,
+    "lazy": false
+  },
+  "platformSupport": {
+    "web": true,
+    "mobile": true,
+    "desktop": true
+  },
+  "adapters": {
+    "mobile": {
+      "prefer": "stepperIfLong",
+      "condition": "fields.length > 10",
+      "then": "form.stepper"
+    },
+    "desktop": {
+      "prefer": "twoColumn"
+    }
+  },
+  "dependencies": {
+    "required": ["form.validation.summary"],
+    "optional": ["form.masking", "form.attachments"]
+  },
+  "examples": [
+    {
+      "name": "basic",
+      "intent": "entityForm",
+      "snippet": {
+        "props": {
+          "layout": "oneColumn",
+          "validation": "schemaDriven",
+          "submitStates": true
+        }
+      }
+    },
+    {
+      "name": "two-column",
+      "intent": "entityForm",
+      "snippet": {
+        "props": {
+          "layout": "twoColumn",
+          "validation": "schemaDriven",
+          "submitStates": true
+        }
+      }
+    }
+  ],
+  "fallbacks": [],
+  "version": "1.0.0"
+}
+

@@ -1,0 +1,76 @@
+{
+  "version": "1.0.0",
+  "description": "Query model for filters/sort/pagination/search",
+  "queryParams": {
+    "pagination": {
+      "page": {
+        "type": "number",
+        "default": 1,
+        "min": 1
+      },
+      "pageSize": {
+        "type": "number",
+        "default": 25,
+        "min": 5,
+        "max": 200
+      }
+    },
+    "sort": {
+      "sortBy": {
+        "type": "string",
+        "default": "createdAt"
+      },
+      "sortDir": {
+        "type": "string",
+        "enum": ["asc", "desc"],
+        "default": "desc"
+      }
+    },
+    "search": {
+      "q": {
+        "type": "string",
+        "default": ""
+      },
+      "fields": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "default": []
+      }
+    },
+    "filters": {
+      "format": "filters[field][op]=value",
+      "ops": [
+        "eq",
+        "ne",
+        "in",
+        "nin",
+        "lt",
+        "lte",
+        "gt",
+        "gte",
+        "contains",
+        "startsWith",
+        "endsWith",
+        "between",
+        "isNull",
+        "notNull"
+      ]
+    },
+    "include": {
+      "include": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "default": []
+      }
+    }
+  },
+  "examples": [
+    "/api/tickets?page=1&pageSize=25&sortBy=createdAt&sortDir=desc&q=printer&filters[status][eq]=open&filters[priority][in]=high,urgent",
+    "/api/invoices?page=2&pageSize=50&filters[issuedAt][between]=2025-01-01,2025-12-31"
+  ]
+}
+

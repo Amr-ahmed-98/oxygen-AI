@@ -1,0 +1,33 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-25T15:38:28.881624+00:00",
+  "items": [
+    {
+      "id": "molecule.presenceBar",
+      "type": "molecule",
+      "name": "Presence Bar",
+      "tags": [
+        "ui",
+        "molecule",
+        "collaboration",
+        "presence",
+        "typing",
+        "docs",
+        "cms",
+        "dxp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Presence Bar ui molecule collaboration presence typing docs cms dxp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "presenceBar_molecule_manifest_v1.json",
+        "presenceBar_variants_library_v1.json",
+        "catalog_index_presenceBar_pack_v1.json"
+      ]
+    }
+  ]
+}

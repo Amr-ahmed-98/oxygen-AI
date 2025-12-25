@@ -1,0 +1,126 @@
+{
+  "$schema": "./entity-spec.schema.json",
+  "entity": "Invoice",
+  "title": {
+    "singular": "فاتورة",
+    "plural": "الفواتير"
+  },
+  "namespace": "invoice",
+  "fields": [
+    {
+      "name": "id",
+      "type": "id",
+      "primary": true,
+      "ui": {
+        "list": false,
+        "form": false
+      }
+    },
+    {
+      "name": "invoiceNo",
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "ui": {
+        "list": true,
+        "form": false,
+        "label": "رقم الفاتورة"
+      }
+    },
+    {
+      "name": "customerId",
+      "type": "relation",
+      "to": "Customer",
+      "required": true,
+      "ui": {
+        "list": true,
+        "form": true,
+        "label": "العميل"
+      }
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "values": ["draft", "sent", "paid", "overdue"],
+      "default": "draft",
+      "ui": {
+        "list": true,
+        "form": true,
+        "label": "الحالة",
+        "format": "badge"
+      }
+    },
+    {
+      "name": "total",
+      "type": "money",
+      "currency": "EGP",
+      "ui": {
+        "list": true,
+        "form": false,
+        "label": "الإجمالي"
+      }
+    },
+    {
+      "name": "issuedAt",
+      "type": "date",
+      "ui": {
+        "list": true,
+        "form": true,
+        "label": "تاريخ الإصدار"
+      }
+    },
+    {
+      "name": "createdAt",
+      "type": "dateTime",
+      "readonly": true,
+      "ui": {
+        "list": true,
+        "form": false,
+        "label": "تاريخ الإنشاء"
+      }
+    }
+  ],
+  "views": {
+    "list": {
+      "layout": "dataTablePro",
+      "filters": ["status", "issuedAt", "customerId"],
+      "search": ["invoiceNo"],
+      "bulkActions": ["exportCSV", "markPaid"],
+      "savedViews": true
+    },
+    "detail": {
+      "layout": "tabs",
+      "tabs": ["overview", "activity", "audit"],
+      "rightPanel": ["status", "tags"]
+    },
+    "form": {
+      "mode": ["create", "edit"],
+      "layout": "oneColumnMobile_twoColumnDesktop",
+      "validation": "schemaDriven",
+      "attachments": false
+    }
+  },
+  "permissions": {
+    "invoice.view": ["admin", "accountant", "sales"],
+    "invoice.create": ["admin", "accountant"],
+    "invoice.edit": ["admin", "accountant"],
+    "invoice.delete": ["admin"]
+  },
+  "policies": [
+    {
+      "id": "tenantScope",
+      "type": "rowLevel",
+      "rule": "record.tenantId == current.tenantId",
+      "appliesTo": ["list", "detail", "create", "edit", "delete"]
+    }
+  ],
+  "computed": [
+    {
+      "name": "isOverdue",
+      "type": "boolean",
+      "expr": "status != 'paid' && now() > resolveDueAt"
+    }
+  ],
+  "version": "1.0.0"
+}
+

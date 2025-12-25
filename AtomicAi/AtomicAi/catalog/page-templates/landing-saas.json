@@ -1,0 +1,91 @@
+{
+  "pageId": "page.landing.saas",
+  "label": "SaaS Landing Page",
+  "description": "SaaS عام (CRM/Helpdesk/ERP-lite)",
+  "type": "marketing",
+  "sections": [
+    {
+      "sectionId": "section.header.nav",
+      "order": 1,
+      "props": {
+        "sticky": true,
+        "transparentOnTop": true
+      }
+    },
+    {
+      "sectionId": "section.hero.dashboardPreview",
+      "order": 2,
+      "props": {
+        "layout": "L2",
+        "mediaFrame": "browser",
+        "background": "gradient"
+      }
+    },
+    {
+      "sectionId": "section.proof.logos",
+      "order": 3,
+      "props": {
+        "style": "grid",
+        "layout": "L1"
+      }
+    },
+    {
+      "sectionId": "section.features.bento",
+      "order": 4,
+      "props": {
+        "layout": "L1"
+      }
+    },
+    {
+      "sectionId": "section.features.workflow",
+      "order": 5,
+      "props": {
+        "layout": "L1",
+        "stepStyle": "flow"
+      }
+    },
+    {
+      "sectionId": "section.proof.testimonials.cards",
+      "order": 6,
+      "props": {
+        "layout": "L1",
+        "cardStyle": "elevated"
+      }
+    },
+    {
+      "sectionId": "section.pricing.threeTiers",
+      "order": 7,
+      "props": {
+        "layout": "L1",
+        "highlightMiddle": true,
+        "billingToggle": true
+      }
+    },
+    {
+      "sectionId": "section.faq.accordion",
+      "order": 8,
+      "props": {
+        "layout": "L1"
+      }
+    },
+    {
+      "sectionId": "section.cta.simple",
+      "order": 9,
+      "props": {
+        "layout": "L1",
+        "emphasis": "high"
+      }
+    },
+    {
+      "sectionId": "section.footer.simple",
+      "order": 10,
+      "props": {
+        "layout": "L1",
+        "columns": 4
+      }
+    }
+  ],
+  "bestThemes": ["minimal-saas", "glass-modern", "fintech-dark"],
+  "version": "1.0.0"
+}
+

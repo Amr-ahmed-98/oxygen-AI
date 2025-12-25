@@ -1,0 +1,31 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:14:56.353277+00:00",
+  "items": [
+    {
+      "id": "atom.slider",
+      "type": "atom",
+      "name": "Slider",
+      "tags": [
+        "ui",
+        "atom",
+        "slider",
+        "range",
+        "filters",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Slider range price filter marks tooltip rtl a11y tokens web mobile desktop",
+      "artifactRefs": [
+        "slider_atom_manifest_v4.json",
+        "slider_variants_library_v4.json",
+        "catalog_index_slider_pack_v4.json"
+      ]
+    }
+  ]
+}

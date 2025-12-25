@@ -1,0 +1,409 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-23T20:21:12.076607+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "dateRange",
+    "goal": "ThemeForest-grade multi-platform DateRange dataset for ERP filters, reports, and booking flows"
+  },
+  "component": {
+    "id": "atom.dateRange",
+    "name": "DateRange",
+    "type": "atom",
+    "aliases": [
+      "DateRangePicker",
+      "RangePicker",
+      "FromToDate",
+      "DateInterval"
+    ],
+    "description": "Two-date selection control with presets, calendar popover/drawer, time support, and validation rules.",
+    "tags": [
+      "ui",
+      "atom",
+      "date-range",
+      "datepicker",
+      "filters",
+      "reports",
+      "booking",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "label": {
+        "type": "text|node",
+        "required": false
+      },
+      "description": {
+        "type": "text|node",
+        "required": false
+      },
+      "helper": {
+        "type": "text|node",
+        "required": false
+      },
+      "error": {
+        "type": "text|node",
+        "required": false
+      },
+      "startIcon": {
+        "type": "icon|node",
+        "required": false
+      },
+      "endIcon": {
+        "type": "icon|node",
+        "required": false
+      },
+      "prefix": {
+        "type": "node",
+        "required": false
+      },
+      "suffix": {
+        "type": "node",
+        "required": false
+      },
+      "calendarHeader": {
+        "type": "node",
+        "required": false
+      },
+      "presets": {
+        "type": "node",
+        "required": false
+      },
+      "footer": {
+        "type": "node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [
+        "onChange",
+        "onOpenChange",
+        "onFocus",
+        "onBlur"
+      ],
+      "mobile": [
+        "onValueChange",
+        "onOpenChange",
+        "onFocus",
+        "onBlur"
+      ]
+    },
+    "props": {
+      "value": {
+        "type": "object",
+        "shape": {
+          "from": "string",
+          "to": "string"
+        },
+        "default": {
+          "from": "",
+          "to": ""
+        }
+      },
+      "defaultValue": {
+        "type": "object",
+        "shape": {
+          "from": "string",
+          "to": "string"
+        },
+        "default": {
+          "from": "",
+          "to": ""
+        }
+      },
+      "format": {
+        "type": "string",
+        "default": "YYYY-MM-DD"
+      },
+      "withTime": {
+        "type": "boolean",
+        "default": false
+      },
+      "timeFormat": {
+        "type": "string",
+        "default": "HH:mm"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ],
+        "default": "md"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "comfortable"
+      },
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "outline",
+          "filled",
+          "ghost",
+          "underline"
+        ],
+        "default": "outline"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "success",
+          "warning",
+          "danger",
+          "info"
+        ],
+        "default": "neutral"
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": false
+      },
+      "readOnly": {
+        "type": "boolean",
+        "default": false
+      },
+      "required": {
+        "type": "boolean",
+        "default": false
+      },
+      "invalid": {
+        "type": "boolean",
+        "default": false
+      },
+      "valid": {
+        "type": "boolean",
+        "default": false
+      },
+      "minDate": {
+        "type": "string",
+        "default": ""
+      },
+      "maxDate": {
+        "type": "string",
+        "default": ""
+      },
+      "disableWeekends": {
+        "type": "boolean",
+        "default": false
+      },
+      "allowSameDay": {
+        "type": "boolean",
+        "default": true
+      },
+      "showPresets": {
+        "type": "boolean",
+        "default": true
+      },
+      "presetStyle": {
+        "type": "enum",
+        "enum": [
+          "chips",
+          "list",
+          "sidebar"
+        ],
+        "default": "chips"
+      },
+      "calendarMode": {
+        "type": "enum",
+        "enum": [
+          "single",
+          "dual"
+        ],
+        "default": "dual"
+      },
+      "openMode": {
+        "type": "enum",
+        "enum": [
+          "popover",
+          "modal",
+          "drawer",
+          "inline"
+        ],
+        "default": "popover"
+      },
+      "weekStart": {
+        "type": "enum",
+        "enum": [
+          "sat",
+          "sun",
+          "mon"
+        ],
+        "default": "sun"
+      },
+      "showClear": {
+        "type": "boolean",
+        "default": true
+      },
+      "ariaLabel": {
+        "type": "string",
+        "default": ""
+      },
+      "ariaDescribedBy": {
+        "type": "string",
+        "default": ""
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "hover",
+      "focus",
+      "open",
+      "disabled",
+      "readonly",
+      "invalid",
+      "valid",
+      "filled",
+      "empty",
+      "selecting",
+      "range-preview"
+    ],
+    "a11y": {
+      "requirements": [
+        "Keyboard navigation within calendar grid and month switching.",
+        "Announce selected range and focused day for screen readers.",
+        "Support RTL calendars and input ordering where appropriate.",
+        "Presets must be reachable by keyboard and have aria-labels."
+      ]
+    }
+  },
+  "designTokens": {
+    "namespace": "tf",
+    "strategy": "semantic tokens -> css vars -> adapters",
+    "baseTokens": {
+      "--dr-radius": "var(--radius-md)",
+      "--dr-border-width": "1px",
+      "--dr-bg": "var(--surface-0)",
+      "--dr-border": "var(--border-subtle)",
+      "--dr-fg": "var(--color-fg)",
+      "--dr-muted": "var(--color-fg-muted)",
+      "--dr-focus-ring": "var(--focus-ring)",
+      "--dr-padding-x": "12px",
+      "--dr-padding-y": "10px",
+      "--dr-calendar-surface": "var(--surface-1)",
+      "--dr-range": "var(--primary-100)",
+      "--dr-range-strong": "var(--primary-500)"
+    },
+    "sizeScale": {
+      "xs": {
+        "px": "10px",
+        "py": "8px",
+        "font": "12px"
+      },
+      "sm": {
+        "px": "11px",
+        "py": "9px",
+        "font": "13px"
+      },
+      "md": {
+        "px": "12px",
+        "py": "10px",
+        "font": "14px"
+      },
+      "lg": {
+        "px": "14px",
+        "py": "12px",
+        "font": "16px"
+      },
+      "xl": {
+        "px": "16px",
+        "py": "14px",
+        "font": "18px"
+      }
+    }
+  },
+  "personas": [
+    {
+      "id": "persona.enterprise",
+      "name": "Enterprise",
+      "tokenOverrides": {
+        "--dr-radius": "var(--radius-md)"
+      }
+    },
+    {
+      "id": "persona.minimal",
+      "name": "Minimal",
+      "tokenOverrides": {
+        "--dr-bg": "transparent"
+      }
+    },
+    {
+      "id": "persona.glass",
+      "name": "Glass",
+      "tokenOverrides": {
+        "--dr-bg": "rgba(255,255,255,0.08)",
+        "--dr-border": "rgba(255,255,255,0.18)"
+      }
+    },
+    {
+      "id": "persona.neon",
+      "name": "Neon",
+      "tokenOverrides": {
+        "--dr-focus-ring": "0 0 0 3px rgba(168,85,247,0.35)"
+      }
+    },
+    {
+      "id": "persona.gov",
+      "name": "Gov / On-prem",
+      "tokenOverrides": {
+        "--dr-border-width": "2px",
+        "--dr-radius": "var(--radius-sm)"
+      }
+    }
+  ]
+}

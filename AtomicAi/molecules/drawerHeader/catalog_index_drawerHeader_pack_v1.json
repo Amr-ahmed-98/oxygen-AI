@@ -1,0 +1,31 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-25T12:40:03.847933+00:00",
+  "items": [
+    {
+      "id": "molecule.drawerHeader",
+      "type": "molecule",
+      "name": "Drawer Header",
+      "tags": [
+        "ui",
+        "molecule",
+        "overlay",
+        "drawer",
+        "header",
+        "steps",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Drawer Header ui molecule overlay drawer header steps a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "drawerHeader_molecule_manifest_v1.json",
+        "drawerHeader_variants_library_v1.json",
+        "catalog_index_drawerHeader_pack_v1.json"
+      ]
+    }
+  ]
+}

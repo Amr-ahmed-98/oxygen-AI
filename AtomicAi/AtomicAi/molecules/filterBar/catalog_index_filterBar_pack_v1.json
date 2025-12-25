@@ -1,0 +1,33 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T17:17:07.950609+00:00",
+  "items": [
+    {
+      "id": "molecule.filterBar",
+      "type": "molecule",
+      "name": "Filter Bar",
+      "tags": [
+        "ui",
+        "molecule",
+        "filters",
+        "chips",
+        "toolbar",
+        "lists",
+        "erp",
+        "saas",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Filter Bar ui molecule filters chips toolbar lists erp saas a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "filterBar_molecule_manifest_v1.json",
+        "filterBar_variants_library_v1.json",
+        "catalog_index_filterBar_pack_v1.json"
+      ]
+    }
+  ]
+}

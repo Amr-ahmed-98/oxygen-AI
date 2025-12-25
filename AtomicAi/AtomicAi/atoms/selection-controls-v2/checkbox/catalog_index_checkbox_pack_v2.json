@@ -1,0 +1,32 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-23T20:15:18.726523+00:00",
+  "items": [
+    {
+      "id": "atom.checkbox",
+      "type": "atom",
+      "name": "Checkbox",
+      "tags": [
+        "ui",
+        "atom",
+        "checkbox",
+        "forms",
+        "erp",
+        "datatable",
+        "bulk-actions",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Checkbox tri-state indeterminate select all datatable bulk selection erp forms settings a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "checkbox_atom_manifest_v2.json",
+        "checkbox_variants_library_v2.json",
+        "catalog_index_checkbox_pack_v2.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "modern",
+  "displayName": "Modern",
+  "description": "Modern, contemporary design system",
+  "colors": {
+    "primary": {
+      "50": "#ecfdf5",
+      "100": "#d1fae5",
+      "500": "#10b981",
+      "600": "#059669",
+      "700": "#047857"
+    },
+    "neutral": {
+      "50": "#f9fafb",
+      "100": "#f3f4f6",
+      "500": "#6b7280",
+      "600": "#4b5563",
+      "700": "#374151",
+      "900": "#111827"
+    }
+  },
+  "radius": {
+    "sm": "6px",
+    "md": "10px",
+    "lg": "16px"
+  },
+  "typography": {
+    "fontFamily": "Inter, system-ui, sans-serif",
+    "fontWeight": {
+      "normal": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    }
+  },
+  "shadows": {
+    "sm": "0 1px 2px rgba(0, 0, 0, 0.05)",
+    "md": "0 4px 6px rgba(0, 0, 0, 0.07)",
+    "lg": "0 10px 15px rgba(0, 0, 0, 0.1)"
+  }
+}
+

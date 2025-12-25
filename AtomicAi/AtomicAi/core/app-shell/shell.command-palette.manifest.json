@@ -1,0 +1,125 @@
+{
+  "id": "shell.command-palette",
+  "type": "section",
+  "category": ["app-shell", "navigation"],
+  "name": "App Shell - Command Palette",
+  "description": "Cmd+K command palette for quick navigation and actions",
+  "variants": [
+    "modal",
+    "drawer",
+    "inline"
+  ],
+  "props": {
+    "variant": {
+      "type": "string",
+      "required": false,
+      "default": "modal",
+      "range": ["modal", "drawer", "inline"],
+      "description": "Command palette variant"
+    },
+    "trigger": {
+      "type": "string",
+      "required": false,
+      "default": "Cmd+K",
+      "description": "Keyboard shortcut trigger"
+    },
+    "placeholder": {
+      "type": "string",
+      "required": false,
+      "default": "Type a command or search...",
+      "description": "Search placeholder"
+    },
+    "maxResults": {
+      "type": "number",
+      "required": false,
+      "default": 10,
+      "description": "Maximum results to show"
+    },
+    "groupBy": {
+      "type": "string",
+      "required": false,
+      "default": "category",
+      "range": ["category", "none"],
+      "description": "Group results by category"
+    }
+  },
+  "slots": {
+    "commands": {
+      "type": "array",
+      "required": true,
+      "itemType": "command",
+      "description": "Available commands",
+      "itemSchema": {
+        "id": {"type": "string", "required": true},
+        "label": {"type": "string", "required": true},
+        "category": {"type": "string", "required": false},
+        "icon": {"type": "string", "required": false},
+        "shortcut": {"type": "string", "required": false},
+        "action": {
+          "type": "object",
+          "required": true,
+          "schema": {
+            "type": {"type": "string", "range": ["navigate", "execute", "search"]},
+            "value": {"type": "string", "required": true}
+          }
+        },
+        "keywords": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Search keywords"
+        },
+        "permission": {"type": "string", "required": false}
+      }
+    },
+    "recent": {
+      "type": "array",
+      "required": false,
+      "itemType": "command",
+      "description": "Recently used commands"
+    }
+  },
+  "constraints": {
+    "commandsRequired": true,
+    "minCommands": 1
+  },
+  "a11y": {
+    "modalHasAriaLabel": true,
+    "keyboardNavigation": true,
+    "escapeCloses": true,
+    "focusManagement": true,
+    "screenReaderAnnouncements": true
+  },
+  "responsive": {
+    "mobile": {
+      "variant": "drawer",
+      "trigger": "Swipe down"
+    },
+    "tablet": {
+      "variant": "modal"
+    },
+    "desktop": {
+      "variant": "modal",
+      "trigger": "Cmd+K"
+    }
+  },
+  "dependencies": [
+    "modal",
+    "input",
+    "menu",
+    "icon",
+    "keyboard"
+  ],
+  "whenToUse": [
+    "Large applications with many features",
+    "Power user navigation",
+    "Quick action access",
+    "SaaS/ERP dashboards"
+  ],
+  "whenNotToUse": [
+    "Simple applications",
+    "Mobile-only apps",
+    "When navigation is minimal"
+  ],
+  "tags": ["app-shell", "command-palette", "navigation", "shortcuts", "saas"]
+}
+

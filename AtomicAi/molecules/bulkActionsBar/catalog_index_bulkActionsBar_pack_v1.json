@@ -1,0 +1,33 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-25T12:32:56.206160+00:00",
+  "items": [
+    {
+      "id": "molecule.bulkActionsBar",
+      "type": "molecule",
+      "name": "Bulk Actions Bar",
+      "tags": [
+        "ui",
+        "molecule",
+        "table",
+        "bulk",
+        "selection",
+        "actions",
+        "erp",
+        "saas",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Bulk Actions Bar ui molecule table bulk selection actions erp saas a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "bulkActionsBar_molecule_manifest_v1.json",
+        "bulkActionsBar_variants_library_v1.json",
+        "catalog_index_bulkActionsBar_pack_v1.json"
+      ]
+    }
+  ]
+}

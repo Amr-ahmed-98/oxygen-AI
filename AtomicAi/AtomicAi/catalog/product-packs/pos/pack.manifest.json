@@ -1,0 +1,73 @@
+{
+  "packId": "pos",
+  "name": "POS - Point of Sale",
+  "productType": "POS",
+  "defaultAudience": "B2C",
+  "primaryPatterns": [
+    "pattern.pointOfSaleCheckout",
+    "pattern.catalogGrid",
+    "pattern.cart",
+    "pattern.receiptPrint"
+  ],
+  "coreModules": [
+    "core.auth",
+    "core.rbac",
+    "core.auditLogs",
+    "core.settings"
+  ],
+  "modules": [
+    {
+      "moduleId": "pos.catalog",
+      "title": "Products",
+      "entities": ["Product", "Category", "Variant", "Inventory"],
+      "required": true
+    },
+    {
+      "moduleId": "pos.orders",
+      "title": "Orders",
+      "entities": ["Order", "OrderItem", "Payment"],
+      "required": true
+    },
+    {
+      "moduleId": "pos.shifts",
+      "title": "Shifts",
+      "entities": ["Shift", "ShiftReport", "CashDrawer"],
+      "required": true
+    },
+    {
+      "moduleId": "pos.customers",
+      "title": "Customers",
+      "entities": ["Customer", "LoyaltyProgram"],
+      "required": false
+    },
+    {
+      "moduleId": "pos.reports",
+      "title": "Reports",
+      "entities": ["SalesReport", "InventoryReport"],
+      "required": false
+    }
+  ],
+  "workflows": [
+    "workflow.checkout",
+    "workflow.shiftOpen",
+    "workflow.shiftClose"
+  ],
+  "integrations": [
+    "barcodeScanner",
+    "printer",
+    "paymentGateway",
+    "cashDrawer"
+  ],
+  "offlineFirst": true,
+  "syncRequired": true,
+  "platformAdapters": {
+    "mobile": {
+      "emphasize": ["touchOptimized", "quickAdd", "barcodeScan"],
+      "avoid": ["complexReports"]
+    },
+    "desktop": {
+      "emphasize": ["dualScreen", "keyboardShortcuts", "receiptPrint"]
+    }
+  }
+}
+

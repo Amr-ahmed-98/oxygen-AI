@@ -1,0 +1,80 @@
+{
+  "pageId": "page.pricing.full",
+  "label": "Full Pricing Page",
+  "description": "صفحة تسعير كاملة قوية",
+  "type": "marketing",
+  "sections": [
+    {
+      "sectionId": "section.header.nav",
+      "order": 1,
+      "props": {
+        "sticky": true
+      }
+    },
+    {
+      "sectionId": "section.hero.pricingFirst",
+      "order": 2,
+      "props": {
+        "layout": "L1",
+        "priceStyle": "big"
+      }
+    },
+    {
+      "sectionId": "section.pricing.threeTiers",
+      "order": 3,
+      "props": {
+        "layout": "L1",
+        "billingToggle": true
+      }
+    },
+    {
+      "sectionId": "section.pricing.featureMatrix",
+      "order": 4,
+      "props": {
+        "layout": "L3",
+        "stickyHeader": false
+      }
+    },
+    {
+      "sectionId": "section.pricing.addons",
+      "order": 5,
+      "props": {
+        "layout": "L3",
+        "addonStyle": "chips"
+      }
+    },
+    {
+      "sectionId": "section.proof.metrics",
+      "order": 6,
+      "props": {
+        "layout": "L2",
+        "kpiStyle": "cards"
+      }
+    },
+    {
+      "sectionId": "section.faq.accordion",
+      "order": 7,
+      "props": {
+        "layout": "L1"
+      }
+    },
+    {
+      "sectionId": "section.cta.simple",
+      "order": 8,
+      "props": {
+        "layout": "L1",
+        "emphasis": "high"
+      }
+    },
+    {
+      "sectionId": "section.footer.simple",
+      "order": 9,
+      "props": {
+        "layout": "L1"
+      }
+    }
+  ],
+  "bestThemes": ["minimal-saas", "fintech-dark", "erp-professional"],
+  "version": "1.0.0"
+}
+

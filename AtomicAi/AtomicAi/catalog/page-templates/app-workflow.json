@@ -1,0 +1,29 @@
+{
+  "pageId": "page.app.workflow",
+  "label": "Workflow Page",
+  "description": "Approvals/SLA/Automation",
+  "type": "app",
+  "patterns": [
+    {
+      "id": "approvals",
+      "pattern": "pattern.approvalWorkflow"
+    },
+    {
+      "id": "automations",
+      "pattern": "pattern.ruleBuilder"
+    },
+    {
+      "id": "sla",
+      "pattern": "pattern.slaTimers",
+      "module": "helpdesk"
+    }
+  ],
+  "props": {
+    "actionsRequirePermissions": true,
+    "timersVisible": true,
+    "escalationPolicies": true
+  },
+  "bestThemes": ["erp-professional", "enterprise-dense", "gov-onprem-rtl"],
+  "version": "1.0.0"
+}
+

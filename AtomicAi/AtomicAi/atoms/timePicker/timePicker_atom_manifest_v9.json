@@ -1,0 +1,231 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T12:20:49.558296+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "time-picker",
+    "goal": "ThemeForest-grade TimePicker atom for scheduling and ERP workflows"
+  },
+  "component": {
+    "id": "atom.timePicker",
+    "name": "Time Picker",
+    "type": "atom",
+    "aliases": [
+      "ClockPicker",
+      "TimeInput"
+    ],
+    "description": "Time picker with 12/24h modes, step minutes, seconds option, and validation states.",
+    "tags": [
+      "ui",
+      "atom",
+      "time",
+      "timepicker",
+      "clock",
+      "forms",
+      "erp",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "prefix": {
+        "type": "node",
+        "required": false
+      },
+      "suffix": {
+        "type": "node",
+        "required": false
+      },
+      "helper": {
+        "type": "node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [
+        "onValueChange",
+        "onOpenChange",
+        "onClear"
+      ],
+      "mobile": [
+        "onValueChange"
+      ],
+      "desktop": [
+        "onValueChange",
+        "onOpenChange"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "outline",
+          "soft",
+          "solid",
+          "minimal"
+        ],
+        "default": "outline"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "info",
+          "success",
+          "warning",
+          "danger"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "comfortable"
+      },
+      "mode": {
+        "type": "enum",
+        "enum": [
+          "popover",
+          "inline"
+        ],
+        "default": "popover"
+      },
+      "clock": {
+        "type": "enum",
+        "enum": [
+          "24h",
+          "12h"
+        ],
+        "default": "24h"
+      },
+      "minuteStep": {
+        "type": "enum",
+        "enum": [
+          1,
+          5,
+          10,
+          15,
+          30
+        ],
+        "default": 5
+      },
+      "showSeconds": {
+        "type": "boolean",
+        "default": false
+      },
+      "clearable": {
+        "type": "boolean",
+        "default": true
+      },
+      "state": {
+        "type": "enum",
+        "enum": [
+          "default",
+          "error",
+          "success",
+          "warning",
+          "disabled",
+          "readonly",
+          "loading"
+        ],
+        "default": "default"
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": false
+      },
+      "readonly": {
+        "type": "boolean",
+        "default": false
+      },
+      "placeholder": {
+        "type": "string",
+        "default": "Select time"
+      },
+      "ariaLabel": {
+        "type": "string",
+        "default": "Time"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "open",
+      "error",
+      "success",
+      "warning",
+      "disabled",
+      "readonly",
+      "loading",
+      "inline",
+      "compact",
+      "seconds",
+      "clock-12h",
+      "clock-24h"
+    ],
+    "a11y": {
+      "requirements": [
+        "Provide accessible label.",
+        "Time list should be keyboard navigable.",
+        "Error states must be announced."
+      ]
+    }
+  }
+}

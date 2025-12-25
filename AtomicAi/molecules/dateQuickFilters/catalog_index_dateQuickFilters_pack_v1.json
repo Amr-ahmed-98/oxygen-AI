@@ -1,0 +1,34 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-25T13:31:26.885221+00:00",
+  "items": [
+    {
+      "id": "molecule.dateQuickFilters",
+      "type": "molecule",
+      "name": "Date Quick Filters",
+      "tags": [
+        "ui",
+        "molecule",
+        "date",
+        "filters",
+        "presets",
+        "analytics",
+        "reports",
+        "erp",
+        "saas",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Date Quick Filters ui molecule date filters presets analytics reports erp saas a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "dateQuickFilters_molecule_manifest_v1.json",
+        "dateQuickFilters_variants_library_v1.json",
+        "catalog_index_dateQuickFilters_pack_v1.json"
+      ]
+    }
+  ]
+}

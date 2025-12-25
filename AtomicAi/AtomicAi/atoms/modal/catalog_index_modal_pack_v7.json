@@ -1,0 +1,31 @@
+{
+  "indexVersion": "2.0.0",
+  "generatedAt": "2025-12-24T11:54:04.518719+00:00",
+  "items": [
+    {
+      "id": "atom.modal",
+      "type": "atom",
+      "name": "Modal / Dialog",
+      "tags": [
+        "ui",
+        "atom",
+        "modal",
+        "dialog",
+        "overlay",
+        "erp",
+        "a11y",
+        "rtl",
+        "tokens",
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "embeddingText": "Modal / Dialog ui atom modal dialog overlay erp a11y rtl tokens web mobile desktop",
+      "artifactRefs": [
+        "modal_atom_manifest_v7.json",
+        "modal_variants_library_v7.json",
+        "catalog_index_modal_pack_v7.json"
+      ]
+    }
+  ]
+}

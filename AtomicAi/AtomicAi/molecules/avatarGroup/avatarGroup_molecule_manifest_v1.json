@@ -1,0 +1,176 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T13:40:51.189135+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "avatar-group",
+    "goal": "Avatar group with overflow, tooltips, presence, and role badges"
+  },
+  "component": {
+    "id": "molecule.avatarGroup",
+    "name": "Avatar Group",
+    "type": "molecule",
+    "aliases": [
+      "StackedAvatars",
+      "MembersGroup",
+      "AssigneesGroup"
+    ],
+    "description": "Group of avatars with overlap, overflow +N, optional tooltips, presence dots, and role badges.",
+    "tags": [
+      "ui",
+      "molecule",
+      "avatars",
+      "users",
+      "presence",
+      "overflow",
+      "collaboration",
+      "erp",
+      "crm",
+      "pm",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.avatar",
+        "atom.badge",
+        "atom.tooltip",
+        "atom.text"
+      ],
+      "molecules": [
+        "molecule.popoverCard",
+        "molecule.contextMenu"
+      ]
+    },
+    "events": {
+      "web": [
+        "onMemberClick",
+        "onOverflowOpen"
+      ],
+      "mobile": [
+        "onMemberClick",
+        "onOverflowOpen"
+      ],
+      "desktop": [
+        "onMemberClick",
+        "onOverflowOpen"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "stacked",
+          "inline",
+          "compact",
+          "with-names"
+        ],
+        "default": "stacked"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "xs",
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "sm"
+      },
+      "members": {
+        "type": "enum",
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          8,
+          12
+        ],
+        "default": 4
+      },
+      "maxVisible": {
+        "type": "enum",
+        "enum": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "default": 4
+      },
+      "withTooltips": {
+        "type": "boolean",
+        "default": true
+      },
+      "withPresence": {
+        "type": "boolean",
+        "default": false
+      },
+      "withRoleBadges": {
+        "type": "boolean",
+        "default": false
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "overflow",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "Avatars must have alt text or aria-label.",
+        "Overflow control must be labeled.",
+        "Tooltips must be accessible."
+      ]
+    }
+  }
+}

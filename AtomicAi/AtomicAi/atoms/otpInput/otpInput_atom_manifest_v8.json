@@ -1,0 +1,194 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-24T12:01:56.274864+00:00",
+  "scope": {
+    "atomicLevel": "atom",
+    "componentFamily": "otp-pin-input",
+    "goal": "ThemeForest-grade OTP/PinInput atom for auth and verification flows"
+  },
+  "component": {
+    "id": "atom.otpInput",
+    "name": "OTP / Pin Input",
+    "type": "atom",
+    "aliases": [
+      "PinInput",
+      "CodeInput",
+      "VerificationCode"
+    ],
+    "description": "Multi-slot code input supporting auto-advance, paste, masking, and error states.",
+    "tags": [
+      "ui",
+      "atom",
+      "input",
+      "otp",
+      "pin",
+      "auth",
+      "security",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui",
+        "electron"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "slots": {
+      "helper": {
+        "type": "node",
+        "required": false
+      }
+    },
+    "events": {
+      "web": [
+        "onComplete",
+        "onChange",
+        "onResend"
+      ],
+      "mobile": [
+        "onComplete",
+        "onChange"
+      ],
+      "desktop": [
+        "onComplete",
+        "onChange"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "outline",
+          "soft",
+          "solid",
+          "minimal"
+        ],
+        "default": "outline"
+      },
+      "tone": {
+        "type": "enum",
+        "enum": [
+          "neutral",
+          "primary",
+          "success",
+          "warning",
+          "danger"
+        ],
+        "default": "neutral"
+      },
+      "size": {
+        "type": "enum",
+        "enum": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "default": "md"
+      },
+      "length": {
+        "type": "enum",
+        "enum": [
+          4,
+          6,
+          8
+        ],
+        "default": 6
+      },
+      "mask": {
+        "type": "boolean",
+        "default": false
+      },
+      "autoFocus": {
+        "type": "boolean",
+        "default": true
+      },
+      "allowPaste": {
+        "type": "boolean",
+        "default": true
+      },
+      "state": {
+        "type": "enum",
+        "enum": [
+          "default",
+          "error",
+          "success",
+          "disabled",
+          "loading"
+        ],
+        "default": "default"
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": false
+      },
+      "placeholder": {
+        "type": "string",
+        "default": "•"
+      },
+      "ariaLabel": {
+        "type": "string",
+        "default": "Verification code"
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "focus",
+      "error",
+      "success",
+      "disabled",
+      "loading",
+      "paste",
+      "masked",
+      "length-4",
+      "length-6",
+      "length-8"
+    ],
+    "a11y": {
+      "requirements": [
+        "Announce error states and remaining attempts if applicable.",
+        "Support keyboard navigation between slots.",
+        "Pasting should distribute digits automatically."
+      ]
+    }
+  }
+}

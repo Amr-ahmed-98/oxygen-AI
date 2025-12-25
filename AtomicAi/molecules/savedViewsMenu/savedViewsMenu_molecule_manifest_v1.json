@@ -1,0 +1,172 @@
+{
+  "datasetVersion": "2.0.0",
+  "generatedAt": "2025-12-25T12:58:02.970652+00:00",
+  "scope": {
+    "atomicLevel": "molecule",
+    "componentFamily": "saved-views",
+    "goal": "Saved views menu for tables/lists (filters + sort + columns + density)"
+  },
+  "component": {
+    "id": "molecule.savedViewsMenu",
+    "name": "Saved Views Menu",
+    "type": "molecule",
+    "aliases": [
+      "ViewsMenu",
+      "PresetViews",
+      "SavedFiltersMenu"
+    ],
+    "description": "Menu to save/apply named views (filters/sort/columns). Supports default view, shared views, and manage mode.",
+    "tags": [
+      "ui",
+      "molecule",
+      "data",
+      "views",
+      "presets",
+      "filters",
+      "columns",
+      "sorting",
+      "erp",
+      "saas",
+      "a11y",
+      "rtl",
+      "tokens",
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "compatibility": {
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "renderingTargets": [
+        "react",
+        "nextjs",
+        "vue",
+        "svelte",
+        "angular",
+        "web-components",
+        "electron",
+        "react-native",
+        "flutter",
+        "swiftui",
+        "jetpack-compose",
+        "dotnet-maui"
+      ],
+      "styleEngines": [
+        "css-vars",
+        "tailwind",
+        "css-modules",
+        "styled-components",
+        "emotion",
+        "nativewind"
+      ],
+      "i18n": {
+        "rtl": true,
+        "ltr": true
+      },
+      "theming": {
+        "supportsMultiplePersonas": true,
+        "supportsDarkMode": true,
+        "supportsHighContrast": true
+      }
+    },
+    "composition": {
+      "atoms": [
+        "atom.button",
+        "atom.iconButton",
+        "atom.input",
+        "atom.text",
+        "atom.badge"
+      ],
+      "molecules": [
+        "molecule.actionMenu",
+        "molecule.confirmDialog",
+        "molecule.popoverCard"
+      ]
+    },
+    "events": {
+      "web": [
+        "onApply",
+        "onSave",
+        "onRename",
+        "onDelete",
+        "onSetDefault"
+      ],
+      "mobile": [
+        "onApply",
+        "onSave",
+        "onRename",
+        "onDelete",
+        "onSetDefault"
+      ],
+      "desktop": [
+        "onApply",
+        "onSave",
+        "onRename",
+        "onDelete",
+        "onSetDefault"
+      ]
+    },
+    "props": {
+      "variant": {
+        "type": "enum",
+        "enum": [
+          "menu",
+          "popover",
+          "drawer",
+          "compact"
+        ],
+        "default": "popover"
+      },
+      "density": {
+        "type": "enum",
+        "enum": [
+          "comfortable",
+          "compact"
+        ],
+        "default": "compact"
+      },
+      "withSearch": {
+        "type": "boolean",
+        "default": true
+      },
+      "withShared": {
+        "type": "boolean",
+        "default": false
+      },
+      "withManageMode": {
+        "type": "boolean",
+        "default": true
+      },
+      "maxViews": {
+        "type": "enum",
+        "enum": [
+          5,
+          10,
+          20,
+          50
+        ],
+        "default": 20
+      },
+      "dataTestId": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "states": [
+      "default",
+      "manage",
+      "empty",
+      "rtl"
+    ],
+    "a11y": {
+      "requirements": [
+        "List items must be navigable via keyboard.",
+        "Manage actions must be labeled.",
+        "Confirm delete for destructive actions."
+      ]
+    }
+  }
+}

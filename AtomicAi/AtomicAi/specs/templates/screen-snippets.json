@@ -1,0 +1,279 @@
+{
+  "version": "1.0.0",
+  "description": "Ready-to-use screen spec snippets for common ERP/CRM intents",
+  "snippets": [
+    {
+      "id": "entityList",
+      "name": "Entity List Screen",
+      "description": "Standard list screen for entities (Invoice, Ticket, Lead, etc.)",
+      "template": {
+        "screenId": "screen.{{entity}}.list",
+        "title": "{{entityTitlePlural}}",
+        "intent": "entityList",
+        "entity": "{{entity}}",
+        "type": "list",
+        "view": {
+          "web": {
+            "layout": "dataTablePro",
+            "pagination": "server",
+            "density": "compact",
+            "virtualized": true
+          },
+          "mobile": {
+            "layout": "cardList",
+            "filters": "bottomSheet",
+            "virtualized": true,
+            "pullToRefresh": true
+          },
+          "desktop": {
+            "layout": "dataTablePro",
+            "pagination": "server",
+            "shortcuts": true,
+            "contextMenu": true,
+            "multiSelect": true,
+            "virtualized": true
+          }
+        },
+        "toolbar": {
+          "web": ["search", "filters", "columns", "savedViews", "export", "create"],
+          "mobile": ["search", "create"],
+          "desktop": ["search", "filters", "columns", "savedViews", "export", "create", "bulkActions"]
+        },
+        "actions": [
+          {
+            "id": "create",
+            "label": "إنشاء",
+            "variant": "primary",
+            "permission": "{{entity}}.create"
+          },
+          {
+            "id": "export",
+            "label": "تصدير",
+            "variant": "secondary",
+            "permission": "{{entity}}.export"
+          }
+        ],
+        "bulkActions": [
+          {
+            "id": "delete",
+            "label": "حذف",
+            "variant": "destructive",
+            "permission": "{{entity}}.delete",
+            "confirm": {
+              "title": "تأكيد الحذف",
+              "message": "هل أنت متأكد من حذف العناصر المحددة؟"
+            }
+          }
+        ],
+        "states": {
+          "loading": true,
+          "empty": {
+            "title": "لا يوجد {{entityTitlePlural}}",
+            "description": "ابدأ بإنشاء أول {{entityTitle}}",
+            "action": {
+              "label": "إنشاء {{entityTitle}}",
+              "permission": "{{entity}}.create"
+            }
+          },
+          "error": true,
+          "noPermission": {
+            "message": "ليس لديك صلاحية لعرض {{entityTitlePlural}}"
+          }
+        },
+        "permissionsRequired": ["{{entity}}.view"]
+      },
+      "variables": {
+        "{{entity}}": "Entity name (e.g., 'invoice', 'ticket')",
+        "{{entityTitle}}": "Entity title singular (e.g., 'فاتورة', 'تذكرة')",
+        "{{entityTitlePlural}}": "Entity title plural (e.g., 'الفواتير', 'التذاكر')"
+      }
+    },
+    {
+      "id": "entityDetail",
+      "name": "Entity Detail Screen",
+      "description": "Standard detail screen for entities",
+      "template": {
+        "screenId": "screen.{{entity}}.detail",
+        "title": "تفاصيل {{entityTitle}}",
+        "intent": "entityDetail",
+        "entity": "{{entity}}",
+        "type": "detail",
+        "breadcrumbs": [
+          {
+            "label": "الصفحة الرئيسية",
+            "path": "/"
+          },
+          {
+            "label": "{{entityTitlePlural}}",
+            "path": "/{{entityPlural}}"
+          },
+          {
+            "label": "تفاصيل {{entityTitle}}"
+          }
+        ],
+        "view": {
+          "web": {
+            "layout": "detailWithRightPanel",
+            "rightPanel": ["status", "assignee", "tags", "metadata", "audit"]
+          },
+          "mobile": {
+            "layout": "tabsTop",
+            "primaryTab": "overview"
+          },
+          "desktop": {
+            "layout": "detailWithRightPanel",
+            "rightPanel": ["status", "assignee", "tags", "metadata", "audit"],
+            "shortcuts": true
+          }
+        },
+        "tabs": [
+          {
+            "id": "overview",
+            "label": "نظرة عامة",
+            "component": "entityOverview",
+            "default": true
+          },
+          {
+            "id": "activity",
+            "label": "النشاط",
+            "component": "activityTimeline"
+          }
+        ],
+        "actions": [
+          {
+            "id": "edit",
+            "label": "تعديل",
+            "variant": "secondary",
+            "permission": "{{entity}}.edit"
+          },
+          {
+            "id": "delete",
+            "label": "حذف",
+            "variant": "destructive",
+            "permission": "{{entity}}.delete",
+            "confirm": {
+              "title": "تأكيد الحذف",
+              "message": "هل أنت متأكد من حذف {{entityTitle}}؟"
+            }
+          }
+        ],
+        "states": {
+          "loading": true,
+          "error": true,
+          "noPermission": {
+            "message": "ليس لديك صلاحية لعرض {{entityTitle}}"
+          }
+        },
+        "permissionsRequired": ["{{entity}}.view"]
+      },
+      "variables": {
+        "{{entity}}": "Entity name",
+        "{{entityTitle}}": "Entity title singular",
+        "{{entityTitlePlural}}": "Entity title plural",
+        "{{entityPlural}}": "Entity name plural (e.g., 'invoices', 'tickets')"
+      }
+    },
+    {
+      "id": "workflowApproval",
+      "name": "Workflow Approval Screen",
+      "description": "Approval inbox screen for HRMS/CPQ/ITSM workflows",
+      "template": {
+        "screenId": "screen.approvals.inbox",
+        "title": "الوارد للموافقات",
+        "intent": "workflowApproval",
+        "type": "list",
+        "view": {
+          "web": {
+            "layout": "dataTablePro",
+            "pagination": "server",
+            "density": "compact",
+            "virtualized": true
+          },
+          "mobile": {
+            "layout": "cardList",
+            "filters": "bottomSheet",
+            "virtualized": true,
+            "pullToRefresh": true
+          },
+          "desktop": {
+            "layout": "dataTablePro",
+            "pagination": "server",
+            "shortcuts": true,
+            "contextMenu": true,
+            "virtualized": true
+          }
+        },
+        "toolbar": {
+          "web": ["search", "filters", "savedViews", "refresh"],
+          "mobile": ["search", "refresh"],
+          "desktop": ["search", "filters", "savedViews", "refresh", "bulkActions"]
+        },
+        "filters": [
+          {
+            "field": "status",
+            "type": "enum",
+            "label": "الحالة",
+            "values": ["pending", "approved", "rejected"]
+          },
+          {
+            "field": "type",
+            "type": "enum",
+            "label": "النوع"
+          },
+          {
+            "field": "createdAt",
+            "type": "dateRange",
+            "label": "تاريخ الإنشاء"
+          }
+        ],
+        "actions": [
+          {
+            "id": "approve",
+            "label": "موافقة",
+            "variant": "primary",
+            "permission": "workflow.approve",
+            "requiresSelection": true
+          },
+          {
+            "id": "reject",
+            "label": "رفض",
+            "variant": "destructive",
+            "permission": "workflow.reject",
+            "requiresSelection": true,
+            "confirm": {
+              "title": "تأكيد الرفض",
+              "message": "هل أنت متأكد من رفض الطلبات المحددة؟"
+            }
+          },
+          {
+            "id": "requestChanges",
+            "label": "طلب تعديل",
+            "variant": "secondary",
+            "permission": "workflow.requestChanges",
+            "requiresSelection": true
+          },
+          {
+            "id": "delegate",
+            "label": "تفويض",
+            "variant": "secondary",
+            "permission": "workflow.delegate",
+            "requiresSelection": true
+          }
+        ],
+        "states": {
+          "loading": true,
+          "empty": {
+            "title": "لا توجد موافقات معلقة",
+            "description": "جميع الطلبات تمت معالجتها"
+          },
+          "error": true,
+          "noPermission": {
+            "message": "ليس لديك صلاحية للموافقة على الطلبات"
+          }
+        },
+        "permissionsRequired": ["workflow.approve", "workflow.view"]
+      }
+    }
+  ]
+}
+
