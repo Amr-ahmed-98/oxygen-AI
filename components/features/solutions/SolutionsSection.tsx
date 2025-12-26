@@ -8,20 +8,20 @@ import { cn } from "@/lib/utils"
 import Link from "next/link"
 
 interface Solution {
-  id: string
-  name: string
-  title: string
-  description: string
-  icon: string
-  category: string
-  audience: string
-  modules: string[]
-  features: string[]
-  integrations: string[]
+  readonly id: string
+  readonly name: string
+  readonly title: string
+  readonly description: string
+  readonly icon: string
+  readonly category: string
+  readonly audience: string
+  readonly modules: readonly string[]
+  readonly features: readonly string[]
+  readonly integrations: readonly string[]
 }
 
 interface SolutionsData {
-  solutions: Solution[]
+  readonly solutions: readonly Solution[]
 }
 
 interface SolutionsSectionProps {

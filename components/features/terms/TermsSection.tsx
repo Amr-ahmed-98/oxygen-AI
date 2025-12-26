@@ -2,14 +2,16 @@
 
 import { cn } from "@/lib/utils"
 
+type TermsSection = {
+  readonly id: string
+  readonly title: string
+  readonly content: string
+}
+
 interface TermsData {
-  title: string
-  lastUpdated: string
-  sections: Array<{
-    id: string
-    title: string
-    content: string
-  }>
+  readonly title: string
+  readonly lastUpdated: string
+  readonly sections: readonly TermsSection[]
 }
 
 interface TermsSectionProps {

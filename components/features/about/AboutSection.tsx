@@ -4,33 +4,39 @@ import { Check } from "lucide-react"
 import { Card } from "@/components/ui/Card"
 import { cn } from "@/lib/utils"
 
+type ValueItem = {
+  readonly title: string
+  readonly description: string
+}
+
+type TeamMember = {
+  readonly name: string
+  readonly role: string
+}
+
+type StatItem = {
+  readonly label: string
+  readonly value: string
+}
+
 interface AboutData {
-  title: string
-  subtitle: string
-  mission: {
-    title: string
-    description: string
+  readonly title: string
+  readonly subtitle: string
+  readonly mission: {
+    readonly title: string
+    readonly description: string
   }
-  story: {
-    title: string
-    description: string
+  readonly story: {
+    readonly title: string
+    readonly description: string
   }
-  values: Array<{
-    title: string
-    description: string
-  }>
-  team: {
-    title: string
-    description: string
-    members: Array<{
-      name: string
-      role: string
-    }>
+  readonly values: readonly ValueItem[]
+  readonly team: {
+    readonly title: string
+    readonly description: string
+    readonly members: readonly TeamMember[]
   }
-  stats: Array<{
-    label: string
-    value: string
-  }>
+  readonly stats: readonly StatItem[]
 }
 
 interface AboutSectionProps {

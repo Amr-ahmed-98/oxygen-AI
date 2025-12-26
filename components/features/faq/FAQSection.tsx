@@ -4,18 +4,22 @@ import { useState } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
 import { cn } from "@/lib/utils"
 
+type FAQQuestion = {
+  readonly id: string
+  readonly question: string
+  readonly answer: string
+}
+
+type FAQCategory = {
+  readonly id: string
+  readonly name: string
+  readonly questions: readonly FAQQuestion[]
+}
+
 interface FAQData {
-  title: string
-  subtitle: string
-  categories: Array<{
-    id: string
-    name: string
-    questions: Array<{
-      id: string
-      question: string
-      answer: string
-    }>
-  }>
+  readonly title: string
+  readonly subtitle: string
+  readonly categories: readonly FAQCategory[]
 }
 
 interface FAQSectionProps {
